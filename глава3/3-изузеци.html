@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sr"></html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Изузеци &#8212; Компоновање рачунарских програма</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/simanim.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pycode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/p5js.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dbDirective.css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-runestone.css" type="text/css" />
+    <link rel="stylesheet" href="../_staticnbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../_static/Blob.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="../_static/blockpy-modal.js"></script>
+    <script type="text/javascript" src="../_static/simanim.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.16.1/full/pyodide.js"></script>
+    <script type="text/javascript" src="../_static/pycode.js"></script>
+    <script type="text/javascript" src="//toolness.github.io/p5.js-widget/p5-widget.js"></script>
+    <script type="text/javascript" src="../_static/p5js.js"></script>
+    <script type="text/javascript" src="../_static/gallery.js"></script>
+    <script type="text/javascript" src="../_static/dbDirective.js"></script>
+    <script type="text/javascript" src="../_static/sql.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="../_static/require.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Обрада података" href="../глава4/index.html" />
+    <link rel="prev" title="Функционално програмирање" href="2-функционално-програмирање.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host + '/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+  eBookConfig.course = 'krp';
+  eBookConfig.logLevel = '0';
+  eBookConfig.loginRequired = 'false';
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = 'false';
+  eBookConfig.python3 = 'true';
+  eBookConfig.basecourse = 'krp';
+  eBookConfig.runestone_version = '';
+  eBookConfig.imagesDir = '../_images/';
+  eBookConfig.staticDir = '../_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="../_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="../">Компоновање рачунарских програма</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content" style="margin-top: 70px;">
+  
+  <div class="section" id="exceptions">
+<span id="id1"></span><h1>Изузеци<a class="headerlink" href="#exceptions" title="Permalink to this headline">¶</a></h1>
+<p>Програмери морају увек имати на уму могуће грешке које се могу појавити у њиховим програмима. Примера има на претек: функција можда неће примити аргументе које је пројектована да прихвати, можда недостају неопходни ресурси или се може изгубити веза преко мреже. Приликом пројектовања програма, морају се предвидети изузетне околности које могу настати и морају се предузети одговарајуће мере за њихово решавање.</p>
+<p>Не постоји јединствен исправан приступ руковођењу грешкама у програму. Програми пројектовани да пружају неке трајне услуге попут веб сервера треба да буду робусни према грешкама, бележећи их за касније разматрање, али настављајући да сервисирају нове захтеве што је дуже могуће. С друге стране, Пајтонов интерпретатор обрађује грешке прекидајући извршавање одмах и исписујући поруку о грешци, тако да програмери могу да реше проблеме чим се појаве. У сваком случају, програмери морају свесно да одлуче како ће њихови програми да реагују на неке ванредне услове.</p>
+<p><em>Изузеци</em>, што је и тема овог одељка, пружају општи механизам за додавање логике за руковање и руковођење грешкама у програмима. Подизање изузетка је техника за прекидање нормалног тока извршавања у програму, сигнализирање да се појавила нека ванредна околност и враћање директно у затворени део програма који је одређен да реагује на ту околност. Пајтонов интерпретатор покреће изузетак сваки пут када открије грешку у изразу или наредби. Корисници такође могу подићи изузетке помоћу <code class="docutils literal notranslate"><span class="pre">raise</span></code> и <code class="docutils literal notranslate"><span class="pre">assert</span></code> наредби.</p>
+<div class="section" id="raisingexceptions">
+<span id="id2"></span><h2>Подизање изузетака<a class="headerlink" href="#raisingexceptions" title="Permalink to this headline">¶</a></h2>
+<p>Изузетак је инстанца објекта са класом која наслеђује, било директно или индиректно, класу <code class="docutils literal notranslate"><span class="pre">BaseException</span></code>. Наредба <code class="docutils literal notranslate"><span class="pre">assert</span></code> представљена у првом поглављу доводи до изузетка класе <code class="docutils literal notranslate"><span class="pre">AssertionError</span></code>. Уопштено, било која инстанца изузетка може се подићи <code class="docutils literal notranslate"><span class="pre">raise</span></code> наредбом. Општи облик наредбе за подизање изузетка описан је у <a class="reference external" href="http://docs.python.org/3/reference/simple_stmts.html#raise">Пајтон документацији</a>. Најчешћа употреба <code class="docutils literal notranslate"><span class="pre">raise</span></code> прави изузетак и подиже га.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;Десила се грешка!&#39;</span><span class="p">)</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+<span class="gr">Exception</span>: <span class="n">Десила се грешка!</span>
+</pre></div>
+</div>
+<p>Када се подигне изузетак, не извршавају се даљи изрази и наредбе у тренутном блоку кода. Изузев ако се изузетак не <em>обрађује</em> (описано у наставку), интерпретатор ће се директно вратити у интерактивну петљу читања-вредновања-исписа (енг. <em>read-eval-print loop</em> или <a class="reference external" href="http://sr.wikipedia.org/wiki/REPL">REPL</a>) или ће се у потпуности завршити ако је Пајтон покренут са аргументом датотеке. Поред тога, интерпретатор ће исписати такозвани <em>stack backtrace</em>, који је структурирани блок текста који описује угнежђени скуп активних позива функције у грани извршења у којој је подигнут изузетак. У примеру изнад, име датотеке <code class="docutils literal notranslate"><span class="pre">&lt;stdin&gt;</span></code> указује на то да је изузетак покренуо корисник у интерактивној сеанси, а не из кода у датотеци.</p>
+</div>
+<div class="section" id="handlingexceptions">
+<span id="id4"></span><h2>Обрада изузетака<a class="headerlink" href="#handlingexceptions" title="Permalink to this headline">¶</a></h2>
+<p>Изузетак се може обрадити обухватајућом <code class="docutils literal notranslate"><span class="pre">try</span></code> наредбом. Наредба <code class="docutils literal notranslate"><span class="pre">try</span></code> састоји се из више клаузула; прва започиње са <code class="docutils literal notranslate"><span class="pre">try</span></code>, док остале почињу са <code class="docutils literal notranslate"><span class="pre">except</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="o">&lt;</span><span class="k">try</span> <span class="n">пакет</span><span class="o">&gt;</span>
+<span class="k">except</span> <span class="o">&lt;</span><span class="n">класа</span> <span class="n">изузетка</span><span class="o">&gt;</span> <span class="k">as</span> <span class="o">&lt;</span><span class="n">име</span><span class="o">&gt;</span><span class="p">:</span>
+    <span class="o">&lt;</span><span class="k">except</span> <span class="n">пакет</span><span class="o">&gt;</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<p>Тело <code class="docutils literal notranslate"><span class="pre">&lt;try</span> <span class="pre">пакет&gt;</span></code> се увек извршава одмах после <code class="docutils literal notranslate"><span class="pre">try</span></code> наредбе. Пакети <code class="docutils literal notranslate"><span class="pre">except</span></code> клаузула извршавају се само када се подигне одговарајући изузетак током извршавања <code class="docutils literal notranslate"><span class="pre">&lt;try</span> <span class="pre">пакет&gt;</span></code>. Свака <code class="docutils literal notranslate"><span class="pre">except</span></code> клаузула специфицира одређену класу изузетка коју треба обрадити и којом треба руководити. На пример, ако је <code class="docutils literal notranslate"><span class="pre">&lt;класа</span> <span class="pre">изузетка&gt;</span></code> заправо <code class="docutils literal notranslate"><span class="pre">AssertionError</span></code>, тада ће било која инстанца класе која наслеђује <code class="docutils literal notranslate"><span class="pre">AssertionError</span></code> која се подигне током извршавања <code class="docutils literal notranslate"><span class="pre">&lt;try</span> <span class="pre">пакет&gt;</span></code> бити обрађена следећим <code class="docutils literal notranslate"><span class="pre">&lt;except</span> <span class="pre">пакет&gt;</span></code>-у. Унутар <code class="docutils literal notranslate"><span class="pre">&lt;except</span> <span class="pre">пакет&gt;</span></code>-а, идентификатор <code class="docutils literal notranslate"><span class="pre">&lt;име&gt;</span></code> је везан за објекат изузетка који је подигнут, али ово везивање не постоји ван <code class="docutils literal notranslate"><span class="pre">&lt;except</span> <span class="pre">пакет&gt;</span></code>-а.</p>
+<p>На пример, можемо се обрадити <code class="docutils literal notranslate"><span class="pre">ZeroDivisionError</span></code> изузетак користећи се <code class="docutils literal notranslate"><span class="pre">try</span></code> наредбом која везује назив <code class="docutils literal notranslate"><span class="pre">x</span></code> на 0 када се изузетак подигне.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">try</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="mi">0</span>
+<span class="gp">... </span><span class="k">except</span> <span class="ne">ZeroDivisionError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;обрађује се&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">e</span><span class="p">))</span>
+<span class="gp">... </span>    <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="go">обрађује се &lt;class &#39;ZeroDivisionError&#39;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span>
+<span class="go">0</span>
+</pre></div>
+</div>
+<p>Наредба <code class="docutils literal notranslate"><span class="pre">try</span></code> ће руководити изузецима који се јављају у телу функције која се примењује (било директно или индиректно) у оквиру <code class="docutils literal notranslate"><span class="pre">&lt;try</span> <span class="pre">пакет&gt;</span></code>-а. Када се изузетак подигне, контрола прелази директно на тело <code class="docutils literal notranslate"><span class="pre">&lt;except</span> <span class="pre">пакет&gt;</span></code>-а најновије <code class="docutils literal notranslate"><span class="pre">try</span></code> наредбе која обрађује ту врсту изузетака.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">инвертуј</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">result</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="n">x</span>  <span class="c1"># Подиже ZeroDivisionError ако је x једнако 0</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Никада се не штампа ако је x једнако 0&#39;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">result</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">инвертујБезбедно</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">try</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">инвертуј</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">except</span> <span class="ne">ZeroDivisionError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">инвертујБезбедно</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="go">Никада се не штампа ако је x једнако 0</span>
+<span class="go">0.5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">инвертујБезбедно</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="go">&#39;division by zero&#39;</span>
+</pre></div>
+</div>
+<p>Овај пример илуструје да се <code class="docutils literal notranslate"><span class="pre">print</span></code> наредба унутар <code class="docutils literal notranslate"><span class="pre">инвертуј</span></code> никада не извршава, већ се уместо тога контрола пребацује у пакет <code class="docutils literal notranslate"><span class="pre">except</span></code> клаузула у <code class="docutils literal notranslate"><span class="pre">инвертујБезбедно</span></code>. Претварањем <code class="docutils literal notranslate"><span class="pre">ZeroDivisionError</span></code> <code class="docutils literal notranslate"><span class="pre">e</span></code> у ниску даје човеку разумљиву текстуалну вредност која се враћа од стране <code class="docutils literal notranslate"><span class="pre">инвертујБезбедно</span></code>, то јест: <code class="docutils literal notranslate"><span class="pre">'division</span> <span class="pre">by</span> <span class="pre">zero'</span></code>.</p>
+</div>
+<div class="section" id="exceptionobjects">
+<span id="id5"></span><h2>Објекти изузетака<a class="headerlink" href="#exceptionobjects" title="Permalink to this headline">¶</a></h2>
+<p>Сами објекти изузетака могу имати атрибуте, као што је порука о грешци наведена у <code class="docutils literal notranslate"><span class="pre">assert</span></code> наредби и информација о томе где је у току извршавања подигнут изузетак. Кориснички дефинисане класе изузетака могу имати и додатне атрибуте.</p>
+<p>У првом поглављу имлементирана је такозвана Њутнова метода за проналажење нула произвољних функција. Следећи пример дефинише класу изузетка која враћа најбољу претпоставку, то јест нагађање октривено током итеративног поступка побољшања нагађања кад год се догоди <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> грешка. Грешка у математичком домену (тип <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> грешке) настаје када се рецимо квадратни корен <code class="docutils literal notranslate"><span class="pre">sqrt</span></code> примени на негативан број. Овај изузетак се обрађује подизањем <code class="docutils literal notranslate"><span class="pre">IterImproveError</span></code> који као атрибут чува најновије нагађање из Њутнове методе.</p>
+<p>Најпре, дефинише се нова класа која наслеђује <code class="docutils literal notranslate"><span class="pre">Exception</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">IterImproveError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">последњеНагађање</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="bp">self</span><span class="o">.</span><span class="n">последњеНагађање</span> <span class="o">=</span> <span class="n">последњеНагађање</span>
+</pre></div>
+</div>
+<p>Затим се дефинише верзија <code class="docutils literal notranslate"><span class="pre">побољшај</span></code>, генеричка функција за алгоритме итеративног побољшања. Ова верзија обрађује било који <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> изузетак тако што подиже <code class="docutils literal notranslate"><span class="pre">IterImproveError</span></code> који чува најсвежије нагађање. Као и раније, <code class="docutils literal notranslate"><span class="pre">побољшај</span></code> узима као аргументе две функције, од којих свака прима по један нумерички аргумент. Функција <code class="docutils literal notranslate"><span class="pre">ажурирај</span></code> враћа нова нагађања, док функција <code class="docutils literal notranslate"><span class="pre">готово</span></code> даје логичку вредност која указује да је побољшање конвергирало ка тачној вредности.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">побољшај</span><span class="p">(</span><span class="n">update</span><span class="p">,</span> <span class="n">готово</span><span class="p">,</span> <span class="n">нагађање</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_updates</span><span class="o">=</span><span class="mi">1000</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="gp">... </span>    <span class="k">try</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">while</span> <span class="ow">not</span> <span class="n">готово</span><span class="p">(</span><span class="n">нагађање</span><span class="p">)</span> <span class="ow">and</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="n">max_updates</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="n">нагађање</span> <span class="o">=</span> <span class="n">update</span><span class="p">(</span><span class="n">нагађање</span><span class="p">)</span>
+<span class="gp">... </span>            <span class="n">k</span> <span class="o">=</span> <span class="n">k</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">нагађање</span>
+<span class="gp">... </span>    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">raise</span> <span class="n">IterImproveError</span><span class="p">(</span><span class="n">нагађање</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Коначно, дефинише се <code class="docutils literal notranslate"><span class="pre">пронађиНулу</span></code>, који враћа резултат <code class="docutils literal notranslate"><span class="pre">побољшај</span></code> примењен на Њутнову функцију ажурирања коју враћа <code class="docutils literal notranslate"><span class="pre">њутновоАжурирање</span></code>, која је дефинисана још у прво поглављу, а овде поновљена у идентичном облику чисто ради комплетности. Ова верзија <code class="docutils literal notranslate"><span class="pre">пронађиНулу</span></code> функције обрађује <code class="docutils literal notranslate"><span class="pre">IterImproveError</span></code> враћањем последњег нагађања.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">њутновоАжурирање</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">df</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">ажурирај</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">x</span> <span class="o">-</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">/</span> <span class="n">df</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">ажурирај</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">пронађиНулу</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">df</span><span class="p">,</span> <span class="n">нагађање</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">готово</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+<span class="gp">... </span>    <span class="k">try</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">побољшај</span><span class="p">(</span><span class="n">њутновоАжурирање</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">df</span><span class="p">),</span> <span class="n">готово</span><span class="p">,</span> <span class="n">нагађање</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">except</span> <span class="n">IterImproveError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">e</span><span class="o">.</span><span class="n">последњеНагађање</span>
+</pre></div>
+</div>
+<p>Размислити о примени <code class="docutils literal notranslate"><span class="pre">пронађиНулу</span></code> како би се пронашла нула функције <span class="math notranslate nohighlight">\(2x^2+\sqrt{x}\)</span> чији је извод једнак <span class="math notranslate nohighlight">\(4x+1/2\sqrt{x}\)</span>. Ова функција има нулу у нули, али вредновање на било којм негативном броју подићи ће <code class="docutils literal notranslate"><span class="pre">ValueError</span></code>. Имплементација Њутнове методе из првог поглавља би подигла грешку и не би вратила било какву апроксимацију нуле функције. Ова пак ревидирана имплементација враћа последње нагађање пронађено пре грешке.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">пронађиНулу</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">4</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span>
+<span class="go">-0.030214676328644885</span>
+</pre></div>
+</div>
+<p>Иако је ова апроксимација још увек далеко од тачног одговора што је 0, неким апликацијама више одговара ова груба апроксимација него <code class="docutils literal notranslate"><span class="pre">ValueError</span></code>.</p>
+<p>Изузеци су још једна техника која помаже програмерима да раздвоје бриге и проблеме унутар програма на модуларне делове. У овом примеру, Пајтонов механизам за изузетке је дозволио да се раздвоји логика за итеративно побољшање, која се чини непромењеном у пакету <code class="docutils literal notranslate"><span class="pre">try</span></code> клаузуле, од логике за обрадом и руковођењем грешкама, која се појављује у <code class="docutils literal notranslate"><span class="pre">except</span></code> клаузулама. Такође ће бити приказано да су изузеци корисна одлика приликом имплементације интерпретатора у Пајтону.</p>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Функционално програмирање' data-toggle="tooltip"><a href="2-функционално-програмирање.html">Претходно поглавље</a></li>
+    
+        <li id="relations-next" title='Next chapter - Обрада података' data-toggle="tooltip"><a href="../глава4/index.html">Следеће поглавље</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Функционално програмирање' data-toggle="tooltip"><a href="2-функционално-програмирање.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Обрада података' data-toggle="tooltip"><a href="../глава4/index.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="pull-left">&copy; 2019 Petlja (Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

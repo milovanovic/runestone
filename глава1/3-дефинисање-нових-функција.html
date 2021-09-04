@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sr"></html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Дефинисање нових функција &#8212; Компоновање рачунарских програма</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/simanim.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pycode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/p5js.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dbDirective.css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-runestone.css" type="text/css" />
+    <link rel="stylesheet" href="../_staticnbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../_static/Blob.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="../_static/blockpy-modal.js"></script>
+    <script type="text/javascript" src="../_static/simanim.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.16.1/full/pyodide.js"></script>
+    <script type="text/javascript" src="../_static/pycode.js"></script>
+    <script type="text/javascript" src="//toolness.github.io/p5.js-widget/p5-widget.js"></script>
+    <script type="text/javascript" src="../_static/p5js.js"></script>
+    <script type="text/javascript" src="../_static/gallery.js"></script>
+    <script type="text/javascript" src="../_static/dbDirective.js"></script>
+    <script type="text/javascript" src="../_static/sql.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="../_static/require.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Пројектовање функција" href="4-пројектовање-функција.html" />
+    <link rel="prev" title="Елементи програмирања" href="2-елементи-програмирања.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host + '/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+  eBookConfig.course = 'krp';
+  eBookConfig.logLevel = '0';
+  eBookConfig.loginRequired = 'false';
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = 'false';
+  eBookConfig.python3 = 'true';
+  eBookConfig.basecourse = 'krp';
+  eBookConfig.runestone_version = '';
+  eBookConfig.imagesDir = '../_images/';
+  eBookConfig.staticDir = '../_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="../_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="../">Компоновање рачунарских програма</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content" style="margin-top: 70px;">
+  
+  <div class="section" id="definingnewfunctions">
+<span id="id1"></span><h1>Дефинисање нових функција<a class="headerlink" href="#definingnewfunctions" title="Permalink to this headline">¶</a></h1>
+<p>Идентификовани су у Пајтону неки од елемената који се морају појавити у сваком моћном програмском језику:</p>
+<ol class="arabic simple">
+<li><p>Бројеви и аритметичке операције су <em>примитивне</em> уграђене вредности података и функције, респективно.</p></li>
+<li><p>Угнежђене примене функција пружају средство за комбиновање операција.</p></li>
+<li><p>Повезивање имена на вредности пружа ограничен начин апстракције.</p></li>
+</ol>
+<p>Сада ће више бити речено о <em>дефинисању функција</em>, далеко моћнијој техници апстракције којом име може бити повезано на сложену операцију којој се може обраћати као и јединичним.</p>
+<p>Започећемо испитивањем како изразити идеју <em>квадрирања</em>. Може се рећи, „да би се нешто квадрирало, поможити га са самим собом”. Ово се у Пајтону изражава као</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">add</span><span class="p">,</span> <span class="n">mul</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">квадрат</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">mul</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>чиме је дефинисана нова функција којој је дато име <code class="docutils literal notranslate"><span class="pre">квадрат</span></code>. Ова кориснички дефинисана функција није уграђена у интерпретатор. Она представља сложену операцију множења нечега са самим собом. У овој дефиницији <code class="docutils literal notranslate"><span class="pre">x</span></code> се назива <em>формални параметар</em> и даје име ономе што треба помножити. Дефиниција ствара ову корисничку функцију и придружује јој име <code class="docutils literal notranslate"><span class="pre">квадрат</span></code>.</p>
+<span class="target" id="howtodefineafunction"></span><p>Како дефинисати функцију? Дефиниције функција се састоје из <code class="docutils literal notranslate"><span class="pre">def</span></code> наредбе која указује на <code class="docutils literal notranslate"><span class="pre">&lt;име&gt;</span></code> и зарезима раздвојен низ имена <code class="docutils literal notranslate"><span class="pre">&lt;формални</span> <span class="pre">параметри&gt;</span></code> праћен <code class="docutils literal notranslate"><span class="pre">return</span></code> наредбом која се зове тело функције и која одређује <code class="docutils literal notranslate"><span class="pre">&lt;повратни</span> <span class="pre">израз&gt;</span></code> функције, израз који се вреднује сваки пут када је функција позвана, односно примењена:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="o">&lt;</span><span class="n">име</span><span class="o">&gt;</span><span class="p">(</span><span class="o">&lt;</span><span class="n">формални</span> <span class="n">параметри</span><span class="o">&gt;</span><span class="p">):</span>
+    <span class="k">return</span> <span class="o">&lt;</span><span class="n">повратни</span> <span class="n">израз</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Други ред <em>мора</em> бити увучен, а већина програмера користи четири размака за увлачење. Повратни израз се не вреднује одмах, већ се чува као део новодефинисане функције и вреднује само онда када функција коначно буде примењена.</p>
+<p>Пошто је <code class="docutils literal notranslate"><span class="pre">квадрат</span></code> дефинисан, може се применити позивним изразом:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">квадрат</span><span class="p">(</span><span class="mi">21</span><span class="p">)</span>
+<span class="go">441</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">квадрат</span><span class="p">(</span><span class="n">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="go">49</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">квадрат</span><span class="p">(</span><span class="n">квадрат</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+<span class="go">81</span>
+</pre></div>
+</div>
+<p>Функција <code class="docutils literal notranslate"><span class="pre">квадрат</span></code> се може користити и као структурни елемент приликом дефинисања других функција. Примера ради, може се лако дефинисати функција <code class="docutils literal notranslate"><span class="pre">збирКвадрата</span></code> која, за задата два броја као аргументе враћа збир њихових квадрата:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">збирКвадрата</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">add</span><span class="p">(</span><span class="n">квадрат</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">квадрат</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">збирКвадрата</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="go">25</span>
+</pre></div>
+</div>
+<p>Кориснички дефинисане функције се користе на идентичан начин као и уграђене функције. И заиста, из дефиниције функције <code class="docutils literal notranslate"><span class="pre">збирКвадрата</span></code> не може се рећи да ли је функција <code class="docutils literal notranslate"><span class="pre">квадрат</span></code> уграђена у интерпретатор, увезена из модула или пак дефинисана од стране корисника.</p>
+<p>Обе, и <code class="docutils literal notranslate"><span class="pre">def</span></code> наредбе и наредбе доделе везују имена на вредности, а сва постојећа везивања су изгубљена. На пример, <code class="docutils literal notranslate"><span class="pre">g</span></code> се, у наставку, најпре односи на функцију без аргумената, затим на број, а потом и на различиту функцију два аргумента.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">g</span><span class="p">():</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="mi">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">g</span><span class="p">()</span>
+<span class="go">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">g</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">g</span>
+<span class="go">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">g</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">h</span> <span class="o">+</span> <span class="n">i</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">g</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="go">3</span>
+</pre></div>
+</div>
+<div class="section" id="environments">
+<span id="id2"></span><h2>Окружења<a class="headerlink" href="#environments" title="Permalink to this headline">¶</a></h2>
+<p>До сада представљен подскуп Пајтона је довољно сложен да значења програма нису више тако једноставна и очигледна. Шта ако формални параметар има исто име као и уграђена функција? Могу ли две функције делити исто име без забуне? Да би се разрешила оваква питања морају се детаљније описати окружења.</p>
+<p>Окружење у коме се одређени израз вреднује састоји се из низа <em>оквира</em> који су приказани као кутије. Сваки оквир садржи <em>везе</em>, при чему свака од њих повезује неко име са њему одговарајућом вредношћу. Постоји јединствен <em>глобални</em> оквир. Наредбе доделе и увоза додају нове уносе у први оквир тренутног окружења. Досад, окружење се састоји само из глобалног оквира.</p>
+<iframe width="800" height="262" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=from%20math%20import%20pi%0A%D1%82%D0%B0%D1%83%20%3D%202%20*%20pi&codeDivHeight=400&codeDivWidth=350&cumulative=true&curInstr=2&origin=composingprograms.js&py=3&rawInputLstJSON=%5B%5D"> </iframe><p>Један овакав <em>дијаграм окружења</em> приказује везе тренутног окружења заједно са вредностима на које су имена повезана. Дијаграми окружења у овом тексту су интерактивни, односно могуће је ићи кроз линије краћих програма с леве стране да би се видело како се стање окружења развија с десне стране. Може се чак и кликнути на „Edit code in Online Python Tutor” везу да се пример учита у <a class="reference external" href="http://www.pythontutor.com/visualize.html">Пајтон тутор</a>, алат који је направио <a class="reference external" href="http://www.pgbovine.net">Филип Гуо</a> за генерисање ових дијаграма окружења. Охрабрују се читаоци да унесу примере и простудирају тако добијене дијаграме окружења.</p>
+<p>Функције се такође приказују у дијаграмима окружења. Наредба <code class="docutils literal notranslate"><span class="pre">import</span></code> везује име на уграђену функцију.</p>
+<p>Наредба <code class="docutils literal notranslate"><span class="pre">def</span></code> повезује име на кориснички дефинисану функцију створену путем дефиниције. Резултујуће окружење након увоза <code class="docutils literal notranslate"><span class="pre">mul</span></code> и <code class="docutils literal notranslate"><span class="pre">квадрат</span></code> дефиниције је приказано у наставку.</p>
+<iframe width="800" height="300" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=from%20operator%20import%20mul%0Adef%20%D0%BA%D0%B2%D0%B0%D0%B4%D1%80%D0%B0%D1%82%28x%29%3A%0A%20%20%20%20return%20mul%28x,%20x%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=2&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe><p>Свака функција је ред који почиње са <code class="docutils literal notranslate"><span class="pre">func</span></code>, праћен именом функције и формалним параметрима. Уграђене функције као што су <code class="docutils literal notranslate"><span class="pre">mul</span></code> немају имена формалних параметара па су зато <code class="docutils literal notranslate"><span class="pre">...</span></code> искоришћене уместо истих.</p>
+<p>Име функције се исписује два пута, једном у окружењу и поново као део саме функције. Име које се појављује у самој функцији назива се <em>својствено име</em>. Име у оквиру је <em>везано име</em>. Постоји разлика између њих: различита имена могу се односити на исту функцију, али сама та функција има само једно својствено име.</p>
+<p>Име везано на функцију у оквиру је оно које се користи током вредновања. Својствено име функције не игра улогу у вредновању. Може се видети у доњем примеру да једном када се назив <code class="docutils literal notranslate"><span class="pre">max</span></code> веже на вредност 3, не може се више користити као функција.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">f</span> <span class="o">=</span> <span class="nb">max</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">max</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1">#max(1, 2)  # проузрокује грешку</span>
+</pre></div>
+</div>
+<p>Порука о грешци <code class="docutils literal notranslate"><span class="pre">TypeError:</span> <span class="pre">'int'</span> <span class="pre">object</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">callable</span></code> даје обавештење да име <code class="docutils literal notranslate"><span class="pre">max</span></code> (тренутно повезано на број 3) представља целобројну вредност, а не функцију. Стога, не може се користити као оператор у позивном изразу.</p>
+<div class="section" id="functionsignatures">
+<span id="id5"></span><h3>Потписи функција<a class="headerlink" href="#functionsignatures" title="Permalink to this headline">¶</a></h3>
+<p>Функције се разликују по броју аргумената које узимају. Да се испрате ови захтеви свака функција се црта на начин који приказује име функције и њене формалне параметре. Кориснички дефинисана функција <code class="docutils literal notranslate"><span class="pre">квадрат</span></code> прима само <code class="docutils literal notranslate"><span class="pre">x</span></code> и пружање мање или више аргумената изазваће грешку. Опис формалних параметара функције назива се <em>потпис функције</em>.</p>
+<p>Функција <code class="docutils literal notranslate"><span class="pre">max</span></code> може примити произвољан број аргумената. Приказује као <code class="docutils literal notranslate"><span class="pre">max(...)</span></code>. Без обзира на број аргумената који примају, све уграђене функције биће приказане као <code class="docutils literal notranslate"><span class="pre">&lt;име&gt;(...)</span></code> зато што ове примитивне функције никада и нису експлицитно дефинисане.</p>
+</div>
+</div>
+<div class="section" id="callinguser-definedfunctions">
+<span id="id6"></span><h2>Позивање кориснички дефинисаних функција<a class="headerlink" href="#callinguser-definedfunctions" title="Permalink to this headline">¶</a></h2>
+<p>Како би вредновао позивни израз чији оператор представља име кориснички дефинисане функције, Пајтонов интерпретатор прати рачунски поступак. Као и са сваким позивним изразом, интерпретатор вреднује изразе оператора и операнада и онда примењује именоване функције на добијеним аргументима.</p>
+<p>Примена кориснички дефинисане функције уноси други <em>локални</em> оквир који је само доступан тој функцији. Да се примени кориснички дефинисана функција не неке аргументе:</p>
+<ol class="arabic simple">
+<li><p>Повезати аргументе с именима формалних параметара функције у новом локалном оквиру.</p></li>
+<li><p>Извршити тело функције у окружењу које почиње овим новонаправљеним оквиром.</p></li>
+</ol>
+<p>Окружење у коме се тело вреднује састоји се из два оквира: прво локални оквир који садржи везе формалних параметара, а затим глобални оквир који садржи све остало. Сваки примерак примењене функције има свој засебан независан локални оквир.</p>
+<p>Како би се један пример детаљно илустровао, треба исцртати неколико корака у дијаграму окружења једног примера. Након извршења прве наредбе увоза, само је име <code class="docutils literal notranslate"><span class="pre">mul</span></code> повезано у глобалном оквиру.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">mul</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">квадрат</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">mul</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">квадрат</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+<span class="go">4</span>
+</pre></div>
+</div>
+<p>Најпре, наредба дефинисања функције <code class="docutils literal notranslate"><span class="pre">квадрат</span></code> је извршена. Треба приметити да се целокупна <code class="docutils literal notranslate"><span class="pre">def</span></code> наредба обрађује у једном кораку. Тело функције се не извршава приликом дефиниције функције, све док функција не буде позвана.</p>
+<p>Следеће, функција <code class="docutils literal notranslate"><span class="pre">квадрат</span></code> је позвана са аргументом <code class="docutils literal notranslate"><span class="pre">-2</span></code> па се ствара нови оквир с формалним параметром <code class="docutils literal notranslate"><span class="pre">x</span></code> повезаним на вредност <code class="docutils literal notranslate"><span class="pre">-2</span></code>.</p>
+<p>Затим, име <code class="docutils literal notranslate"><span class="pre">x</span></code> се тражи у тренутном окружењу које се састоји из два оквира. У овом случају <code class="docutils literal notranslate"><span class="pre">x</span></code> се вреднује у <code class="docutils literal notranslate"><span class="pre">-2</span></code> и тако функција <code class="docutils literal notranslate"><span class="pre">квадрат</span></code> враћа 4.</p>
+<p>Чак и у овом једноставном примеру, два различита окружења су коришћена. Израз <code class="docutils literal notranslate"><span class="pre">квадрат(-2)</span></code> из највишег нивоа се вреднује у глобалном окружењу док је повратни израз <code class="docutils literal notranslate"><span class="pre">mul(x,</span> <span class="pre">x)</span></code> вреднован у окружењу направљеном позивом <code class="docutils literal notranslate"><span class="pre">квадрат</span></code> функције. Оба имена и <code class="docutils literal notranslate"><span class="pre">x</span></code> и <code class="docutils literal notranslate"><span class="pre">mul</span></code> су повезана у овом окружењу, али у различитим оквирима.</p>
+<p>Редослед оквира у окружењу утиче на повратну вредност услед тражења имена у изразу. Претходно је наведено да се име вреднује у вредност која је придружена том имену у тренутном окружењу. У наставку ће се то још прецизирати.</p>
+<div class="section" id="nameevaluation">
+<span id="id7"></span><h3>Вредновање имена<a class="headerlink" href="#nameevaluation" title="Permalink to this headline">¶</a></h3>
+<p>Име се вреднује у вредност која је повезана на то име у најранијем оквиру тренутног окружења у коме је то име пронађено.</p>
+<p>Концептуални поредак окружења, имена и функција представља <em>модел вредновања</em>. И док су неке механичке појединости још увек неодређене (нпр. како је повезивање имплементирано), овај модел ради прецизно и тачно описује како интерпретатор вреднује позивне изразе. У претпоследњем поглављу ће бити показано како овај модел може послужити као нацрт имплементације радног интерпретатора неког програмског језика.</p>
+</div>
+</div>
+<div class="section" id="examplecallingauser-definedfunction">
+<span id="id8"></span><h2>Пример: Позивање кориснички дефинисане функције<a class="headerlink" href="#examplecallingauser-definedfunction" title="Permalink to this headline">¶</a></h2>
+<p>Размотримо изнова исте две једноставне дефиниције функција које илуструју поступак вредновања позивног израза кориснички дефинисане функције.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">add</span><span class="p">,</span> <span class="n">mul</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">квадрат</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">mul</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">збирКвадрата</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">add</span><span class="p">(</span><span class="n">квадрат</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">квадрат</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">збирКвадрата</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
+<span class="go">169</span>
+</pre></div>
+</div>
+<p>Пајтон најпре вреднује име <code class="docutils literal notranslate"><span class="pre">збирКвадрата</span></code> које је везано на кориснички дефинисану функцију у глобалном оквиру. Примитивни бројевни изрази 5 и 12 вреднују се у бројеве које представљају.</p>
+<p>Даље, Пајтон примењује <code class="docutils literal notranslate"><span class="pre">збирКвадрата</span></code> што уводи и локални оквир који повезује <code class="docutils literal notranslate"><span class="pre">x</span></code> на 5 и <code class="docutils literal notranslate"><span class="pre">y</span></code> на 12.</p>
+<p>Тело функције <code class="docutils literal notranslate"><span class="pre">збирКвадрата</span></code> садржи овај позивни израз:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span>     <span class="n">add</span>     <span class="p">(</span>  <span class="n">квадрат</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  <span class="p">,</span>  <span class="n">квадрат</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>  <span class="p">)</span>
+<span class="o">-</span>   <span class="n">________</span>     <span class="n">__________</span>     <span class="n">__________</span>
+<span class="o">-</span>   <span class="n">оператор</span>      <span class="n">операнд0</span>       <span class="n">операнд1</span>
+</pre></div>
+</div>
+<p>Сва три подизраза се вреднују у тренутном окружењу које почиње оквиром означеним са <code class="docutils literal notranslate"><span class="pre">збирКвадрата()</span></code>. Подизраз оператора <code class="docutils literal notranslate"><span class="pre">add</span></code> је име које се налази у глобалном оквиру и везано је на уграђену функцију за сабирање. Два подизраза за операнде морају бити вредновани по реду пре него што се примени функција сабирања. Оба операнда се вреднују у тренутном окружењу које почиње оквиром са ознаком <code class="docutils literal notranslate"><span class="pre">збирКвадрата</span></code>.</p>
+<p>У <code class="docutils literal notranslate"><span class="pre">операнд0</span></code>, име <code class="docutils literal notranslate"><span class="pre">квадрат</span></code> је кориснички дефинисана функција у глобалном оквиру, док је <code class="docutils literal notranslate"><span class="pre">x</span></code> име броја 5 у локалном оквиру. Пајтон примењује функцију <code class="docutils literal notranslate"><span class="pre">квадрат</span></code> на 5 уводећи још један локални оквир који повезује <code class="docutils literal notranslate"><span class="pre">x</span></code> на 5.</p>
+<p>Користећи ово окружење, израз <code class="docutils literal notranslate"><span class="pre">mul(x,</span> <span class="pre">x)</span></code> се вреднује у 25.</p>
+<p>Поступак вредновања сада прелази на <code class="docutils literal notranslate"><span class="pre">операнд1</span></code> за који <code class="docutils literal notranslate"><span class="pre">y</span></code> именује број 12. Пајтон вреднује тело функције <code class="docutils literal notranslate"><span class="pre">квадрат</span></code> поново, овога пута уводећи још један локални оквир који повезује <code class="docutils literal notranslate"><span class="pre">x</span></code> на 12. Стога, <code class="docutils literal notranslate"><span class="pre">операнд1</span></code> се вреднује у 144.</p>
+<p>Коначно, примењујући сабирање на аргументима 25 и 144 доноси крајњу повратну вредност за <code class="docutils literal notranslate"><span class="pre">збирКвадрата</span></code>: 169.</p>
+<p>Овај пример илуструје много темељних идеја које су до сада развијене. Имена су повезана на вредности које су расподељене преко више независних локалних оквира упоредо са јединственим глобалним оквиром који садржи дељена имена. Нови локални оквир се уводи сваки пут када је функција позвана, чак и ако се иста функција позива двапут.</p>
+<p>Сва ова машинерија постоји како би осигурала да се имена разлучују у тачне вредности и у тачним временским тренуцима током извршавања програма. Овај пример илуструје зашто модел захтева сву сложеност која је уведена. Сва три локална оквира садрже везу имена <code class="docutils literal notranslate"><span class="pre">x</span></code>, али је то име везано на различите вредности у различитим оквирима. Локални оквири су ти који држе ова имена раздвојена.</p>
+</div>
+<div class="section" id="localnames">
+<span id="id9"></span><h2>Локална имена<a class="headerlink" href="#localnames" title="Permalink to this headline">¶</a></h2>
+<p>Једна појединост у имплементацији функције која не би требало да утиче на понашање функције јесте избор имена за формалне параметре функције. Па тако следеће две функције имају идентично понашање:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">квадрат</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">mul</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">квадрат</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">mul</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Овај принцип – да је значење функције независно од имена параметара одабраних од стране њеног аутора -  има важне последице на програмске језике. Најпростија последица јесте да имена параметара функције морају остати локални за тело те функције.</p>
+<p>Уколико параметри не би били локални за тело њима одговарајуће функције, тада би параметар <code class="docutils literal notranslate"><span class="pre">x</span></code> у функцији <code class="docutils literal notranslate"><span class="pre">квадрат</span></code> могао бити побркан са параметром  <code class="docutils literal notranslate"><span class="pre">x</span></code> у <code class="docutils literal notranslate"><span class="pre">збирКвадрата</span></code>. Критично је да ово није случај: везе имена <code class="docutils literal notranslate"><span class="pre">x</span></code> у различитим локалним оквирима су неповезане. Модел израчунавања је пажљиво пројектован да осигура ову независност.</p>
+<p>Каже се да је <a class="reference external" href="http://sr.wikipedia.org/wiki/Област_видљивости">област видљивости</a> локалног имена ограничена на тело кориснички дефинисане функције која га дефинише. Када неко име више није доступно, оно је ван области видљивости. Ово понашање које се тиче видљивости није нова ставка у представљеном моделу већ је последица начина на који окружења раде.</p>
+</div>
+<div class="section" id="choosingnames">
+<span id="id11"></span><h2>Избор имена<a class="headerlink" href="#choosingnames" title="Permalink to this headline">¶</a></h2>
+<p>Заменљивост имена не подразумева да су имена формалних параметара потпуно неважна. Напротив, добро изабрана имена функције и параметара су кључна за читљивост и људску интерпретацију дефиниција функција!</p>
+<p>Следеће смернице су преузете из <a class="reference external" href="http://www.python.org/dev/peps/pep-0008">стилских путоказа за Пајтон код</a> који служи као водич за све (нејеретички и неодметнички настројене) Пајтон програмере. Заједнички скуп правила олакшава комуникацију међу члановима развојне заједнице. Као нуспојава праћења ових договора и споразума и сопствени код постаје све више и интерно конзистентан.</p>
+<ol class="arabic simple">
+<li><p>Имена функција се пишу малим словима при чему су речи раздвојене подвлакама. Охрабрују се описна имена.</p></li>
+<li><p>Имена функција обично евоцирају операције примењене над аргументима од стране интерпретатора (нпр. <code class="docutils literal notranslate"><span class="pre">print</span></code>, <code class="docutils literal notranslate"><span class="pre">add</span></code>, <code class="docutils literal notranslate"><span class="pre">квадрат</span></code>) или име резултата (нпр. <code class="docutils literal notranslate"><span class="pre">max</span></code>, <code class="docutils literal notranslate"><span class="pre">abs</span></code>, <code class="docutils literal notranslate"><span class="pre">sum</span></code>).</p></li>
+<li><p>Имена параметара се пишу малим словима при чему су речи раздвојене подвлакама иако су пожељна имена која се састоје из само једне речи.</p></li>
+<li><p>Имена параметара требало би да евоцирају на њихову улогу у функцији, а не само дозвољену врсту аргумента.</p></li>
+<li><p>Једнословна имена параметара су прихватљива када је им је улога очигледна, али треба избегавати мало латинично слово <code class="docutils literal notranslate"><span class="pre">l</span></code>, велика латинична слова <code class="docutils literal notranslate"><span class="pre">O</span></code> или <code class="docutils literal notranslate"><span class="pre">I</span></code> како би се избегла збрка са цифрама.</p></li>
+</ol>
+<p>Постоји много изузетака од ових смерница чак и у самој Пајтон стандардној библиотеци. Као и речници природних језика, Пајтон је наследио речи које потичу од разних сарадника па крајњи резултат није увек конзистентан.</p>
+</div>
+<div class="section" id="functionsasabstractions">
+<span id="id13"></span><h2>Функције као апстракције<a class="headerlink" href="#functionsasabstractions" title="Permalink to this headline">¶</a></h2>
+<p>Иако веома једноставан, <code class="docutils literal notranslate"><span class="pre">збирКвадрата</span></code> показује најмоћније својство кориснички дефинисаних функција. Функција <code class="docutils literal notranslate"><span class="pre">збирКвадрата</span></code> је дефинисана у смислу функције <code class="docutils literal notranslate"><span class="pre">квадрат</span></code>, али се ослања само на однос који <code class="docutils literal notranslate"><span class="pre">квадрат</span></code> дефинише између њених улазних аргумената и њених излазних вредности.</p>
+<p>Наиме, може се написати <code class="docutils literal notranslate"><span class="pre">збирКвадрата</span></code> неоптерећујући се <em>како</em> квадрирати број. Појединости како се рачуна квадрат се могу потиснути и одложити за касније разматрање. Збиља, што се <code class="docutils literal notranslate"><span class="pre">збирКвадрата</span></code> тиче, <code class="docutils literal notranslate"><span class="pre">квадрат</span></code> не представља посебно тело функције већ апстракцију функције, односно такозвану функционалну апстракцију. На овом нивоу апстракције, свака функција која исправно рачуна квадрат је подједнако добра.</p>
+<p>Тако, узимајући у обзир само вредности које враћају, следеће две функције за квадрирање броја су међусобно неразлучиве. Обе узимају бројевни аргумент и производе квадрат тог броја као вредност.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">квадрат</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">mul</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">квадрат</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">mul</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">x</span>
+</pre></div>
+</div>
+<p>Другим речима, дефиниције функција треба да су у стању да потисну појединости. Корисници функције можда нису сами писали те функције већ су их добили од другог програмера као „црну кутију”. Нема потребе да програмер зна како је функција имлементирана да би је користио. Сама Пајтон библиотека има ову особину. Многи програмери користе функције које су тамо дефинисане, али мали број њих икада прегледа њихову имплементацију.</p>
+<div class="section" id="aspectsofafunctionalabstraction">
+<span id="id14"></span><h3>Аспекти функционалне апстракције<a class="headerlink" href="#aspectsofafunctionalabstraction" title="Permalink to this headline">¶</a></h3>
+<p>Да се савлада и усаврши коришћење функционалне апстракције, често је корисно размотрити три њена основна атрибута. Такозвани <em>домен</em> функције је скуп аргумената које узима. С друге стране, <em>опсег</em> функције је скуп свих вредности које функција може да врати. Коначно, <em>намера</em> функције је веза између улаза и израчунатих излаза (као и потенцијалних бочних ефеката које може имати). Разумевање функционалних апстракција кроз њихов домен, опсег и намеру је од пресудног значаја за њихову исправну употребу у сложеним програмима.</p>
+<p>На пример, свака функција <code class="docutils literal notranslate"><span class="pre">квадрат</span></code> коју користимо да имплементирамо <code class="docutils literal notranslate"><span class="pre">збирКвадрата</span></code> треба имати следеће особине:</p>
+<ul class="simple">
+<li><p><em>Домен</em> је било који реалан број.</p></li>
+<li><p><em>Опсег</em> је ма који ненегативан реалан број.</p></li>
+<li><p><em>Намера</em> је да је излаз једнак квадрату улаза.</p></li>
+</ul>
+<p>Ове особине не указују на то како се намера извршава, односно та појединост је апстракована.</p>
+</div>
+</div>
+<div class="section" id="operators">
+<span id="id15"></span><h2>Оператори<a class="headerlink" href="#operators" title="Permalink to this headline">¶</a></h2>
+<p>Математички оператори (као што су <code class="docutils literal notranslate"><span class="pre">+</span></code> и <code class="docutils literal notranslate"><span class="pre">-</span></code>) обезбедили су прве примере методе комбиновања, али још увек нису дефинисани поступци вредновања израза који садрже ове операторе.</p>
+<p>Сваки Пајтон израз с инфиксним операторима има свој поступак вредновања, али се о њему може често размишљати као о скраћеници за одговарајући позивни израз. Када се види</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span>
+<span class="go">5</span>
+</pre></div>
+</div>
+<p>једноставно сматрати да је то скраћени облик за</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="go">5</span>
+</pre></div>
+</div>
+<p>Инфиксни запис се може угнежђивати, баш као и позивни изрази. Пајтон примењује уобичајена математичка правила за редослед и приоритет оператора која налажу како интерпретирати сложене изразе са више оператора. Наиме,</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">*</span> <span class="mi">4</span> <span class="o">+</span> <span class="mi">5</span>
+<span class="go">19</span>
+</pre></div>
+</div>
+<p>се вреднује тако да даје идентичан резултат као и</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">add</span><span class="p">(</span><span class="n">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">mul</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)),</span> <span class="mi">5</span><span class="p">)</span>
+<span class="go">19</span>
+</pre></div>
+</div>
+<p>Угнежђивање позивних израза је недвосмислено и свакако експлицитније него ли угнежђивање самих математичких оператора, али и знатно теже за читање. Пајтон такође дозвољава груписање подизраза заградама како би се заобишла уобичајена правила редоследа оператора или пак нагласила угнежђена структура израза. Рецимо,</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">4</span> <span class="o">+</span> <span class="mi">5</span><span class="p">)</span>
+<span class="go">45</span>
+</pre></div>
+</div>
+<p>се вреднује у исти резултат као</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mul</span><span class="p">(</span><span class="n">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">add</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="go">45</span>
+</pre></div>
+</div>
+<p>Када је у питању дељење, Пајтон обезбеђује два инфиксна оператора: <code class="docutils literal notranslate"><span class="pre">/</span></code> и <code class="docutils literal notranslate"><span class="pre">//</span></code>. Први представља обично дељење с тим што је количник увек <em>реалан број</em>, односно децимална вредност, чак и у случају да је дељеник дељив делиоцем:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">5</span> <span class="o">/</span> <span class="mi">4</span>
+<span class="go">1.25</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">8</span> <span class="o">/</span> <span class="mi">4</span>
+<span class="go">2.0</span>
+</pre></div>
+</div>
+<p>Оператор <code class="docutils literal notranslate"><span class="pre">//</span></code>, с друге стране, заокружује резултат дељења на целобројну вредност и представља такозвано целобројно дељење:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">5</span> <span class="o">//</span> <span class="mi">4</span>
+<span class="go">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="o">-</span><span class="mi">5</span> <span class="o">//</span> <span class="mi">4</span>
+<span class="go">-2</span>
+</pre></div>
+</div>
+<p>Ова два оператора су скраћенице за <code class="docutils literal notranslate"><span class="pre">truediv</span></code> и <code class="docutils literal notranslate"><span class="pre">floordiv</span></code> функције.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">truediv</span><span class="p">,</span> <span class="n">floordiv</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">truediv</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="go">1.25</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">floordiv</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="go">1</span>
+</pre></div>
+</div>
+<p>Програмери се охрабрују да користе инфиксне операторе и заграде у својим програмима. Идиоматски гледано, Пајтон је наклоњенији употреби оператора над позивним изразима у једноставним математичким операцијама.</p>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Елементи програмирања' data-toggle="tooltip"><a href="2-елементи-програмирања.html">Претходно поглавље</a></li>
+    
+        <li id="relations-next" title='Next chapter - Пројектовање функција' data-toggle="tooltip"><a href="4-пројектовање-функција.html">Следеће поглавље</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Елементи програмирања' data-toggle="tooltip"><a href="2-елементи-програмирања.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Пројектовање функција' data-toggle="tooltip"><a href="4-пројектовање-функција.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="pull-left">&copy; 2019 Petlja (Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

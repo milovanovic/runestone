@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sr"></html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Имплицитне секвенце &#8212; Компоновање рачунарских програма</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/simanim.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pycode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/p5js.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dbDirective.css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-runestone.css" type="text/css" />
+    <link rel="stylesheet" href="../_staticnbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../_static/Blob.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="../_static/blockpy-modal.js"></script>
+    <script type="text/javascript" src="../_static/simanim.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.16.1/full/pyodide.js"></script>
+    <script type="text/javascript" src="../_static/pycode.js"></script>
+    <script type="text/javascript" src="//toolness.github.io/p5.js-widget/p5-widget.js"></script>
+    <script type="text/javascript" src="../_static/p5js.js"></script>
+    <script type="text/javascript" src="../_static/gallery.js"></script>
+    <script type="text/javascript" src="../_static/dbDirective.js"></script>
+    <script type="text/javascript" src="../_static/sql.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="../_static/require.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Расподељено израчунавање" href="6-расподељено-израчунавање.html" />
+    <link rel="prev" title="Увод" href="1-увод.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host + '/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+  eBookConfig.course = 'krp';
+  eBookConfig.logLevel = '0';
+  eBookConfig.loginRequired = 'false';
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = 'false';
+  eBookConfig.python3 = 'true';
+  eBookConfig.basecourse = 'krp';
+  eBookConfig.runestone_version = '';
+  eBookConfig.imagesDir = '../_images/';
+  eBookConfig.staticDir = '../_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="../_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="../">Компоновање рачунарских програма</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content" style="margin-top: 70px;">
+  
+  <div class="section" id="implicitsequences">
+<span id="id1"></span><h1>Имплицитне секвенце<a class="headerlink" href="#implicitsequences" title="Permalink to this headline">¶</a></h1>
+<p>Низ се може представити без да се сваки члан експлицитно чува у меморији рачунара. Односно, може да се направи објекат који омогућава приступ свим члановима неког секвенцијалног скупа података без да се израчунавају вредност сваког члана унапред. Уместо тога, чланови се израчунавају на захтев.</p>
+<p>Пример ове идеје јавља се у типу података распона или <code class="docutils literal notranslate"><span class="pre">range</span></code> представљеном у другом поглављу. Распон, односно <code class="docutils literal notranslate"><span class="pre">range</span></code> представља узастопну, ограничену секвенцу целих бројева. Међутим, није случај да је сваки члан те секвенце експлицитно представљен у рачунарској меморији. Уместо тога, када се члан из <code class="docutils literal notranslate"><span class="pre">range</span></code> то јест распона затражи, он се израчунава. Дакле, могу се представити веома велики распони целих бројева без употребе великих блокова меморије. Само су крајње тачке распона похрањене као део <code class="docutils literal notranslate"><span class="pre">range</span></code> објекта.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">р</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10000</span><span class="p">,</span> <span class="mi">1000000000</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">р</span><span class="p">[</span><span class="mi">45006230</span><span class="p">]</span>
+<span class="go">45016230</span>
+</pre></div>
+</div>
+<p>У овом примеру се не складиште свих 999’990’000 целих бројева у овом распону када се инстанца распона ствара. Уместо тога, објект распона додаје први члан 10’000 индексу 45’006’230 да би произвео члан 45’016’230. Израчунавање вредности на захтев, уместо преузимања истих из постојеће представе, пример је такозваног <em>лењег</em> израчунавања. У рачунарству, лења израчунавања описују било који програм који одлаже израчунавања вредности док те вредности нису неопходне.</p>
+<div class="section" id="iterators">
+<span id="id2"></span><h2>Итератори<a class="headerlink" href="#iterators" title="Permalink to this headline">¶</a></h2>
+<p>Пајтон као и многи други програмски језици пружају јединствени начин секвенцијалне обраде чланова неког садржаоца истих који се назива итератор. <em>Итератор</em> је објекат који пружа секвенцијални приступ вредностима, једну по једну.</p>
+<p>Апстракција итератора има две компоненте: механизам проналажења следећег члана у секвенци која се обрађује и механизам сигнализације да је достигнут крај секвенце и да не преостаје више ниједан члан. За било који садржалац, попут низова или опсега, итератор се може добити позивањем уграђене <code class="docutils literal notranslate"><span class="pre">iter</span></code> функције. Садржају итератора може се приступити позивом уграђене <code class="docutils literal notranslate"><span class="pre">next</span></code> функције.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">прости</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">прости</span><span class="p">)</span>
+<span class="go">&lt;class &#39;list&#39;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">итератор</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">прости</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">итератор</span><span class="p">)</span>
+<span class="go">&lt;class &#39;list_iterator&#39;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">итератор</span><span class="p">)</span>
+<span class="go">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">итератор</span><span class="p">)</span>
+<span class="go">3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">итератор</span><span class="p">)</span>
+<span class="go">5</span>
+</pre></div>
+</div>
+<p>Пајтон сигнализира да нема више преосталих вредности подижући <code class="docutils literal notranslate"><span class="pre">StopIteration</span></code> изузетак након <code class="docutils literal notranslate"><span class="pre">next</span></code> позива. Овај изузетак се може обрадити користећи се <code class="docutils literal notranslate"><span class="pre">try</span></code> наредбом.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">итератор</span><span class="p">)</span>
+<span class="go">7</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">итератор</span><span class="p">)</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+<span class="gr">StopIteration</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">try</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">next</span><span class="p">(</span><span class="n">итератор</span><span class="p">)</span>
+<span class="gp">... </span><span class="k">except</span> <span class="ne">StopIteration</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Нема више вредности!&#39;</span><span class="p">)</span>
+<span class="go">Нема више вредности!</span>
+</pre></div>
+</div>
+<p>Итератор одржава локално стање да представи свој положај унутар секвенце. Сваки пут када се <code class="docutils literal notranslate"><span class="pre">next</span></code> позове, тај положај напредује. Два одвојена итератора могу пратити два различита положаја унутар исте секвенце. Међутим, два имена за исти итератор делиће исти положај јер деле и исту вредност.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">о</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">13</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">п</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">о</span><span class="p">)</span>  <span class="c1"># први итератор кроз о</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">п</span><span class="p">)</span>
+<span class="go">3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">п</span><span class="p">)</span>
+<span class="go">4</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">р</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">о</span><span class="p">)</span>  <span class="c1"># други итератор кроз о</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">р</span><span class="p">)</span>
+<span class="go">3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">р</span><span class="p">)</span>
+<span class="go">4</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">с</span> <span class="o">=</span> <span class="n">р</span>        <span class="c1"># Резервно име за други итератор</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">с</span><span class="p">)</span>
+<span class="go">5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">с</span><span class="p">)</span>
+<span class="go">6</span>
+</pre></div>
+</div>
+<p>Напредовање другог итератора не утиче на први. Пошто је последња вредност враћена од стране првог итератора била 4, његов положај је остао да врати 5 у наредној итерацији. С друге стране, други итератор је у положају да врати 7 у наредној итерацији.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">п</span><span class="p">)</span>
+<span class="go">5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">р</span><span class="p">)</span>
+<span class="go">7</span>
+</pre></div>
+</div>
+<p>Позивање уграђене <code class="docutils literal notranslate"><span class="pre">iter</span></code> функције над итератором вратиће тај итератор, а не његову копију. Ово понашање је укључено у Пајтон, тако да програмер може позвати <code class="docutils literal notranslate"><span class="pre">iter</span></code> с неком вредношћу како би добио итератор без потребе да брине да ли је она већ итератор или садржалац.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">т</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">р</span><span class="p">)</span>  <span class="c1"># Још једно резервно име за други итератор</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">т</span><span class="p">)</span>
+<span class="go">8</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">с</span><span class="p">)</span>
+<span class="go">9</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">р</span><span class="p">)</span>
+<span class="go">10</span>
+</pre></div>
+</div>
+<p>Корисност итератора произилази из чињенице да секвенца података која је основа за итератор и која заправо лежи испод итератора можда неће бити експлицитно представљена у меморији рачунара. Итератор пружа механизам за разматрање по редоследу сваке вредности у секвенци, али сви ти чланови не морају бити ускладиштени истовремено. Уместо тога, када се од итератора затражи следећи члан, тај члан се може израчунати на захтев, уместо да се преузме из већ постојећег меморијског извора.</p>
+<p>Опсези могу лењо да израчунају чланове секвенце пошто је представљена секвенца уједначена, а било који члан унутар опсега је лако израчунати из почетне и крајње границе опсега. Итератори омогућавају лења генерисања много шире класе секвенцијалних скупова података јер не треба да подрже приступ произвољним члановима секвенце која се налази у основи итератора. Уместо тога, од итератора се тражи да израчунају само први следећи члан секвенце, редоследом, сваки пут када се затражи други члан. Иако није тако флексибилан као <em>случајни приступ</em> (односно приступ произвољним члановима секвенце у било ком редоследу), <em>секвенцијални приступ</em> секвенцијалним подацима је често довољан за примене у обради података.</p>
+</div>
+<div class="section" id="iterables">
+<span id="id3"></span><h2>Итерирајуће вредности<a class="headerlink" href="#iterables" title="Permalink to this headline">¶</a></h2>
+<p>Свака вредност која може да произведе итераторе назива се <em>итерирајућа вредност</em>. У Пајтону, итерирајућа вредност је све што се може проследити уграђеној <code class="docutils literal notranslate"><span class="pre">iter</span></code> функцији. Итерирајуће вредности укључују секвенце као што су ниске и поворке, као и друге садржаоце као што су скупови и речници. Итератори су такође и сами итерирајуће вредности јер се могу проследити <code class="docutils literal notranslate"><span class="pre">iter</span></code> функцији.</p>
+<p>Чак и неуређене структуре података, попут речника у Пајтону 3.5 и старијим верзијама, морају дефинисати редослед над својим садржајем када производе итераторе. Речници и скупови раније нису били уређени јер програмер није имао контролу над редоследом итерација, али Пајтон у својој спецификацији гарантује одређена својства њиховог редоследа.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">р</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;један&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;два&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;три&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">р</span>
+<span class="go">{&#39;један&#39;: 1, &#39;два&#39;: 2, &#39;три&#39;: 3}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">к</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">р</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">к</span><span class="p">)</span>
+<span class="go">&#39;један&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">к</span><span class="p">)</span>
+<span class="go">&#39;два&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">в</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">р</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">в</span><span class="p">)</span>
+<span class="go">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">в</span><span class="p">)</span>
+<span class="go">2</span>
+</pre></div>
+</div>
+<p>Уколико се структура речника промени услед додавања или уклањања одређеног кључа, тада сви постојећи итератори над тим речником постају неважећи, а будући итератори могу имати измењен редослед њиховог садржаја у односу на претходне. С друге стране, промена вредности постојећег кључа не доводи до престанка важења итератора или промене редоследа у њиховом садржају.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">р</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;два&#39;</span><span class="p">)</span>
+<span class="go">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">к</span><span class="p">)</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+<span class="gr">RuntimeError</span>: <span class="n">dictionary changed size during iteration</span>
+</pre></div>
+</div>
+<p>Наредба <code class="docutils literal notranslate"><span class="pre">for</span></code> се може користити за пролазак кроз садржај ма ког итератора или итерирајуће вредности.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">о</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">и</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">о</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">и</span><span class="p">)</span>
+<span class="go">3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">и</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="go">4</span>
+<span class="go">5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">и</span><span class="p">)</span>
+<span class="go">[]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">о</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="go">3</span>
+<span class="go">4</span>
+<span class="go">5</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="built-initerators">
+<span id="id4"></span><h2>Уграђени итератори<a class="headerlink" href="#built-initerators" title="Permalink to this headline">¶</a></h2>
+<p>Неколико уграђених функција прима итерирајуће вредности као аргументе и враћа итераторе. Ове функције се широко користе за лењу обраду секвенци.</p>
+<p>Функција <code class="docutils literal notranslate"><span class="pre">map</span></code> је лења: њен позив не врши рачунање неопходно за израчунавање чланова њеног резултата. Уместо тога, ствара се објекат итератора који може вратити резултате ако траже преко <code class="docutils literal notranslate"><span class="pre">next</span></code> функције. Ова чињеница може се уочити у следећем примеру у ком се <code class="docutils literal notranslate"><span class="pre">print</span></code> позив одлаже све док се одговарајући члан не затражи од <code class="docutils literal notranslate"><span class="pre">удвостручен</span></code>-ог итератора.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">удвостручиИиспиши</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;***&#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="s1">&#39;=&gt;&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="p">,</span> <span class="s1">&#39;***&#39;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">о</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">удвостручен</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="n">удвостручиИиспиши</span><span class="p">,</span> <span class="n">о</span><span class="p">)</span>  <span class="c1"># удвостручиИиспиши још није позвана</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">удвостручен</span><span class="p">)</span>                        <span class="c1"># удвостручиИиспиши је позвана једанпут</span>
+<span class="go">*** 3 =&gt; 6 ***</span>
+<span class="go">6</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">удвостручен</span><span class="p">)</span>                        <span class="c1"># удвостручиИиспиши је позвана поново</span>
+<span class="go">*** 4 =&gt; 8 ***</span>
+<span class="go">8</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">удвостручен</span><span class="p">)</span>                        <span class="c1"># удвостручиИиспиши је позвана још двапут</span>
+<span class="go">*** 5 =&gt; 10 ***</span>
+<span class="go">*** 6 =&gt; 12 ***</span>
+<span class="go">[10, 12]</span>
+</pre></div>
+</div>
+<p>Уграђена функција <code class="docutils literal notranslate"><span class="pre">filter</span></code> враћа итератор кроз неки подскуп итерирајуће вредности која јој је прослеђена као аргумент. С друге стране уграђена функција <code class="docutils literal notranslate"><span class="pre">zip</span></code> враћа итератор кроз поворку вредности која комбинује по једну вредност из сваке од више прослеђених јој итерирајућих вредности. Такође и уграђена функција <code class="docutils literal notranslate"><span class="pre">reversed</span></code> враћа итератор кроз улазну секвенцу, само у обрнутом редоследу од изворног.</p>
+</div>
+<div class="section" id="for">
+<span id="forstatements"></span><h2>For наредбе/петље<a class="headerlink" href="#for" title="Permalink to this headline">¶</a></h2>
+<p>Наредба <code class="docutils literal notranslate"><span class="pre">for</span></code> у Пајтону делује на итераторима. Објекти су <em>итерирајуће вредности</em> (сучеље) ако имају <code class="docutils literal notranslate"><span class="pre">__iter__</span></code> методу која враћа итератор. Објекти итерирајућих вредности могу бити вредност у коју се вреднује <code class="docutils literal notranslate"><span class="pre">&lt;израз&gt;</span></code> у заглављу <code class="docutils literal notranslate"><span class="pre">for</span></code> наредбе:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="o">&lt;</span><span class="n">име</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">израз</span><span class="o">&gt;</span><span class="p">:</span>
+    <span class="o">&lt;</span><span class="n">пакет</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Да би извршио <code class="docutils literal notranslate"><span class="pre">for</span></code> наредбу, Пајтон вреднује <code class="docutils literal notranslate"><span class="pre">&lt;израз&gt;</span></code> у заглављу, који мора да враћа итерирајућу вредност. Затим се на ту вредност примењује <code class="docutils literal notranslate"><span class="pre">iter</span></code> функција. Све док се не подигне <code class="docutils literal notranslate"><span class="pre">StopIteration</span></code> изузетак, Пајтон изнова у више наврата позива <code class="docutils literal notranslate"><span class="pre">next</span></code> над тим итератором и резултат повезује на <code class="docutils literal notranslate"><span class="pre">&lt;име&gt;</span></code> у <code class="docutils literal notranslate"><span class="pre">for</span></code> наредби. Затим извршава <code class="docutils literal notranslate"><span class="pre">&lt;пакет&gt;</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">бројеви</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">члан</span> <span class="ow">in</span> <span class="n">бројеви</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">члан</span><span class="p">)</span>
+<span class="go">1</span>
+<span class="go">2</span>
+<span class="go">3</span>
+</pre></div>
+</div>
+<p>У горњем примеру, наредба <code class="docutils literal notranslate"><span class="pre">for</span></code> имплицитно позива функцију <code class="docutils literal notranslate"><span class="pre">iter(бројеви)</span></code>, која враћа итератор кроз садржај. Наредба <code class="docutils literal notranslate"><span class="pre">for</span></code> затим позива <code class="docutils literal notranslate"><span class="pre">next</span></code> над тим итератором и сваки пут додељује враћену вредност променљивој <code class="docutils literal notranslate"><span class="pre">члан</span></code>. Овај процес се наставља све док итератор не подигне <code class="docutils literal notranslate"><span class="pre">StopIteration</span></code> изузетак, у ком тренутку се завршава извршавање <code class="docutils literal notranslate"><span class="pre">for</span></code> наредбе/петље.</p>
+<p>Опскрбљени знањем итератора, може се имплементирати правило извршавања <code class="docutils literal notranslate"><span class="pre">for</span></code> наредбе преко <code class="docutils literal notranslate"><span class="pre">while</span></code> наредбе, наредбе доделе, и <code class="docutils literal notranslate"><span class="pre">try</span></code> наредбе.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">чланови</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">бројеви</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">try</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="n">члан</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">чланови</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="nb">print</span><span class="p">(</span><span class="n">члан</span><span class="p">)</span>
+<span class="gp">... </span><span class="k">except</span> <span class="ne">StopIteration</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">pass</span>
+<span class="go">1</span>
+<span class="go">2</span>
+<span class="go">3</span>
+</pre></div>
+</div>
+<p>Горе, итератор враћен позивањем <code class="docutils literal notranslate"><span class="pre">iter</span></code> на <code class="docutils literal notranslate"><span class="pre">бројеви</span></code> везан је на име <code class="docutils literal notranslate"><span class="pre">чланови</span></code> тако да се може редом испитивати за сваки члан редоследом. Клаузула за обраду <code class="docutils literal notranslate"><span class="pre">StopIteration</span></code> изузетка не ради ништа изузев што руковођење изузетком пружа управљачки механизам за излазак из <code class="docutils literal notranslate"><span class="pre">while</span></code> петље.</p>
+</div>
+<div class="section" id="iteratorinterface">
+<span id="id5"></span><h2>Сучеље итератора<a class="headerlink" href="#iteratorinterface" title="Permalink to this headline">¶</a></h2>
+<p>Сучеље итератора у Пајтону дефинисано је користећи се методом под називом <code class="docutils literal notranslate"><span class="pre">__next__</span></code> која враћа следећи члан неке секвенце која се налази у основи итератора. Као одговор на позивање <code class="docutils literal notranslate"><span class="pre">__next__</span></code> методе, итератор може извршити произвољно израчунавање како би дохватио или израчунао следећи члан секвенце. Позиви <code class="docutils literal notranslate"><span class="pre">__next__</span></code> методе врше мутирајућу промену на итератору: они мењају положај итератора. Стога ће вишеструки позиви <code class="docutils literal notranslate"><span class="pre">__next__</span></code> методи по редоследу враћати чланове секвенце који леже у основи итератора. Пајтон обавештава да је дошло до краја основне секвенце подизањем <code class="docutils literal notranslate"><span class="pre">StopIteration</span></code> изузетка приликом позива на <code class="docutils literal notranslate"><span class="pre">__next__</span></code>.</p>
+<p>Класа <code class="docutils literal notranslate"><span class="pre">СловаИтер</span></code> из наставка итерира кроз низ слова који се налази у њеној основи почевши од слова <code class="docutils literal notranslate"><span class="pre">почетак</span></code> па све до слова <code class="docutils literal notranslate"><span class="pre">крај</span></code>, не укључујући га. Атрибут инстанце <code class="docutils literal notranslate"><span class="pre">следећеСлово</span></code> чува следеће слово које треба вратити. Метода <code class="docutils literal notranslate"><span class="pre">__next__</span></code> враћа ово слово и користи га за израчунавање нове вредности атрибута <code class="docutils literal notranslate"><span class="pre">следећеСлово</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">СловаИтер</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Итератор кроз слова по азбучном редоследу.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">почетак</span><span class="o">=</span><span class="s1">&#39;а&#39;</span><span class="p">,</span> <span class="n">крај</span><span class="o">=</span><span class="s1">&#39;е&#39;</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="bp">self</span><span class="o">.</span><span class="n">следећеСлово</span> <span class="o">=</span> <span class="n">почетак</span>
+<span class="gp">... </span>        <span class="bp">self</span><span class="o">.</span><span class="n">крај</span> <span class="o">=</span> <span class="n">крај</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__next__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">следећеСлово</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">крај</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="k">raise</span> <span class="ne">StopIteration</span>
+<span class="gp">... </span>        <span class="n">слово</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">следећеСлово</span>
+<span class="gp">... </span>        <span class="bp">self</span><span class="o">.</span><span class="n">следећеСлово</span> <span class="o">=</span> <span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">слово</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">слово</span>
+</pre></div>
+</div>
+<p>Користећи ову класу, можемо приступити словима у секвенци користећи <code class="docutils literal notranslate"><span class="pre">__next__</span></code> методу или уграђену <code class="docutils literal notranslate"><span class="pre">next</span></code> функцију која позива методу <code class="docutils literal notranslate"><span class="pre">__next__</span></code> свог аргумента.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">словаИтер</span> <span class="o">=</span> <span class="n">СловаИтер</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">словаИтер</span><span class="o">.</span><span class="fm">__next__</span><span class="p">()</span>
+<span class="go">&#39;а&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">словаИтер</span><span class="o">.</span><span class="fm">__next__</span><span class="p">()</span>
+<span class="go">&#39;б&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">словаИтер</span><span class="p">)</span>
+<span class="go">&#39;в&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">словаИтер</span><span class="p">)</span>
+<span class="go">&#39;г&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">словаИтер</span><span class="o">.</span><span class="fm">__next__</span><span class="p">()</span>
+<span class="go">&#39;д&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">словаИтер</span><span class="o">.</span><span class="fm">__next__</span><span class="p">()</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">12</span>, in <span class="n">next</span>
+<span class="gr">StopIteration</span>
+</pre></div>
+</div>
+<p>Итератори су променљиви: током напредовања они прате положај у некој секвенци вредности која се налази у њиховој основи. Када се дође до краја, итератор је искоришћен и потрошен. Кроз инстанцу класе <code class="docutils literal notranslate"><span class="pre">СловаИтер</span></code> може се проћи само једном. Након што њена метода <code class="docutils literal notranslate"><span class="pre">__next__()</span></code> први пут подигне <code class="docutils literal notranslate"><span class="pre">StopIteration</span></code> изузетак, она то наставља да чини и приликом сваког следећег позива. Типично, итератори се не ресетују већ се уместо тога стварају нове инстанце за започињање нових итерација.</p>
+<p>Итератори такође омогућавају представљање бесконачних секвенци импелемнтацијом <code class="docutils literal notranslate"><span class="pre">__next__</span></code> методе која никада не подиже <code class="docutils literal notranslate"><span class="pre">StopIteration</span></code> изузетак. На пример, класа <code class="docutils literal notranslate"><span class="pre">Позитивни</span></code> дата у наставку пролази кроз бесконачни низ позитивних целих бројева. Уграђена функција <code class="docutils literal notranslate"><span class="pre">next</span></code> у Пајтону позива методу <code class="docutils literal notranslate"><span class="pre">__next__</span></code> свог аргумента.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Позитивни</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="bp">self</span><span class="o">.</span><span class="n">следећиПозитиван</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__next__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="n">резултат</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">следећиПозитиван</span>
+<span class="gp">... </span>        <span class="bp">self</span><span class="o">.</span><span class="n">следећиПозитиван</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">резултат</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">п</span> <span class="o">=</span> <span class="n">Позитивни</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">п</span><span class="p">)</span>
+<span class="go">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">п</span><span class="p">)</span>
+<span class="go">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">п</span><span class="p">)</span>
+<span class="go">3</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="iterableinterface">
+<span id="id6"></span><h2>Сучеље итерирајућих вредности<a class="headerlink" href="#iterableinterface" title="Permalink to this headline">¶</a></h2>
+<p>Објекат је итерабилан ако враћа итератор када се позове његова <code class="docutils literal notranslate"><span class="pre">__iter__</span></code> метода. Итерирајуће вредности представљају колекције података и пружају сталну представу која може произвести више од једног итератора.</p>
+<p>На пример, инстанца класе <code class="docutils literal notranslate"><span class="pre">Слова</span></code> у наставку представља секвенцу узастопних слова. Сваки пут када се позове њена <code class="docutils literal notranslate"><span class="pre">__iter__</span></code> метода гради се нова инстанца <code class="docutils literal notranslate"><span class="pre">СловаИтер</span></code> која омогућава секвенцијални приступ садржају секвенце.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Слова</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">почетак</span><span class="o">=</span><span class="s1">&#39;а&#39;</span><span class="p">,</span> <span class="n">крај</span><span class="o">=</span><span class="s1">&#39;е&#39;</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="bp">self</span><span class="o">.</span><span class="n">почетак</span> <span class="o">=</span> <span class="n">почетак</span>
+<span class="gp">... </span>        <span class="bp">self</span><span class="o">.</span><span class="n">крај</span> <span class="o">=</span> <span class="n">крај</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">СловаИтер</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">почетак</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">крај</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Уграђена функција <code class="docutils literal notranslate"><span class="pre">iter</span></code> позива <code class="docutils literal notranslate"><span class="pre">__iter__</span></code> методу свог аргумента. У низу израза у наставку, два итератора изведена из исте итерабилне секвенце независно дају слова у низу.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ВдоМ</span> <span class="o">=</span> <span class="n">Слова</span><span class="p">(</span><span class="s1">&#39;в&#39;</span><span class="p">,</span> <span class="s1">&#39;м&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">првиИтератор</span> <span class="o">=</span> <span class="n">ВдоМ</span><span class="o">.</span><span class="fm">__iter__</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">првиИтератор</span><span class="p">)</span>
+<span class="go">&#39;в&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">првиИтератор</span><span class="p">)</span>
+<span class="go">&#39;г&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">другиИтератор</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">ВдоМ</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">другиИтератор</span><span class="o">.</span><span class="fm">__next__</span><span class="p">()</span>
+<span class="go">&#39;в&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">првиИтератор</span><span class="o">.</span><span class="fm">__next__</span><span class="p">()</span>
+<span class="go">&#39;д&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">првиИтератор</span><span class="o">.</span><span class="fm">__next__</span><span class="p">()</span>
+<span class="go">&#39;е&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">другиИтератор</span><span class="o">.</span><span class="fm">__next__</span><span class="p">()</span>
+<span class="go">&#39;г&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">другиИтератор</span><span class="o">.</span><span class="fm">__next__</span><span class="p">()</span>
+<span class="go">&#39;д&#39;</span>
+</pre></div>
+</div>
+<p>Итерирајућа инстанца класе <code class="docutils literal notranslate"><span class="pre">Слова</span></code> названа <code class="docutils literal notranslate"><span class="pre">ВдоМ</span></code> и инстанце итератора <code class="docutils literal notranslate"><span class="pre">СловаИтер</span></code> под називима <code class="docutils literal notranslate"><span class="pre">првиИтератор</span></code> и <code class="docutils literal notranslate"><span class="pre">другиИтератор</span></code> се разликују по томе што се инстанца класе <code class="docutils literal notranslate"><span class="pre">Слова</span></code> не мења, док се инстанце итератора мењају са сваким позивом на уграђене функције <code class="docutils literal notranslate"><span class="pre">next</span></code> (или еквивалентно, са сваким позивањем методе <code class="docutils literal notranslate"><span class="pre">__next__</span></code>). Итератор прати напредак кроз секвенцијалне податке, док итерирајућа вредност представља саме податке.</p>
+<p>Многе уграђене функције у Пајтону примају итерабилне аргументе и враћају итераторе. На пример, функција <code class="docutils literal notranslate"><span class="pre">map</span></code> прима функцију и итерирајућу вредност, а враћа итератор кроз резултате примене функције из аргумента на сваки члан у итерабилном аргументу.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">велика</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">upper</span><span class="p">(),</span> <span class="n">ВдоМ</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">велика</span><span class="p">)</span>
+<span class="go">&#39;В&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">велика</span><span class="o">.</span><span class="fm">__next__</span><span class="p">()</span>
+<span class="go">&#39;Г&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">велика</span><span class="p">)</span>
+<span class="go">&#39;Д&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="yield">
+<span id="generatorsandyieldstatements"></span><h2>Генератори и yield наредбе<a class="headerlink" href="#yield" title="Permalink to this headline">¶</a></h2>
+<p>Горе наведени објекти <code class="docutils literal notranslate"><span class="pre">Слова</span></code> и <code class="docutils literal notranslate"><span class="pre">Позитиви</span></code> захтевају да се у објект уведе ново поље налик на <code class="docutils literal notranslate"><span class="pre">self.тренутно</span></code> како би се испратио напредак кроз секвенцу. У једноставним секвенцама, попут малопређашње приказаних, то се може лако учинити. Међутим, код сложених секвенци, методи <code class="docutils literal notranslate"><span class="pre">__next__</span></code> може бити прилично тешко да сачува своје тренутно место у одређеном прорачуну. Генератори омогућавају да се дефинишу сложеније итерације над произвољним секвенцама, па чак и оним бесконачним, користећи се својствима Пајтоновог интерпретатора.</p>
+<p><em>Генератор</em> је итератор који је повратна вредност посебне класе функција под називом <em>генераторска функција</em>. Генераторске функције се разликују од обичних функција по томе што уместо наредбе <code class="docutils literal notranslate"><span class="pre">return</span></code> у свом телу користе наредбу <code class="docutils literal notranslate"><span class="pre">yield</span></code> како би вратиле поједине чланове секвенце.</p>
+<p>Генератори не користе атрибуте објекта да би пратили свој напредак кроз секвенцу. Уместо тога, они управљају извршавањем генераторске функције, која се извршава све док се не дође до следеће <code class="docutils literal notranslate"><span class="pre">yield</span></code> наредбе сваки пут када је <code class="docutils literal notranslate"><span class="pre">next</span></code> позвана над генератором. На пример, доња функција <code class="docutils literal notranslate"><span class="pre">генераторСлова</span></code> враћа генератор кроз слова а, б, в, и на крају г.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">генераторСлова</span><span class="p">():</span>
+<span class="gp">... </span>    <span class="n">тренутно</span> <span class="o">=</span> <span class="s1">&#39;а&#39;</span>
+<span class="gp">... </span>    <span class="k">while</span> <span class="n">тренутно</span> <span class="o">&lt;=</span> <span class="s1">&#39;г&#39;</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">yield</span> <span class="n">тренутно</span>
+<span class="gp">... </span>        <span class="n">тренутно</span> <span class="o">=</span> <span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">тренутно</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">слово</span> <span class="ow">in</span> <span class="n">генераторСлова</span><span class="p">():</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">слово</span><span class="p">)</span>
+<span class="go">а</span>
+<span class="go">б</span>
+<span class="go">в</span>
+<span class="go">г</span>
+</pre></div>
+</div>
+<p>Наредба <code class="docutils literal notranslate"><span class="pre">yield</span></code> указује на то да је дефинисана генераторска функција, а не обична функција. Приликом позива, генераторска функција не враћа одређену вредност из секвенце, већ <code class="docutils literal notranslate"><span class="pre">generator</span></code> (који је врста итератора) који може да врати добијене вредности из секвенце. Позивањем <code class="docutils literal notranslate"><span class="pre">next</span></code> над генератором наставља извршавање генераторске функције одакле год је претходно стала па све док се не изврши следећа <code class="docutils literal notranslate"><span class="pre">yield</span></code> наредба.</p>
+<p>Приликом првог <code class="docutils literal notranslate"><span class="pre">next</span></code> позива, програм извршава наредбе унутар тела функције <code class="docutils literal notranslate"><span class="pre">генераторСлова</span></code> све док не наиђе на <code class="docutils literal notranslate"><span class="pre">yield</span></code> наредбу. Затим се зауставља и враћа вредност променљиве <code class="docutils literal notranslate"><span class="pre">тренутно</span></code>. Наредбе <code class="docutils literal notranslate"><span class="pre">yield</span></code> не уништавају новостворено окружење већ га чувају за касније. Приликом следећег <code class="docutils literal notranslate"><span class="pre">next</span></code> позива, извршавање се наставља тамо где је и заустављено. Вредности повезане за име <code class="docutils literal notranslate"><span class="pre">тренутно</span></code> и ма које друго повезано име у опсегу <code class="docutils literal notranslate"><span class="pre">генераторСлова</span></code> чувају се и током наредних <code class="docutils literal notranslate"><span class="pre">next</span></code> позива.</p>
+<p>Кроз генератор се може пролазити и ручним позивањем <code class="docutils literal notranslate"><span class="pre">next()</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">слова</span> <span class="o">=</span> <span class="n">генераторСлова</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">слова</span><span class="p">)</span>
+<span class="go">&lt;class &#39;generator&#39;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">слова</span><span class="p">)</span>
+<span class="go">&#39;а&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">слова</span><span class="p">)</span>
+<span class="go">&#39;б&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">слова</span><span class="p">)</span>
+<span class="go">&#39;в&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">слова</span><span class="p">)</span>
+<span class="go">&#39;г&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">слова</span><span class="p">)</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+<span class="gr">StopIteration</span>
+</pre></div>
+</div>
+<p>Генератор не започиње са извршавањем било које наредбе из тела своје генераторске функције све док се први пут не позове <code class="docutils literal notranslate"><span class="pre">next</span></code>. Генератор подиже <code class="docutils literal notranslate"><span class="pre">StopIteration</span></code> изузетак кад год његова генераторска функција врати нешто (било преко <code class="docutils literal notranslate"><span class="pre">return</span></code> наредбе, било <code class="docutils literal notranslate"><span class="pre">None</span></code> када јој понестане наредби унутар тела).</p>
+</div>
+<div class="section" id="creatingiterableswithyield">
+<span id="id7"></span><h2>Прављење итерирајућих вредности преко yield<a class="headerlink" href="#creatingiterableswithyield" title="Permalink to this headline">¶</a></h2>
+<p>У Пајтону, итератори праве само један пролаз кроз чланове основне секвенце. Након тог проласка, итератор ће наставити да подиже <code class="docutils literal notranslate"><span class="pre">StopIteration</span></code> изузетак када се позове уграђена функција <code class="docutils literal notranslate"><span class="pre">next</span></code> или <code class="docutils literal notranslate"><span class="pre">__next__</span></code> метода. Многе апликације захтевају понављање чланова секвенце више пута. На пример, мора се много пута проћи кроз секвенцу како би се побројали сви могући парови чланова исте.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">свиПарови</span><span class="p">(</span><span class="n">секвенца</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">for</span> <span class="n">члан1</span> <span class="ow">in</span> <span class="n">секвенца</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">for</span> <span class="n">члан2</span> <span class="ow">in</span> <span class="n">секвенца</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="k">yield</span> <span class="p">(</span><span class="n">члан1</span><span class="p">,</span> <span class="n">члан2</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">свиПарови</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]))</span>
+<span class="go">[(1, 1), (1, 2), (1, 3), (2, 1), (2, 2), (2, 3), (3, 1), (3, 2), (3, 3)]</span>
+</pre></div>
+</div>
+<p>Секвенце саме по себи нису итератори, већ су <em>итерабилни</em> објекти. Сучеље итерирајуће вредности, односно итерабилног објекта у Пајтону се састоји од једне поруке, <code class="docutils literal notranslate"><span class="pre">__iter__</span></code>, која враћа итератор. Уграђени типови секвенци у Пајтону враћају нове инстанце итератора када се позове њихова <code class="docutils literal notranslate"><span class="pre">__iter__</span></code> метода. Уколико итерабилни објекат врати свежу инстанцу итератора сваки пут када се <code class="docutils literal notranslate"><span class="pre">__iter__</span></code> позове, тада се кроз њега може итерирати више пута.</p>
+<p>Нове итерабилне класе могу се дефинисати имплементацијом сучеља итерирајућих вредности. На пример, <em>итерабилна</em> класа <code class="docutils literal notranslate"><span class="pre">СловаПрекоYield</span></code> из наставка враћа нови итератор кроз слова сваки пут када се <code class="docutils literal notranslate"><span class="pre">__iter__</span></code> позове.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">СловаПрекоYield</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">почетак</span><span class="o">=</span><span class="s1">&#39;а&#39;</span><span class="p">,</span> <span class="n">крај</span><span class="o">=</span><span class="s1">&#39;д&#39;</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="bp">self</span><span class="o">.</span><span class="n">почетак</span> <span class="o">=</span> <span class="n">почетак</span>
+<span class="gp">... </span>        <span class="bp">self</span><span class="o">.</span><span class="n">крај</span> <span class="o">=</span> <span class="n">крај</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="n">следећеСлово</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">почетак</span>
+<span class="gp">... </span>        <span class="k">while</span> <span class="n">следећеСлово</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">крај</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="k">yield</span> <span class="n">следећеСлово</span>
+<span class="gp">... </span>            <span class="n">следећеСлово</span> <span class="o">=</span> <span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">следећеСлово</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Метода <code class="docutils literal notranslate"><span class="pre">__iter__</span></code> је генераторска функција: враћа објекат генератора који даје слова од <code class="docutils literal notranslate"><span class="pre">'а'</span></code> до <code class="docutils literal notranslate"><span class="pre">'г'</span></code>, а затим се зауставља. Сваки пут када се позове ова метода, нови генератор започиње свеж пролаз кроз секвенцијалне податке.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">слова</span> <span class="o">=</span> <span class="n">СловаПрекоYield</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">свиПарови</span><span class="p">(</span><span class="n">слова</span><span class="p">))[:</span><span class="mi">5</span><span class="p">]</span>
+<span class="go">[(&#39;а&#39;, &#39;а&#39;), (&#39;а&#39;, &#39;б&#39;), (&#39;а&#39;, &#39;в&#39;), (&#39;а&#39;, &#39;г&#39;), (&#39;б&#39;, &#39;а&#39;)]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="pythonstreams">
+<span id="id8"></span><h2>Пајтон токови<a class="headerlink" href="#pythonstreams" title="Permalink to this headline">¶</a></h2>
+<p><em>Токови</em> нуде још један начин имплицитног представљања секвенцијалних података. Ток је лењо израчуната уланчана листа. Попут класе <code class="docutils literal notranslate"><span class="pre">Листа</span></code> из другог поглавља, инстанца <code class="docutils literal notranslate"><span class="pre">Ток</span></code> одговара на захтеве за свој <code class="docutils literal notranslate"><span class="pre">први</span></code> члан и <code class="docutils literal notranslate"><span class="pre">остатак</span></code> тока. Као и код класе <code class="docutils literal notranslate"><span class="pre">Листа</span></code>, <code class="docutils literal notranslate"><span class="pre">остатак</span></code> класе <code class="docutils literal notranslate"><span class="pre">Ток</span></code> је сам по себи такође <code class="docutils literal notranslate"><span class="pre">Ток</span></code>. За разлику класе <code class="docutils literal notranslate"><span class="pre">Листа</span></code>, <code class="docutils literal notranslate"><span class="pre">остатак</span></code> класе <code class="docutils literal notranslate"><span class="pre">Ток</span></code> израчунава се само када се погледа, уместо да се унапред ускладишти у меморији рачунара. Односно, <code class="docutils literal notranslate"><span class="pre">остатак</span></code> тока се израчунава лењо.</p>
+<p>Да би се постигло ово лењо вредновање, ток чува функцију која израчунава остатак тока. Кад год се ова функција позове, њена враћена вредност се кешира као део тока у атрибуту званом <code class="docutils literal notranslate"><span class="pre">_остатак</span></code>, именованим подвлаком која треба да укаже на то да му не треба приступати директно.</p>
+<p>Доступни атрибут <code class="docutils literal notranslate"><span class="pre">остатак</span></code> је метода својства која враћа остатак тока, рачунајући га ако је потребно. Са оваквим дизајном, ток похрањује <em>како израчунати</em> остатак тока, уместо да остатак увек експлицитно складишти.</p>
+<p>Ради прегледности ево најпре поновљене класе која дефинише уланчану листу, која је додуше нешто измењена у односу на ону која је представљена у другом поглављу.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Листа</span><span class="p">:</span>
+<span class="gp">... </span>   <span class="sd">&quot;&quot;&quot;Уланчана листа.&quot;&quot;&quot;</span>
+<span class="gp">... </span>   <span class="n">празно</span> <span class="o">=</span> <span class="p">()</span>
+<span class="gp">... </span>   <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">први</span><span class="p">,</span> <span class="n">остатак</span><span class="o">=</span><span class="n">празно</span><span class="p">):</span>
+<span class="gp">... </span>       <span class="bp">self</span><span class="o">.</span><span class="n">први</span> <span class="o">=</span> <span class="n">први</span>
+<span class="gp">... </span>       <span class="bp">self</span><span class="o">.</span><span class="n">остатак</span> <span class="o">=</span> <span class="n">остатак</span>
+<span class="gp">... </span>   <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
+<span class="gp">... </span>       <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<span class="gp">... </span>           <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">први</span>
+<span class="gp">... </span>       <span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>           <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">остатак</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="gp">... </span>   <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="gp">... </span>       <span class="k">return</span> <span class="mi">1</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">остатак</span><span class="p">)</span>
+<span class="gp">... </span>   <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="gp">... </span>       <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">остатак</span><span class="p">:</span>
+<span class="gp">... </span>           <span class="n">нискаОстатка</span> <span class="o">=</span> <span class="s1">&#39;, &#39;</span> <span class="o">+</span> <span class="nb">repr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">остатак</span><span class="p">)</span>
+<span class="gp">... </span>       <span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>           <span class="n">нискаОстатка</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<span class="gp">... </span>       <span class="k">return</span> <span class="s1">&#39;Листа(</span><span class="si">{0}{1}</span><span class="s1">)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">први</span><span class="p">,</span> <span class="n">нискаОстатка</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Затим ево и класе ток, која даје могућност лењог израчунавања остатка, само онда када је потребан.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Ток</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Лењо израчуната уланчана листа.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="k">class</span> <span class="nc">празно</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="gp">... </span>            <span class="k">return</span> <span class="s1">&#39;Ток.празно&#39;</span>
+<span class="gp">... </span>    <span class="n">празно</span> <span class="o">=</span> <span class="n">празно</span><span class="p">()</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">први</span><span class="p">,</span> <span class="n">израчунајОстатак</span><span class="o">=</span><span class="k">lambda</span><span class="p">:</span> <span class="n">празно</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">assert</span> <span class="n">callable</span><span class="p">(</span><span class="n">израчунајОстатак</span><span class="p">),</span> <span class="s1">&#39;израчунајОстатак мора бити callable.&#39;</span>
+<span class="gp">... </span>        <span class="bp">self</span><span class="o">.</span><span class="n">први</span> <span class="o">=</span> <span class="n">први</span>
+<span class="gp">... </span>        <span class="bp">self</span><span class="o">.</span><span class="n">_compute_rest</span> <span class="o">=</span> <span class="n">израчунајОстатак</span>
+<span class="gp">... </span>    <span class="nd">@property</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">остатак</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="sd">&quot;&quot;&quot;Враћа остатак тока, израчунавајући га ако је неопходно.&quot;&quot;&quot;</span>
+<span class="gp">... </span>        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_compute_rest</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="bp">self</span><span class="o">.</span><span class="n">_остатак</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_compute_rest</span><span class="p">()</span>
+<span class="gp">... </span>            <span class="bp">self</span><span class="o">.</span><span class="n">_израчунајОстатак</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_остатак</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="s1">&#39;Ток(</span><span class="si">{0}</span><span class="s1">, &lt;...&gt;)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">први</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Уланчана листа се дефинише помоћу угнежђеног израза. На пример, можемо се створити <code class="docutils literal notranslate"><span class="pre">Листа</span></code> која представља чланове 1 па 5 на следећи начин:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">л</span> <span class="o">=</span> <span class="n">Листа</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">Листа</span><span class="p">(</span><span class="mi">2</span><span class="o">+</span><span class="mi">3</span><span class="p">,</span> <span class="n">Листа</span><span class="p">(</span><span class="mi">9</span><span class="p">)))</span>
+</pre></div>
+</div>
+<p>Исто тако, може се створити и <code class="docutils literal notranslate"><span class="pre">Ток</span></code> који представља исту серију. <code class="docutils literal notranslate"><span class="pre">Ток</span></code> заправо не израчунава други члан 5 све док остатак тока не буде затражен. Овај ефекат постиже се стварањем анонимних функција.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">т</span> <span class="o">=</span> <span class="n">Ток</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="k">lambda</span><span class="p">:</span> <span class="n">Ток</span><span class="p">(</span><span class="mi">2</span><span class="o">+</span><span class="mi">3</span><span class="p">,</span> <span class="k">lambda</span><span class="p">:</span> <span class="n">Ток</span><span class="p">(</span><span class="mi">9</span><span class="p">)))</span>
+</pre></div>
+</div>
+<p>Овде је 1 први члан тока, а <code class="docutils literal notranslate"><span class="pre">lambda</span></code> израз који следи враћа функцију за израчунавање остатка тока.</p>
+<p>Приступ члановима уланчане листе <code class="docutils literal notranslate"><span class="pre">л</span></code> и тока <code class="docutils literal notranslate"><span class="pre">т</span></code> одвија се слично. Међутим, док је 5 ускладиштено у <code class="docutils literal notranslate"><span class="pre">л</span></code>, код <code class="docutils literal notranslate"><span class="pre">т</span></code> се израчунава на захтев преко додавања, први пут када је затражено.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">л</span><span class="o">.</span><span class="n">први</span>
+<span class="go">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">т</span><span class="o">.</span><span class="n">први</span>
+<span class="go">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">л</span><span class="o">.</span><span class="n">остатак</span><span class="o">.</span><span class="n">први</span>
+<span class="go">5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">т</span><span class="o">.</span><span class="n">остатак</span><span class="o">.</span><span class="n">први</span>
+<span class="go">5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">л</span><span class="o">.</span><span class="n">остатак</span>
+<span class="go">Листа(5, Листа(9))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">т</span><span class="o">.</span><span class="n">остатак</span>
+<span class="go">Ток(5, &lt;...&gt;)</span>
+</pre></div>
+</div>
+<p>Док је <code class="docutils literal notranslate"><span class="pre">остатак</span></code> од <code class="docutils literal notranslate"><span class="pre">л</span></code> двочлана уланчана листа, <code class="docutils literal notranslate"><span class="pre">остатак</span></code> од <code class="docutils literal notranslate"><span class="pre">т</span></code> укључује функцију за израчунавање остатка, а чињеница да ће можда вратити празан ток још увек није откривена.</p>
+<p>Када је направљена инстанца <code class="docutils literal notranslate"><span class="pre">Ток</span></code>, поље <code class="docutils literal notranslate"><span class="pre">self._остатак</span></code> је <code class="docutils literal notranslate"><span class="pre">None</span></code>, што значи да остатак <code class="docutils literal notranslate"><span class="pre">Ток</span></code>-а још увек није израчунат. Када се атрибут <code class="docutils literal notranslate"><span class="pre">остатак</span></code> затражи помоћу тачканог израза, позива се метода својства <code class="docutils literal notranslate"><span class="pre">остатак</span></code> која покреће израчунавање са <code class="docutils literal notranslate"><span class="pre">self._остатак</span> <span class="pre">=</span> <span class="pre">self._compute_rest()</span></code>. Због механизма кеширања унутар класе <code class="docutils literal notranslate"><span class="pre">Ток</span></code>, функција <code class="docutils literal notranslate"><span class="pre">compute_rest</span></code> се позива само једном, а затим одбацује.</p>
+<p>Основна својства функције <code class="docutils literal notranslate"><span class="pre">compute_rest</span></code> су да не узима никакве аргументе и да враћа <code class="docutils literal notranslate"><span class="pre">Ток</span></code> или <code class="docutils literal notranslate"><span class="pre">Ток.празно</span></code>.</p>
+<p>Лења вредновања дају могућност представљања бесконачних секвенцијалних скупова података токове. На пример, могу се представити растуће целобројне вредности, почевши од било ког броја који се усвоји као <code class="docutils literal notranslate"><span class="pre">први</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">целобројниТок</span><span class="p">(</span><span class="n">први</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">израчунајОстатак</span><span class="p">():</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">целобројниТок</span><span class="p">(</span><span class="n">први</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">Ток</span><span class="p">(</span><span class="n">први</span><span class="p">,</span> <span class="n">израчунајОстатак</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">позитивни</span> <span class="o">=</span> <span class="n">целобројниТок</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">позитивни</span>
+<span class="go">Ток(1, &lt;...&gt;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">позитивни</span><span class="o">.</span><span class="n">први</span>
+<span class="go">1</span>
+</pre></div>
+</div>
+<p>Када се <code class="docutils literal notranslate"><span class="pre">целобројниТок</span></code> позове по први пут, враћа ток чији је <code class="docutils literal notranslate"><span class="pre">први</span></code> прва целобројна вредност у секвенци. Међутим, <code class="docutils literal notranslate"><span class="pre">целобројниТок</span></code> је заправо рекурзивна функција, јер <code class="docutils literal notranslate"><span class="pre">израчунајОстатак</span></code> од овог тока позива <code class="docutils literal notranslate"><span class="pre">целобројниТок</span></code> поново, са увећаним аргументом. Каже се да је <code class="docutils literal notranslate"><span class="pre">целобројниТок</span></code> лењ јер се рекурзивни <code class="docutils literal notranslate"><span class="pre">целобројниТок</span></code> позив извршава само кад се затражи <code class="docutils literal notranslate"><span class="pre">остатак</span></code> целобројног тока.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">позитивни</span><span class="o">.</span><span class="n">први</span>
+<span class="go">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">позитивни</span><span class="o">.</span><span class="n">остатак</span><span class="o">.</span><span class="n">први</span>
+<span class="go">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">позитивни</span><span class="o">.</span><span class="n">остатак</span><span class="o">.</span><span class="n">остатак</span>
+<span class="go">Ток(3, &lt;...&gt;)</span>
+</pre></div>
+</div>
+<p>Исте функције вишег реда које манипулишу секвенцама – <code class="docutils literal notranslate"><span class="pre">map</span></code> и <code class="docutils literal notranslate"><span class="pre">filter</span></code> – такође се примењују на токове, мада се њихове имплементације морају мењати како би лењо примењивале своје функције аргумената. Функција <code class="docutils literal notranslate"><span class="pre">мапТок</span></code> примењује функцију пресликавања кроз читав ток, тиме стварајући нови ток. Локално дефинисана функција <code class="docutils literal notranslate"><span class="pre">израчунајОстатак</span></code> осигурава да ће се функција пресликати на остатак тока кад год се израчуна остатак.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">mapТок</span><span class="p">(</span><span class="n">фја</span><span class="p">,</span> <span class="n">т</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">т</span> <span class="ow">is</span> <span class="n">Ток</span><span class="o">.</span><span class="n">празно</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">т</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">израчунајОстатак</span><span class="p">():</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">mapТок</span><span class="p">(</span><span class="n">фја</span><span class="p">,</span> <span class="n">т</span><span class="o">.</span><span class="n">остатак</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">Ток</span><span class="p">(</span><span class="n">фја</span><span class="p">(</span><span class="n">т</span><span class="o">.</span><span class="n">први</span><span class="p">),</span> <span class="n">израчунајОстатак</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Ток се може филтрирати дефинисањем функције <code class="docutils literal notranslate"><span class="pre">израчунајОстатак</span></code> која примењује функцију филтера на остатак тока. Уколико функција филтера одбије први члан тока, остатак се израчунава одмах. Будући да је <code class="docutils literal notranslate"><span class="pre">filterТок</span></code> рекурзивна функција, остатак се може израчунати више пута све док се не пронађе важећи <code class="docutils literal notranslate"><span class="pre">први</span></code> члан.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">filterТок</span><span class="p">(</span><span class="n">фја</span><span class="p">,</span> <span class="n">т</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">т</span> <span class="ow">is</span> <span class="n">Ток</span><span class="o">.</span><span class="n">празно</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">т</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">израчунајОстатак</span><span class="p">():</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">filterТок</span><span class="p">(</span><span class="n">фја</span><span class="p">,</span> <span class="n">т</span><span class="o">.</span><span class="n">остатак</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">фја</span><span class="p">(</span><span class="n">т</span><span class="o">.</span><span class="n">први</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">Ток</span><span class="p">(</span><span class="n">т</span><span class="o">.</span><span class="n">први</span><span class="p">,</span> <span class="n">израчунајОстатак</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">израчунајОстатак</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Функције <code class="docutils literal notranslate"><span class="pre">mapТок</span></code> и <code class="docutils literal notranslate"><span class="pre">filterТок</span></code> показују заједнички образац у обради тока: локално дефинисана функција <code class="docutils literal notranslate"><span class="pre">израчунајОстатак</span></code> рекурзивно примењује функцију обраде на остатак тока кад год се остатак израчунава.</p>
+<p>Да би се прегледао садржај тока, може се извршити претварање до првих <code class="docutils literal notranslate"><span class="pre">k</span></code> чланова у Пајтонов низ, односно уграђени тип <code class="docutils literal notranslate"><span class="pre">list</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">првихk</span><span class="p">(</span><span class="n">т</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">низk</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="gp">... </span>    <span class="k">while</span> <span class="n">т</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">Ток</span><span class="o">.</span><span class="n">празно</span> <span class="ow">and</span> <span class="n">k</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="n">низk</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">т</span><span class="o">.</span><span class="n">први</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="n">т</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="n">т</span><span class="o">.</span><span class="n">остатак</span><span class="p">,</span> <span class="n">k</span><span class="o">-</span><span class="mi">1</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">низk</span>
+</pre></div>
+</div>
+<p>Ова погодна функција омогућава верификацију имплементације <code class="docutils literal notranslate"><span class="pre">mapТок</span></code> једноставним примером који квадрира природне бројеве од 3 до 7.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">т</span> <span class="o">=</span> <span class="n">целобројниТок</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">т</span>
+<span class="go">Ток(3, &lt;...&gt;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">м</span> <span class="o">=</span> <span class="n">mapТок</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">,</span> <span class="n">т</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">м</span>
+<span class="go">Ток(9, &lt;...&gt;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">првихk</span><span class="p">(</span><span class="n">м</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="go">[9, 16, 25, 36, 49]</span>
+</pre></div>
+</div>
+<p>Користећи функцију <code class="docutils literal notranslate"><span class="pre">filterТок</span></code> може се дефинисати ток простих бројева помоћу такозваног <a class="reference external" href="http://sr.wikipedia.org/wiki/Ератостеново_сито">Ератостеновог сита</a>, које филтрира ток целих бројева како би уклонио све бројеве који су умношци његовог првог члана. Узастопним филтрирањем са сваким простим бројем, сви сложени бројеви уклањају се из тока.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">прости</span><span class="p">(</span><span class="n">природниТок</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">недељив</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">x</span> <span class="o">%</span> <span class="n">природниТок</span><span class="o">.</span><span class="n">први</span> <span class="o">!=</span> <span class="mi">0</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">израчунајОстатак</span><span class="p">():</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">прости</span><span class="p">(</span><span class="n">filterТок</span><span class="p">(</span><span class="n">недељив</span><span class="p">,</span> <span class="n">природниТок</span><span class="o">.</span><span class="n">остатак</span><span class="p">))</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">Ток</span><span class="p">(</span><span class="n">природниТок</span><span class="o">.</span><span class="n">први</span><span class="p">,</span> <span class="n">израчунајОстатак</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Једноставним скраћивањем тока <code class="docutils literal notranslate"><span class="pre">прости</span></code>, може се побројати било који префикс простих бројева.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">простиБројеви</span> <span class="o">=</span> <span class="n">прости</span><span class="p">(</span><span class="n">целобројниТок</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">првихk</span><span class="p">(</span><span class="n">простиБројеви</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
+<span class="go">[2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37]</span>
+</pre></div>
+</div>
+<p>Токови се разликују од итератора тако што се могу више пута проследити чистим функцијама и сваки пут донети исти резултат. Ток простих бројева се не „троши” претварањем у низ. Односно, <code class="docutils literal notranslate"><span class="pre">први</span></code> члан тока <code class="docutils literal notranslate"><span class="pre">простиБројеви</span></code> је и даље 2 чак и након претварања префикса тока у низ.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">простиБројеви</span><span class="o">.</span><span class="n">први</span>
+<span class="go">2</span>
+</pre></div>
+</div>
+<p>Као што уланчане листе пружају једноставну имплементацију апстракције секвенце, токови пружају једноставну, функционалну, рекурзивну структуру података која имплементира лењо вредновање употребом функција вишег реда.</p>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Увод' data-toggle="tooltip"><a href="1-увод.html">Претходно поглавље</a></li>
+    
+        <li id="relations-next" title='Next chapter - Расподељено израчунавање' data-toggle="tooltip"><a href="6-расподељено-израчунавање.html">Следеће поглавље</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Увод' data-toggle="tooltip"><a href="1-увод.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Расподељено израчунавање' data-toggle="tooltip"><a href="6-расподељено-израчунавање.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="pull-left">&copy; 2019 Petlja (Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

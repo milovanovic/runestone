@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sr"></html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Објектна апстракција &#8212; Компоновање рачунарских програма</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/simanim.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pycode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/p5js.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dbDirective.css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-runestone.css" type="text/css" />
+    <link rel="stylesheet" href="../_staticnbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../_static/Blob.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="../_static/blockpy-modal.js"></script>
+    <script type="text/javascript" src="../_static/simanim.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.16.1/full/pyodide.js"></script>
+    <script type="text/javascript" src="../_static/pycode.js"></script>
+    <script type="text/javascript" src="//toolness.github.io/p5.js-widget/p5-widget.js"></script>
+    <script type="text/javascript" src="../_static/p5js.js"></script>
+    <script type="text/javascript" src="../_static/gallery.js"></script>
+    <script type="text/javascript" src="../_static/dbDirective.js"></script>
+    <script type="text/javascript" src="../_static/sql.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="../_static/require.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Ефикасност" href="8-ефикасност.html" />
+    <link rel="prev" title="Имплементација класа и објеката" href="6-имплементација-класа-и-објеката.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host + '/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+  eBookConfig.course = 'krp';
+  eBookConfig.logLevel = '0';
+  eBookConfig.loginRequired = 'false';
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = 'false';
+  eBookConfig.python3 = 'true';
+  eBookConfig.basecourse = 'krp';
+  eBookConfig.runestone_version = '';
+  eBookConfig.imagesDir = '../_images/';
+  eBookConfig.staticDir = '../_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="../_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="../">Компоновање рачунарских програма</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content" style="margin-top: 70px;">
+  
+  <div class="section" id="objectabstraction">
+<span id="id1"></span><h1>Објектна апстракција<a class="headerlink" href="#objectabstraction" title="Permalink to this headline">¶</a></h1>
+<p>Објектни систем омогућава програмерима да ефикасно граде и користе апстрактне представе података. Такође је пројектован и да омогући да вишеструке представе апстрактних података заједно постоје у истом програму.</p>
+<p>Главни концепт у објектној апстракцији је такозвана <em>генеричка</em> или <em>општа функција</em>, функција која може прихватити вредности више различитих типова. Биће размотрене три различите технике за примену генеричких, то јест општих функција: дељена сучеља, отпремање типова и превођење или претварање типова. У поступку изградње ових концепата, такође ће бити откривене одлике и особине Пајтоновог објектног система који подржава стварање генеричких, односно општих функција.</p>
+<div class="section" id="stringconversion">
+<span id="id2"></span><h2>Претварање ниски<a class="headerlink" href="#stringconversion" title="Permalink to this headline">¶</a></h2>
+<p>Да би представљао податке на ефикасан начин, вредност објекта би се требала понашати попут оне врсте података коју је намењена да представља, укључујући ту и представу самог себе преко одговарајуће ниске. Текстуалне представе вредности података посебно су важне у интерактивном језику као што је Пајтон који аутоматски у виду ниске приказује вредности израза у интерактивној сеанси.</p>
+<p>Текстуалне вредности, односно ниске обезбеђују основни медијум за преношење информација међу људима. Секвенце знакова могу се приказивати на екрану, штампати на папиру, читати наглас, претварати у Брајеву азбуку или слати као Морзеов код. Ниске су такође фундаменталне за програмирање, јер могу представљати Пајтонове изразе.</p>
+<p>Пајтон предвиђа да сви објекти треба да производе две различите текстуалне представље у виду ниске: једну која је разумљива људима и другу која се може од стране Пајтона интерпретирати као израз. Конструкторска функција за ниске, <code class="docutils literal notranslate"><span class="pre">str</span></code>, враћа ниску која је читљива човеку. Где је то могуће, функција <code class="docutils literal notranslate"><span class="pre">repr</span></code> враћа Пајтонов израз који се вреднује у идентичан објекат. Докниска за уграђену функцију <code class="docutils literal notranslate"><span class="pre">repr</span></code> објашњава ово својство:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">repr</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="o">/</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ниска</span>
+
+    <span class="n">Враћа</span> <span class="n">каноничку</span> <span class="n">представу</span> <span class="n">објекта</span> <span class="n">у</span> <span class="n">виду</span> <span class="n">ниске</span><span class="o">.</span>
+    <span class="n">За</span> <span class="n">многе</span> <span class="n">типове</span> <span class="n">објеката</span><span class="p">,</span> <span class="n">укључујући</span> <span class="n">и</span> <span class="n">већину</span> <span class="n">уграђених</span><span class="p">,</span> <span class="nb">eval</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">obj</span><span class="p">))</span> <span class="o">==</span> <span class="n">obj</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>Резултат позива <code class="docutils literal notranslate"><span class="pre">repr</span></code> над вредношћу неког израза је оно што Пајтон исписује, односно штампа у интерактивној сеанси.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mf">12e12</span>
+<span class="go">12000000000000.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="mf">12e12</span><span class="p">))</span>
+<span class="go">12000000000000.0</span>
+</pre></div>
+</div>
+<p>У случајевима када не постоји представа која се вреднује у изворну вредност, Пајтон обично даје опис окружен угластим заградама.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">repr</span><span class="p">(</span><span class="nb">min</span><span class="p">)</span>
+<span class="go">&#39;&lt;built-in function min&gt;&#39;</span>
+</pre></div>
+</div>
+<p>Резултат конструктора <code class="docutils literal notranslate"><span class="pre">str</span></code> се често подудара са <code class="docutils literal notranslate"><span class="pre">repr</span></code> резултатом, али у неким случајевима пружа приказ текста који је лакши за тумачење. На пример, разлика између <code class="docutils literal notranslate"><span class="pre">str</span></code> и <code class="docutils literal notranslate"><span class="pre">repr</span></code> се види у раду са датумима.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">date</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">среда</span> <span class="o">=</span> <span class="n">date</span><span class="p">(</span><span class="mi">1991</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">29</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">repr</span><span class="p">(</span><span class="n">среда</span><span class="p">)</span>
+<span class="go">&#39;datetime.date(1991, 5, 29)&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">str</span><span class="p">(</span><span class="n">среда</span><span class="p">)</span>
+<span class="go">&#39;1991-05-29&#39;</span>
+</pre></div>
+</div>
+<p>Дефинисање <code class="docutils literal notranslate"><span class="pre">repr</span></code> функције представља нови изазов: волели бисмо да се исправно примењује на све типове података, чак и на оне који нису постојали када је <code class="docutils literal notranslate"><span class="pre">repr</span></code> имплементирана. Желели бисмо да она буде генеричка или <em>полиморфна функција</em>, функција која се може применити на многе (<em>поли</em>) различите облике (<em>морф</em>) података.</p>
+<p>Објектни систем нуди елегантно решење у овом случају: функција <code class="docutils literal notranslate"><span class="pre">repr</span></code> увек позива методу која се зове <code class="docutils literal notranslate"><span class="pre">__repr__</span></code> над својим аргументом.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">среда</span><span class="o">.</span><span class="fm">__repr__</span><span class="p">()</span>
+<span class="go">&#39;datetime.date(1991, 5, 29)&#39;</span>
+</pre></div>
+</div>
+<p>Имплементацијом исте ове методе у кориснички дефинисане класе, може се проширити применљивост <code class="docutils literal notranslate"><span class="pre">repr</span></code> функције на било коју класу која се буде правила у будућности. Овај пример истиче још једну предност тачкастих израза уопште, а то је да пружају механизам за проширивање домена постојећих функција на нове типове објеката.</p>
+<p>Конструктор <code class="docutils literal notranslate"><span class="pre">str</span></code> је имплементиран на сличан начин: он позива методу под називом <code class="docutils literal notranslate"><span class="pre">__str__</span></code> над својим аргументом.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">среда</span><span class="o">.</span><span class="fm">__str__</span><span class="p">()</span>
+<span class="go">&#39;1991-05-29&#39;</span>
+</pre></div>
+</div>
+<p>Ове полиморфне функције су примери једног општијег принципа: одређене функције треба да буду примењиве на више различитих типова података. Штавише, један од начина за прављење такве једне функције јесте употреба заједничког имена атрибута са различитом дефиницијом у свакој класи.</p>
+</div>
+<div class="section" id="specialmethods">
+<span id="id3"></span><h2>Посебне методе<a class="headerlink" href="#specialmethods" title="Permalink to this headline">¶</a></h2>
+<p>У Пајтону, у неким посебним околностима Пајтонов тумач позива одређене посебне методе. На пример, метода <code class="docutils literal notranslate"><span class="pre">__init__</span></code> неке класе се аутоматски позива кад год се ствара нови објекат. Метода <code class="docutils literal notranslate"><span class="pre">__str__</span></code> се позива аутоматски приликом исписивања, односно штампања, а <code class="docutils literal notranslate"><span class="pre">__repr__</span></code> се позива у интерактивној сесији за приказ вредности.</p>
+<p>Постоје посебна имена и за многа друга понашања у Пајтону. Нека од најчешће коришћених описана су у наставку.</p>
+<div class="section" id="trueandfalsevalues">
+<span id="id4"></span><h3>Логичке вредности<a class="headerlink" href="#trueandfalsevalues" title="Permalink to this headline">¶</a></h3>
+<p>Раније је приказано да бројеви у Пајтону имају своје логичке вредности; тачније 0 је нетачна вредност, а сви остали бројеви су тачне вредности. У ствари, сви објекти у Пајтону поседују логичку вредност. Подразумевано је да се објекти кориснички дефинисаних класа сматрају као тачни, али посебна метода <code class="docutils literal notranslate"><span class="pre">__bool__</span></code> се може икористити за промену овог понашања. Уколико објекат дефинише <code class="docutils literal notranslate"><span class="pre">__bool__</span></code> методу, тада Пајтон позива ту методу да одреди његову логичку вредност.</p>
+<p>Као пример, претпоставимо да желимо да банковни рачун са стањем 0 буде логички нетачан. Може се додати метода <code class="docutils literal notranslate"><span class="pre">__bool__</span></code> у класу <code class="docutils literal notranslate"><span class="pre">Рачун</span></code> да би се имплементирао овакав режим рада.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Рачун</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">власникРачуна</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="bp">self</span><span class="o">.</span><span class="n">стање</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="gp">... </span>        <span class="bp">self</span><span class="o">.</span><span class="n">власник</span> <span class="o">=</span> <span class="n">власникРачуна</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Рачун</span><span class="o">.</span><span class="fm">__bool__</span> <span class="o">=</span> <span class="k">lambda</span> <span class="bp">self</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">стање</span> <span class="o">!=</span> <span class="mi">0</span>
+</pre></div>
+</div>
+<p>Може се позвати <code class="docutils literal notranslate"><span class="pre">bool</span></code> конструктор како би се утврдила логичка вредност објекта, а било који објекат може се користити у логичком контексту.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">bool</span><span class="p">(</span><span class="n">Рачун</span><span class="p">(</span><span class="s1">&#39;Влада&#39;</span><span class="p">))</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">if</span> <span class="ow">not</span> <span class="n">Рачун</span><span class="p">(</span><span class="s1">&#39;Влада&#39;</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Влада је шворц!&#39;</span><span class="p">)</span>
+<span class="go">Влада је шворц!</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="sequenceoperations">
+<span id="id5"></span><h3>Операције над секвенцама<a class="headerlink" href="#sequenceoperations" title="Permalink to this headline">¶</a></h3>
+<p>Већ је виђено да је могуће позвати уграђену функцију <code class="docutils literal notranslate"><span class="pre">len</span></code> како би се одредила дужина неке секвенце.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="s1">&#39;Напред Звездо!&#39;</span><span class="p">)</span>
+<span class="go">14</span>
+</pre></div>
+</div>
+<p>Функција <code class="docutils literal notranslate"><span class="pre">len</span></code> позива методу <code class="docutils literal notranslate"><span class="pre">__len__</span></code> свог аргумента како би одредила његову дужину. Сви уграђени типови секвенци имплементирају ову методу.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;Напред Звездо!&#39;</span><span class="o">.</span><span class="fm">__len__</span><span class="p">()</span>
+<span class="go">14</span>
+</pre></div>
+</div>
+<p>Пајтон користи користи дужину секвенце како би одредио њену логичку вредност, ако се већ деси да <code class="docutils literal notranslate"><span class="pre">__bool__</span></code> метода не постоји. Празне секвенце су нетачне, док су непразне секвенце логички тачне.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">bool</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">bool</span><span class="p">([])</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">bool</span><span class="p">(</span><span class="s1">&#39;Напред Звездо!&#39;</span><span class="p">)</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p>Метода <code class="docutils literal notranslate"><span class="pre">__getitem__</span></code> се позива од стране оператора избора члана, али се такође може позвати и директно.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;Напред Звездо!&#39;</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span>
+<span class="go">&#39;З&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;Напред Звездо!&#39;</span><span class="o">.</span><span class="fm">__getitem__</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="go">&#39;З&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="callableobjects">
+<span id="id6"></span><h3>Позивни објекти<a class="headerlink" href="#callableobjects" title="Permalink to this headline">¶</a></h3>
+<p>У Пајтону, функције су првокласни објекти, тако да се могу прослеђивати као подаци и имати атрибуте као и било који други објекат. Пајтон такође омогућава да се дефинишу објекти који се могу „позвати” попут функција укључивањем <code class="docutils literal notranslate"><span class="pre">__call__</span></code> методе. Овом методом може се дефинисати класа која се понаша као функција вишег реда.</p>
+<p>Као пример, биће размотрена следећа функција вишег реда која враћа функцију која свом аргументу додаје константну вредност.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">направиСабирач</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">сабирач</span><span class="p">(</span><span class="n">k</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">n</span> <span class="o">+</span> <span class="n">k</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">сабирач</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">додајТри</span> <span class="o">=</span> <span class="n">направиСабирач</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">додајТри</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="go">7</span>
+</pre></div>
+</div>
+<p>Може се направити класа <code class="docutils literal notranslate"><span class="pre">Сабирач</span></code> која дефинише методу <code class="docutils literal notranslate"><span class="pre">__call__</span></code> како би пружила исту функционалност.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Сабирач</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="bp">self</span><span class="o">.</span><span class="n">n</span> <span class="o">=</span> <span class="n">n</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">n</span> <span class="o">+</span> <span class="n">k</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">додајТројку</span> <span class="o">=</span> <span class="n">Сабирач</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">додајТројку</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="go">7</span>
+</pre></div>
+</div>
+<p>Овде се класа <code class="docutils literal notranslate"><span class="pre">Сабирач</span></code> понаша као функција вишег реда <code class="docutils literal notranslate"><span class="pre">направиСабирач</span></code>, а објект <code class="docutils literal notranslate"><span class="pre">додајТројку</span></code> понаша се као функција <code class="docutils literal notranslate"><span class="pre">додајТри</span></code>. Овим је још више замагљена граница између података и функција.</p>
+</div>
+<div class="section" id="arithmetic">
+<span id="id7"></span><h3>Аритметика<a class="headerlink" href="#arithmetic" title="Permalink to this headline">¶</a></h3>
+<p>Посебне методе такође могу дефинисати режим понашања уграђених оператора примењених на кориснички дефинисане објекте. Да би обезбедио ову општост, Пајтон прати одређене протоколе за примену сваког оператора. На пример, да би вредновао изразе који садрже оператор <code class="docutils literal notranslate"><span class="pre">+</span></code>, Пајтон проверава посебне методе и на левом и на десном операнду израза. Најпре, Пајтон проверава методу <code class="docutils literal notranslate"><span class="pre">__add__</span></code> над вредношћу левог операнда, а затим проверава методу <code class="docutils literal notranslate"><span class="pre">__radd__</span></code> над вредношћу десног операнда. За случај да се пронађе било која од њих, та метода се позива са вредношћу другог операнда као аргументом. Неки примери су дати у следећим одељцима. За читаоце који су заинтересовани за појединости, Пајтон документација описује исцрпан скуп <a class="reference external" href="http://docs.python.org/3/reference/datamodel.html#special-method-names">назива метода за операторе</a>. Већ више пута референцирана интернет књига <a class="reference external" href="http://www.diveintopython3.net/special-method-names.html">Dive Into Python 3</a> садржи поглавље о именима посебних метода које описује колико се ових специјалних имена метода заправо користи.</p>
+</div>
+</div>
+<div class="section" id="multiplerepresentations">
+<span id="id9"></span><h2>Вишеструке представе<a class="headerlink" href="#multiplerepresentations" title="Permalink to this headline">¶</a></h2>
+<p>Апстракцијске баријере омогућавају раздвајање употребе података од њихове представе. Међутим, у великим и сложеним програмима можда неће увек имати смисла говорити о „основној представи” за тип података у програму. Као прво, можда постоји више корисних представа за неки објекат податка, а могуће је и да се жели пројектовање система који могу баратати вишеструким представама.</p>
+<p>Узмимо једноставан пример, комплексни бројеви могу се представити на два готово еквивалентна начина: у такозваном правоугаоном облику (реални и имагинарни део) и у поларном облику (апсолутна вреднос, односно модул и угао). Понекад је правоугаони облик прикладнији, а понекад поларни. Заиста, савршено је вероватно замислити систем у којем су комплексни бројеви представљени на оба начина и у којем функције за манипулисање комплексним бројевима раде са било којом представом. Такав систем биће имплементиран у наставку. Као пропратна напомена, биће развијен систем који изводи аритметичке операције над комплексним бројевима као једноставан, али нереалан пример програма који користи генеричке, односно опште операције. <a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#typesnumeric">Комплексни тип броја</a> је заправо уграђен у Пајтон, али за овај пример биће имплементиран посебан тип податка.</p>
+<p>Идеја о омогућавању вишеструке представе података јавља се редовно. Велике софтверске системе често пројектује више људи који раде на томе неки дужи временски период, при чему се одређени захтеви у међувремену могу и променити. У таквом окружењу једноставно није могуће да се сви унапред договоре око избора представе података. Поред апстракцијских баријера за податке које изолују начин представљања података од употребе истих, потребне су и апстракцијске баријере које међусобно изолују различите пројектне изборе и омогућавају коегзистенцију различитих избора у једном програму.</p>
+<p>Имплементацију започињемо на највишем нивоу апстракције и постепено ће се ићи ка конкретнијим представама. <code class="docutils literal notranslate"><span class="pre">Комплексан</span></code> број је <code class="docutils literal notranslate"><span class="pre">Број</span></code>, а бројеви се могу сабирати или множити. Како се бројеви могу сабирати или множити, апстраковано је методама под именима <code class="docutils literal notranslate"><span class="pre">add</span></code> и <code class="docutils literal notranslate"><span class="pre">mul</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Број</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">други</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">други</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__mul__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">други</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">mul</span><span class="p">(</span><span class="n">други</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Ова класа захтева да објекти <code class="docutils literal notranslate"><span class="pre">Број</span></code>-а садрже методе <code class="docutils literal notranslate"><span class="pre">add</span></code> и <code class="docutils literal notranslate"><span class="pre">mul</span></code>, али их не дефинише. Штавише, чак нема ни <code class="docutils literal notranslate"><span class="pre">__init__</span></code> методу. Сврха <code class="docutils literal notranslate"><span class="pre">Број</span></code>-а није да се директно инстанцира, већ да служи као суперкласа различитих специфичних класа бројева. Следећи задатак је да се дефинишу <code class="docutils literal notranslate"><span class="pre">add</span></code> и <code class="docutils literal notranslate"><span class="pre">mul</span></code> на одговарајући начин за комплексне бројеве.</p>
+<p>Комплексни број се може сматрати тачком у дводимензионалном простору са две ортогоналне осе (Декартов правоугли координатни систем), такозваном реалном и имагинарном осом (комплексна раван). Из ове перспективе, комплексни број <code class="docutils literal notranslate"><span class="pre">z</span> <span class="pre">=</span> <span class="pre">реал</span> <span class="pre">+</span> <span class="pre">имаг</span> <span class="pre">*</span> <span class="pre">i</span></code> (где је <code class="docutils literal notranslate"><span class="pre">i</span> <span class="pre">*</span> <span class="pre">i</span> <span class="pre">=</span> <span class="pre">-1</span></code>) може се сматрати тачком у равни чија је хоризонтална координата <code class="docutils literal notranslate"><span class="pre">реал</span></code>, а чија је вертикална координата <code class="docutils literal notranslate"><span class="pre">имаг</span></code>. Додавање комплексних бројева заправо укључује додавање њима одговарајућих <code class="docutils literal notranslate"><span class="pre">реал</span></code> и <code class="docutils literal notranslate"><span class="pre">имаг</span></code> координата.</p>
+<p>Приликом множења комплексних бројева, природније је размишљати у смислу представљања комплексног броја у поларном облику, односно као уређени пар <code class="docutils literal notranslate"><span class="pre">модул</span></code> и <code class="docutils literal notranslate"><span class="pre">угао</span></code>. Производ два комплексна броја је вектор добијен растезањем једног комплексног броја фактором дужине другог, а затим ротирањем за угао другог.</p>
+<p>Класа <code class="docutils literal notranslate"><span class="pre">Комплексан</span></code> наслеђује класу <code class="docutils literal notranslate"><span class="pre">Број</span></code> и описује аритметику за комплексне бројеве.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Комплексан</span><span class="p">(</span><span class="n">Број</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">други</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">КомплексанРИ</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">реал</span> <span class="o">+</span> <span class="n">други</span><span class="o">.</span><span class="n">реал</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">имаг</span> <span class="o">+</span> <span class="n">други</span><span class="o">.</span><span class="n">имаг</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">mul</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">други</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="n">модуо</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">модуо</span> <span class="o">*</span> <span class="n">други</span><span class="o">.</span><span class="n">модуо</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">КомплексанМУ</span><span class="p">(</span><span class="n">модуо</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">угао</span> <span class="o">+</span> <span class="n">други</span><span class="o">.</span><span class="n">угао</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Ова имплементација претпоставља да постоје две класе за сложене бројеве, што одговара њиховим природним представама:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">КомплексанРИ</span></code> конструише комплексан број из реалног и имагинарног дела.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">КомплексанМУ</span></code> конструише комплексан број из модула и угла.</p></li>
+</ul>
+<div class="section" id="interfaces">
+<span id="id11"></span><h3>Сучеља<a class="headerlink" href="#interfaces" title="Permalink to this headline">¶</a></h3>
+<p>Атрибути објекта, који су облик преношења порука, омогућавају различитим типовима података да одговоре на исту поруку на различите начине. Заједнички скуп порука које производе слично понашање различитих класа је моћан метод апстракције. <em>Сучеље</em> је скуп дељених имена атрибута заједно са спецификацијом њиховог понашања. У случају комплексних бројева, сучеље потребно за имплементацију аритметике састоји се од четири атрибута: <code class="docutils literal notranslate"><span class="pre">реал</span></code>, <code class="docutils literal notranslate"><span class="pre">имаг</span></code>, <code class="docutils literal notranslate"><span class="pre">модуо</span></code> и <code class="docutils literal notranslate"><span class="pre">угао</span></code>.</p>
+<p>Да би комплексна аритметика била тачна, ови атрибути морају бити међусобно доследни. Односно, правоугаоне координате (<code class="docutils literal notranslate"><span class="pre">реал</span></code>, <code class="docutils literal notranslate"><span class="pre">имаг</span></code>) и поларне координате (<code class="docutils literal notranslate"><span class="pre">модуо</span></code>, <code class="docutils literal notranslate"><span class="pre">угао</span></code>) морају описивати исту тачку на комплексној равни. Класа <code class="docutils literal notranslate"><span class="pre">Комплексан</span></code> имплицитно дефинише ово сучеље одређујући како се ови атрибути користе за сабирање (<code class="docutils literal notranslate"><span class="pre">add</span></code>) и множење (<code class="docutils literal notranslate"><span class="pre">mul</span></code>) комплексних бројева.</p>
+</div>
+<div class="section" id="properties">
+<span id="id12"></span><h3>Особине<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h3>
+<p>Нови изазов представља захтев да две или више вредности атрибута одржавају фиксну међусобну везу. Једно од могућих решења је чување вредности атрибута само за једну представу и израчунавање друге представе кад год је то потребно.</p>
+<p>Пајтон има једноставну функцију за израчунавање атрибута у ходу из функција без аргумената. Декоратер <code class="docutils literal notranslate"><span class="pre">&#64;property</span></code> омогућава да функције буду позване без синтаксе позивног израза (заграде након израза). Класа <code class="docutils literal notranslate"><span class="pre">КомплексанРИ</span></code> чува <code class="docutils literal notranslate"><span class="pre">реал</span></code> и <code class="docutils literal notranslate"><span class="pre">имаг</span></code> атрибуте и израчунава <code class="docutils literal notranslate"><span class="pre">модуо</span></code> и <code class="docutils literal notranslate"><span class="pre">угао</span></code> на захтев.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">atan2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">КомплексанРИ</span><span class="p">(</span><span class="n">Комплексан</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">реал</span><span class="p">,</span> <span class="n">имаг</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="bp">self</span><span class="o">.</span><span class="n">реал</span> <span class="o">=</span> <span class="n">реал</span>
+<span class="gp">... </span>        <span class="bp">self</span><span class="o">.</span><span class="n">имаг</span> <span class="o">=</span> <span class="n">имаг</span>
+<span class="gp">... </span>    <span class="nd">@property</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">модуо</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">реал</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">имаг</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mf">0.5</span>
+<span class="gp">... </span>    <span class="nd">@property</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">угао</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">atan2</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">имаг</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">реал</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="s1">&#39;КомплексанРИ(</span><span class="si">{0:g}</span><span class="s1">, </span><span class="si">{1:g}</span><span class="s1">)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">реал</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">имаг</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Као резултат ове имплементације, може се приступити сва четири атрибута потребна за комплексну аритметику и то без икаквих позивних израза, а било какве промене у <code class="docutils literal notranslate"><span class="pre">реал</span></code> или <code class="docutils literal notranslate"><span class="pre">имаг</span></code> осликавају се и на <code class="docutils literal notranslate"><span class="pre">модуо</span></code> и <code class="docutils literal notranslate"><span class="pre">угао</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ри</span> <span class="o">=</span> <span class="n">КомплексанРИ</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ри</span><span class="o">.</span><span class="n">реал</span>
+<span class="go">5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ри</span><span class="o">.</span><span class="n">модуо</span>
+<span class="go">13.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ри</span><span class="o">.</span><span class="n">реал</span> <span class="o">=</span> <span class="mi">9</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ри</span><span class="o">.</span><span class="n">реал</span>
+<span class="go">9</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ри</span><span class="o">.</span><span class="n">модуо</span>
+<span class="go">15.0</span>
+</pre></div>
+</div>
+<p>Слично томе, класа <code class="docutils literal notranslate"><span class="pre">КомплексанМУ</span></code> чува <code class="docutils literal notranslate"><span class="pre">модуо</span></code> и <code class="docutils literal notranslate"><span class="pre">угао</span></code>, али израчунава <code class="docutils literal notranslate"><span class="pre">реал</span></code> и <code class="docutils literal notranslate"><span class="pre">имаг</span></code> кад год се ти атрибути потраже, односно позову.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sin</span><span class="p">,</span> <span class="n">cos</span><span class="p">,</span> <span class="n">pi</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">КомплексанМУ</span><span class="p">(</span><span class="n">Комплексан</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">модуо</span><span class="p">,</span> <span class="n">угао</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="bp">self</span><span class="o">.</span><span class="n">модуо</span> <span class="o">=</span> <span class="n">модуо</span>
+<span class="gp">... </span>        <span class="bp">self</span><span class="o">.</span><span class="n">угао</span> <span class="o">=</span> <span class="n">угао</span>
+<span class="gp">... </span>    <span class="nd">@property</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">реал</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">модуо</span> <span class="o">*</span> <span class="n">cos</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">угао</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="nd">@property</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">имаг</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">модуо</span> <span class="o">*</span> <span class="n">sin</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">угао</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="s1">&#39;КомплексанМУ(</span><span class="si">{0:g}</span><span class="s1">, </span><span class="si">{1:g}</span><span class="s1"> * pi)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">модуо</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">угао</span><span class="o">/</span><span class="n">pi</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Промене модула или угла осликавају се одмах на <code class="docutils literal notranslate"><span class="pre">реал</span></code> и <code class="docutils literal notranslate"><span class="pre">имаг</span></code> атрибутима.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">му</span> <span class="o">=</span> <span class="n">КомплексанМУ</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">pi</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">му</span><span class="o">.</span><span class="n">имаг</span>
+<span class="go">2.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">му</span><span class="o">.</span><span class="n">угао</span> <span class="o">=</span> <span class="n">pi</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">му</span><span class="o">.</span><span class="n">реал</span>
+<span class="go">-2.0</span>
+</pre></div>
+</div>
+<p>Имплементација комплексних бројева је сада завршена. Обе класе које имплементирају комплексне бројеве могу се користити за било који од аргумената у било којој аритметичкој функцији у класи <code class="docutils literal notranslate"><span class="pre">Комплексан</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">pi</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">КомплексанРИ</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">КомплексанМУ</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">pi</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+<span class="go">КомплексанРИ(1, 4)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">КомплексанРИ</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">КомплексанРИ</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="go">КомплексанМУ(1, 1 * pi)</span>
+</pre></div>
+</div>
+<p>Приступ у виду сучеља кодирању вишеструких представа има нека привлачна својства. Класа за сваку представу може се развијати одвојено; морају се сложити само око имена дељених атрибута, као и свих услова понашања за те атрибуте. Сучеље је такође <em>адитивно</em>. Уколико би други програмер желео да дода трећу представу комплексних бројева истом програму, морала би само да се направи нова класа са истим атрибутима.</p>
+<p>Вишеструке представе података уско су повезане са идејом апстракције података којом је започето ово поглавље. Коришћењем апстракције података промењена је имплементација типа податка без промене значења самог програма. Са сучељима и прослеђивањем порука, могу постојати више различитих представа у оквиру истог програма. У оба случаја, скуп имена и одговарајући услови понашања дефинишу апстракцију која омогућава ову флексибилност.</p>
+</div>
+</div>
+<div class="section" id="genericfunctions">
+<span id="id13"></span><h2>Генеричке функције<a class="headerlink" href="#genericfunctions" title="Permalink to this headline">¶</a></h2>
+<p>Генеричке функције су методе или функције које се примењују на аргументе различитих типова. Већ је виђено много примера. Метода <code class="docutils literal notranslate"><span class="pre">Комплексан.add</span></code> је генеричка, јер може узимати или <code class="docutils literal notranslate"><span class="pre">КомплексанРИ</span></code> или <code class="docutils literal notranslate"><span class="pre">КомплексанМУ</span></code> као вредност за <code class="docutils literal notranslate"><span class="pre">други</span></code>. Ова флексибилност стечена је обезбеђивањем да и <code class="docutils literal notranslate"><span class="pre">КомплексанРИ</span></code> и <code class="docutils literal notranslate"><span class="pre">КомплексанМУ</span></code> имају заједничко сучеље. Коришћење сучеља и прослеђивање порука су само једна од неколико метода које се користе за имплементацију генеричких или општих функција. У овом одељку биће размотрене још две: отпремање типова и превођење или претварање типова.</p>
+<p>Претпоставимо да је, поред класа комплексних бројева, имплементирана и класа <code class="docutils literal notranslate"><span class="pre">Рационалан</span></code> како би се њоме представљали разломци. Методе <code class="docutils literal notranslate"><span class="pre">add</span></code> и <code class="docutils literal notranslate"><span class="pre">mul</span></code> изражавају и описују иста израчунавања као и функције <code class="docutils literal notranslate"><span class="pre">збирРазломака</span></code> и <code class="docutils literal notranslate"><span class="pre">производРазломака</span></code> из једног од ранијих одељака овог поглавља.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">gcd</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Рационалан</span><span class="p">(</span><span class="n">Број</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">бројилац</span><span class="p">,</span> <span class="n">именилац</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="n">нзд</span> <span class="o">=</span> <span class="n">gcd</span><span class="p">(</span><span class="n">бројилац</span><span class="p">,</span> <span class="n">именилац</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="bp">self</span><span class="o">.</span><span class="n">бројилац</span> <span class="o">=</span> <span class="n">бројилац</span> <span class="o">//</span> <span class="n">нзд</span>
+<span class="gp">... </span>        <span class="bp">self</span><span class="o">.</span><span class="n">именилац</span> <span class="o">=</span> <span class="n">именилац</span> <span class="o">//</span> <span class="n">нзд</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="s1">&#39;Рационалан(</span><span class="si">{0}</span><span class="s1">, </span><span class="si">{1}</span><span class="s1">)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">бројилац</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">именилац</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">други</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="n">бx</span><span class="p">,</span> <span class="n">иx</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">бројилац</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">именилац</span>
+<span class="gp">... </span>        <span class="n">бy</span><span class="p">,</span> <span class="n">иy</span> <span class="o">=</span> <span class="n">други</span><span class="o">.</span><span class="n">бројилац</span><span class="p">,</span> <span class="n">други</span><span class="o">.</span><span class="n">именилац</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">Рационалан</span><span class="p">(</span><span class="n">бx</span> <span class="o">*</span> <span class="n">иy</span> <span class="o">+</span> <span class="n">бy</span> <span class="o">*</span> <span class="n">иx</span><span class="p">,</span> <span class="n">иx</span> <span class="o">*</span> <span class="n">иy</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">mul</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">други</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="n">бројилац</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">бројилац</span> <span class="o">*</span> <span class="n">други</span><span class="o">.</span><span class="n">бројилац</span>
+<span class="gp">... </span>        <span class="n">именилац</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">именилац</span> <span class="o">*</span> <span class="n">други</span><span class="o">.</span><span class="n">именилац</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">Рационалан</span><span class="p">(</span><span class="n">бројилац</span><span class="p">,</span> <span class="n">именилац</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Пошто је сучеље суперкласе <code class="docutils literal notranslate"><span class="pre">Број</span></code> имплементирано укључивањем метода <code class="docutils literal notranslate"><span class="pre">__add__</span></code> и <code class="docutils literal notranslate"><span class="pre">__mul__</span></code>, рационални бројеви као, резултат тога, могу се сабирати и множити помоћу уобичајених оператора.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Рационалан</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="o">+</span> <span class="n">Рационалан</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="go">Рационалан(1, 2)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Рационалан</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="o">*</span> <span class="n">Рационалан</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="go">Рационалан(1, 6)</span>
+</pre></div>
+</div>
+<p>Међутим, комплексном броју се још увек не може додати рационалан број, иако је у математици и таква комбинација јасно дефинисана. Желели бисмо да представимо ову операцију унакрсног типа на неки пажљиво контролисан начин, како бисмо је могли подржати без озбиљног кршења већ успостављених апстракцијских баријера. Постоји натегнутост између исхода који се желе постићи: желели бисмо да рационалном броју додамо комплексан број и желели бисмо то да то буде учињено користећи генеричку <code class="docutils literal notranslate"><span class="pre">__add__</span></code> методу која ради исправно са свим нумеричким типовима. Истовремено, желели бисмо да раздвојимо бриге и проблеме који се тичу комплексних бројева и рационалних бројева кад год је то могуће, како би се задржала модуларност програма.</p>
+<div class="section" id="typedispatching">
+<span id="id14"></span><h3>Отпремање типова<a class="headerlink" href="#typedispatching" title="Permalink to this headline">¶</a></h3>
+<p>Један од начина имплементације унакрсних операција је да се изабере одговарајуће понашање на основу типова аргумената функције или методе. Главна идеја такозваног отпремања типова јесте писање функција које испитују типове аргумената које добијају, а затим извршавају део кода који је прикладан за те конкретне типове.</p>
+<p>Уграђена функција <code class="docutils literal notranslate"><span class="pre">isinstance</span></code> прима као аргументе објекат и класу, а враћа логичку вредност <code class="docutils literal notranslate"><span class="pre">True</span></code> ако је прослеђени објекат или те класе или неке од класа које је наслеђују, а иначе враћа <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">к</span> <span class="o">=</span> <span class="n">КомплексанРИ</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">isinstance</span><span class="p">(</span><span class="n">к</span><span class="p">,</span> <span class="n">КомплексанРИ</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">isinstance</span><span class="p">(</span><span class="n">к</span><span class="p">,</span> <span class="n">Комплексан</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">isinstance</span><span class="p">(</span><span class="n">к</span><span class="p">,</span> <span class="n">КомплексанМУ</span><span class="p">)</span>
+<span class="go">False</span>
+</pre></div>
+</div>
+<p>Једноставан пример такозваног отпремања типова је функција <code class="docutils literal notranslate"><span class="pre">даЛиЈеРеалан</span></code> која користи различите имплементације за сваки тип комплексног броја.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">даЛиЈеРеалан</span><span class="p">(</span><span class="n">к</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Враћа да ли је к реалан број без имагинарног дела.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">к</span><span class="p">,</span> <span class="n">КомплексанРИ</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">к</span><span class="o">.</span><span class="n">имаг</span> <span class="o">==</span> <span class="mi">0</span>
+<span class="gp">... </span>    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">к</span><span class="p">,</span> <span class="n">КомплексанМУ</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">к</span><span class="o">.</span><span class="n">угао</span> <span class="o">%</span> <span class="n">pi</span> <span class="o">==</span> <span class="mi">0</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">даЛиЈеРеалан</span><span class="p">(</span><span class="n">КомплексанРИ</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">даЛиЈеРеалан</span><span class="p">(</span><span class="n">КомплексанМУ</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">pi</span><span class="p">))</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p>Отпремање типова не изводи се увек помоћу <code class="docutils literal notranslate"><span class="pre">isinstance</span></code>. За аритметику, у инстанце класа <code class="docutils literal notranslate"><span class="pre">Рационалан</span></code> и <code class="docutils literal notranslate"><span class="pre">Комплексан</span></code> биће уведен додатан атрибут <code class="docutils literal notranslate"><span class="pre">ознакаТипа</span></code> који ће имати текстуалне вредности у виду ниске. Када је <code class="docutils literal notranslate"><span class="pre">ознакаТипа</span></code> код две вредности <code class="docutils literal notranslate"><span class="pre">x</span></code> и <code class="docutils literal notranslate"><span class="pre">y</span></code> иста, тада се оне могу директно комбиновати са <code class="docutils literal notranslate"><span class="pre">x.add(y)</span></code>, на пример, а ако није, биће неопходна операција унакрсног типа.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Рационалан</span><span class="o">.</span><span class="n">ознакаТипа</span> <span class="o">=</span> <span class="s1">&#39;рац&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Комплексан</span><span class="o">.</span><span class="n">ознакаТипа</span> <span class="o">=</span> <span class="s1">&#39;ком&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Рационалан</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">ознакаТипа</span> <span class="o">==</span> <span class="n">Рационалан</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">ознакаТипа</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">КомплексанРИ</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">ознакаТипа</span> <span class="o">==</span> <span class="n">КомплексанМУ</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">pi</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">ознакаТипа</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Рационалан</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">ознакаТипа</span> <span class="o">==</span> <span class="n">КомплексанРИ</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">ознакаТипа</span>
+<span class="go">False</span>
+</pre></div>
+</div>
+<p>Да би се комбиновали комплексни и рационални бројеви, биће написане функције које се истовремено ослањају на обе представе. У наставку, ослонићемо се на чињеницу да се <code class="docutils literal notranslate"><span class="pre">Рационалан</span></code> број може приближно претворити у <code class="docutils literal notranslate"><span class="pre">float</span></code> вредност која је заправо рачунарска апроксимација реалног броја. Резултат се може комбиновати са комплексним бројевима.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">сабериКомплексанИРационалан</span><span class="p">(</span><span class="n">к</span><span class="p">,</span> <span class="n">р</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">КомплексанРИ</span><span class="p">(</span><span class="n">к</span><span class="o">.</span><span class="n">реал</span> <span class="o">+</span> <span class="n">р</span><span class="o">.</span><span class="n">бројилац</span><span class="o">/</span><span class="n">р</span><span class="o">.</span><span class="n">именилац</span><span class="p">,</span> <span class="n">к</span><span class="o">.</span><span class="n">имаг</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Множење укључује слично претварање. У поларном облику, реалан број у комплексној равни увек има позитивну апсолутну вредност, то јест модуо. Угао 0 означава позитиван број. Угао <code class="docutils literal notranslate"><span class="pre">pi</span></code> означава негативан број.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">помножиКомплексанИРационалан</span><span class="p">(</span><span class="n">к</span><span class="p">,</span> <span class="n">р</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">рМодуо</span><span class="p">,</span> <span class="n">рУгао</span> <span class="o">=</span> <span class="n">р</span><span class="o">.</span><span class="n">бројилац</span><span class="o">/</span><span class="n">р</span><span class="o">.</span><span class="n">именилац</span><span class="p">,</span> <span class="mi">0</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">рМодуо</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="n">рМодуо</span><span class="p">,</span> <span class="n">рУгао</span> <span class="o">=</span> <span class="o">-</span><span class="n">рМодуо</span><span class="p">,</span> <span class="n">pi</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">КомплексанМУ</span><span class="p">(</span><span class="n">к</span><span class="o">.</span><span class="n">модуо</span> <span class="o">*</span> <span class="n">рМодуо</span><span class="p">,</span> <span class="n">к</span><span class="o">.</span><span class="n">угао</span> <span class="o">+</span> <span class="n">рУгао</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>И код сабирања и код множења важи комутативност, тако да замена редоследа аргументима може користити исте имплементације ових операција унакрсног типа.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">сабериРационаланИКомплексан</span><span class="p">(</span><span class="n">р</span><span class="p">,</span> <span class="n">к</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">сабериКомплексанИРационалан</span><span class="p">(</span><span class="n">к</span><span class="p">,</span> <span class="n">р</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">помножиРационаланИКомплексан</span><span class="p">(</span><span class="n">р</span><span class="p">,</span> <span class="n">к</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">помножиКомплексанИРационалан</span><span class="p">(</span><span class="n">к</span><span class="p">,</span> <span class="n">р</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Улога отпремања типова је да обезбеди да се ове операције унакрсног типа користе у одговарајуће време. У наставку, суперкласа <code class="docutils literal notranslate"><span class="pre">Број</span></code> биће преписана тако да користи отпремање типова за своје <code class="docutils literal notranslate"><span class="pre">__add__</span></code> и <code class="docutils literal notranslate"><span class="pre">__mul__</span></code> методе.</p>
+<p>Атрибут <code class="docutils literal notranslate"><span class="pre">ознакаТипа</span></code> биће искоришћен да се направи разлика између типова аргумената. Такође се може директно користити и уграђена <code class="docutils literal notranslate"><span class="pre">isinstance</span></code> метода, али ознаке поједностављују имплементацију. Коришћење типовних ознака такође илуструје да отпремање типова није нужно везано за Пајтонов објектни систем, већ је напротив, општа техника за стварање генеричких функција на хетерогеним доменима.</p>
+<p>Метода <code class="docutils literal notranslate"><span class="pre">__add__</span></code> разматра два случаја. Најпре, ако два аргумента имају исту ознаку типа, тада се претпоставља да <code class="docutils literal notranslate"><span class="pre">add</span></code> метода првог може узети други као свој аргумент. Иначе, проверава да ли речник имплементација унакрсног типа, под називом <code class="docutils literal notranslate"><span class="pre">сабирачи</span></code>, садржи функцију која може да сабере аргументе тих типовних ознака. Уколико таква функција постоји, метода <code class="docutils literal notranslate"><span class="pre">унакрсноПримени</span></code> је проналази и примењује. Метода <code class="docutils literal notranslate"><span class="pre">__mul__</span></code> има сличну структуру.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Број</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">други</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ознакаТипа</span> <span class="o">==</span> <span class="n">други</span><span class="o">.</span><span class="n">ознакаТипа</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">други</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="k">elif</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ознакаТипа</span><span class="p">,</span> <span class="n">други</span><span class="o">.</span><span class="n">ознакаТипа</span><span class="p">)</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">сабирачи</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">унакрсноПримени</span><span class="p">(</span><span class="n">други</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">сабирачи</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__mul__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">други</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ознакаТипа</span> <span class="o">==</span> <span class="n">други</span><span class="o">.</span><span class="n">ознакаТипа</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">mul</span><span class="p">(</span><span class="n">други</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="k">elif</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ознакаТипа</span><span class="p">,</span> <span class="n">други</span><span class="o">.</span><span class="n">ознакаТипа</span><span class="p">)</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">множачи</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">унакрсноПримени</span><span class="p">(</span><span class="n">други</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">множачи</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">унакрсноПримени</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">други</span><span class="p">,</span> <span class="n">унакрснеФје</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="n">унакрснаФја</span> <span class="o">=</span> <span class="n">унакрснеФје</span><span class="p">[(</span><span class="bp">self</span><span class="o">.</span><span class="n">ознакаТипа</span><span class="p">,</span> <span class="n">други</span><span class="o">.</span><span class="n">ознакаТипа</span><span class="p">)]</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">унакрснаФја</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">други</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="n">сабирачи</span> <span class="o">=</span> <span class="p">{(</span><span class="s2">&quot;ком&quot;</span><span class="p">,</span> <span class="s2">&quot;рац&quot;</span><span class="p">):</span> <span class="n">сабериКомплексанИРационалан</span><span class="p">,</span>
+<span class="gp">... </span>                <span class="p">(</span><span class="s2">&quot;рац&quot;</span><span class="p">,</span> <span class="s2">&quot;ком&quot;</span><span class="p">):</span> <span class="n">сабериРационаланИКомплексан</span><span class="p">}</span>
+<span class="gp">... </span>    <span class="n">множачи</span> <span class="o">=</span> <span class="p">{(</span><span class="s2">&quot;ком&quot;</span><span class="p">,</span> <span class="s2">&quot;рац&quot;</span><span class="p">):</span> <span class="n">помножиКомплексанИРационалан</span><span class="p">,</span>
+<span class="gp">... </span>               <span class="p">(</span><span class="s2">&quot;рац&quot;</span><span class="p">,</span> <span class="s2">&quot;ком&quot;</span><span class="p">):</span> <span class="n">помножиРационаланИКомплексан</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>У овој новој дефиницији класе <code class="docutils literal notranslate"><span class="pre">Број</span></code>, све имплементације унакрсног типа индексиране су паровима типовних ознака унутар речника <code class="docutils literal notranslate"><span class="pre">сабирачи</span></code> и <code class="docutils literal notranslate"><span class="pre">множачи</span></code>.</p>
+<p>Овај приступ отпремања типова који је заснован на речницима је лако проширив. Нове поткласе класе <code class="docutils literal notranslate"><span class="pre">Број</span></code> могле би се инсталирати у читав систем једноставном декларацијом ознаке типа и додавањем унакрсних операција у речнике <code class="docutils literal notranslate"><span class="pre">Број.сабирачи</span></code> и <code class="docutils literal notranslate"><span class="pre">Број.множачи</span></code>. Могу се такође дефинисати и сопствени <code class="docutils literal notranslate"><span class="pre">сабирачи</span></code> и <code class="docutils literal notranslate"><span class="pre">множачи</span></code> у самим поткласама.</p>
+<p>Иако је у читав систем уведена одређена доза сложености, сада се могу комбиновати и мешати типови података у изразима сабирања и множења.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">КомплексанРИ</span><span class="p">(</span><span class="mf">1.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="n">Рационалан</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="c1"># doctest: +SKIP</span>
+<span class="go">КомплексанРИ(3, 0)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Рационалан</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">КомплексанМУ</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">pi</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># doctest: +SKIP</span>
+<span class="go">КомплексанМУ(2, 1.5 * pi)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="coercion">
+<span id="id15"></span><h3>Претварање<a class="headerlink" href="#coercion" title="Permalink to this headline">¶</a></h3>
+<p>У општој ситуацији потпуно неповезаних операција које делују над потпуно неповезаним типовима, имплементација експлицитних унакрсних операција, колико год гломазна била, најбоље је до чега се може доћи. Срећом, понекад се може учинити још нешто боље користећи предност додатне структуре која може бити латентна и прикривена у изграђеном систему типова. Често различити типови података нису у потпуности независни и могу постојати начини на које се објекти једног типа могу посматрати као објекти другог типа. Овај процес се назива <em>претварање</em>. На пример, ако се затражи да се аритметички искомбинују рационалан број са комплексним бројем, рационалан број се може посматрати посматрати као комплексан број чији је имагинарни део нула. Након тога могу се користити <code class="docutils literal notranslate"><span class="pre">Комплексан.add</span></code> и <code class="docutils literal notranslate"><span class="pre">Комплексан.mul</span></code> за комбиноване математичке операције сабирања и множења.</p>
+<p>Уопштено, ова идеја може се спровести пројектовањем функција претварања које трансформишу објекат једног типа у еквивалентни објекат другог типа. Ево типичне функције претварања која трансформише рационални у комплексни број са нултим имагинарним делом:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">рационаланУкомплексан</span><span class="p">(</span><span class="n">р</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">КомплексанРИ</span><span class="p">(</span><span class="n">р</span><span class="o">.</span><span class="n">бројилац</span><span class="o">/</span><span class="n">р</span><span class="o">.</span><span class="n">именилац</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Алтернативна дефиниција класе <code class="docutils literal notranslate"><span class="pre">Број</span></code> изводи операције над унакрсним типовима покушајем претварања оба аргумента у исти тип. Речник <code class="docutils literal notranslate"><span class="pre">претварања</span></code> индексира сва могућа претварања са по једним паром типовних ознака, указујући да одговарајућа вредност претвара вредност првог типа у вредност другог типа.</p>
+<p>Генерално није могуће претворити произвољан објекат података неког типа у све остале типове. На пример, не постоји начин да се произвољан комплексан број претвори у рационалан број, тако да неће бити имплементирана таква конверзија у речнику <code class="docutils literal notranslate"><span class="pre">претварања</span></code>.</p>
+<p>Метода <code class="docutils literal notranslate"><span class="pre">претвори</span></code> враћа две вредности са истом ознаком типа. Она испитује ознаке типова својих аргумената, упоређује их са уносима у речнику <code class="docutils literal notranslate"><span class="pre">претварања</span></code> и конвертује један аргумент у тип другог користећи <code class="docutils literal notranslate"><span class="pre">претвориУ</span></code> методу. Само један унос у речнику <code class="docutils literal notranslate"><span class="pre">претварања</span></code> је неопходан да би се довршио аритметички систем над унакрсним типовима, тиме замењујући све четири функције унакрсног типа у верзији класе <code class="docutils literal notranslate"><span class="pre">Број</span></code> која користи отпремање типова.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Број</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">други</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">претвори</span><span class="p">(</span><span class="n">други</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">x</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__mul__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">други</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">претвори</span><span class="p">(</span><span class="n">други</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">x</span><span class="o">.</span><span class="n">mul</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">претвори</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">други</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ознакаТипа</span> <span class="o">==</span> <span class="n">други</span><span class="o">.</span><span class="n">ознакаТипа</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="k">return</span> <span class="bp">self</span><span class="p">,</span> <span class="n">други</span>
+<span class="gp">... </span>        <span class="k">elif</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ознакаТипа</span><span class="p">,</span> <span class="n">други</span><span class="o">.</span><span class="n">ознакаТипа</span><span class="p">)</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">претварања</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">претвориУ</span><span class="p">(</span><span class="n">други</span><span class="o">.</span><span class="n">ознакаТипа</span><span class="p">),</span> <span class="n">други</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="k">elif</span> <span class="p">(</span><span class="n">други</span><span class="o">.</span><span class="n">ознакаТипа</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ознакаТипа</span><span class="p">)</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">претварања</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">други</span><span class="o">.</span><span class="n">претвориУ</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ознакаТипа</span><span class="p">))</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">претвориУ</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other_tag</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="n">фјаПретварања</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">претварања</span><span class="p">[(</span><span class="bp">self</span><span class="o">.</span><span class="n">ознакаТипа</span><span class="p">,</span> <span class="n">other_tag</span><span class="p">)]</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">фјаПретварања</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="n">претварања</span> <span class="o">=</span> <span class="p">{(</span><span class="s1">&#39;рац&#39;</span><span class="p">,</span> <span class="s1">&#39;ком&#39;</span><span class="p">):</span> <span class="n">рационаланУкомплексан</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Ова шема претварања има неке предности у односу на метод дефинисања експлицитних операција унакрсног типа. Иако се још увек морају писати функције претварања како би се повезали типови, ипак мора да се напише само једна функција за сваки пар типова, а не различиту функцију за сваки скуп типова и сваку генеричку операцију. Оно на шта се овде рачуна јесте чињеница да одговарајућа трансформација између типова зависи само од самих типова, а не од конкретне операције која ће се над њима применити.</p>
+<p>Даље предности долазе од проширивања претварања. Неке софистицираније шеме претварања не само да покушавају да претворе један тип у други, већ уместо тога могу да покушају да претворе два различита типа у трећи уобичајени тип. Узмимо у обзир ромб и правоугаоник: ниједан није посебан случај другог, али оба се могу посматрати као четвороугли. Још једно проширење претварања је такозвано итеративно претварање, у коме се један тип података претвара у други путем посредних типова. Узмимо у обзир да се цео број може претворити у реалан број тако што ће се најпре претворити у рационалан број, а потом тај рационални број претворити у реалан број. Уланчавање претварања на овај начин може смањити укупан број функција претварања које су потребне програму.</p>
+<p>Упркос својим предностима, претварање има потенцијалне недостатке. Као прво, функције претварања могу услед примене довести до губитка информације. У малопређашњем примеру, рационални бројеви су имају тачну и егзактну представу, али нажалост постају апроксимације када се претворе у комплексне бројеве.</p>
+<p>Неки програмски језици поседују уграђене системе аутоматског претварања. У ствари, ране верзије Пајтона имале су посебну методу <code class="docutils literal notranslate"><span class="pre">__coerce__</span></code> на објектима. На крају, сложеност уграђеног система претварања није оправдала његову употребу и зато је уклоњен. Уместо тога, одређени оператори по потреби примењују претварање над својим аргументима.</p>
+</div>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Имплементација класа и објеката' data-toggle="tooltip"><a href="6-имплементација-класа-и-објеката.html">Претходно поглавље</a></li>
+    
+        <li id="relations-next" title='Next chapter - Ефикасност' data-toggle="tooltip"><a href="8-ефикасност.html">Следеће поглавље</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Имплементација класа и објеката' data-toggle="tooltip"><a href="6-имплементација-класа-и-објеката.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Ефикасност' data-toggle="tooltip"><a href="8-ефикасност.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="pull-left">&copy; 2019 Petlja (Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

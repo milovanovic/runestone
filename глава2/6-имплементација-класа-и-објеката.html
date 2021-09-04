@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sr"></html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Имплементација класа и објеката &#8212; Компоновање рачунарских програма</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/simanim.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pycode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/p5js.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dbDirective.css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-runestone.css" type="text/css" />
+    <link rel="stylesheet" href="../_staticnbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../_static/Blob.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="../_static/blockpy-modal.js"></script>
+    <script type="text/javascript" src="../_static/simanim.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.16.1/full/pyodide.js"></script>
+    <script type="text/javascript" src="../_static/pycode.js"></script>
+    <script type="text/javascript" src="//toolness.github.io/p5.js-widget/p5-widget.js"></script>
+    <script type="text/javascript" src="../_static/p5js.js"></script>
+    <script type="text/javascript" src="../_static/gallery.js"></script>
+    <script type="text/javascript" src="../_static/dbDirective.js"></script>
+    <script type="text/javascript" src="../_static/sql.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="../_static/require.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Објектна апстракција" href="7-објектна-апстракција.html" />
+    <link rel="prev" title="Објектно-оријентисано програмирање" href="5-ооп.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host + '/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+  eBookConfig.course = 'krp';
+  eBookConfig.logLevel = '0';
+  eBookConfig.loginRequired = 'false';
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = 'false';
+  eBookConfig.python3 = 'true';
+  eBookConfig.basecourse = 'krp';
+  eBookConfig.runestone_version = '';
+  eBookConfig.imagesDir = '../_images/';
+  eBookConfig.staticDir = '../_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="../_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="../">Компоновање рачунарских програма</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content" style="margin-top: 70px;">
+  
+  <div class="section" id="implementingclassesandobjects">
+<span id="id1"></span><h1>Имплементација класа и објеката<a class="headerlink" href="#implementingclassesandobjects" title="Permalink to this headline">¶</a></h1>
+<p>Када се ради у такозваној објектно-оријентисаној парадигми програмирања, користи се објектна метафора за управљање организацијом рачунарских програма. Већина логике о начину представљања и обраде података изражена је унутар декларисаних класа. У овом одељку је приказано да се класе и објекти могу и сами представити искључиво помоћу функција и речника. Сврха имплементације објектног система на овај начин је да илуструје да употреба објектне метафоре не захтева посебан програмски језик. Програми могу бити објектно-оријентисани, чак и у програмским језицима који немају уграђени објектни систем.</p>
+<p>Да би се имплементирали објекти, биће напуштен запис, односно нотација преко тачке (која захтева уграђену језичку подршку), али ће бити створени диспечерски речници који се понашају приближно на исти начин као и елементи уграђеног објектног система. Већ је виђено како се имплементира понашање прослеђивања порука кроз деспечерске речнике. Да би се у потпуности имплементирао објектни систем, шаљу се поруке између инстанци, класа и основних класа, а све су заправо ништа друго до речници који садрже атрибуте.</p>
+<p>Неће бити имплементиран целокупан Пајтонов објектни систем, који укључује и одлике које нису обрађиване у досадашњем излагању (нпр. мета-класе и статичке методе). Уместо тога, фокус ће бити стављен на кориснички дефинисане класе без вишеструког наслеђивања и без интроспективног понашања (попут враћања класе неке инстанце). Намера ове показне имлементације није да прати тачну спецификацију Пајтоновог система типова. Уместо тога, пројектована је само за имплементацију основних функционалности које омогућавају објектну метафору.</p>
+<div class="section" id="instances">
+<span id="id2"></span><h2>Инстанце<a class="headerlink" href="#instances" title="Permalink to this headline">¶</a></h2>
+<p>Почнимо инстанцама. Инстанца има именоване атрибуте, као што је стање на рачуну, који се може поставити и очитати, односно вратити то јест преузети. Инстанце се имплементирају помоћу диспечерског речника који одговара на поруке „преузми” и „постави” које се односе на вредности атрибута. Сами атрибути се чувају у локалном речнику под називом <code class="docutils literal notranslate"><span class="pre">атрибути</span></code>.</p>
+<p>Као што је приказано нешто раније у овом поглављу, сами речници су апстрактни типови података. Речници су били имплементирани помоћу низова, низови помоћу парова, а парови помоћу функција. Док се објектни систем имплементира преко речника, треба имати на уму да би се и сами објекти могли подједнако добро имплементирати користећи се искључиво функцијама.</p>
+<p>Имплементација инстанце се започиње претпоставком да постоји имплементација класе која може претражити било која имена која нису део инстанце. Класа се прослеђује функцији <code class="docutils literal notranslate"><span class="pre">направиИнстанцу</span></code> као <code class="docutils literal notranslate"><span class="pre">клс</span></code> параметар.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">направиИнстанцу</span><span class="p">(</span><span class="n">клс</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Враћа нови објекат инстанце која је у ствари диспечерски речник.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">преузмиВредност</span><span class="p">(</span><span class="n">име</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">if</span> <span class="n">име</span> <span class="ow">in</span> <span class="n">атрибути</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="k">return</span> <span class="n">атрибути</span><span class="p">[</span><span class="n">име</span><span class="p">]</span>
+<span class="gp">... </span>        <span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="n">вредност</span> <span class="o">=</span> <span class="n">клс</span><span class="p">[</span><span class="s1">&#39;преузми&#39;</span><span class="p">](</span><span class="n">име</span><span class="p">)</span>
+<span class="gp">... </span>            <span class="k">return</span> <span class="n">повежиМетоду</span><span class="p">(</span><span class="n">вредност</span><span class="p">,</span> <span class="n">инстанца</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">поставиВредност</span><span class="p">(</span><span class="n">име</span><span class="p">,</span> <span class="n">вредност</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="n">атрибути</span><span class="p">[</span><span class="n">име</span><span class="p">]</span> <span class="o">=</span> <span class="n">вредност</span>
+<span class="gp">... </span>    <span class="n">атрибути</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="gp">... </span>    <span class="n">инстанца</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;преузми&#39;</span><span class="p">:</span> <span class="n">преузмиВредност</span><span class="p">,</span> <span class="s1">&#39;постави&#39;</span><span class="p">:</span> <span class="n">поставиВредност</span><span class="p">}</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">инстанца</span>
+</pre></div>
+</div>
+<p>У горњој функцији <code class="docutils literal notranslate"><span class="pre">инстанца</span></code> је диспечерски речник који одговара на поруке <code class="docutils literal notranslate"><span class="pre">преузми</span></code> и <code class="docutils literal notranslate"><span class="pre">постави</span></code>. Порука <code class="docutils literal notranslate"><span class="pre">постави</span></code> одговара додељивању вредности атрибута у Пајтоновом објектном систему: сви додељени атрибути чувају се директно у локалном речнику атрибута објекта. У <code class="docutils literal notranslate"><span class="pre">преузми</span></code>, ако се <code class="docutils literal notranslate"><span class="pre">име</span></code> не појављује у локалном речнику атрибута, онда се тражи у класи. Уколико је <code class="docutils literal notranslate"><span class="pre">вредност</span></code> коју враћа <code class="docutils literal notranslate"><span class="pre">клс</span></code> функција, она мора бити везана за ову инстанцу.</p>
+<div class="section" id="boundmethodvalues">
+<span id="id3"></span><h3>Вредности везане методе<a class="headerlink" href="#boundmethodvalues" title="Permalink to this headline">¶</a></h3>
+<p>Функција <code class="docutils literal notranslate"><span class="pre">преузмиВредност</span></code> у <code class="docutils literal notranslate"><span class="pre">направиИнстанцу</span></code> проналази именовани атрибут у својој класи помоћу <code class="docutils literal notranslate"><span class="pre">преузми</span></code>, а затим позива <code class="docutils literal notranslate"><span class="pre">повежиМетоду</span></code>. Везивање методе односи се само на вредности функције и ствара вредност везане методе на основу вредности функције уметањем инстанце као првог аргумента:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">повежиМетоду</span><span class="p">(</span><span class="n">вредност</span><span class="p">,</span> <span class="n">инстанца</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Враћа везану методу ако је вредност могуће позвати, а иначе вредност.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">callable</span><span class="p">(</span><span class="n">вредност</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">def</span> <span class="nf">метода</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+<span class="gp">... </span>            <span class="k">return</span> <span class="n">вредност</span><span class="p">(</span><span class="n">инстанца</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">метода</span>
+<span class="gp">... </span>    <span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">вредност</span>
+</pre></div>
+</div>
+<p>Када је метода позвана, први параметар <code class="docutils literal notranslate"><span class="pre">self</span></code> ће овом дефиницијом бити везан на вредност то јест објекат инстанце.</p>
+</div>
+</div>
+<div class="section" id="classes">
+<span id="id4"></span><h2>Класе<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<p>Класе су такође објекти, како у Пајтоновом уграђеном објектном систему, тако и у систему који се овде имплементира. Због једноставности каже се да саме класе немају класу. (У Пајтону, класе имају класе; готово све класе деле исту класу, која се назива <code class="docutils literal notranslate"><span class="pre">type</span></code>). Класа може одговорити на поруке <code class="docutils literal notranslate"><span class="pre">презуми</span></code> и <code class="docutils literal notranslate"><span class="pre">постави</span></code>, као и на поруку <code class="docutils literal notranslate"><span class="pre">нова</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">направиКласу</span><span class="p">(</span><span class="n">атрибути</span><span class="p">,</span> <span class="n">основнаКласа</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Враћа нову класу, која је у ствари диспечерски речник.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">преузмиВредност</span><span class="p">(</span><span class="n">име</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">if</span> <span class="n">име</span> <span class="ow">in</span> <span class="n">атрибути</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="k">return</span> <span class="n">атрибути</span><span class="p">[</span><span class="n">име</span><span class="p">]</span>
+<span class="gp">... </span>        <span class="k">elif</span> <span class="n">основнаКласа</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="k">return</span> <span class="n">основнаКласа</span><span class="p">[</span><span class="s1">&#39;преузми&#39;</span><span class="p">](</span><span class="n">име</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">поставиВредност</span><span class="p">(</span><span class="n">име</span><span class="p">,</span> <span class="n">вредност</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="n">атрибути</span><span class="p">[</span><span class="n">име</span><span class="p">]</span> <span class="o">=</span> <span class="n">вредност</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">нова</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">иницијализујИнстанцу</span><span class="p">(</span><span class="n">клс</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="n">клс</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;преузми&#39;</span><span class="p">:</span> <span class="n">преузмиВредност</span><span class="p">,</span> <span class="s1">&#39;постави&#39;</span><span class="p">:</span> <span class="n">поставиВредност</span><span class="p">,</span> <span class="s1">&#39;нова&#39;</span><span class="p">:</span> <span class="n">нова</span><span class="p">}</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">клс</span>
+</pre></div>
+</div>
+<p>За разлику од инстанце, функција <code class="docutils literal notranslate"><span class="pre">преузми</span></code> за класе не поставља упит својој класи када атрибут није пронађен, већ поставља упит својој основној класи. Саме класе не захтевају везивање метода.</p>
+<div class="section" id="initialization">
+<span id="id5"></span><h3>Иницијализација<a class="headerlink" href="#initialization" title="Permalink to this headline">¶</a></h3>
+<p>Функција <code class="docutils literal notranslate"><span class="pre">нова</span></code> у <code class="docutils literal notranslate"><span class="pre">направиКласу</span></code> позива <code class="docutils literal notranslate"><span class="pre">иницијализујИнстанцу</span></code> која најпре прави нову инстанцу, а затим позива методу под називом <code class="docutils literal notranslate"><span class="pre">__init__</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">иницијализујИнстанцу</span><span class="p">(</span><span class="n">клс</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Враћа нови објекат са клс типом који је иницијализован са args.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="n">инстанца</span> <span class="o">=</span> <span class="n">направиИнстанцу</span><span class="p">(</span><span class="n">клс</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="n">init</span> <span class="o">=</span> <span class="n">клс</span><span class="p">[</span><span class="s1">&#39;преузми&#39;</span><span class="p">](</span><span class="s1">&#39;__init__&#39;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">init</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="n">init</span><span class="p">(</span><span class="n">инстанца</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">инстанца</span>
+</pre></div>
+</div>
+<p>Ова последња функција довршава објектни систем. Сада имамо инстанце, над којима <code class="docutils literal notranslate"><span class="pre">постави</span></code> ради локално, али које се за <code class="docutils literal notranslate"><span class="pre">преузми</span></code> обраћају својим класама. Након што инстанца потражи неко име у својој класи, она се везује за функционалне вредности како би створила методе. Коначно, класе могу преко <code class="docutils literal notranslate"><span class="pre">нова</span></code> да праве нове инстанце и позивају/примењују њихову конструкторску функцију <code class="docutils literal notranslate"><span class="pre">__init__</span></code> одмах након стварања инстанце.</p>
+<p>У овом објектном систему једина функција коју би корисник требало да позове је <code class="docutils literal notranslate"><span class="pre">направиКласу</span></code>. Све остале функционалности су омогућене путем преношења порука. Слично томе, Пајтонов објектни систем позива се преко <code class="docutils literal notranslate"><span class="pre">class</span></code> наредбе, а све остале његове функционалности су омогућене кроз тачкасте изразе и позиве класама.</p>
+</div>
+</div>
+<div class="section" id="usingimplementedobjects">
+<span id="id6"></span><h2>Коришћење имплементираних објеката<a class="headerlink" href="#usingimplementedobjects" title="Permalink to this headline">¶</a></h2>
+<p>Вратимо се сада употреби банковног рачуна као примера из претходног одељка. Користећи имплементиран објектни систем, биће створена класа <code class="docutils literal notranslate"><span class="pre">Рачун</span></code>, поткласа <code class="docutils literal notranslate"><span class="pre">ТекућиРачун</span></code> и инстанца сваке од њих.</p>
+<p>Класа <code class="docutils literal notranslate"><span class="pre">Рачун</span></code> се прави помоћу функције <code class="docutils literal notranslate"><span class="pre">направиКласуРачун</span></code> која има структуру сличну оној коју има и наредба класе у Пајтону, али се завршава позивом на <code class="docutils literal notranslate"><span class="pre">направиКласу</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">направиКласуРачун</span><span class="p">():</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Враћа класу Рачун која поседује методе депонуј и подигни.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="n">камата</span> <span class="o">=</span> <span class="mf">0.02</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">власникРачуна</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="bp">self</span><span class="p">[</span><span class="s1">&#39;постави&#39;</span><span class="p">](</span><span class="s1">&#39;власник&#39;</span><span class="p">,</span> <span class="n">власникРачуна</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="bp">self</span><span class="p">[</span><span class="s1">&#39;постави&#39;</span><span class="p">](</span><span class="s1">&#39;стање&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">депонуј</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">износ</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="sd">&quot;&quot;&quot;Увећај стање на рачуну за износ и врати ново стање на рачуну.&quot;&quot;&quot;</span>
+<span class="gp">... </span>        <span class="n">new_balance</span> <span class="o">=</span> <span class="bp">self</span><span class="p">[</span><span class="s1">&#39;преузми&#39;</span><span class="p">](</span><span class="s1">&#39;стање&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">износ</span>
+<span class="gp">... </span>        <span class="bp">self</span><span class="p">[</span><span class="s1">&#39;постави&#39;</span><span class="p">](</span><span class="s1">&#39;стање&#39;</span><span class="p">,</span> <span class="n">new_balance</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="bp">self</span><span class="p">[</span><span class="s1">&#39;преузми&#39;</span><span class="p">](</span><span class="s1">&#39;стање&#39;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">подигни</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">износ</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="sd">&quot;&quot;&quot;Умањи стање на рачуну за износ и врати ново стање на рачуну.&quot;&quot;&quot;</span>
+<span class="gp">... </span>        <span class="n">стање</span> <span class="o">=</span> <span class="bp">self</span><span class="p">[</span><span class="s1">&#39;преузми&#39;</span><span class="p">](</span><span class="s1">&#39;стање&#39;</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="k">if</span> <span class="n">износ</span> <span class="o">&gt;</span> <span class="n">стање</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="k">return</span> <span class="s1">&#39;Недовољно средстава на рачуну.&#39;</span>
+<span class="gp">... </span>        <span class="bp">self</span><span class="p">[</span><span class="s1">&#39;постави&#39;</span><span class="p">](</span><span class="s1">&#39;стање&#39;</span><span class="p">,</span> <span class="n">стање</span> <span class="o">-</span> <span class="n">износ</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="bp">self</span><span class="p">[</span><span class="s1">&#39;преузми&#39;</span><span class="p">](</span><span class="s1">&#39;стање&#39;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">направиКласу</span><span class="p">(</span><span class="nb">locals</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>Завршни позив функцији <code class="docutils literal notranslate"><span class="pre">locals</span></code> враћа речник са текстуалним кључевима који садржи везе име-вредност у тренутном локалном оквиру.</p>
+<p>Класа <code class="docutils literal notranslate"><span class="pre">Рачун</span></code> најзад се може инстанцирати преко доделе.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Рачун</span> <span class="o">=</span> <span class="n">направиКласуРачун</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Затим се путем поруке <code class="docutils literal notranslate"><span class="pre">нова</span></code> ствара инстанца рачуна, која захтева и неко име које иде уз новостворени рачун.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">владинРачун</span> <span class="o">=</span> <span class="n">Рачун</span><span class="p">[</span><span class="s1">&#39;нова&#39;</span><span class="p">](</span><span class="s1">&#39;Влада&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Након тога, поруке <code class="docutils literal notranslate"><span class="pre">преузми</span></code> прослеђене инстанци <code class="docutils literal notranslate"><span class="pre">владинРачун</span></code> враћају њена својства и методе. Рецуним могу се позвати методе за ажурирање стања на рачуну.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">владинРачун</span><span class="p">[</span><span class="s1">&#39;преузми&#39;</span><span class="p">](</span><span class="s1">&#39;власник&#39;</span><span class="p">)</span>
+<span class="go">&#39;Влада&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">владинРачун</span><span class="p">[</span><span class="s1">&#39;преузми&#39;</span><span class="p">](</span><span class="s1">&#39;камата&#39;</span><span class="p">)</span>
+<span class="go">0.02</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">владинРачун</span><span class="p">[</span><span class="s1">&#39;преузми&#39;</span><span class="p">](</span><span class="s1">&#39;депонуј&#39;</span><span class="p">)(</span><span class="mi">20</span><span class="p">)</span>
+<span class="go">20</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">владинРачун</span><span class="p">[</span><span class="s1">&#39;преузми&#39;</span><span class="p">](</span><span class="s1">&#39;подигни&#39;</span><span class="p">)(</span><span class="mi">5</span><span class="p">)</span>
+<span class="go">15</span>
+</pre></div>
+</div>
+<p>Као и код Пајтоновог објектног система, постављањем атрибута инстанце не мења се одговарајући атрибут његове класе.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">владинРачун</span><span class="p">[</span><span class="s1">&#39;постави&#39;</span><span class="p">](</span><span class="s1">&#39;камата&#39;</span><span class="p">,</span> <span class="mf">0.04</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Рачун</span><span class="p">[</span><span class="s1">&#39;преузми&#39;</span><span class="p">](</span><span class="s1">&#39;камата&#39;</span><span class="p">)</span>
+<span class="go">0.02</span>
+</pre></div>
+</div>
+<div class="section" id="inheritance">
+<span id="id7"></span><h3>Наслеђивање<a class="headerlink" href="#inheritance" title="Permalink to this headline">¶</a></h3>
+<p>Може се направити поткласа <code class="docutils literal notranslate"><span class="pre">ТекућиРачун</span></code> преписивањем једног подскупа атрибута класе. У овом случају мења се метода <code class="docutils literal notranslate"><span class="pre">подигни</span></code> како би се наметнула провизија приликом подизања новца и смањује се каматна стопа.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">направиКласуТекућиРачун</span><span class="p">():</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Враћа класу ТекућиРачун, која намеће провизију 1 приликом подизања новца.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="n">камата</span> <span class="o">=</span> <span class="mf">0.01</span>
+<span class="gp">... </span>    <span class="n">провизија</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">подигни</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">износ</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="n">накнада</span> <span class="o">=</span> <span class="bp">self</span><span class="p">[</span><span class="s1">&#39;преузми&#39;</span><span class="p">](</span><span class="s1">&#39;провизија&#39;</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">Рачун</span><span class="p">[</span><span class="s1">&#39;преузми&#39;</span><span class="p">](</span><span class="s1">&#39;подигни&#39;</span><span class="p">)(</span><span class="bp">self</span><span class="p">,</span> <span class="n">износ</span> <span class="o">+</span> <span class="n">накнада</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">направиКласу</span><span class="p">(</span><span class="nb">locals</span><span class="p">(),</span> <span class="n">Рачун</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>У овој имплементацији, функција <code class="docutils literal notranslate"><span class="pre">подигни</span></code> основне класе <code class="docutils literal notranslate"><span class="pre">Рачун</span></code> позива се из функције <code class="docutils literal notranslate"><span class="pre">подигни</span></code> њене поткласе као што се то и иначе ради у Пајтоновом уграђеном објектном систему. И сама поткласа и њене инстанце могу се стварати као и раније.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ТекућиРачун</span> <span class="o">=</span> <span class="n">направиКласуТекућиРачун</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">баруновРачун</span> <span class="o">=</span> <span class="n">ТекућиРачун</span><span class="p">[</span><span class="s1">&#39;нова&#39;</span><span class="p">](</span><span class="s1">&#39;Барун&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Депозити се понашају идентично, као и конструкторска функција, односно, подизања новца се одвијају уз наметнуту провизију од 1 динар из специјализоване и прилагођене методе <code class="docutils literal notranslate"><span class="pre">подигни</span></code>, а <code class="docutils literal notranslate"><span class="pre">камата</span></code> има нову, нешто нижу вредност у поткласи <code class="docutils literal notranslate"><span class="pre">ТекућиРачун</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">баруновРачун</span><span class="p">[</span><span class="s1">&#39;преузми&#39;</span><span class="p">](</span><span class="s1">&#39;камата&#39;</span><span class="p">)</span>
+<span class="go">0.01</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">баруновРачун</span><span class="p">[</span><span class="s1">&#39;преузми&#39;</span><span class="p">](</span><span class="s1">&#39;депонуј&#39;</span><span class="p">)(</span><span class="mi">20</span><span class="p">)</span>
+<span class="go">20</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">баруновРачун</span><span class="p">[</span><span class="s1">&#39;преузми&#39;</span><span class="p">](</span><span class="s1">&#39;подигни&#39;</span><span class="p">)(</span><span class="mi">5</span><span class="p">)</span>
+<span class="go">14</span>
+</pre></div>
+</div>
+<p>Објектни систем изграђен на речницима прилично је сличан по имплементацији уграђеном Пајтоновом објектном систему. У Пајтону, инстанца било које кориснички дефинисане класе има посебан атрибут <code class="docutils literal notranslate"><span class="pre">__dict__</span></code> који у речнику чува локалне атрибуте инстанце за тај објекат, врло слично као и речник <code class="docutils literal notranslate"><span class="pre">атрибути</span></code>. Пајтон се ипак разликује због тога што он ипак издваја одређене посебне методе које комуницирају са уграђеним функцијама како би се осигурало да се те функције правилно понашају за аргументе многих различитих типова. Функције које оперишу над различитим типовима предмет су следећег одељка.</p>
+</div>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Објектно-оријентисано програмирање' data-toggle="tooltip"><a href="5-ооп.html">Претходно поглавље</a></li>
+    
+        <li id="relations-next" title='Next chapter - Објектна апстракција' data-toggle="tooltip"><a href="7-објектна-апстракција.html">Следеће поглавље</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Објектно-оријентисано програмирање' data-toggle="tooltip"><a href="5-ооп.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Објектна апстракција' data-toggle="tooltip"><a href="7-објектна-апстракција.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="pull-left">&copy; 2019 Petlja (Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

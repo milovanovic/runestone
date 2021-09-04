@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sr"></html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Рекурзивни објекти &#8212; Компоновање рачунарских програма</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/simanim.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pycode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/p5js.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dbDirective.css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-runestone.css" type="text/css" />
+    <link rel="stylesheet" href="../_staticnbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../_static/Blob.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="../_static/blockpy-modal.js"></script>
+    <script type="text/javascript" src="../_static/simanim.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.16.1/full/pyodide.js"></script>
+    <script type="text/javascript" src="../_static/pycode.js"></script>
+    <script type="text/javascript" src="//toolness.github.io/p5.js-widget/p5-widget.js"></script>
+    <script type="text/javascript" src="../_static/p5js.js"></script>
+    <script type="text/javascript" src="../_static/gallery.js"></script>
+    <script type="text/javascript" src="../_static/dbDirective.js"></script>
+    <script type="text/javascript" src="../_static/sql.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="../_static/require.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Тумачење рачунарских програма" href="../глава3/index.html" />
+    <link rel="prev" title="Ефикасност" href="8-ефикасност.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host + '/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+  eBookConfig.course = 'krp';
+  eBookConfig.logLevel = '0';
+  eBookConfig.loginRequired = 'false';
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = 'false';
+  eBookConfig.python3 = 'true';
+  eBookConfig.basecourse = 'krp';
+  eBookConfig.runestone_version = '';
+  eBookConfig.imagesDir = '../_images/';
+  eBookConfig.staticDir = '../_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="../_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="../">Компоновање рачунарских програма</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content" style="margin-top: 70px;">
+  
+  <div class="section" id="recursiveobjects">
+<span id="id1"></span><h1>Рекурзивни објекти<a class="headerlink" href="#recursiveobjects" title="Permalink to this headline">¶</a></h1>
+<p>Објекти могу имати друге објекте као вредности атрибута. Када објекат неке класе има вредност атрибута исте те класе, то је рекурзивни објекат.</p>
+<div class="section" id="linkedlistclass">
+<span id="id2"></span><h2>Класа уланчане листе<a class="headerlink" href="#linkedlistclass" title="Permalink to this headline">¶</a></h2>
+<p>Уланчана листа, представљена раније у овом поглављу, састоји се од првог члана и остатка листе. Остатак повезане листе је сам по себи уланчана листа – рекурзивна дефиниција. Празна листа је посебан случај уланчане листе која нема први члан нити остатак. Уланчана листа је секвенца: има коначну дужину и подржава избор елемената индексом.</p>
+<p>Сада се може имплементирати и класа са истим понашањем. У овој верзији биће дефинисано њено понашање користећи посебна имена метода која омогућавају класи да ради са уграђеном функцијом <code class="docutils literal notranslate"><span class="pre">len</span></code> и оператором избора чланова (углатсе заграде или <code class="docutils literal notranslate"><span class="pre">operator.getitem</span></code>) у Пајтону. Ове уграђене функције позивају посебна имена класе: дужина се одређује помоћу <code class="docutils literal notranslate"><span class="pre">__len__</span></code>, а избор чланова обавља се са <code class="docutils literal notranslate"><span class="pre">__getitem__</span></code>. Празна уланчана листа представљена је празном поворком, која има дужину 0 и нема чланове.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Листа</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Уланчана листа са првим чланом и остатком.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="n">празно</span> <span class="o">=</span> <span class="p">()</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">први</span><span class="p">,</span> <span class="n">остатак</span><span class="o">=</span><span class="n">празно</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">assert</span> <span class="n">остатак</span> <span class="ow">is</span> <span class="n">Листа</span><span class="o">.</span><span class="n">празно</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">остатак</span><span class="p">,</span> <span class="n">Листа</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="bp">self</span><span class="o">.</span><span class="n">први</span> <span class="o">=</span> <span class="n">први</span>
+<span class="gp">... </span>        <span class="bp">self</span><span class="o">.</span><span class="n">остатак</span> <span class="o">=</span> <span class="n">остатак</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">први</span>
+<span class="gp">... </span>        <span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">остатак</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="mi">1</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">остатак</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">с</span> <span class="o">=</span> <span class="n">Листа</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">Листа</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">Листа</span><span class="p">(</span><span class="mi">5</span><span class="p">)))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">с</span><span class="p">)</span>
+<span class="go">3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">с</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="go">4</span>
+</pre></div>
+</div>
+<p>Дефиниције за <code class="docutils literal notranslate"><span class="pre">__len__</span></code> и <code class="docutils literal notranslate"><span class="pre">__getitem__</span></code> су у ствари рекурзивне. Уграђена Пајтон функција <code class="docutils literal notranslate"><span class="pre">len</span></code> позива методу под називом <code class="docutils literal notranslate"><span class="pre">__len__</span></code> када се примени на кориснички дефинисан објекат аргумента. Слично томе, оператор избора члана позива методу под називом <code class="docutils literal notranslate"><span class="pre">__getitem__</span></code>. Тако ће се унутар тела ове две методе оне саме позивати индиректно. За <code class="docutils literal notranslate"><span class="pre">__len__</span></code>, основни случај се постиже када се <code class="docutils literal notranslate"><span class="pre">self.остатак</span></code> вреднује у празну поворку, <code class="docutils literal notranslate"><span class="pre">Листа.празно</span></code>, која има нулту дужину.</p>
+<p>Уграђена функција <code class="docutils literal notranslate"><span class="pre">isinstance</span></code> враћа да ли први аргумент има тип који јесте или наслеђује други аргумент. Позив <code class="docutils literal notranslate"><span class="pre">isinstance(остатак,</span> <span class="pre">Листа)</span></code> је логички тачан ако је <code class="docutils literal notranslate"><span class="pre">остатак</span></code> инстанце класе <code class="docutils literal notranslate"><span class="pre">Листа</span></code> или инстанца неке од поткласа класе <code class="docutils literal notranslate"><span class="pre">Листа</span></code>.</p>
+<p>Ова имплементација је завршена, али инстанцу класе <code class="docutils literal notranslate"><span class="pre">Листа</span></code> тренутно је тешко прегледати. Да би се припомогло у отклањању грешака, такође се може дефинисати функција претварање објекта класе <code class="docutils literal notranslate"><span class="pre">Листа</span></code> у текстуални израз, односно у ниску.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">листаИзраз</span><span class="p">(</span><span class="n">с</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Враћа ниску која би се вредновала у с.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">с</span><span class="o">.</span><span class="n">остатак</span> <span class="ow">is</span> <span class="n">Листа</span><span class="o">.</span><span class="n">празно</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="n">остатак</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<span class="gp">... </span>    <span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="n">остатак</span> <span class="o">=</span> <span class="s1">&#39;, &#39;</span> <span class="o">+</span> <span class="n">листаИзраз</span><span class="p">(</span><span class="n">с</span><span class="o">.</span><span class="n">остатак</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="s1">&#39;Листа(</span><span class="si">{0}{1}</span><span class="s1">)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">с</span><span class="o">.</span><span class="n">први</span><span class="p">,</span> <span class="n">остатак</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">листаИзраз</span><span class="p">(</span><span class="n">с</span><span class="p">)</span>
+<span class="go">&#39;Листа(3, Листа(4, Листа(5)))&#39;</span>
+</pre></div>
+</div>
+<p>Овај начин приказивања објеката класе <code class="docutils literal notranslate"><span class="pre">Листа</span></code> је толико згодан да би било добро да се искористи кад год се инстанца класе <code class="docutils literal notranslate"><span class="pre">Листа</span></code> прикаже. То понашање може се осигурати постављањем функције <code class="docutils literal notranslate"><span class="pre">листаИзраз</span></code> као вредност за посебан атрибут класе <code class="docutils literal notranslate"><span class="pre">__repr__</span></code>. Пајтон приказује инстанце кориснички дефинисаних класа позивајући се на њихову <code class="docutils literal notranslate"><span class="pre">__repr__</span></code> методу.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Листа</span><span class="o">.</span><span class="fm">__repr__</span> <span class="o">=</span> <span class="n">листаИзраз</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">с</span>
+<span class="go">Листа(3, Листа(4, Листа(5)))</span>
+</pre></div>
+</div>
+<p>Класа <code class="docutils literal notranslate"><span class="pre">Листа</span></code> поседује својство затворења. Баш као што члан низа и сам може бити низ, тако и <code class="docutils literal notranslate"><span class="pre">Листа</span></code> може као свој <code class="docutils literal notranslate"><span class="pre">први</span></code> члан садржати неку другу <code class="docutils literal notranslate"><span class="pre">Листа</span></code> инстанцу.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">сПрва</span> <span class="o">=</span> <span class="n">Листа</span><span class="p">(</span><span class="n">с</span><span class="p">,</span> <span class="n">Листа</span><span class="p">(</span><span class="mi">6</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">сПрва</span>
+<span class="go">Листа(Листа(3, Листа(4, Листа(5))), Листа(6))</span>
+</pre></div>
+</div>
+<p>Уланчана листа <code class="docutils literal notranslate"><span class="pre">сПрва</span></code> има само два члана, али је њен први члан заправо трочлана уланчана листа.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">сПрва</span><span class="p">)</span>
+<span class="go">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">сПрва</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="go">3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">сПрва</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span>
+<span class="go">5</span>
+</pre></div>
+</div>
+<p>Рекурзивне функције су посебно погодне за манипулисање уланчаним листама. На пример, рекурзивна функција <code class="docutils literal notranslate"><span class="pre">прошириЛисту</span></code> гради ланчану листу која садржи чланове инстанце <code class="docutils literal notranslate"><span class="pre">с</span></code> класе <code class="docutils literal notranslate"><span class="pre">Листа</span></code>, плраћене од стране чланова инстанце <code class="docutils literal notranslate"><span class="pre">т</span></code> класе <code class="docutils literal notranslate"><span class="pre">Листа</span></code>. Инсталирање ове функције као <code class="docutils literal notranslate"><span class="pre">__add__</span></code> методе класе <code class="docutils literal notranslate"><span class="pre">Листа</span></code> опонаша се понашање уграђеног оператора додавања или конкатенације над уграђеним низовима.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">прошириЛисту</span><span class="p">(</span><span class="n">с</span><span class="p">,</span> <span class="n">т</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">с</span> <span class="ow">is</span> <span class="n">Листа</span><span class="o">.</span><span class="n">празно</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">т</span>
+<span class="gp">... </span>    <span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">Листа</span><span class="p">(</span><span class="n">с</span><span class="o">.</span><span class="n">први</span><span class="p">,</span> <span class="n">прошириЛисту</span><span class="p">(</span><span class="n">с</span><span class="o">.</span><span class="n">остатак</span><span class="p">,</span> <span class="n">т</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">прошириЛисту</span><span class="p">(</span><span class="n">с</span><span class="p">,</span> <span class="n">с</span><span class="p">)</span>
+<span class="go">Листа(3, Листа(4, Листа(5, Листа(3, Листа(4, Листа(5))))))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Листа</span><span class="o">.</span><span class="fm">__add__</span> <span class="o">=</span> <span class="n">прошириЛисту</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">с</span> <span class="o">+</span> <span class="n">с</span>
+<span class="go">Листа(3, Листа(4, Листа(5, Листа(3, Листа(4, Листа(5))))))</span>
+</pre></div>
+</div>
+<p>Уместо низовних убрајања, једна уланчана листа може се генерисати из друге помоћу две функције вишег реда: <code class="docutils literal notranslate"><span class="pre">mapЛиста</span></code> и <code class="docutils literal notranslate"><span class="pre">filterЛиста</span></code>. Доле дефинисана функција <code class="docutils literal notranslate"><span class="pre">mapЛиста</span></code> примењује функцију <code class="docutils literal notranslate"><span class="pre">f</span></code> на сваки члан уланчане листе <code class="docutils literal notranslate"><span class="pre">с</span></code> и израђује уланчану листу која садржи резултате.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">mapЛиста</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">с</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">с</span> <span class="ow">is</span> <span class="n">Листа</span><span class="o">.</span><span class="n">празно</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">с</span>
+<span class="gp">... </span>    <span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">Листа</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">с</span><span class="o">.</span><span class="n">први</span><span class="p">),</span> <span class="n">mapЛиста</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">с</span><span class="o">.</span><span class="n">остатак</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">квадрат</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapЛиста</span><span class="p">(</span><span class="n">квадрат</span><span class="p">,</span> <span class="n">с</span><span class="p">)</span>
+<span class="go">Листа(9, Листа(16, Листа(25)))</span>
+</pre></div>
+</div>
+<p>Функција <code class="docutils literal notranslate"><span class="pre">filterЛиста</span></code> враћа уланчану листу која садржи све чланове уланчане листе <code class="docutils literal notranslate"><span class="pre">с</span></code> за које <code class="docutils literal notranslate"><span class="pre">f</span></code> враћа тачну логичку вредност. Комбинација <code class="docutils literal notranslate"><span class="pre">mapЛиста</span></code> и <code class="docutils literal notranslate"><span class="pre">filterЛиста</span></code> може изразити потпуно исту логику као и низовна убрајања.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">filterЛиста</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">с</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">с</span> <span class="ow">is</span> <span class="n">Листа</span><span class="o">.</span><span class="n">празно</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">с</span>
+<span class="gp">... </span>    <span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="n">filtered</span> <span class="o">=</span> <span class="n">filterЛиста</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">с</span><span class="o">.</span><span class="n">остатак</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="k">if</span> <span class="n">f</span><span class="p">(</span><span class="n">с</span><span class="o">.</span><span class="n">први</span><span class="p">):</span>
+<span class="gp">... </span>            <span class="k">return</span> <span class="n">Листа</span><span class="p">(</span><span class="n">с</span><span class="o">.</span><span class="n">први</span><span class="p">,</span> <span class="n">filtered</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="k">return</span> <span class="n">filtered</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">непаран</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapЛиста</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">,</span> <span class="n">filterЛиста</span><span class="p">(</span><span class="n">непаран</span><span class="p">,</span> <span class="n">с</span><span class="p">))</span>
+<span class="go">Листа(9, Листа(25))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">квадрат</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span> <span class="k">if</span> <span class="n">непаран</span><span class="p">(</span><span class="n">x</span><span class="p">)]</span>
+<span class="go">[9, 25]</span>
+</pre></div>
+</div>
+<p>Функција <code class="docutils literal notranslate"><span class="pre">спојЛисту</span></code> рекурзивно гради ниску која садржи чланове уланчане листе раздвојене <code class="docutils literal notranslate"><span class="pre">раздвајач</span></code>-ем, односно неким знаком за раздвајање. Резултат је много компактнији текстуални запис од резултата функције <code class="docutils literal notranslate"><span class="pre">листаИзраз</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">спојЛисту</span><span class="p">(</span><span class="n">с</span><span class="p">,</span> <span class="n">раздвајач</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">с</span> <span class="ow">is</span> <span class="n">Листа</span><span class="o">.</span><span class="n">празно</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="s2">&quot;&quot;</span>
+<span class="gp">... </span>    <span class="k">elif</span> <span class="n">с</span><span class="o">.</span><span class="n">остатак</span> <span class="ow">is</span> <span class="n">Листа</span><span class="o">.</span><span class="n">празно</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">с</span><span class="o">.</span><span class="n">први</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">с</span><span class="o">.</span><span class="n">први</span><span class="p">)</span> <span class="o">+</span> <span class="n">раздвајач</span> <span class="o">+</span> <span class="n">спојЛисту</span><span class="p">(</span><span class="n">с</span><span class="o">.</span><span class="n">остатак</span><span class="p">,</span> <span class="n">раздвајач</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">спојЛисту</span><span class="p">(</span><span class="n">с</span><span class="p">,</span> <span class="s2">&quot;, &quot;</span><span class="p">)</span>
+<span class="go">&#39;3, 4, 5&#39;</span>
+</pre></div>
+</div>
+<div class="section" id="recursiveconstruction">
+<span id="id3"></span><h3>Рекурзивна изградња<a class="headerlink" href="#recursiveconstruction" title="Permalink to this headline">¶</a></h3>
+<p>Уланчане листе су посебно корисне при постепеној изградњи секвенци, што је ситуација која се често јавља у рекурзивним израчунавањима.</p>
+<p>Функција <code class="docutils literal notranslate"><span class="pre">бројПартиција</span></code> из првог поглавља рачунала је број партиција природног броја <span class="math notranslate nohighlight">\(n\)</span> помоћу делова величине највише <span class="math notranslate nohighlight">\(m\)</span> у поступку преко рекурзивног стабла. Са секвенцама, такође се могу изричито набројати све ове партиције користећи се сличним поступком.</p>
+<p>Прати се иста рекурзивна анализа проблема као и током бројања: партиционисање <span class="math notranslate nohighlight">\(n\)</span> коришћењем природних бројева до <span class="math notranslate nohighlight">\(m\)</span> укључује било</p>
+<ol class="arabic simple">
+<li><p>партиционисање <span class="math notranslate nohighlight">\(n-m\)</span> помоћу природних бројева <span class="math notranslate nohighlight">\(m\)</span>, или</p></li>
+<li><p>партиционисање <span class="math notranslate nohighlight">\(n\)</span> коришћењем природних бројева до <span class="math notranslate nohighlight">\(m-1\)</span>.</p></li>
+</ol>
+<p>За основне случајеве лако се открива да 0 има празну партицију, док је партиционисање негативних бројева или коришћење делова мањих од 1 немогуће.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">партиције</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Враћа уланчану листу партиција броја n користећи се деловима до m.</span>
+<span class="gp">... </span><span class="sd">       Свака партиција је представљена као уланчана лиаста. &quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">Листа</span><span class="p">(</span><span class="n">Листа</span><span class="o">.</span><span class="n">празно</span><span class="p">)</span>   <span class="c1"># Листа која садржи празну партицију</span>
+<span class="gp">... </span>    <span class="k">elif</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">m</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">Листа</span><span class="o">.</span><span class="n">празно</span>
+<span class="gp">... </span>    <span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="n">помоћу_m</span> <span class="o">=</span> <span class="n">партиције</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="n">m</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="n">са_m</span> <span class="o">=</span> <span class="n">mapЛиста</span><span class="p">(</span><span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="n">Листа</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">s</span><span class="p">),</span> <span class="n">помоћу_m</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="n">без_m</span> <span class="o">=</span> <span class="n">партиције</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">прошириЛисту</span><span class="p">(</span><span class="n">са_m</span><span class="p">,</span> <span class="n">без_m</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>У рекурзивном случају, граде се две подлисте партиција. Прва користи <code class="docutils literal notranslate"><span class="pre">m</span></code>, па се <code class="docutils literal notranslate"><span class="pre">m</span></code> додаје сваком члану резултата <code class="docutils literal notranslate"><span class="pre">помоћу_м</span></code> да се формира <code class="docutils literal notranslate"><span class="pre">са_м</span></code>.</p>
+<p>Резултат партиција је високо угнежђен: уланчана листа уланчаних листа. Користећи <code class="docutils literal notranslate"><span class="pre">спојЛисту</span></code> са одговарајућим раздвајачима, могу се приказати партиције на начин који је читљив за људе.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">испишиПартиције</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">листе</span> <span class="o">=</span> <span class="n">партиције</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="n">ниске</span> <span class="o">=</span> <span class="n">mapЛиста</span><span class="p">(</span><span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="n">спојЛисту</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="s2">&quot; + &quot;</span><span class="p">),</span> <span class="n">листе</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">спојЛисту</span><span class="p">(</span><span class="n">ниске</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">испишиПартиције</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="go">4 + 2</span>
+<span class="go">4 + 1 + 1</span>
+<span class="go">3 + 3</span>
+<span class="go">3 + 2 + 1</span>
+<span class="go">3 + 1 + 1 + 1</span>
+<span class="go">2 + 2 + 2</span>
+<span class="go">2 + 2 + 1 + 1</span>
+<span class="go">2 + 1 + 1 + 1 + 1</span>
+<span class="go">1 + 1 + 1 + 1 + 1 + 1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="treeclass">
+<span id="id4"></span><h2>Класа стабла<a class="headerlink" href="#treeclass" title="Permalink to this headline">¶</a></h2>
+<p>Стабла такође могу бити представљена инстанцама кориснички дефинисаних класа, уместо угнежђеним инстанцама уграђених типова секвенци. Стабло је било која структура података која као атрибут има низ грана које су такође стабла.</p>
+<div class="section" id="internalvalues">
+<span id="id5"></span><h3>Унутрашње вредности<a class="headerlink" href="#internalvalues" title="Permalink to this headline">¶</a></h3>
+<p>Претходно су стабла дефинисана на такав начин да су се све вредности појављивале на листовима стабла. Такође је уобичајено дефинисати стабла која имају унутрашње вредности у корену сваког подстабла. Унутрашња вредност назива се <code class="docutils literal notranslate"><span class="pre">ознака</span></code> у стаблу. Класа <code class="docutils literal notranslate"><span class="pre">Стабло</span></code> испод представља таква стабла, у којима свако стабло има секвенцу грана које су уједно и саме стабла.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Стабло</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ознака</span><span class="p">,</span> <span class="n">гране</span><span class="o">=</span><span class="p">()):</span>
+<span class="gp">... </span>        <span class="bp">self</span><span class="o">.</span><span class="n">ознака</span> <span class="o">=</span> <span class="n">ознака</span>
+<span class="gp">... </span>        <span class="k">for</span> <span class="n">грана</span> <span class="ow">in</span> <span class="n">гране</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">грана</span><span class="p">,</span> <span class="n">Стабло</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="bp">self</span><span class="o">.</span><span class="n">гране</span> <span class="o">=</span> <span class="n">гране</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">гране</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="k">return</span> <span class="s1">&#39;Стабло(</span><span class="si">{0}</span><span class="s1">, </span><span class="si">{1}</span><span class="s1">)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ознака</span><span class="p">,</span> <span class="nb">repr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">гране</span><span class="p">))</span>
+<span class="gp">... </span>        <span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="k">return</span> <span class="s1">&#39;Стабло(</span><span class="si">{0}</span><span class="s1">)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ознака</span><span class="p">))</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">is_leaf</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">гране</span>
+</pre></div>
+</div>
+<p>Класа <code class="docutils literal notranslate"><span class="pre">Стабло</span></code> може да представља, на пример, вредности израчунате у стаблу израза за рекурзивну имплементацију <code class="docutils literal notranslate"><span class="pre">фиб</span></code>, функције за израчунавање Фибоначијевог низа бројева. Функција <code class="docutils literal notranslate"><span class="pre">фибСтабло(n)</span></code> у наставку враћа <code class="docutils literal notranslate"><span class="pre">Стабло</span></code> које има <span class="math notranslate nohighlight">\(n\)</span>-ти Фибоначијев број као атрибут <code class="docutils literal notranslate"><span class="pre">ознака</span></code> и траг свих претходно израчунатих Фибоначијевих бројева унутар његових грана.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">фибСтабло</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">Стабло</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">elif</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">Стабло</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="n">лево</span> <span class="o">=</span> <span class="n">фибСтабло</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="n">десно</span> <span class="o">=</span> <span class="n">фибСтабло</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">Стабло</span><span class="p">(</span><span class="n">лево</span><span class="o">.</span><span class="n">ознака</span> <span class="o">+</span> <span class="n">десно</span><span class="o">.</span><span class="n">ознака</span><span class="p">,</span> <span class="p">(</span><span class="n">лево</span><span class="p">,</span> <span class="n">десно</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">фибСтабло</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="go">Стабло(3, (Стабло(1, (Стабло(0), Стабло(1))), Стабло(2, (Стабло(1), Стабло(1, (Стабло(0), Стабло(1)))))))</span>
+</pre></div>
+</div>
+<p>Овако представљена стабла се такође обрађују помоћу рекурзивних функција. На пример, могу се сумирати ознаке стабла. Као основни случај, повратна вредност празне гране је да нема ознаку.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">збирОзнака</span><span class="p">(</span><span class="n">с</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Сабира ознаке инстанце Стабла које могу бити и None.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">с</span><span class="o">.</span><span class="n">ознака</span> <span class="o">+</span> <span class="nb">sum</span><span class="p">([</span><span class="n">збирОзнака</span><span class="p">(</span><span class="n">г</span><span class="p">)</span> <span class="k">for</span> <span class="n">г</span> <span class="ow">in</span> <span class="n">с</span><span class="o">.</span><span class="n">гране</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">збирОзнака</span><span class="p">(</span><span class="n">фибСтабло</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+<span class="go">10</span>
+</pre></div>
+</div>
+<p>Такође може се применити <code class="docutils literal notranslate"><span class="pre">мемо</span></code>, чија имплементација је поновљена из претходног поглавља ради прегледности, за изградњу Фибоначијевог стабла, где се поновљена подстабла само једном стварају у мемоизираној верзији функције <code class="docutils literal notranslate"><span class="pre">фибСтабло</span></code>, али се више пута користе као гране различитих већих стабала.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">мемо</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">кеш</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">мемоизирано</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">if</span> <span class="n">n</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">кеш</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="n">кеш</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">кеш</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">мемоизирано</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">фибСтабло</span> <span class="o">=</span> <span class="n">мемо</span><span class="p">(</span><span class="n">фибСтабло</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">великоФибСтабло</span> <span class="o">=</span> <span class="n">фибСтабло</span><span class="p">(</span><span class="mi">35</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">великоФибСтабло</span><span class="o">.</span><span class="n">ознака</span>
+<span class="go">5702887</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">великоФибСтабло</span><span class="o">.</span><span class="n">гране</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">is</span> <span class="n">великоФибСтабло</span><span class="o">.</span><span class="n">гране</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">гране</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">збирОзнака</span> <span class="o">=</span> <span class="n">мемо</span><span class="p">(</span><span class="n">збирОзнака</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">збирОзнака</span><span class="p">(</span><span class="n">великоФибСтабло</span><span class="p">)</span>
+<span class="go">142587180</span>
+</pre></div>
+</div>
+<p>Количина рачунарског времена и меморије сачуване памћењем у овим случајевима је огромна. Уместо да се створи 18’454’929 различитих инстанци класе <code class="docutils literal notranslate"><span class="pre">Стабло</span></code>, сада се ствара само њих 35.</p>
+</div>
+</div>
+<div class="section" id="sets">
+<span id="id6"></span><h2>Скупови<a class="headerlink" href="#sets" title="Permalink to this headline">¶</a></h2>
+<p>Поред низова, поворки, и речника, Пајтон има и четврти уграђени тип контејнера који се назива скуп или <code class="docutils literal notranslate"><span class="pre">set</span></code>. Скуповни литерали следе математичку нотацију чланова затворених у витичастим заградама. Двоструки чланови (дупликати) се уклањају приликом изградње. Скупови су неуређене колекције, па се штампани редослед може разликовати од редоследа чланова у литералу скупа.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">с</span> <span class="o">=</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">с</span>
+<span class="go">{1, 2, 3, 4}</span>
+</pre></div>
+</div>
+<p>Пајтон скупови подржавају разне операције, укључујући и проверу чланства, одређивање дужине и стандардне операције над скуповима као што је пресек и унија</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">3</span> <span class="ow">in</span> <span class="n">с</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">с</span><span class="p">)</span>
+<span class="go">4</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">с</span><span class="o">.</span><span class="n">union</span><span class="p">({</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">})</span>
+<span class="go">{1, 2, 3, 4, 5}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">с</span><span class="o">.</span><span class="n">intersection</span><span class="p">({</span><span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">})</span>
+<span class="go">{3, 4}</span>
+</pre></div>
+</div>
+<p>Поред <code class="docutils literal notranslate"><span class="pre">union</span></code> и <code class="docutils literal notranslate"><span class="pre">intersection</span></code>, скупови у Пајтону подржавају и неколико других уграђених метода. Предикати <code class="docutils literal notranslate"><span class="pre">isdisjoint</span></code>, <code class="docutils literal notranslate"><span class="pre">issubset</span></code>, и <code class="docutils literal notranslate"><span class="pre">issuperset</span></code> омогућавају поређење скупова. Скупови су променљив тип податка и може им се мењати по један члан помоћу <code class="docutils literal notranslate"><span class="pre">add</span></code>, <code class="docutils literal notranslate"><span class="pre">remove</span></code>, <code class="docutils literal notranslate"><span class="pre">discard</span></code>, и <code class="docutils literal notranslate"><span class="pre">pop</span></code>. Додатне методе пружају вишечлане мутације, као што су <code class="docutils literal notranslate"><span class="pre">clear</span></code> и <code class="docutils literal notranslate"><span class="pre">update</span></code>. Пајтонова  <a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#set">документација за скупове</a> у овом тренутку курса требало би да буде довољно разумљива да попуни све појединости.</p>
+<div class="section" id="implementingsets">
+<span id="id8"></span><h3>Имплементација скупова<a class="headerlink" href="#implementingsets" title="Permalink to this headline">¶</a></h3>
+<p>Апстрактно, скуп је збирка различитих објеката који подржавају проверу чланства, унију, пресек и придруживање. Придруживање члана скупу враћа нови скуп који садржи све чланове изворног скупа заједно са новим чланом, ако је различит од свих претходних. Унија и пресек враћају скуп чланова који се појављују у једном од или у оба скупа. Као и код сваке друге апстракције података, на кориснику је потпуна слобода да имплементира било које функције преко било које представе скупова која пружаја ову колекцију понашања.</p>
+<p>У остатку овог одељка, разматрају се три начина имплементације скупова који се разликују по својој представи. Ефикасност ових различитих имплементација биће карактерисана анализом величине раста скуповних операција. Биће коришћене класе <code class="docutils literal notranslate"><span class="pre">Листа</span></code> и <code class="docutils literal notranslate"><span class="pre">Стабло</span></code> из претходног дела овог одељка, које омогућавају једноставна и елегантна рекурзивна решења за основне операције над скуповима.</p>
+</div>
+<div class="section" id="setsasunorderedsequences">
+<span id="id9"></span><h3>Скупови као неуређене секвенце<a class="headerlink" href="#setsasunorderedsequences" title="Permalink to this headline">¶</a></h3>
+<p>Један од начина представљања скупа је као секвенца у коме се ниједан члан не појављује више од једном. Празан скуп представљен је празном секвенцом. Провера чланства рекурзивно пролази кроз секвенцу.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">празан</span><span class="p">(</span><span class="n">с</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">с</span> <span class="ow">is</span> <span class="n">Листа</span><span class="o">.</span><span class="n">празно</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">скупСадржи</span><span class="p">(</span><span class="n">с</span><span class="p">,</span> <span class="n">в</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Враћа True ако и само ако скуп с садржи в.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">празан</span><span class="p">(</span><span class="n">с</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="kc">False</span>
+<span class="gp">... </span>    <span class="k">elif</span> <span class="n">с</span><span class="o">.</span><span class="n">први</span> <span class="o">==</span> <span class="n">в</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="kc">True</span>
+<span class="gp">... </span>    <span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">скупСадржи</span><span class="p">(</span><span class="n">с</span><span class="o">.</span><span class="n">остатак</span><span class="p">,</span> <span class="n">в</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">с</span> <span class="o">=</span> <span class="n">Листа</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">Листа</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">Листа</span><span class="p">(</span><span class="mi">5</span><span class="p">)))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">скупСадржи</span><span class="p">(</span><span class="n">с</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">скупСадржи</span><span class="p">(</span><span class="n">с</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p>Ова имплементација функције <code class="docutils literal notranslate"><span class="pre">скупСадржи</span></code> захтева у просеку <span class="math notranslate nohighlight">\(\Theta(n)\)</span> времена за проверу чланства у скупу, где је <span class="math notranslate nohighlight">\(n\)</span> број чланова у скупу, односно величина скупа <code class="docutils literal notranslate"><span class="pre">с</span></code>. Користећи ову временски линеарну функцију за проверу чланства, може се и придружити члан скупу, такође у линеарном времену.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">придружиСкупу</span><span class="p">(</span><span class="n">с</span><span class="p">,</span> <span class="n">в</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Враћа скуп који садржи све чланове скупа с и члан в.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">скупСадржи</span><span class="p">(</span><span class="n">с</span><span class="p">,</span> <span class="n">в</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">с</span>
+<span class="gp">... </span>    <span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">Листа</span><span class="p">(</span><span class="n">в</span><span class="p">,</span> <span class="n">с</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">т</span> <span class="o">=</span> <span class="n">придружиСкупу</span><span class="p">(</span><span class="n">с</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">т</span>
+<span class="go">Листа(2, Листа(4, Листа(1, Листа(5))))</span>
+</pre></div>
+</div>
+<p>При пројектовању представе, једно од питања које би требало да је од пресудног значаја и којим би се требало позабавити јесте ефикасност. Пресек два скупа <code class="docutils literal notranslate"><span class="pre">скуп1</span></code> и <code class="docutils literal notranslate"><span class="pre">скуп2</span></code> такође захтева проверу чланства, али овај пут сваки члан из <code class="docutils literal notranslate"><span class="pre">скуп1</span></code> мора бити проверен на чланство у <code class="docutils literal notranslate"><span class="pre">скуп2</span></code>, што доводи до квадратне величине раста броја корака, <span class="math notranslate nohighlight">\(\Theta(n^2)\)</span>, за два скупа величине <span class="math notranslate nohighlight">\(n\)</span>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">пресекСкупова</span><span class="p">(</span><span class="n">скуп1</span><span class="p">,</span> <span class="n">скуп2</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Враћа скуп који садржи све чланове заједничке за скуп1 и скуп2.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">filterЛиста</span><span class="p">(</span><span class="k">lambda</span> <span class="n">в</span><span class="p">:</span> <span class="n">скупСадржи</span><span class="p">(</span><span class="n">скуп2</span><span class="p">,</span> <span class="n">в</span><span class="p">),</span> <span class="n">скуп1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">пресекСкупова</span><span class="p">(</span><span class="n">с</span><span class="p">,</span> <span class="n">mapЛиста</span><span class="p">(</span><span class="n">квадрат</span><span class="p">,</span> <span class="n">т</span><span class="p">))</span>
+<span class="go">Листа(4, Листа(1))</span>
+</pre></div>
+</div>
+<p>Када се рачуна унију два скупа, мора се бити на опрезу да се ниједан од чланова не укључи два пута. Функција <code class="docutils literal notranslate"><span class="pre">унијаСкупова</span></code> такође захтева линеарни број провера чланства, стварајући тако поступак који такође укључује <span class="math notranslate nohighlight">\(\Theta(n^2)\)</span> корака.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">унијаСкупова</span><span class="p">(</span><span class="n">скуп1</span><span class="p">,</span> <span class="n">скуп2</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Враћа скуп који садржи све чланове и из скуп1 и из скуп2.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="n">скуп1РазликаСкуп2</span> <span class="o">=</span> <span class="n">filterЛиста</span><span class="p">(</span><span class="k">lambda</span> <span class="n">v</span><span class="p">:</span> <span class="ow">not</span> <span class="n">скупСадржи</span><span class="p">(</span><span class="n">скуп2</span><span class="p">,</span> <span class="n">v</span><span class="p">),</span> <span class="n">скуп1</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">прошириЛисту</span><span class="p">(</span><span class="n">скуп1РазликаСкуп2</span><span class="p">,</span> <span class="n">скуп2</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">унијаСкупова</span><span class="p">(</span><span class="n">т</span><span class="p">,</span> <span class="n">с</span><span class="p">)</span>
+<span class="go">Листа(2, Листа(4, Листа(1, Листа(5))))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="setsasorderedsequences">
+<span id="id10"></span><h3>Скупови као уређене секвенце<a class="headerlink" href="#setsasorderedsequences" title="Permalink to this headline">¶</a></h3>
+<p>Један од начина да се убрзају скуповне операције је промена начина представе тако да се чланови скупа наводе у растућем редоследу. Да би се то учинило неопходан је начин да поређења два објекта како би се могли рећи који је од њих већи. У Пајтону се могу упоређивати многе различите врсте објеката помоћу оператора <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> и <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>, али ми ће у овом конкретном примеру акценат бити стављен на бројеве. Биће представљен скуп бројева излиставањем његових чланова у растућем редоследу.</p>
+<p>Једна од предности уређивања чланова показује се у функцији <code class="docutils literal notranslate"><span class="pre">скупСадржи</span></code>: при провери присуства објекта више се не мора пролазити кроз читав скуп. Уколико се дође до члана скупа који је већи од члана који се тражи, већ тада се може закључити да није у скупу:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">скупСадржи</span><span class="p">(</span><span class="n">с</span><span class="p">,</span> <span class="n">в</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">празан</span><span class="p">(</span><span class="n">с</span><span class="p">)</span> <span class="ow">or</span> <span class="n">с</span><span class="o">.</span><span class="n">први</span> <span class="o">&gt;</span> <span class="n">в</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="kc">False</span>
+<span class="gp">... </span>    <span class="k">elif</span> <span class="n">с</span><span class="o">.</span><span class="n">први</span> <span class="o">==</span> <span class="n">в</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="kc">True</span>
+<span class="gp">... </span>    <span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">скупСадржи</span><span class="p">(</span><span class="n">с</span><span class="o">.</span><span class="n">остатак</span><span class="p">,</span> <span class="n">в</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">у</span> <span class="o">=</span> <span class="n">Листа</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">Листа</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">Листа</span><span class="p">(</span><span class="mi">5</span><span class="p">)))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">скупСадржи</span><span class="p">(</span><span class="n">у</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">скупСадржи</span><span class="p">(</span><span class="n">у</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p>Колико корака ово штеди? У најгорем случају, ставка која се тражи може бити највећа у скупу, па је број потребних корака исти као и за неуређену представу скупа. С друге стране, ако се претражују ставке, односно чланови различитих величина, може се очекивати да ће се понекад десити да се просто зауставимо одмах у некој тачки при почетку листе, а да ћемо понекад морати да прегледамо већи део листе. У просеку треба очекивати да ће морати да се испита, односно провери око половина чланова у скупу. Тако ће просечан број потребних корака бити око <span class="math notranslate nohighlight">\(\frac{n}{2}\)</span>. Ово је и даље <span class="math notranslate nohighlight">\(\Theta(n)\)</span> раст, али у пракси ради нешто брже у просеку у односу на претходну имплементацију.</p>
+<p>Упечатљивије убрзање може се постићи поновном имплементацијом функције <code class="docutils literal notranslate"><span class="pre">пресекСкупа</span></code>. У неуређеној представи, ова операција је захтевала <span class="math notranslate nohighlight">\(\Theta(n^2)\)</span> корака, јер смо извршен потпун пролазак кроз <code class="docutils literal notranslate"><span class="pre">скуп2</span></code> за сваки члан из <code class="docutils literal notranslate"><span class="pre">скуп1</span></code>. Међутим, користећи се уређеном представом, може се упослити и нешто паметнији начин. Наиме, пролази се кроз оба скупа истовремено, пратећи члан <code class="docutils literal notranslate"><span class="pre">ч1</span></code> у <code class="docutils literal notranslate"><span class="pre">скуп1</span></code> и <code class="docutils literal notranslate"><span class="pre">ч2</span></code> у <code class="docutils literal notranslate"><span class="pre">скуп2</span></code>. Када су <code class="docutils literal notranslate"><span class="pre">ч1</span></code> и <code class="docutils literal notranslate"><span class="pre">ч2</span></code> једнаки, тај члан се укључује у пресек.</p>
+<p>Претпоставити, међутим, да је <code class="docutils literal notranslate"><span class="pre">ч1</span></code> мање од <code class="docutils literal notranslate"><span class="pre">ч2</span></code>. Будући да је <code class="docutils literal notranslate"><span class="pre">ч2</span></code> мањи од преосталих чланова из <code class="docutils literal notranslate"><span class="pre">скуп2</span></code>, може се одмах закључити да се <code class="docutils literal notranslate"><span class="pre">ч1</span></code> не може нигде појавити у остатку <code class="docutils literal notranslate"><span class="pre">скуп2</span></code> те стога сигурно није у пресеку. Дакле, више није потребно разматрати <code class="docutils literal notranslate"><span class="pre">ч1</span></code>; он једноставно бива одбачен и прелази се на следећи члан из <code class="docutils literal notranslate"><span class="pre">скуп1</span></code>. Слична логика напредује кроз чланове из <code class="docutils literal notranslate"><span class="pre">скуп2</span></code> када је <code class="docutils literal notranslate"><span class="pre">ч2</span> <span class="pre">&lt;</span> <span class="pre">ч1</span></code>. Ево и саме функције:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">пресекСкупова</span><span class="p">(</span><span class="n">скуп1</span><span class="p">,</span> <span class="n">скуп2</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">празан</span><span class="p">(</span><span class="n">скуп1</span><span class="p">)</span> <span class="ow">or</span> <span class="n">празан</span><span class="p">(</span><span class="n">скуп2</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">Листа</span><span class="o">.</span><span class="n">празно</span>
+<span class="gp">... </span>    <span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="n">ч1</span><span class="p">,</span> <span class="n">ч2</span> <span class="o">=</span> <span class="n">скуп1</span><span class="o">.</span><span class="n">први</span><span class="p">,</span> <span class="n">скуп2</span><span class="o">.</span><span class="n">први</span>
+<span class="gp">... </span>        <span class="k">if</span> <span class="n">ч1</span> <span class="o">==</span> <span class="n">ч2</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="k">return</span> <span class="n">Листа</span><span class="p">(</span><span class="n">ч1</span><span class="p">,</span> <span class="n">пресекСкупова</span><span class="p">(</span><span class="n">скуп1</span><span class="o">.</span><span class="n">остатак</span><span class="p">,</span> <span class="n">скуп2</span><span class="o">.</span><span class="n">остатак</span><span class="p">))</span>
+<span class="gp">... </span>        <span class="k">elif</span> <span class="n">ч1</span> <span class="o">&lt;</span> <span class="n">ч2</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="k">return</span> <span class="n">пресекСкупова</span><span class="p">(</span><span class="n">скуп1</span><span class="o">.</span><span class="n">остатак</span><span class="p">,</span> <span class="n">скуп2</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="k">elif</span> <span class="n">ч2</span> <span class="o">&lt;</span> <span class="n">ч1</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="k">return</span> <span class="n">пресекСкупова</span><span class="p">(</span><span class="n">скуп1</span><span class="p">,</span> <span class="n">скуп2</span><span class="o">.</span><span class="n">остатак</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">пресекСкупова</span><span class="p">(</span><span class="n">у</span><span class="p">,</span> <span class="n">у</span><span class="o">.</span><span class="n">остатак</span><span class="p">)</span>
+<span class="go">Листа(4, Листа(5))</span>
+</pre></div>
+</div>
+<p>Да би се проценио број корака који је потребан за овај поступак, треба имати на уму да се у сваком кораку смањује величина најмање једног скупа. Стога је потребан број корака највише збир броја чланова из <code class="docutils literal notranslate"><span class="pre">скуп1</span></code> и <code class="docutils literal notranslate"><span class="pre">скуп2</span></code>, а не њихов производ, као што је то био случај код неуређене представе. Ово је раст <span class="math notranslate nohighlight">\(\Theta(n)\)</span>, а не <span class="math notranslate nohighlight">\(\Theta(n^2)\)</span> – што представља знатно убрзање, чак и за скупове умерене величине. На пример, пресек два скупа од по сто чланова трајаће око двеста корака, уместо десет хиљада за неуређену представу.</p>
+<p>Припајање и унија скупова представљених као уређене секвенце такође се могу израчунати, односно урадити у линеарном времену. Ове имплементације су остављене читаоцима као вежба.</p>
+</div>
+<div class="section" id="setsasbinarysearchtrees">
+<span id="id11"></span><h3>Скупови као бинарна стабла претраге<a class="headerlink" href="#setsasbinarysearchtrees" title="Permalink to this headline">¶</a></h3>
+<p>Може се урадити чак и боље од представљања скупова уређеном листом тако што ће се представљени чланови распоредити у облику стабла са тачно две гране. Унос корена стабла садржи један члан скупа. Уноси унутар гране <code class="docutils literal notranslate"><span class="pre">лево</span></code> укључују све чланове мање од оног у корену. Уноси у грани <code class="docutils literal notranslate"><span class="pre">десно</span></code> укључују све чланове веће од оног у корену. На доњој слици приказана су нека стабла која представљају скуп <code class="docutils literal notranslate"><span class="pre">{1,</span> <span class="pre">3,</span> <span class="pre">5,</span> <span class="pre">7,</span> <span class="pre">9,</span> <span class="pre">11}</span></code>. Исти скуп може бити представљен стаблом на више различитих начина. У свим стаблима бинарне претраге, сви чланови у левој грани морају бити мањи од уноса у корену стабла, као што и сви чланови у десном подстаблу морају бити већи од члана који се налази у корену стабла.</p>
+<img alt="../_images/set_trees.png" class="align-center" src="../_images/set_trees.png" />
+<p>Предност представе преко стабла је следећа: претпоставити да се жели провера да ли се нека вредност <code class="docutils literal notranslate"><span class="pre">в</span></code> садржи у скупу. Започиње се упоређивањем <code class="docutils literal notranslate"><span class="pre">в</span></code> и <code class="docutils literal notranslate"><span class="pre">унос</span></code>. Уколико је <code class="docutils literal notranslate"><span class="pre">в</span></code> мање, зна се да треба само да се претражи лево подстабло, а ако је <code class="docutils literal notranslate"><span class="pre">в</span></code> веће, треба само да се претражи десно подстабло. Ако је стабло „уравнотежено”, свако од ових подстабала биће приближно упола мање од почетног. Тако је у само једном кораку сведен проблем претраге стабла величине <span class="math notranslate nohighlight">\(n\)</span> на претрагу стабла величине <span class="math notranslate nohighlight">\(\frac{n}{2}\)</span>. Будући да величина стабла бива преполовљена у сваком кораку, требали би очекивати да број корака потребних за претрагу стабла расте као <span class="math notranslate nohighlight">\(\Theta(\log{n})\)</span>. За велике скупове ово ће бити значајно убрзање у односу на претходне представе. Ова <code class="docutils literal notranslate"><span class="pre">скупСадржи</span></code> функција користи структурирано стабло као уређену структуру.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">скупСадржи</span><span class="p">(</span><span class="n">с</span><span class="p">,</span> <span class="n">в</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">с</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="kc">False</span>
+<span class="gp">... </span>    <span class="k">elif</span> <span class="n">с</span><span class="o">.</span><span class="n">унос</span> <span class="o">==</span> <span class="n">в</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="kc">True</span>
+<span class="gp">... </span>    <span class="k">elif</span> <span class="n">с</span><span class="o">.</span><span class="n">унос</span> <span class="o">&lt;</span> <span class="n">в</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">скупСадржи</span><span class="p">(</span><span class="n">с</span><span class="o">.</span><span class="n">десно</span><span class="p">,</span> <span class="n">в</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">elif</span> <span class="n">с</span><span class="o">.</span><span class="n">унос</span> <span class="o">&gt;</span> <span class="n">в</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">скупСадржи</span><span class="p">(</span><span class="n">с</span><span class="o">.</span><span class="n">лево</span><span class="p">,</span> <span class="n">в</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Придруживање, односно додавање члана скупу спроводи се на сличан начин и такође захтева <span class="math notranslate nohighlight">\(\Theta(\log{n})\)</span> корака. Да би се додала, то јест придружила вредност <code class="docutils literal notranslate"><span class="pre">в</span></code>, упоређује се најпре <code class="docutils literal notranslate"><span class="pre">в</span></code> са <code class="docutils literal notranslate"><span class="pre">унос</span></code> да би се утврдило да ли <code class="docutils literal notranslate"><span class="pre">в</span></code> треба додати грани <code class="docutils literal notranslate"><span class="pre">десно</span></code> или грани <code class="docutils literal notranslate"><span class="pre">лево</span></code>, а придруживши <code class="docutils literal notranslate"><span class="pre">в</span></code> одговарајућој грани, саставља се ова новоизграђена грану заједно са оригиналним <code class="docutils literal notranslate"><span class="pre">унос</span></code>-ом и другом граном . Ако је <code class="docutils literal notranslate"><span class="pre">в</span></code> једнако <code class="docutils literal notranslate"><span class="pre">унос</span></code>-у, чвор се само враћа. Уколико се затражи да се <code class="docutils literal notranslate"><span class="pre">в</span></code> придружи празном стаблу, ствара се <code class="docutils literal notranslate"><span class="pre">Стабло</span></code> које има <code class="docutils literal notranslate"><span class="pre">в</span></code> као <code class="docutils literal notranslate"><span class="pre">унос</span></code> и празне <code class="docutils literal notranslate"><span class="pre">десно</span></code> и <code class="docutils literal notranslate"><span class="pre">лево</span></code> гране. Ево и саме функције:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">придружиСкупу</span><span class="p">(</span><span class="n">с</span><span class="p">,</span> <span class="n">в</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">с</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">Стабло</span><span class="p">(</span><span class="n">в</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">elif</span> <span class="n">с</span><span class="o">.</span><span class="n">унос</span> <span class="o">==</span> <span class="n">в</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">с</span>
+<span class="gp">... </span>    <span class="k">elif</span> <span class="n">с</span><span class="o">.</span><span class="n">унос</span> <span class="o">&lt;</span> <span class="n">в</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">Стабло</span><span class="p">(</span><span class="n">с</span><span class="o">.</span><span class="n">унос</span><span class="p">,</span> <span class="n">с</span><span class="o">.</span><span class="n">лево</span><span class="p">,</span> <span class="n">придружиСкупу</span><span class="p">(</span><span class="n">с</span><span class="o">.</span><span class="n">десно</span><span class="p">,</span> <span class="n">в</span><span class="p">))</span>
+<span class="gp">... </span>    <span class="k">elif</span> <span class="n">с</span><span class="o">.</span><span class="n">унос</span> <span class="o">&gt;</span> <span class="n">в</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">Стабло</span><span class="p">(</span><span class="n">с</span><span class="o">.</span><span class="n">унос</span><span class="p">,</span> <span class="n">придружиСкупу</span><span class="p">(</span><span class="n">с</span><span class="o">.</span><span class="n">лево</span><span class="p">,</span> <span class="n">в</span><span class="p">),</span> <span class="n">с</span><span class="o">.</span><span class="n">десно</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Тврдња да се претраживање стабла може извести у логаритамском броју корака почива на претпоставци да је стабло „уравнотежено”, односно да лево и десно подстабло сваког стабла имају приближно једнак број чланова, тако да свако подстабло садржи око половине чланова свог родитеља. Међутим, како се може бити сигуран да ће стабла која се граде бити уравнотежена? Чак и ако се започне са уравнотеженим стаблом, додавање чланова са <code class="docutils literal notranslate"><span class="pre">придружиСкупу</span></code> може произвести неуравнотежени резултат. Будући да положај новопридруженог члана зависи од тога како се члан упоређује са члановима који су већ у скупу, може се очекивати да ће, ако се чланови додају „случајно”, стабло тежити да буде у просеку уравнотежено.</p>
+<p>Међутим ово није гаранција. На пример, ако се започне са празним скупом и редом се придружују бројеви од 1 до 7 у редоследу, на крају ће се добити изузетно неуравнотежено стабло у којем су сва лева подстабла празна, тако да нема предности у односу на једноставну уређену листу. Један од начина за решавање овог проблема је дефинисање операције која претвара произвољно стабло у уравнотежено стабло са истим члановима. Ова трансформација може се извршити након сваких неколико <code class="docutils literal notranslate"><span class="pre">придружиСкупу</span></code> операција како би се одржала равнотежа скупа.</p>
+<p>Операције пресека и уније могу се изводити над скуповима који у основи садрже стабло као структуру у линеарном времену њиховим претварањем у уређене листе и назад. Појединости су остављени као вежба.</p>
+</div>
+<div class="section" id="pythonsetimplementation">
+<span id="id12"></span><h3>Пајтонова имплементација скупова<a class="headerlink" href="#pythonsetimplementation" title="Permalink to this headline">¶</a></h3>
+<p>Тип <code class="docutils literal notranslate"><span class="pre">set</span></code> који је уграђен у Пајтон не користи ниједну од ових представа интерно. Уместо тога, Пајтон користи представу која даје проверу чланства у константном времену и операције придруживања засноване на техници која се назива <em>хеширање</em>, што је тема другог курса. Уграђени Пајтонови скупови не могу садржати променљиве типове података, као што су низови, речници или други скупови. Да би омогућили угнежђени скупови, Пајтон такође укључује уграђену непроменљиву класу <code class="docutils literal notranslate"><span class="pre">frozenset</span></code> која дели методе са класом <code class="docutils literal notranslate"><span class="pre">set</span></code>, али искључује методе мутације и операторе.</p>
+</div>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Ефикасност' data-toggle="tooltip"><a href="8-ефикасност.html">Претходно поглавље</a></li>
+    
+        <li id="relations-next" title='Next chapter - Тумачење рачунарских програма' data-toggle="tooltip"><a href="../глава3/index.html">Следеће поглавље</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Ефикасност' data-toggle="tooltip"><a href="8-ефикасност.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Тумачење рачунарских програма' data-toggle="tooltip"><a href="../глава3/index.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="pull-left">&copy; 2019 Petlja (Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

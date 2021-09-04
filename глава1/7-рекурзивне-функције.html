@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sr"></html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Рекурзивне функције &#8212; Компоновање рачунарских програма</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/simanim.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pycode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/p5js.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dbDirective.css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-runestone.css" type="text/css" />
+    <link rel="stylesheet" href="../_staticnbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../_static/Blob.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="../_static/blockpy-modal.js"></script>
+    <script type="text/javascript" src="../_static/simanim.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.16.1/full/pyodide.js"></script>
+    <script type="text/javascript" src="../_static/pycode.js"></script>
+    <script type="text/javascript" src="//toolness.github.io/p5.js-widget/p5-widget.js"></script>
+    <script type="text/javascript" src="../_static/p5js.js"></script>
+    <script type="text/javascript" src="../_static/gallery.js"></script>
+    <script type="text/javascript" src="../_static/dbDirective.js"></script>
+    <script type="text/javascript" src="../_static/sql.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="../_static/require.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Апстракција подацима" href="../глава2/index.html" />
+    <link rel="prev" title="Функције вишег реда" href="6-функције-вишег-реда.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host + '/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+  eBookConfig.course = 'krp';
+  eBookConfig.logLevel = '0';
+  eBookConfig.loginRequired = 'false';
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = 'false';
+  eBookConfig.python3 = 'true';
+  eBookConfig.basecourse = 'krp';
+  eBookConfig.runestone_version = '';
+  eBookConfig.imagesDir = '../_images/';
+  eBookConfig.staticDir = '../_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="../_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="../">Компоновање рачунарских програма</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content" style="margin-top: 70px;">
+  
+  <div class="section" id="recursivefunctions">
+<span id="id1"></span><h1>Рекурзивне функције<a class="headerlink" href="#recursivefunctions" title="Permalink to this headline">¶</a></h1>
+<p>Функција је <em>рекурзивна</em> ако унутар тела функције позива саму себе било директно или индиректно. Другим речима, ток извршења тела рекурзивне функције може захтевати позив те функције поново. Рекурзивне функције у Пајтону не користе никакву посебну синтаксу, али захтевају известан напор да се разумеју и напишу.</p>
+<p>Почећемо примером задатка: написати функцију која сабира цифре природног броја. Приликом пројектовања рекурзивне функције траже се начини да се проблем растави на једноставније потпроблеме. У овом конкретном случају, оператори <code class="docutils literal notranslate"><span class="pre">%</span></code> и <code class="docutils literal notranslate"><span class="pre">//</span></code> се могу користити да се број раздвоји на два дела: цифру најмање тежине и остатак броја.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">18117</span> <span class="o">%</span> <span class="mi">10</span>
+<span class="go">7</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">18117</span> <span class="o">//</span> <span class="mi">10</span>
+<span class="go">1811</span>
+</pre></div>
+</div>
+<p>Збир цифара броја 18117 је <span class="math notranslate nohighlight">\(1+8+1+1+7=18\)</span>. Баш као што је могуће раздвојити број, може се раздвојити и овај збир на последњу цифру, 7, и збир свих цифара изузев последње, <span class="math notranslate nohighlight">\(1+8+1+1=11\)</span>. Ово раздвајање даје алгоритам: да се саберу цифре броја <code class="docutils literal notranslate"><span class="pre">n</span></code>, додати његову последњу цифру <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">%</span> <span class="pre">10</span></code> на збир цифара броја <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">//</span> <span class="pre">10</span></code>. Постоји један посебан случај: ако је број једноцифрен, тада је збир његових цифара управо сам тај број. Овај алгоритам може се имплементирати као рекурзивна функција.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">збирЦифара</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Враћа збир цифара природног броја n.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">n</span>
+<span class="gp">... </span>    <span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="n">свеСемПоследњеЦифре</span><span class="p">,</span> <span class="n">последњаЦифра</span> <span class="o">=</span> <span class="n">n</span> <span class="o">//</span> <span class="mi">10</span><span class="p">,</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">10</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">збирЦифара</span><span class="p">(</span><span class="n">свеСемПоследњеЦифре</span><span class="p">)</span> <span class="o">+</span> <span class="n">последњаЦифра</span>
+</pre></div>
+</div>
+<p>Оваква дефиниција <code class="docutils literal notranslate"><span class="pre">збирЦифара</span></code> је истовремено и потпуна и исправна упркос томе што је функција <code class="docutils literal notranslate"><span class="pre">збирЦифара</span></code> позвана унутар сопственог тела. Задатак израчунавања збира цифара броја је подељен на два корака: збир свих цифара изузев последње и додавања последње цифре. Оба ова корака су једноставнија од почетног задатка. Функција је рекурзивна зато што је први корак заправо исти тип задатка као и оригинални задатак. То јест, <code class="docutils literal notranslate"><span class="pre">збирЦифара</span></code> је функција која је потребна да би се имплементирао <code class="docutils literal notranslate"><span class="pre">збирЦифара</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">збирЦифара</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+<span class="go">9</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">збирЦифара</span><span class="p">(</span><span class="mi">18117</span><span class="p">)</span>
+<span class="go">18</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">збирЦифара</span><span class="p">(</span><span class="mi">9437184</span><span class="p">)</span>
+<span class="go">36</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">збирЦифара</span><span class="p">(</span><span class="mi">11408855402054064613470328848384</span><span class="p">)</span>
+<span class="go">126</span>
+</pre></div>
+</div>
+<p>Могуће је тачно разумети како ова рекурзивна функција бива позивана користећи окружење модела израчунавања. Нису неопходна никаква додатна нова правила.</p>
+<p>Када се <code class="docutils literal notranslate"><span class="pre">def</span></code> наредба изврши, назив <code class="docutils literal notranslate"><span class="pre">збирЦифара</span></code> је повезан на новостворену функцију, али тело те функције још увек није извршено. Због тога, кружна природа функције <code class="docutils literal notranslate"><span class="pre">збирЦифара</span></code> још увек не представља проблем. Затим се <code class="docutils literal notranslate"><span class="pre">збирЦифара</span></code> позива над аргументом 738, рецимо:</p>
+<ol class="arabic simple">
+<li><p>Ствара се локални оквир за <code class="docutils literal notranslate"><span class="pre">збирЦифара</span></code> у коме је <code class="docutils literal notranslate"><span class="pre">n</span></code> повезано на 738 и тело функције <code class="docutils literal notranslate"><span class="pre">збирЦифара</span></code> се извршава у окружењу које започиње тим оквиром.</p></li>
+<li><p>Како 738 није мање од 10, наредба доделе вредности се извршава делећи број 738 на 73 и 8.</p></li>
+<li><p>У <code class="docutils literal notranslate"><span class="pre">return</span></code> наредби која следи, <code class="docutils literal notranslate"><span class="pre">збирЦифара</span></code> се позива над аргументом 73, што је вредност променљиве <code class="docutils literal notranslate"><span class="pre">свеСемПоследњеЦифре</span></code> у тренутном окружењу.</p></li>
+<li><p>Други локални оквир за <code class="docutils literal notranslate"><span class="pre">збирЦифара</span></code> је створен, али овога пута са <code class="docutils literal notranslate"><span class="pre">n</span></code> увезаним на 73. Тело функције <code class="docutils literal notranslate"><span class="pre">збирЦифара</span></code> се поново извршава, сада у новом окружењу које почиње овим оквиром.</p></li>
+<li><p>Пошто 73 такође није мање од 10, број 73 се дели на 7 и 3 и <code class="docutils literal notranslate"><span class="pre">збирЦифара</span></code> бива позван над 7 што је вредност променљиве <code class="docutils literal notranslate"><span class="pre">свеСемПоследњеЦифре</span></code> вредноване у овом оквиру.</p></li>
+<li><p>Трећи локални оквир за функцију <code class="docutils literal notranslate"><span class="pre">збирЦифара</span></code> је створен са <code class="docutils literal notranslate"><span class="pre">n</span></code> повезаним на 7.</p></li>
+<li><p>У окружењу које започиње овим оквиром провера <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&lt;</span> <span class="pre">10</span></code> је тачна те је зато 7 повратна вредност.</p></li>
+<li><p>У другом локалном оквиру, ова враћена вредност 7 се сабира са 3, што је вредност променљиве <code class="docutils literal notranslate"><span class="pre">последњаЦифра</span></code>, да би се вратила вредност 10.</p></li>
+<li><p>У првом локалном оквиру, ова враћена вредност 10 се сабира са 8, што је вредност променљиве <code class="docutils literal notranslate"><span class="pre">последњаЦифра</span></code>, да би се вратила вредност 18.</p></li>
+</ol>
+<p>Упркос својој кружној одлици, ова рекурзивна функција примењује се исправно зато што бива примењена два пута, али с различитим аргументима. Штавише, други позив функције био је једноставни случај почетног задатка да се израчуна збир цифара броја. При позиву функције <code class="docutils literal notranslate"><span class="pre">збирЦифара</span></code> над произвољно великим аргументом, може се једноставним скицирањем окружења показати да сваки наредни позив функције <code class="docutils literal notranslate"><span class="pre">збирЦифара</span></code> узима мањи аргумент од претходног, све док се најзад не дође до једноцифреног улаза.</p>
+<p>Овај пример такође илуструје како се функције које имају једноставна тела могу развити у сложене процесе израчунавања користећи рекурзију.</p>
+<div class="section" id="anatomyofrecursivefunctions">
+<span id="id2"></span><h2>Анатомија рекурзивних функција<a class="headerlink" href="#anatomyofrecursivefunctions" title="Permalink to this headline">¶</a></h2>
+<p>У телу многих рекурзивних функција проналази се заједнички шаблон. Тело започиње основним случајем, условном наредбом која дефинише понашање функције за тривијалне улазе, односно аргументе најједноставније за обраду. У примеру <code class="docutils literal notranslate"><span class="pre">збирЦифара</span></code>, основни случај је сваки једноцифрен аргумент који уједно представља и повратну вредност. Поједине рекурзивне функције ће имати више основних случајева.</p>
+<p>Основни случајеви су праћени од стране једног или више рекурзивних позива. Рекурзивни позиви увек упрошћавају почетни проблем. Рекурзивне функције изражавају израчунавање кроз постепено поједностављивање проблема. На пример, сабирање цифара броја 7 је једноставније од сабирање цифара броја 73, што је опет једноставније од сабирања цифара броја 738. За сваки следећи позив функције, преостало је мање посла да се обави.</p>
+<p>Рекурзивне функције често решавају проблеме на другачији начин од итеративних приступа који су коришћени раније. Размотрити функцију <code class="docutils literal notranslate"><span class="pre">факт</span></code> која израчунава факторијел од <code class="docutils literal notranslate"><span class="pre">n</span></code>, где примера ради <code class="docutils literal notranslate"><span class="pre">факт(4)</span></code> рачуна <span class="math notranslate nohighlight">\(4!=4\cdot3\cdot2\cdot1=24\)</span>.</p>
+<p>Природна имплементација коришћењем <code class="docutils literal notranslate"><span class="pre">while</span></code> наредбе акумулира производ множећи све природне бројеве до <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">фактИтер</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">производ</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span>
+<span class="gp">... </span>    <span class="k">while</span> <span class="n">k</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">:</span>
+<span class="gp">... </span>       <span class="n">производ</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="n">производ</span> <span class="o">*</span> <span class="n">k</span><span class="p">,</span> <span class="n">k</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">производ</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">фактИтер</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="go">24</span>
+</pre></div>
+</div>
+<p>С друге стране, рекурзивна имплементација факторијела може изразити <code class="docutils literal notranslate"><span class="pre">факт(n)</span></code> преко <code class="docutils literal notranslate"><span class="pre">факт(n-1)</span></code>, што је једноставнији проблем. Основни рекурзивни случај је најједноставнији облик проблема, односно: <code class="docutils literal notranslate"><span class="pre">факт(1)</span></code> је 1.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">факт</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+<span class="gp">... </span>       <span class="k">return</span> <span class="mi">1</span>
+<span class="gp">... </span>    <span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>       <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">факт</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">факт</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="go">24</span>
+</pre></div>
+</div>
+<p>Претходне две факторијел фукнције се концептуално разликују. Итеративна функција постепено гради резултат почевши од основног случаја за 1 све до коначног производа кроз узастопна множења сваког чиниоца. Рекурзивна функција, у другу руку, гради резултат директно од последњег чиниоца, <code class="docutils literal notranslate"><span class="pre">n</span></code>, и резултата једноставнијег проблема, <code class="docutils literal notranslate"><span class="pre">факт(n-1)</span></code>.</p>
+<p>Како се рекурзија „одмотава” кроз сукцесивне примене <code class="docutils literal notranslate"><span class="pre">факт</span></code> фукције на све једноставније и једноставније инстанце проблема, резултат најзад бива изграђен почевши од основног случаја. Рекурзија се завршава прослеђивањем аргумента 1 функцији <code class="docutils literal notranslate"><span class="pre">факт</span></code>. Резултат сваког позива зависи од наредног све док се не стигне до основног случаја.</p>
+<p>Исправност ове рекурзивне фукнције је лако потврдити преко стандардне дефиниције математичке функције факторијел:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}(n-1)!&amp;=(n-1)\cdot(n-2)\cdot\cdots\cdot3\cdot2\cdot1\\
+n!&amp;=n\cdot(n-1)\cdot(n-2)\cdot\cdots\cdot3\cdot2\cdot1\\
+n!&amp;=n\cdot(n-1)!\end{split}\]</div>
+<p>Иако је могуће размотати рекурзију користећи постојећи модел израчунавања, често је јасније размишљати о рекурзивним позивима као функционалним апстракцијама. То јест, не треба бринути о томе како је <code class="docutils literal notranslate"><span class="pre">факт(n-1)</span></code> имплементирано у телу функције <code class="docutils literal notranslate"><span class="pre">факт</span></code>, већ једноставно веровати да рачуна факторијел аргумента <code class="docutils literal notranslate"><span class="pre">n-1</span></code>. Третирање рекурзивних позива као функционалне апстракције је назван <cite>рекурзивни скок вере</cite>. Функција се дефинише преко саме себе и приликом провере исправности функције просто се верује, односно претпоставља да једноставнији случај ради исправно. У овом примеру верује се да <code class="docutils literal notranslate"><span class="pre">факт(n-1)</span></code> тачно рачуна <span class="math notranslate nohighlight">\((n-1)!\)</span> па се стога само проверава да је <span class="math notranslate nohighlight">\(n!\)</span> исправно израчунато под условом да је претходна претпоставка тачна. На овај начин, провера исправности рекурзивне функције је облик индуктивног доказа.</p>
+<p>Функције <code class="docutils literal notranslate"><span class="pre">фактИтер</span></code> и <code class="docutils literal notranslate"><span class="pre">факт</span></code> се такође разликују зато што се у првопоменутој имплементацији морају увести две додатне променљиве, <code class="docutils literal notranslate"><span class="pre">производ</span></code> и <code class="docutils literal notranslate"><span class="pre">k</span></code> које нису неопходне у рекурзивној имплементацији. Итеративне функције углавном морају успоставити и одржавати нека локална стања која се мењају током читавог рачунања. У сваком тренутку, то стање карактерише резултат обављеног посла као и преосталу количину посла. На пример, када је <code class="docutils literal notranslate"><span class="pre">k</span></code> једнако 3, а <code class="docutils literal notranslate"><span class="pre">производ</span></code> једнак 2, преостају још два члана да се обраде, 3 и 4. С друге стране, <code class="docutils literal notranslate"><span class="pre">факт</span></code> функција је одређена једним аргументом <code class="docutils literal notranslate"><span class="pre">n</span></code>. Стање израчунавања је у потпуности садржано унутар структуре окружења, тачније кроз повратне вредности које имају улогу производа и повезују <code class="docutils literal notranslate"><span class="pre">n</span></code> на различите вредности у различитим оквирима уместо да експлицитно прате <code class="docutils literal notranslate"><span class="pre">k</span></code>.</p>
+<p>Рекурзивне функције користе правила вредновања позивних израза да повежу имена на вредности притом често избегавајући сметње проузроковане доделама локалних имена унутар итерације. Из овог разлога рекурзивне функције се лакше дефинишу на исправан начин. Међутим, учење да се препознају процеси израчунавања развијени из рекурзивних функције свакако захтевају вежбу.</p>
+</div>
+<div class="section" id="mutualrecursion">
+<span id="id3"></span><h2>Међусобна рекурзија<a class="headerlink" href="#mutualrecursion" title="Permalink to this headline">¶</a></h2>
+<p>Када је рекурзивна процедура подељена између две функције које позивају једна другу, каже се да су функције <cite>међусобно рекурзивне</cite>. Као пример размотрити следећу дефиницију парности и непарности за природне бројеве:</p>
+<ul class="simple">
+<li><p>број је паран ако је за један већи од непарног броја;</p></li>
+<li><p>број је непаран ако је за један већи од парног броја;</p></li>
+<li><p>нула је парна.</p></li>
+</ul>
+<p>Користећи ову дефиницију, могуће је имплементирати међусобно рекурзивне функције које одређују да ли је број паран или непаран:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">јеПаран</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="kc">True</span>
+<span class="gp">... </span>    <span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">јеНепаран</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">јеНепаран</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="kc">False</span>
+<span class="gp">... </span>    <span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">јеПаран</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">јеПаран</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p>Међусобно рекурзивне функције могу се претворити у појединачно рекурзивне функције кроз пробијање границе апстракције између две функције. У овом примеру, тело функције <code class="docutils literal notranslate"><span class="pre">јеНепаран</span></code> може се припојити телу функције <code class="docutils literal notranslate"><span class="pre">јеПаран</span></code> водећи рачуна да се <code class="docutils literal notranslate"><span class="pre">n</span></code> унутар тела функције <code class="docutils literal notranslate"><span class="pre">јеНепаран</span></code> замени са <code class="docutils literal notranslate"><span class="pre">n-1</span></code> како би одразио прослеђени јој аргумент:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">јеПаран</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="kc">True</span>
+<span class="gp">... </span>    <span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">if</span> <span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="k">return</span> <span class="kc">False</span>
+<span class="gp">... </span>        <span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="k">return</span> <span class="n">јеПаран</span><span class="p">((</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Као таква, међусобна рекурзија није ништа тајанственија нити моћнија од једноставне рекурзије, али пружа механизам одржавања апстракције унутар компликованих рекурзивних програма.</p>
+</div>
+<div class="section" id="printinginrecursivefunctions">
+<span id="id4"></span><h2>Испис унутар рекурзивних функција<a class="headerlink" href="#printinginrecursivefunctions" title="Permalink to this headline">¶</a></h2>
+<p>Рачунски процес развијен кроз рекурзивну функцију често се може осликати користећи <code class="docutils literal notranslate"><span class="pre">print</span></code> позиве. Као пример, биће иплементирана функција <code class="docutils literal notranslate"><span class="pre">каскада</span></code> која исписује све префиксе неког броја од најдужег ка најмањем и натраг до најдужег.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">каскада</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Исписује каскаду префикса броја n.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="n">каскада</span><span class="p">(</span><span class="n">n</span><span class="o">//</span><span class="mi">10</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">каскада</span><span class="p">(</span><span class="mi">2023</span><span class="p">)</span>
+<span class="go">2023</span>
+<span class="go">202</span>
+<span class="go">20</span>
+<span class="go">2</span>
+<span class="go">20</span>
+<span class="go">202</span>
+<span class="go">2023</span>
+</pre></div>
+</div>
+<p>У овој рекурзивној функцији, основни случај јесте једноцифрени број, који се исписује. Иначе, рекурзивни позив је постављен између два <code class="docutils literal notranslate"><span class="pre">print</span></code> позива.</p>
+<p>Није строг услов да се основни случај изрази пре рекурзивних позива. Заправо, ова функција се може компактније изразити уз опаску да се <code class="docutils literal notranslate"><span class="pre">print(n)</span></code> понавља у оба случаја условне наредбе те јој стога може претходити.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">каскада</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Исписује каскаду префикса броја n.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">n</span> <span class="o">&gt;=</span> <span class="mi">10</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="n">каскада</span><span class="p">(</span><span class="n">n</span><span class="o">//</span><span class="mi">10</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Као други пример међусобне рекурзије, размотрити игру у којој се на почетку на столу налази <span class="math notranslate nohighlight">\(n\)</span> облутака. Два играча у сваком кругу узимају по један или два облутка са стола. Победник је онај играч који узме последњи облутак. Претпоставити да играчи А и Б играју ову игру, сваки од њих користећи просту стратегију:</p>
+<ul class="simple">
+<li><p>Играч А увек узима по један облутак;</p></li>
+<li><p>Играч Б узима два облутка ако је на столу паран број облутака, а иначе један.</p></li>
+</ul>
+<p>Уколико је дато <span class="math notranslate nohighlight">\(n\)</span> облутака и ирач А започиње игру, ко ће победити?</p>
+<p>Природно растављање овог задатка јесте кроз раздвајање сваке од стратегија у засебну функцију. Ово дозвољава потенцијалну промену сваке од стратегија без утицаја на ону другу тако одржавајући апстрактну преграду између њих. Да би се укључила кружна природа игре, ове две функције позивају једна другу на крају сваког круга.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">играчА</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Играч Б побеђује!&quot;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="n">играчБ</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">играчБ</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Играч А побеђује!&quot;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">elif</span> <span class="n">јеПаран</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="n">играчА</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="n">играчА</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">играчА</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="go">Играч Б побеђује!</span>
+</pre></div>
+</div>
+<p>Унутар тела функције <code class="docutils literal notranslate"><span class="pre">играчБ</span></code> примећују се вишеструки рекурзивни позиви. Међутим, у овом случају, сваки позив функције <code class="docutils literal notranslate"><span class="pre">играчБ</span></code> позива функцију <code class="docutils literal notranslate"><span class="pre">играчА</span></code> највише једном. У следећем одељку биће размотрено шта се дешава када један позив функције прави вишеструке директне рекурзивне позиве.</p>
+</div>
+<div class="section" id="treerecursion">
+<span id="id5"></span><h2>Рекурзивно стабло<a class="headerlink" href="#treerecursion" title="Permalink to this headline">¶</a></h2>
+<p>Још један уобичајени образац израчунавања јесте такозвано рекурзивно стабло или стабло рекурзије у ком функција позива саму себе више од једном. Као пример размотрити израчунавање низа Фибоначијевих бројева у коме сваки члан представља збир претходна два.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">фиб</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="mi">0</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="mi">1</span>
+<span class="gp">... </span>    <span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">фиб</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">фиб</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">фиб</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="go">5</span>
+</pre></div>
+</div>
+<p>У поређењу са претходним покушајима, ова рекурзивна дефиниција је јако привлачна јер тачно одражава опште познату дефиницију Фибоначијевих бројева. Размотрити образац израчунавања који је резултат извршавања функције <code class="docutils literal notranslate"><span class="pre">фиб(6)</span></code>, приказан у наставку. Да би се израчунао <code class="docutils literal notranslate"><span class="pre">фиб(6)</span></code>, израчунавају се најпре <code class="docutils literal notranslate"><span class="pre">фиб(5)</span></code> и <code class="docutils literal notranslate"><span class="pre">фиб(4)</span></code>. Да би се израчунао <code class="docutils literal notranslate"><span class="pre">фиб(5)</span></code>, израчунавају се <code class="docutils literal notranslate"><span class="pre">фиб(4)</span></code> и <code class="docutils literal notranslate"><span class="pre">фиб(3)</span></code>. Генерално гледано, овај поступак израчунавања изгледа попут стабла (дијаграм у наставку није потпуни дијаграм окружења, већ поједностављени приказ поступка израчунавања). Свака плава тачка означава завршено израчунавање Фибоначијевог броја у процесу проласка кроз ово стабло.</p>
+<img alt="../_images/fib.png" class="align-center" src="../_images/fib.png" />
+<p>За функцију са вишеструким рекурзивним позивима се каже да представља <em>рекурзивно стабло</em> због тога што се сваки позив грана на више мањих позива од који се сваки даље рачва у још мање позиве, баш као што и гране дрвета постају мање и бројније како се шире од стабла. Ова функција је поучна као прототипска рекурзија стабла, али је ужасно неефикасан начин за одређивање Фибоначијевог низа јер врши толико сувишних израчунавања. Треба приметити да је целокупно израчунавање <code class="docutils literal notranslate"><span class="pre">фиб(4)</span></code>, што је готово половина посла, дуплирано. У ствари, није тешко показати да ће функција израчунати <code class="docutils literal notranslate"><span class="pre">фиб(1)</span></code> или <code class="docutils literal notranslate"><span class="pre">фиб(2)</span></code> (што представља број листова у стаблу) тачно <code class="docutils literal notranslate"><span class="pre">фиб(n+1)</span></code> пута. Да би се уопште схватило до које мере је ово лоше и неефикасно, лако се може показати да вредност <code class="docutils literal notranslate"><span class="pre">фиб(n)</span></code> расте експоненцијално са порастом <code class="docutils literal notranslate"><span class="pre">n</span></code>. Рецимо, <code class="docutils literal notranslate"><span class="pre">фиб(40)</span></code> је 63’245’986! Горња функција извршава кораке чији број расте експоненцијално са улазом.</p>
+<p>Већ је показано да је могуће дефинисати функцију која израчунава Фибоначијеве бројеве без рекурзивног стабла. Заправо, претходни покушаји су били далеко ефикаснији, што је тема која ће бити разматрана нешто касније. Претходно приказана итеративна имплементација Фибоначијевих бројева, поновљена је овде ради боље прегледности.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">фибИтеративно</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Израчунава n-ти Фибоначијев број, за n &gt;= 2.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="n">претходни</span><span class="p">,</span> <span class="n">тренутни</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>   <span class="c1"># први и други Фибоначијев број</span>
+<span class="gp">... </span>    <span class="n">k</span> <span class="o">=</span> <span class="mi">2</span>                        <span class="c1"># тренутни Фибоначијев број</span>
+<span class="gp">... </span>    <span class="k">while</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="n">претходни</span><span class="p">,</span> <span class="n">тренутни</span> <span class="o">=</span> <span class="n">тренутни</span><span class="p">,</span> <span class="n">претходни</span> <span class="o">+</span> <span class="n">тренутни</span>
+<span class="gp">... </span>        <span class="n">k</span> <span class="o">=</span> <span class="n">k</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">тренутни</span>
+</pre></div>
+</div>
+<p>Стање које се у овом случају мора одржавати састоји се од тренутног и претходног Фибоначијевог броја, заједно са индексом тренутног броја. Ова дефиниција не одражава стандардну математичку дефиницију Фибоначијевих бројева тако јасно као рекурзивни приступ. Међутим, количина израчунавања потребна у итеративној имплементацији само је линеарна у односу на <code class="docutils literal notranslate"><span class="pre">n</span></code>, а не експоненцијална. Чак и за мале вредности <code class="docutils literal notranslate"><span class="pre">n</span></code>, ова разлика може бити огромна.</p>
+<p>Из ове разлике не треба закључити да су поступци који укључују рекурзивна стабла бескорисни. Када се узму у обзир поступци који оперишу над хијерархијски структурираним подацима, а не бројевима, биће откривено да су рекурзивна стабла врло природно и моћно средство. Осим тога, поступци који укључују рекзурзивна стабла често се могу учинити далеко ефикаснији, као што ће бити приказано у трећем поглављу.</p>
+<p>У наставку ће бити приказан проблем за који је решење преко стабла рекурзије знатно једноставније од било које итеративне алтернативе.</p>
+</div>
+<div class="section" id="examplepartitions">
+<span id="id6"></span><h2>Пример: Партиције<a class="headerlink" href="#examplepartitions" title="Permalink to this headline">¶</a></h2>
+<p>Број партиција природног броја <span class="math notranslate nohighlight">\(n\)</span>, користећи се сабирцима мањим или једнаким од <span class="math notranslate nohighlight">\(m\)</span>, је број начина на који се број <span class="math notranslate nohighlight">\(n\)</span> може изразити као збир природних бројева не већих од <span class="math notranslate nohighlight">\(m\)</span> у неопадајућем редоследу. На пример, број партиција броја 6 користећи се деловима не већим од 4 јесте девет.</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(6 = 2 + 4\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(6 = 1 + 1 + 4\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(6 = 3 + 3\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(6 = 1 + 2 + 3\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(6 = 1 + 1 + 1 + 3\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(6 = 2 + 2 + 2\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(6 = 1 + 1 + 2 + 2\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(6 = 1 + 1 + 1 + 1 + 2\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(6 = 1 + 1 + 1 + 1 + 1 + 1\)</span></p></li>
+</ol>
+<p>Биће дефинисана функција <code class="docutils literal notranslate"><span class="pre">бројПартиција(n,</span> <span class="pre">m)</span></code> која враћа број различитих партиција аргумента <code class="docutils literal notranslate"><span class="pre">n</span></code> користећи делове мање или једнаке од <code class="docutils literal notranslate"><span class="pre">m</span></code>. Ова функција има једноставно решење користећи се рекурзивним стаблом које је засновано на следећем запажању:</p>
+<p>Број начина на који се може партиционисати <span class="math notranslate nohighlight">\(n\)</span> користећи бројеве не веће од <span class="math notranslate nohighlight">\(m\)</span> једнак је:</p>
+<ol class="arabic simple">
+<li><p>броју начина да се партиционише <span class="math notranslate nohighlight">\(n-m\)</span> користећи делове мање или једнаке од <span class="math notranslate nohighlight">\(m\)</span>, и</p></li>
+<li><p>броју начина да се партиционише <span class="math notranslate nohighlight">\(n\)</span> користећи делове не веће од <span class="math notranslate nohighlight">\(m-1\)</span>.</p></li>
+</ol>
+<p>Да би се схватило зашто је претходно тврђење тачно, треба уочити да се укупан број начина за партиционисање <span class="math notranslate nohighlight">\(n\)</span> може поделити у два дисјунктна подскупа: први који садржи макар једно <span class="math notranslate nohighlight">\(m\)</span> и други који не садржи ниједно. Штавише, свако партиционисање из првог подскупа јесте заправо партиција броја <span class="math notranslate nohighlight">\(n-m\)</span> праћена <span class="math notranslate nohighlight">\(m\)</span> као последњим сабирком. У горњем примеру, прве две партиције садрже 4, док осталих седам не садржи.</p>
+<p>Стога, могуће је рекурзивно упростити проблем партиционисања <span class="math notranslate nohighlight">\(n\)</span> користећи бројеве мање или једнаке <span class="math notranslate nohighlight">\(m\)</span> на два једноставнија потпроблема: (1) партиционисање мањег броја <span class="math notranslate nohighlight">\(n-m\)</span>, и (2) партиционисање са мањим саставним деловима не већим од <span class="math notranslate nohighlight">\(m-1\)</span>.</p>
+<p>Да би се довршила имплементација, неопходно је назначити и следеће основне случајеве:</p>
+<ol class="arabic">
+<li><p>Постоји један начин да се партиционише 0 који не садржи ниједан сабирак.</p></li>
+<li><p>Постоји нула начина да се партиционишу негативни бројеви.</p></li>
+<li><p>Не постоји начин да се природан број партиционише непозитивним бројевима.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">бројПартиција</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Враћа број партиција броја n користећи сабирке не веће од m.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="mi">1</span>
+<span class="gp">... </span>    <span class="k">elif</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="mi">0</span>
+<span class="gp">... </span>    <span class="k">elif</span> <span class="n">m</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="mi">0</span>
+<span class="gp">... </span>    <span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">бројПартиција</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="n">m</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span> <span class="o">+</span> <span class="n">бројПартиција</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">бројПартиција</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="go">9</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">бројПартиција</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="go">7</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">бројПартиција</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="go">42</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">бројПартиција</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
+<span class="go">176</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">бројПартиција</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="go">627</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p>Може се размишљати о стаблима рекурзије као о истраживању различитих могућности. У овом конкретном случају, истражује се могућност да се користе делови величине <span class="math notranslate nohighlight">\(m\)</span> и могућност да се не користе. Први и други рекурзивни позив управо одговарају овим могућностима.</p>
+<p>Имплементација ове функције без рекурзије била би знатно запетљанија. Заинтересовани читаоци се охрабрују да покушају.</p>
+</div>
+<div class="section" id="examplecountingchange">
+<span id="id7"></span><h2>Пример: Враћање кусура<a class="headerlink" href="#examplecountingchange" title="Permalink to this headline">¶</a></h2>
+<p>Размотримо следеће хипотетичко питање: да ли сте се икада запитали на колико различитих начина у продавници можете добити кусур у висини одређеног износа користећи кованице од 1, 2, 5, 10 и 20 динара? Односно још уопштеније, може ли се написати функција за израчунавање броја начина за враћање било које унапред задате новчане вредности?</p>
+<p>Овај проблем има једноставно решење у виду рекурзивне функције. Претпоставимо да вредности новчића, тј. кованица, имамо распоређене по неком редоследу (рецимо од виших ка нижим). Тада важи следећа релација:</p>
+<p>Број начина за враћање кусура <span class="math notranslate nohighlight">\(k\)</span> користећи <span class="math notranslate nohighlight">\(n\)</span> врста кованица једнак је:</p>
+<ul class="simple">
+<li><p>број начина за враћање кусура <span class="math notranslate nohighlight">\(k\)</span> користећи све кованице изузев прве, плус</p></li>
+<li><p>број начина за враћање кусура <span class="math notranslate nohighlight">\(k-d\)</span> коришћењем свих <span class="math notranslate nohighlight">\(n\)</span> врста кованица, где је <span class="math notranslate nohighlight">\(d\)</span> вредност прве кованице.</p></li>
+</ul>
+<p>Да би се увидело зашто претходна тврдња важи, треба запазити да се начини враћања кусура могу поделити у два скупа: они који не користе ниједан новчић прве вредности и они које то чине. Према томе, укупан број начина за враћање одређеног износа кусура једнак је броју начина за враћање износа кусура без употребе прве кованице из низа, плус број начина за враћање под претпоставком да се користи први новчић. Међутим, овај последњи број једнак је броју начина за враћање износа кусура који преостаје након употребе прве кованице у низу.</p>
+<p>Дакле, може се рекурзивно смањити проблем враћања задатог износа кусура на проблем враћања мањих износа користећи мањи број кованица. Треба пажљиво размислити и размотрити претходно правило смањења и прихватити да се оно може искористити за описивање алгоритма ако се наведу и следећи специјални случајеви:</p>
+<ul class="simple">
+<li><p>Ако је <span class="math notranslate nohighlight">\(k\)</span> тачно 0, то би се требало рачунати као један начин за враћање кусура.</p></li>
+<li><p>Ако је <span class="math notranslate nohighlight">\(k\)</span> мање од 0, то би се требало рачунати као 0 начина за враћање кусура.</p></li>
+<li><p>Ако је <span class="math notranslate nohighlight">\(n\)</span> једнако 0, то би се такође требало рачунати као 0 начина за враћање кусура.</p></li>
+</ul>
+<p>Овај опис може се лако превести у рекурзиван поступак:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">кусур</span><span class="p">(</span><span class="n">износ</span><span class="p">,</span> <span class="n">апоени</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot; износ:  произвољан природан броj;</span>
+<span class="gp">... </span><span class="sd">        апоени: низ или поворка природних броjева;</span>
+<span class="gp">... </span><span class="sd">        враћа:  броj начина да се врати износ користећи апоене.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">износ</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="mi">1</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">износ</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">апоени</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="mi">0</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">кусур</span><span class="p">(</span><span class="n">износ</span> <span class="o">-</span> <span class="n">апоени</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">апоени</span><span class="p">)</span> <span class="o">+</span> <span class="n">кусур</span><span class="p">(</span><span class="n">износ</span><span class="p">,</span> <span class="n">апоени</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+</pre></div>
+</div>
+<p>Сада се може претходна функција употребити да се одговори на питање на колико начина је могуће кованицама вратити кусур од 100 динара:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">кусур</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">])</span>
+<span class="go">4111</span>
+</pre></div>
+</div>
+<p>Функција <code class="docutils literal notranslate"><span class="pre">кусур</span></code> генерише рекурзивно стабло са редундансама сличним онима у првој имплементацији <code class="docutils literal notranslate"><span class="pre">фиб</span></code> функције. (Требаће доста времена да се израчуна 4111 начина.) С друге стране, није очигледно како испројектовати бољи и ефикаснији алгоритам за израчунавање резултата, а овај проблем оставља се као изазов читаоцу. Запажање да рекурзивни поступак може бити крајње неефикасан, иако га је често лако описати и разумети, навело је људе да предложе идеју о преузимању најбољих ствари из оба света пројектовањем такозваног „паметног преводиоца” који би трансформисао рекурзивна стабла у ефикасније поступке израчунавања којима би се долазило до истог резултата.</p>
+<p>Један приступ у савладавању редундантних и сувишних израчунавања је сређивање ствари тако да се у току израчунавања аутоматски прави и попуњава табела вредности. Сваки пут када се позове функција над неким аргументом најпре се погледа да ли је вредност већ сачувана у табели, у ком случају се избегава излишно израчунавање. Ова стратегија, позната као <em>табулација</em> или <em>мемоизација</em>, може се имплементирати праволинијски. Табулација се понекад може користити за трансформисање поступака који захтевају експоненцијални број корака (као што је <code class="docutils literal notranslate"><span class="pre">кусур</span></code>) у поступке чији захтеви за простором и временом расту линеарно са порастом улаза. Више речи о мемоизацији биће у одељку о ефикасности у оквиру наредног поглавља.</p>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Функције вишег реда' data-toggle="tooltip"><a href="6-функције-вишег-реда.html">Претходно поглавље</a></li>
+    
+        <li id="relations-next" title='Next chapter - Апстракција подацима' data-toggle="tooltip"><a href="../глава2/index.html">Следеће поглавље</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Функције вишег реда' data-toggle="tooltip"><a href="6-функције-вишег-реда.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Апстракција подацима' data-toggle="tooltip"><a href="../глава2/index.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="pull-left">&copy; 2019 Petlja (Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sr"></html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Секвенце &#8212; Компоновање рачунарских програма</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/simanim.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pycode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/p5js.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dbDirective.css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-runestone.css" type="text/css" />
+    <link rel="stylesheet" href="../_staticnbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../_static/Blob.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="../_static/blockpy-modal.js"></script>
+    <script type="text/javascript" src="../_static/simanim.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.16.1/full/pyodide.js"></script>
+    <script type="text/javascript" src="../_static/pycode.js"></script>
+    <script type="text/javascript" src="//toolness.github.io/p5.js-widget/p5-widget.js"></script>
+    <script type="text/javascript" src="../_static/p5js.js"></script>
+    <script type="text/javascript" src="../_static/gallery.js"></script>
+    <script type="text/javascript" src="../_static/dbDirective.js"></script>
+    <script type="text/javascript" src="../_static/sql.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="../_static/require.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Променљиви подаци" href="4-променљиви-подаци.html" />
+    <link rel="prev" title="Апстракција података" href="2-апстракција-података.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host + '/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+  eBookConfig.course = 'krp';
+  eBookConfig.logLevel = '0';
+  eBookConfig.loginRequired = 'false';
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = 'false';
+  eBookConfig.python3 = 'true';
+  eBookConfig.basecourse = 'krp';
+  eBookConfig.runestone_version = '';
+  eBookConfig.imagesDir = '../_images/';
+  eBookConfig.staticDir = '../_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="../_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="../">Компоновање рачунарских програма</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content" style="margin-top: 70px;">
+  
+  <div class="section" id="sequences">
+<span id="id1"></span><h1>Секвенце<a class="headerlink" href="#sequences" title="Permalink to this headline">¶</a></h1>
+<p>Секвенца је уређена колекција вредности. Секвенца је снажна, основна апстракција у рачунарству. Секвенце нису инстанце одређеног уграђеног типа или апстрактне представе податка, већ скуп понашања која су заједничка за неколико различитих типова података. То јест, постоји много врста секвенци, али све оне имају заједничко понашање. Нарочито,</p>
+<ul class="simple">
+<li><p>Дужина: секвенца има коначну дужину, а дужина празне секвенце је 0.</p></li>
+<li><p>Избор чланова: секвенца поседује чланове који одговарају ненегативним целобројним индексима мањим од њене дужине, где је са 0 означен први члан.</p></li>
+</ul>
+<p>Пајтон обухвата неколико изворних типова података који су секвенце од којих је вероватно најважнији низ.</p>
+<div class="section" id="lists">
+<span id="id2"></span><h2>Низови<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h2>
+<p>Низ је секвенца која може имати произвољну дужину. Низови имају широк скуп уграђених понашања, заједно са специфичном синтаксом за изражавање тих понашања. Већ су виђени литерал низа који се вреднује у инстанцу низа, као и израз за одабир чланова који се вреднује у вредност унутар низа. Уграђена функција <code class="docutils literal notranslate"><span class="pre">len</span></code> враћа дужину секвенце. У наставку, <code class="docutils literal notranslate"><span class="pre">цифре</span></code> су низ од четири члана. Члан на индексу 3 је 8.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">цифре</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">цифре</span><span class="p">)</span>
+<span class="go">4</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">цифре</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+<span class="go">8</span>
+</pre></div>
+</div>
+<p>Поред тога, низови се могу међусобно сабирати и множити целим бројевима. За низове, сабирање и множење не сабирају и не множе чланове, већ уместо тога спајају и умножавају саме секвенце. То јест, функција <code class="docutils literal notranslate"><span class="pre">add</span></code> из модула <code class="docutils literal notranslate"><span class="pre">operator</span></code> (као и <code class="docutils literal notranslate"><span class="pre">+</span></code> оператор) даје низ који је спој сабраних аргумената. Функција <code class="docutils literal notranslate"><span class="pre">mul</span></code> из модула <code class="docutils literal notranslate"><span class="pre">operator</span></code> (као и <code class="docutils literal notranslate"><span class="pre">*</span></code> оператор) узимају низ и цео број <code class="docutils literal notranslate"><span class="pre">k</span></code>, а враћају низ који се састоји из <code class="docutils literal notranslate"><span class="pre">k</span></code> понављања улазног низа.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span> <span class="o">+</span> <span class="n">цифре</span> <span class="o">*</span> <span class="mi">2</span>
+<span class="go">[2, 7, 1, 8, 2, 8, 1, 8, 2, 8]</span>
+</pre></div>
+</div>
+<p>Било које вредности могу бити стављене у низ, укључујући ту и друге низове. Одабир чланова се може применити више пута како би се у низу низова одабрали дубље угнежђени чланови.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">парови</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">],</span> <span class="p">[</span><span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">парови</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="go">[30, 40]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">парови</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="go">30</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="sequenceiteration">
+<span id="id3"></span><h2>Пролазак кроз секвенце<a class="headerlink" href="#sequenceiteration" title="Permalink to this headline">¶</a></h2>
+<p>У многим случајевима, корисно би било пролазити кроз чланове неке секвенце и извршити неко рачунање за сваки члан. Овај шаблон се до те мере често среће да Пајтон поседује додатну управљачку наредбу за обраду секвенцијалних података: <code class="docutils literal notranslate"><span class="pre">for</span></code> наредбу.</p>
+<p>Размотрити задатак бројања колико пута се нека вредност појављује у секвенци. Могуће је имплементирати функцију за рачунање овог броја користећи <code class="docutils literal notranslate"><span class="pre">while</span></code> петљу.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">бројПојављивања</span><span class="p">(</span><span class="n">секвенца</span><span class="p">,</span> <span class="n">вредност</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Враћа број појављивања вредности унутар секвенце.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="n">укупно</span><span class="p">,</span> <span class="n">индекс</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
+<span class="gp">... </span>    <span class="k">while</span> <span class="n">индекс</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">секвенца</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">if</span> <span class="n">секвенца</span><span class="p">[</span><span class="n">индекс</span><span class="p">]</span> <span class="o">==</span> <span class="n">вредност</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="n">укупно</span> <span class="o">=</span> <span class="n">укупно</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="gp">... </span>        <span class="n">индекс</span> <span class="o">=</span> <span class="n">индекс</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">укупно</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">бројПојављивања</span><span class="p">(</span><span class="n">цифре</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+<span class="go">2</span>
+</pre></div>
+</div>
+<p>Наредба <code class="docutils literal notranslate"><span class="pre">for</span></code> у Пајтону може поједноставити тело ове функције тако што ће директно пролазити кроз вредности чланова, а да не уводи име <code class="docutils literal notranslate"><span class="pre">индекс</span></code> уопште.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">бројПојављивања</span><span class="p">(</span><span class="n">секвенца</span><span class="p">,</span> <span class="n">вредност</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Враћа број појављивања вредности унутар секвенце.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="n">укупно</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="gp">... </span>    <span class="k">for</span> <span class="n">члан</span> <span class="ow">in</span> <span class="n">секвенца</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">if</span> <span class="n">члан</span> <span class="o">==</span> <span class="n">вредност</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="n">укупно</span> <span class="o">=</span> <span class="n">укупно</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">укупно</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">бројПојављивања</span><span class="p">(</span><span class="n">цифре</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+<span class="go">2</span>
+</pre></div>
+</div>
+<p>Наредба <code class="docutils literal notranslate"><span class="pre">for</span></code> састоји се из једне клаузуле у облику:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="o">&lt;</span><span class="n">име</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">израз</span><span class="o">&gt;</span><span class="p">:</span>
+    <span class="o">&lt;</span><span class="n">пакет</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Наредба <code class="docutils literal notranslate"><span class="pre">for</span></code> се извршава пратећи следећи поступак:</p>
+<ol class="arabic">
+<li><p>Вредновати заглавље <code class="docutils literal notranslate"><span class="pre">&lt;израз&gt;</span></code> које мора давати итерирајућу вредност.</p></li>
+<li><p>За сваку вредност члана те итерирајуће вредности, редоследом:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Повезати <code class="docutils literal notranslate"><span class="pre">&lt;име&gt;</span></code> на ту вредност у тренутном оквиру.</p></li>
+<li><p>Извршити <code class="docutils literal notranslate"><span class="pre">&lt;пакет&gt;</span></code>.</p></li>
+</ol>
+</div></blockquote>
+</li>
+</ol>
+<p>Овај поступак извршења помиње <em>итерирајуће вредности</em>. Низови су врста секвенце, а секвенце су итерирајуће вредности. Њихови чланови се разматрају по редоследу. Пајтон укључује и друге итерирајуће типове, али засад ће секвенце бити у жижи, док ће општа дефиниција појма „итерирајући” бити разматрана у одељку о итераторима у оквиру последњег поглавља.</p>
+<p>Важна последица претходног поступка вредновања је да ће <code class="docutils literal notranslate"><span class="pre">&lt;име&gt;</span></code> остати повезано на последњи члан секвенце након што је <code class="docutils literal notranslate"><span class="pre">for</span></code> наредба извршена. Додатно, <code class="docutils literal notranslate"><span class="pre">for</span></code> петља уводи још један начин ажурирања окружења кроз ову наредбу.</p>
+<div class="section" id="sequenceunpacking">
+<span id="id4"></span><h3>Распакивање секвенце<a class="headerlink" href="#sequenceunpacking" title="Permalink to this headline">¶</a></h3>
+<p>Уобичајени шаблон у програмима је да постоји секвенца чланова који су и сами секвенце, али сви тачно одређене дужине. Наредба <code class="docutils literal notranslate"><span class="pre">for</span></code> може укључити више имена у своје заглавље како би „распаковала” сваку подсеквенцу у њој одговарајуће чланове. Примера ради, можемо имати низ двочланих низова:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">парови</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">]]</span>
+</pre></div>
+</div>
+<p>и жељу да се изброје сви парови код којих су први и други члан међусобно једнаки.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">бројЈеднаких</span> <span class="o">=</span> <span class="mi">0</span>
+</pre></div>
+</div>
+<p>Следећа <code class="docutils literal notranslate"><span class="pre">for</span></code> наредба која садржи два имена у свом заглављу ће повезати свако од имена <code class="docutils literal notranslate"><span class="pre">x</span></code> и <code class="docutils literal notranslate"><span class="pre">y</span></code> на први и други члан сваког пара, респективно.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">парови</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="n">y</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="n">бројЈеднаких</span> <span class="o">=</span> <span class="n">бројЈеднаких</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">бројЈеднаких</span>
+<span class="go">2</span>
+</pre></div>
+</div>
+<p>Овај шаблон повезивања више имена на више вредности у секвенцама тачно одређене дужине се назива <em>распакивање секвенце</em> и заправо је потпуно исти шаблон који је већ виђен код наредбе доделе која повезује вишеструка имена на вишеструке вредности.</p>
+</div>
+<div class="section" id="ranges">
+<span id="id5"></span><h3>Распони<a class="headerlink" href="#ranges" title="Permalink to this headline">¶</a></h3>
+<p>Распон, односно <code class="docutils literal notranslate"><span class="pre">range</span></code> је још један уграђени тип секвенце у Пајтону који представља распон целих бројева. Распони се стварају помоћу <code class="docutils literal notranslate"><span class="pre">range</span></code> који прима два целобројна аргумента: први број и један након последњег броја у жељеном распону.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>  <span class="c1"># Укључује 1, али не и 10.</span>
+<span class="go">range(1, 10)</span>
+</pre></div>
+</div>
+<p>Позивање конструктора низа <code class="docutils literal notranslate"><span class="pre">list</span></code> над распоном вреднује се у низ са истим члановима као и распон, тако да је могућ лак преглед свих чланова.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="go">[5, 6, 7]</span>
+</pre></div>
+</div>
+<p>Уколико је задат само један аргумент, он се тумачи као један изнад последње вредности у распону који почиње нулом.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
+<span class="go">[0, 1, 2, 3]</span>
+</pre></div>
+</div>
+<p>Распони се обично појављују као израз у <code class="docutils literal notranslate"><span class="pre">for</span></code> заглављима како би се одредио број извршавања пакета наредби који следи. Уобичајени договор је да се користи један знак за подвлачење (односно, доња црта) за име у заглављу ако се то име не појављује у пакету наредби који следи:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Напред, Звездо!&#39;</span><span class="p">)</span>
+<span class="go">Напред, Звездо!</span>
+<span class="go">Напред, Звездо!</span>
+<span class="go">Напред, Звездо!</span>
+</pre></div>
+</div>
+<p>Што се тиче интерпретатора, подвлака, то јест доња црта, је само још једно од имена у окружењу, али према договору међу програмерима означава име које се неће појавити у будућим изразима који следе.</p>
+</div>
+</div>
+<div class="section" id="sequenceprocessing">
+<span id="id6"></span><h2>Обрада секвенци<a class="headerlink" href="#sequenceprocessing" title="Permalink to this headline">¶</a></h2>
+<p>Секвенце су до те мере чест облик сложених података да су понекад цели програми организовани око ове једне апстракције. Модуларни делови програма који имају секвенце као своје улазе и излазе могу бити мешани и упаривани како би се извршила нека обрада података. Сложени делови могу бити дефинисани међусобним уланчавањем операција обраде секвенци од којих је свака једноставна и усредсређена, односно има јасну намену.</p>
+<div class="section" id="listcomprehensionsinsequences">
+<span id="id7"></span><h3>Низовна убрајања<a class="headerlink" href="#listcomprehensionsinsequences" title="Permalink to this headline">¶</a></h3>
+<p>Многе операције обраде секвенци могу се изразити кроз вредновање, односно интерпретацију израза за сваки члан секвенце, и потоње прикупљање добијених вредности у резултујућу секвенцу. У Пајтону, низовно убрајање је израз који изводи једно такво израчунавање.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">непарни</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">непарни</span><span class="p">]</span>
+<span class="go">[2, 4, 6, 8, 10]</span>
+</pre></div>
+</div>
+<p>Из разлога што се налази унутар угластих заграда, кључна реч <code class="docutils literal notranslate"><span class="pre">for</span></code> није део <code class="docutils literal notranslate"><span class="pre">for</span></code> наредбе већ уместо тога део такозваног низовног убрајања . Подизраз <code class="docutils literal notranslate"><span class="pre">x+1</span></code> се вреднује, то јест интерпретира са <code class="docutils literal notranslate"><span class="pre">x</span></code> повезаним на сваки члан низа <code class="docutils literal notranslate"><span class="pre">непарни</span></code> и тако добијене вредности се прикупљају у низ.</p>
+<p>Друга уобичајена операција обраде секвенци јесте избор подскупа вредности које задовољавају неки услов. Убрајања низа такође могу изразити овај шаблон, на пример бирање свих чланова из низа <code class="docutils literal notranslate"><span class="pre">непарни</span></code> који су делиоци броја 25.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">непарни</span> <span class="k">if</span> <span class="mi">25</span> <span class="o">%</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+<span class="go">[1, 5]</span>
+</pre></div>
+</div>
+<p>Општи облик низовног убрајања је:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="o">&lt;</span><span class="n">израз</span> <span class="n">пресликавања</span><span class="o">&gt;</span> <span class="k">for</span> <span class="o">&lt;</span><span class="n">име</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">израз</span> <span class="n">секвенце</span><span class="o">&gt;</span> <span class="k">if</span> <span class="o">&lt;</span><span class="n">израз</span> <span class="n">филтера</span><span class="o">&gt;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Да би се вредновало низовно убрајање, Пајтон најпре вреднује <code class="docutils literal notranslate"><span class="pre">&lt;израз</span> <span class="pre">секвенце&gt;</span></code> који мора да враћа итерирајућу вредност. Затим, пратећи редослед, вредност сваког члана се везује на <code class="docutils literal notranslate"><span class="pre">&lt;име&gt;</span></code>, вреднује се израз филтера и ако даје вредност тачно, вреднује се израз пресликавања. Најзад, вредности израза пресликавања се прикупљају у низ.</p>
+</div>
+<div class="section" id="aggregation">
+<span id="id8"></span><h3>Агрегација<a class="headerlink" href="#aggregation" title="Permalink to this headline">¶</a></h3>
+<p>Трећи уобичајени шаблон у обради секвенци је агрегација односно здруживање или обједињавање свих вредности из секвенце у једну вредност. Уграђене функције <code class="docutils literal notranslate"><span class="pre">sum</span></code>, <code class="docutils literal notranslate"><span class="pre">min</span></code>, и <code class="docutils literal notranslate"><span class="pre">max</span></code> су само неки од примера агрегационих функција.</p>
+<p>Комбиновањем шаблона вредновања израза за сваки члан, одабиром подскупа чланова, и обједињавањем чланова, могуће је решавање задатака и проблема користећи се приступом обраде секвенци.</p>
+<p>Савршен број је природан број који је једнак збиру својих правих делилаца (укључујући и јединицу). Прави делиоци броја <span class="math notranslate nohighlight">\(n\)</span> су природни бројеви мањи од <span class="math notranslate nohighlight">\(n\)</span> који деле <span class="math notranslate nohighlight">\(n\)</span> без остатка. Списак делиоца броја <span class="math notranslate nohighlight">\(n\)</span> може се изразити преко убрајања низа.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">делиоци</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span> <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">делиоци</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="go">[1, 2]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">делиоци</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+<span class="go">[1, 2, 3, 4, 6]</span>
+</pre></div>
+</div>
+<p>Користећи функцију <code class="docutils literal notranslate"><span class="pre">делиоци</span></code> могу се пронаћи сви савршени бројеви до хиљаду помоћу другог низовног убрајања. Понекада се и број 1 рачуна у савршене бројеве, али ипак не задовољава горњу дефиницију правих делиоца. На овом месту ће бити ипак урачунат као савршени број због следећег примера.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span> <span class="k">if</span> <span class="nb">sum</span><span class="p">(</span><span class="n">делиоци</span><span class="p">(</span><span class="n">n</span><span class="p">))</span> <span class="o">==</span> <span class="n">n</span><span class="p">]</span>
+<span class="go">[1, 6, 28, 496]</span>
+</pre></div>
+</div>
+<p>Може се поново искористити дефиниција <code class="docutils literal notranslate"><span class="pre">делиоци</span></code> за решавање другог задатка у коме се тражи минималан обим правоугаоника са целобројним дужинама страница, уколико је задата његова површина. Површина правоугаоника једнака је производу његове висине и ширине. Отуда, ако је задата површина и висина правоугаоника,, могуће је израчунати ширину. Може се извршити провера да и ширина и висина деле површину без остатка како би се осигурало да су странице правоугаоника целобројне.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">ширина</span><span class="p">(</span><span class="n">површина</span><span class="p">,</span> <span class="n">висина</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">assert</span> <span class="n">површина</span> <span class="o">%</span> <span class="n">висина</span> <span class="o">==</span> <span class="mi">0</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">површина</span> <span class="o">//</span> <span class="n">висина</span>
+</pre></div>
+</div>
+<p>Обим правоугаоника једнак је збиру дужина његових страница.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">обим</span><span class="p">(</span><span class="n">ширина</span><span class="p">,</span> <span class="n">висина</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">ширина</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">висина</span>
+</pre></div>
+</div>
+<p>Висина правоугаоника са целобројним дужинама страница мора бити делилац његове површине. Минимални обим може се израчунати узимајући у обзир све целобројне висине.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">минималниОбим</span><span class="p">(</span><span class="n">површина</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">висине</span> <span class="o">=</span> <span class="n">делиоци</span><span class="p">(</span><span class="n">површина</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="n">обими</span> <span class="o">=</span> <span class="p">[</span><span class="n">обим</span><span class="p">(</span><span class="n">ширина</span><span class="p">(</span><span class="n">површина</span><span class="p">,</span> <span class="n">висина</span><span class="p">),</span> <span class="n">висина</span><span class="p">)</span> <span class="k">for</span> <span class="n">висина</span> <span class="ow">in</span> <span class="n">висине</span><span class="p">]</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="nb">min</span><span class="p">(</span><span class="n">обими</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">површина</span> <span class="o">=</span> <span class="mi">80</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ширина</span><span class="p">(</span><span class="n">површина</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="go">16</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">обим</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="go">42</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">обим</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+<span class="go">36</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">минималниОбим</span><span class="p">(</span><span class="n">површина</span><span class="p">)</span>
+<span class="go">36</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">минималниОбим</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)]</span>
+<span class="go">[4, 6, 8, 8, 12, 10, 16, 12, 12]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="higherorderfunctions">
+<span id="id9"></span><h3>Функције вишег реда<a class="headerlink" href="#higherorderfunctions" title="Permalink to this headline">¶</a></h3>
+<p>Уобичајени шаблони посматрани у оквиру обраде секвенци могу се изразити преко функција вишег реда. Прво, вредновање израза за сваки члан у секвенци може се изразити применом функције на сваки члан.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">примениНаСве</span><span class="p">(</span><span class="n">функцијаПресликавања</span><span class="p">,</span> <span class="n">секвенца</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="p">[</span><span class="n">функцијаПресликавања</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">секвенца</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Избор чланова за које је неки израз истинит може се изразити применом функције на сваки члан секвенце.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">задржиПодУсловом</span><span class="p">(</span><span class="n">функцијаФилтрирања</span><span class="p">,</span> <span class="n">секвенца</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">секвенца</span> <span class="k">if</span> <span class="n">функцијаФилтрирања</span><span class="p">(</span><span class="n">x</span><span class="p">)]</span>
+</pre></div>
+</div>
+<p>Коначно, многи облици агрегације, то јест здруживања могу се изразити кроз узастопну примену двоаргументне функције на већ донекле сведену <code class="docutils literal notranslate"><span class="pre">вредност</span></code> и сваки следећи члан по редоследу.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">reduce</span><span class="p">(</span><span class="n">функцијаЗдруживања</span><span class="p">,</span> <span class="n">секвенца</span><span class="p">,</span> <span class="n">почетнаВредност</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">вредност</span> <span class="o">=</span> <span class="n">почетнаВредност</span>
+<span class="gp">... </span>    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">секвенца</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="n">вредност</span> <span class="o">=</span> <span class="n">функцијаЗдруживања</span><span class="p">(</span><span class="n">вредност</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">вредност</span>
+</pre></div>
+</div>
+<p>Примера ради, претходна функција се може користити за множење свих чланова секвенце. Користећи <code class="docutils literal notranslate"><span class="pre">mul</span></code> као <code class="docutils literal notranslate"><span class="pre">функцијаЗдруживања</span></code> и 1 као <code class="docutils literal notranslate"><span class="pre">почетнаВредност</span></code>, функција <code class="docutils literal notranslate"><span class="pre">reduce</span></code> множи све бројеве из секвенце.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">mul</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">reduce</span><span class="p">(</span><span class="n">mul</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span>
+<span class="go">64</span>
+</pre></div>
+</div>
+<p>Савршени бројеви могу се пронаћи такође и помоћу ових функција вишег реда.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">делитељи</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">делитељ</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">n</span> <span class="o">%</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">задржиПодУсловом</span><span class="p">(</span><span class="n">делитељ</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">n</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">делитељи</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+<span class="go">[1, 2, 3, 4, 6]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">add</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">збирДелилаца</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">reduce</span><span class="p">(</span><span class="n">add</span><span class="p">,</span> <span class="n">делитељи</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">савршенБрој</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">збирДелилаца</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">==</span> <span class="n">n</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">задржиПодУсловом</span><span class="p">(</span><span class="n">савршенБрој</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1000</span><span class="p">))</span>
+<span class="go">[1, 6, 28, 496]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="conventionalnames">
+<span id="id10"></span><h3>Уобичајени називи<a class="headerlink" href="#conventionalnames" title="Permalink to this headline">¶</a></h3>
+<p>У рачунарској заједници, чешћи назив за <code class="docutils literal notranslate"><span class="pre">примениНаСве</span></code> је <code class="docutils literal notranslate"><span class="pre">map</span></code>, а чешћи назив за <code class="docutils literal notranslate"><span class="pre">задржиПодУсловом</span></code> је <code class="docutils literal notranslate"><span class="pre">filter</span></code>. У Пајтону, уграђене функције <code class="docutils literal notranslate"><span class="pre">map</span></code> и <code class="docutils literal notranslate"><span class="pre">filter</span></code> су уопштења ових функција која не враћају низове. Више речи о овим функцијама биће у оквиру последњег поглавља. Горе наведене дефиниције су еквивалентне примени <code class="docutils literal notranslate"><span class="pre">list</span></code> конструктора на резултат позива уграђених <code class="docutils literal notranslate"><span class="pre">map</span></code> и <code class="docutils literal notranslate"><span class="pre">filter</span></code> функција.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">примениНаСве</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">функцијаПресликавања</span><span class="p">,</span> <span class="n">с</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">функцијаПресликавања</span><span class="p">,</span> <span class="n">с</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">задржиПодУсловом</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">функцијаФилтрирања</span><span class="p">,</span> <span class="n">с</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">функцијаФилтрирања</span><span class="p">,</span> <span class="n">с</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Функција <code class="docutils literal notranslate"><span class="pre">reduce</span></code> је уграђена у <code class="docutils literal notranslate"><span class="pre">functools</span></code> модул из Пајтонове стандардне библиотеке. У тој верзији, аргумент <code class="docutils literal notranslate"><span class="pre">почетнаВредност</span></code> није обавезан.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">reduce</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">производ</span><span class="p">(</span><span class="n">секвенца</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">reduce</span><span class="p">(</span><span class="n">mul</span><span class="p">,</span> <span class="n">секвенца</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">производ</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+<span class="go">120</span>
+</pre></div>
+</div>
+<p>У Пајтон програмима, чешће се срећу непосредна низовна убрајања него функције вишег реда, али се може слободно рећи да су оба приступа обради секвенци широко распрострањена.</p>
+</div>
+</div>
+<div class="section" id="sequenceabstraction">
+<span id="id11"></span><h2>Апстракција секвенце<a class="headerlink" href="#sequenceabstraction" title="Permalink to this headline">¶</a></h2>
+<p>Представљена су два изворна типа података која задовољавају апстракцију секвенце: низови и распони. Оба задовољавају услове којима је започет овај одељак: дужину и избор чланова. Пајтон укључује још два понашања секвентних типова која обогаћују и проширују апстракцију секвенце.</p>
+<div class="section" id="sequencemembership">
+<span id="id12"></span><h3>Чланство<a class="headerlink" href="#sequencemembership" title="Permalink to this headline">¶</a></h3>
+<p>Може се извршити провера одређене вредности на чланство у секвенци. Пајтон поседује два оператора <code class="docutils literal notranslate"><span class="pre">in</span></code> и <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code> који се вреднују у <code class="docutils literal notranslate"><span class="pre">True</span></code> или <code class="docutils literal notranslate"><span class="pre">False</span></code> у зависности од тога да ли се члан појављује у секвенци или не.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">цифре</span>
+<span class="go">[1, 8, 2, 8]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">2</span> <span class="ow">in</span> <span class="n">цифре</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">1828</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">цифре</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="slicing">
+<span id="id13"></span><h3>Одсецање<a class="headerlink" href="#slicing" title="Permalink to this headline">¶</a></h3>
+<p>Унутар себе, секвенце садрже краће подсеквенце. Такозвани <em>одрезак</em> секвенце је ма који исечак суседних чланова изворне секвенце, означен паром целих бројева. Баш као и код <code class="docutils literal notranslate"><span class="pre">range</span></code> конструктора, први цео број означава почетни индекс одреска, док други означава један индекс након завршетка истог.</p>
+<p>У Пајтону, одсецање секвенци је изражено на сличан начин као и избор елемената, користећи угласте заграде. Почетни и крајњи индекс раздвојени су двотачком. По претпоставци, за сваку изостављену границу узима се крајња вредност, односно, 0 за почетни индекс, а дужина секвенце за крајњи индекс.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">цифре</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+<span class="go">[1, 8]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">цифре</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+<span class="go">[8, 2, 8]</span>
+</pre></div>
+</div>
+<p>Набрајање ових додатних понашања апстракција секвенци у Пајтону даје прилику за осврт на тему из чега се све састоје корисне апстракције података. Богатство апстракције (то јест, колико понашања укључује) има и своје последице. За кориснике апстракције, додатна понашања свакако могу бити корисна. С друге стране, задовољавање свих захтева богатих апстракција неким новим типом података може бити изазовно. Још једна негативна последица богатих апстракција може бити и та да је корисницима потребно више времена да их науче и савладају.</p>
+<p>Секвенце имају богату апстракцију зато што су до те мере распрострањене и свеприсутне у израчунавањима да је учење неколико сложених понашања више него оправдано и, на дужи рок, увек исплативо. Међутим, уопштено говорећи, за велику већину кориснички дефинисаних апстракција важи да треба да буду што је могуће једноставније.</p>
+<p>Додатна литература: нотација одсецања прихвата разноразне случајеве као што су негативне почетне или крајње вредности, као и величине корака. Потпун опис се појављује у одељку интернет књиге <a class="reference external" href="http://www.diveintopython3.net/native-datatypes.html#slicinglists">Dive Into Python 3</a> о изворним типовима података. У овом поглављу ће бити коришћене само претходно описане основне функције.</p>
+</div>
+</div>
+<div class="section" id="strings">
+<span id="id14"></span><h2>Ниске<a class="headerlink" href="#strings" title="Permalink to this headline">¶</a></h2>
+<p>Текстуалне вредности су можда фундаменталније у рачунарству чак и од самих бројева. Као пример претходне тврдње, рачунарски програми су обично пишу и чувају у текстуалном облику. Изворни тип података за текст у Пајтону назива се ниска, а <code class="docutils literal notranslate"><span class="pre">str</span></code> му је припадајући конструктор.</p>
+<p>Много је појединости о томе како су ниске представљене, изражене и манипулисане у Пајтону. Ниске су још један пример богатих апстракција које захтевају значајнију посвећеност од стране програмера да би се савладале и како би њима у потпуности овладало. Овај одељак служи као сажети увод у основна понашања ниски.</p>
+<p>Литерали ниске могу изражавати произвољни текст који се налази или између једноструких или између двоструких наводника.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;Ја сам ниска.&#39;</span>
+<span class="go">&#39;Ја сам ниска.&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s2">&quot;А ја сам Д&#39;Артањан и садржим апостроф!&quot;</span>
+<span class="go">&quot;А ја сам Д&#39;Артањан и садржим апостроф!&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;您好&#39;</span>
+<span class="go">&#39;您好&#39;</span>
+</pre></div>
+</div>
+<p>Ниске су се већ појављивале у досадашњим изворним кодовима, као докниске, унутар <code class="docutils literal notranslate"><span class="pre">print</span></code> позива, и као поруке о грешци у <code class="docutils literal notranslate"><span class="pre">assert</span></code> наредбама провере.</p>
+<p>Ниске задовољавају два основна услова секвенце која су уведена на почетку овог одељка: имају своју дужину и подржавају избор чланова.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">град</span> <span class="o">=</span> <span class="s1">&#39;Крагујевац&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">град</span><span class="p">)</span>
+<span class="go">10</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">град</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span>
+<span class="go">&#39;в&#39;</span>
+</pre></div>
+</div>
+<p>Чланови ниске су и сами ниске које садрже само један знак. Знак представља било које слово неког алфабета (односно азбуке, абецеде, и других писама), интерпункцијски знак или други симбол. За разлику од многих других програмских језика, Пајтон нема посебан знаковни тип податка: било који текст је ниска, а ниске које представљају појединачне знакове имају јединичну дужину.</p>
+<p>Као и низови, ниске се такође могу комбиновати сабирањем и множењем.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;Крагујевац&#39;</span> <span class="o">+</span> <span class="s1">&#39;, Шумадија&#39;</span>
+<span class="go">&#39;Крагујевац, Шумадија&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;кус&#39;</span> <span class="o">*</span> <span class="mi">2</span>
+<span class="go">&#39;кускус&#39;</span>
+</pre></div>
+</div>
+<div class="section" id="stringmembership">
+<span id="id15"></span><h3>Чланство<a class="headerlink" href="#stringmembership" title="Permalink to this headline">¶</a></h3>
+<p>Понашање ниски разликује се од осталих секвентних типова у Пајтону. Апстракција ниске не одговара пуној апстракцији секвенце која је описана за низове и распоне. Конкретно, оператор чланства <code class="docutils literal notranslate"><span class="pre">in</span></code> применљив је и на ниске, али има потпуно другачије понашање од оног када се примењује на друге секвенце. Заправо овај оператор врши проверу присуства подниске, уместо појединачних чланова.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;де је&#39;</span> <span class="ow">in</span> <span class="s2">&quot;Где је Гиле?&quot;</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="multilineliterals">
+<span id="id16"></span><h3>Вишередни литерали<a class="headerlink" href="#multilineliterals" title="Permalink to this headline">¶</a></h3>
+<p>Ниске нису ограничене на само један ред. Троструки знакови навода обухватају литерале ниске који се протежу у више редова. Ови троструки наводници су већ обимно коришћени у докнискама.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="sd">&quot;&quot;&quot;The Zen of Python</span>
+<span class="gp">... </span><span class="sd">claims, &quot;Readability counts.&quot;</span>
+<span class="gp">... </span><span class="sd">Read more: import this.&quot;&quot;&quot;</span>
+<span class="go">&#39;The Zen of Python\nclaims, &quot;Readability counts.&quot;\nRead more: import this.&#39;</span>
+</pre></div>
+</div>
+<p>У горњем испису <code class="docutils literal notranslate"><span class="pre">\n</span></code> је један члан ниске који представља симбол за нови ред. Иако се појављује као двознак (обрнута коса црта и мало латинично слово <code class="docutils literal notranslate"><span class="pre">n</span></code>), ипак се рачуна као један за потребе одређивања дужине ниске и избора њених чланова.</p>
+</div>
+<div class="section" id="stringcoercion">
+<span id="id17"></span><h3>Претварање у ниску<a class="headerlink" href="#stringcoercion" title="Permalink to this headline">¶</a></h3>
+<p>Ниска се може створити из било ког другог објекта у Пајтону позивањем <code class="docutils literal notranslate"><span class="pre">str</span></code> конструкторске функције са вредношћу објекта као аргументом. Ова одлика ниски корисна је за прављење описних ниски полазећи од објеката различитих типова.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">str</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; је један од чланова низа &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">цифре</span><span class="p">)</span>
+<span class="go">&#39;2 је један од чланова низа [1, 8, 2, 8]&#39;</span>
+</pre></div>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/home/vlada/work/reST/runestone/_sources/глава2/3-секвенце.rst</span>, line 5); <em><a href="#id18">backlink</a></em></p>
+<p>Duplicate explicit target name: „dive into python 3”.</p>
+</div>
+<p>Додатна литература: кодирање текста у рачунарима је сложена тема. У овом поглављу, детаљи о представи ниски ће бити изапстраковани. Међутим, за многе примене, од изузетне су важности све појединости о томе како се ниске кодирају унутар самог рачунара. Поглавље о нискама у интернет књизи <a class="reference external" href="http://www.diveintopython3.net/strings.html">Dive Into Python 3</a> даје ближи опис кодирања знакова.</p>
+</div>
+</div>
+<div class="section" id="trees">
+<span id="id19"></span><h2>Стабла<a class="headerlink" href="#trees" title="Permalink to this headline">¶</a></h2>
+<p>Могућност да се низови користе као чланови других низова пружа ново средство за комбиновање у програмском језику. Ова способност обично се зове <em>својство затворења</em> типа података. Уопштено говорећи, метода комбиновања вредности има својство затворења ако резултат комбиновања може и сам бити комбинован помоћу исте методе. <a class="reference external" href="http://sr.wikipedia.org/wiki/Затворење_(програмирање)">Затворење</a> је извор снаге у било ком начину комбинације јер омогућава стварање хијерархијских структура – структура састављених из делова који су и сами састављени из делова и тако даље.</p>
+<p>У дијаграмима окружења низови се могу визуализовати помоћу нотације са кућицама и показивачима. Низ је приказан преко узастопних правоугаоних поља, односно кућица које садрже чланове низа. Примитивне вредности као што су бројеви, ниске, логичке вредности, и <code class="docutils literal notranslate"><span class="pre">None</span></code> појављују се као чланови уоквирени кућицом. Сложене вредности, као што су вредности функција и други низови, означене су стрелицом, то јест показивачем.</p>
+<p>Угнежђивање низова унутар других низова може унети неке сложености. Такозвано <em>стабло</em> је основна апстракција података која намеће правилност у хијерархијском структуирању и манипулисању вредностима.</p>
+<p>Стабло има корен и секвенцу грана. Свака грана стабла је и сама стабло. Стабло без грана назива се лист. Свако стабло које се налази унутар стабла зове се подстабло датог стабла (као на пример, грана гране). Корен сваког подстабла неког стабла назива се чвором у том стаблу.</p>
+<p>Апстракција података за стабло састоји се из конструктора <code class="docutils literal notranslate"><span class="pre">стабло</span></code> и селектора <code class="docutils literal notranslate"><span class="pre">ознака</span></code> и <code class="docutils literal notranslate"><span class="pre">гране</span></code>. Почећемо с поједностављеном верзијом.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">стабло</span><span class="p">(</span><span class="n">корен</span><span class="p">,</span> <span class="n">гране</span><span class="o">=</span><span class="p">[]):</span>
+<span class="gp">... </span>    <span class="k">for</span> <span class="n">грана</span> <span class="ow">in</span> <span class="n">гране</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">assert</span> <span class="n">даЛиЈеСтабло</span><span class="p">(</span><span class="n">грана</span><span class="p">),</span> <span class="s1">&#39;гране морају бити стабла&#39;</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="p">[</span><span class="n">корен</span><span class="p">]</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="n">гране</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">ознака</span><span class="p">(</span><span class="n">стабло</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">стабло</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">гране</span><span class="p">(</span><span class="n">стабло</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">стабло</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+</pre></div>
+</div>
+<p>Стабло је добро формирано само ако има ознаку корена и све гране које су такође стабла. Функција <code class="docutils literal notranslate"><span class="pre">даЛиЈеСтабло</span></code> се примењује у конструктору <code class="docutils literal notranslate"><span class="pre">стабло</span></code> како би се извршила провера јесу ли и све гране стабла добро формиране.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">даЛиЈеСтабло</span><span class="p">(</span><span class="n">стабло</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">стабло</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">list</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">стабло</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="kc">False</span>
+<span class="gp">... </span>    <span class="k">for</span> <span class="n">грана</span> <span class="ow">in</span> <span class="n">гране</span><span class="p">(</span><span class="n">стабло</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">if</span> <span class="ow">not</span> <span class="n">даЛиЈеСтабло</span><span class="p">(</span><span class="n">грана</span><span class="p">):</span>
+<span class="gp">... </span>            <span class="k">return</span> <span class="kc">False</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="kc">True</span>
+</pre></div>
+</div>
+<p>Функција <code class="docutils literal notranslate"><span class="pre">даЛиЈеЛист</span></code> проверава да ли стабло има гране или не.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">даЛиЈеЛист</span><span class="p">(</span><span class="n">стабло</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="ow">not</span> <span class="n">гране</span><span class="p">(</span><span class="n">стабло</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Стабла могу бити направљена угнежђеним изразима. Следеће стабло <code class="docutils literal notranslate"><span class="pre">с</span></code> има ознаку корена <code class="docutils literal notranslate"><span class="pre">3</span></code> и две гране.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">с</span> <span class="o">=</span> <span class="n">стабло</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="p">[</span><span class="n">стабло</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">стабло</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="p">[</span><span class="n">стабло</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">стабло</span><span class="p">(</span><span class="mi">1</span><span class="p">)])])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">с</span>
+<span class="go">[3, [1], [2, [1], [1]]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ознака</span><span class="p">(</span><span class="n">с</span><span class="p">)</span>
+<span class="go">3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">гране</span><span class="p">(</span><span class="n">с</span><span class="p">)</span>
+<span class="go">[[1], [2, [1], [1]]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ознака</span><span class="p">(</span><span class="n">гране</span><span class="p">(</span><span class="n">с</span><span class="p">)[</span><span class="mi">1</span><span class="p">])</span>
+<span class="go">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">даЛиЈеЛист</span><span class="p">(</span><span class="n">с</span><span class="p">)</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">даЛиЈеЛист</span><span class="p">(</span><span class="n">гране</span><span class="p">(</span><span class="n">с</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p>Рекурзивна стабла се као функције могу користити за изградњу стабала. Примера ради, <span class="math notranslate nohighlight">\(n\)</span>-ти Фибоначијев број има ознаку корена <span class="math notranslate nohighlight">\(n\)</span>-тог Фибоначијевог броја и, за <span class="math notranslate nohighlight">\(n &gt; 1\)</span>, две гране које су такође Фибоначијева стабла. Фибоначијево стабло илуструје рекурзивно стабло израчунавања Фибоначијевог броја.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">фибСтабло</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">стабло</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="n">лева</span><span class="p">,</span> <span class="n">десна</span> <span class="o">=</span> <span class="n">фибСтабло</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">),</span> <span class="n">фибСтабло</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="n">фиб_n</span> <span class="o">=</span> <span class="n">ознака</span><span class="p">(</span><span class="n">лева</span><span class="p">)</span> <span class="o">+</span> <span class="n">ознака</span><span class="p">(</span><span class="n">десна</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">стабло</span><span class="p">(</span><span class="n">фиб_n</span><span class="p">,</span> <span class="p">[</span><span class="n">лева</span><span class="p">,</span> <span class="n">десна</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">фибСтабло</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="go">[5, [2, [1], [1, [0], [1]]], [3, [1, [0], [1]], [2, [1], [1, [0], [1]]]]]</span>
+</pre></div>
+</div>
+<p>Функције стабла рекурзије се такође користе за обраду стабала. На пример, функција <code class="docutils literal notranslate"><span class="pre">избројЛистове</span></code> броји и враћа колико стабло има листова.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">избројЛистове</span><span class="p">(</span><span class="n">стабло</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">даЛиЈеЛист</span><span class="p">(</span><span class="n">стабло</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="mi">1</span>
+<span class="gp">... </span>    <span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="n">бројЛистоваПоГранама</span> <span class="o">=</span> <span class="p">[</span><span class="n">избројЛистове</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">гране</span><span class="p">(</span><span class="n">стабло</span><span class="p">)]</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">бројЛистоваПоГранама</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">избројЛистове</span><span class="p">(</span><span class="n">фибСтабло</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+<span class="go">8</span>
+</pre></div>
+</div>
+<div class="section" id="partitiontrees">
+<span id="id21"></span><h3>Стабла партиција<a class="headerlink" href="#partitiontrees" title="Permalink to this headline">¶</a></h3>
+<p>Стабла се такође могу користити за представљање партиција природног броја. Стабло партиција природног броја <span class="math notranslate nohighlight">\(n\)</span> користећи се бројевима не већим од <span class="math notranslate nohighlight">\(m\)</span> је бинарно (двограно) стабло које представља изборе начињене током рачунања. У стаблу партиција:</p>
+<ul class="simple">
+<li><p>лева грана (индекс 0) садржи све начине партиционисања броја <span class="math notranslate nohighlight">\(n\)</span> користећи најмање једно <span class="math notranslate nohighlight">\(m\)</span>,</p></li>
+<li><p>десна грана (индекс 1) садржи све партиције које користе делове до <span class="math notranslate nohighlight">\(m-1\)</span>, и</p></li>
+<li><p>ознака корена је <span class="math notranslate nohighlight">\(m\)</span>.</p></li>
+</ul>
+<p>Ознаке листова стабла партиција изражавају да ли путања од корена до листа представља успешну поделу природног броја <span class="math notranslate nohighlight">\(n\)</span>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">стаблоПартиција</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Враћа стабло партиција за n користећи делове не веће од m.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">стабло</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">elif</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">m</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">стабло</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="n">лева</span> <span class="o">=</span> <span class="n">стаблоПартиција</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="n">m</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="n">десна</span> <span class="o">=</span> <span class="n">стаблоПартиција</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">стабло</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="p">[</span><span class="n">лева</span><span class="p">,</span> <span class="n">десна</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">стаблоПартиција</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="go">[2, [True], [1, [1, [True], [False]], [False]]]</span>
+</pre></div>
+</div>
+<p>Испис партиција из стабла партиција је још један рекурзивни процес којим се обилази стабло, градећи сваку партицију у виду низа. Кад год се дође до листа <code class="docutils literal notranslate"><span class="pre">True</span></code> партиција се исписује.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">исписПартиција</span><span class="p">(</span><span class="n">tree</span><span class="p">,</span> <span class="n">партиција</span><span class="o">=</span><span class="p">[]):</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">даЛиЈеЛист</span><span class="p">(</span><span class="n">tree</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">if</span> <span class="n">ознака</span><span class="p">(</span><span class="n">tree</span><span class="p">):</span>
+<span class="gp">... </span>            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39; + &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">партиција</span><span class="p">))</span>
+<span class="gp">... </span>    <span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="n">лева</span><span class="p">,</span> <span class="n">десна</span> <span class="o">=</span> <span class="n">гране</span><span class="p">(</span><span class="n">tree</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="n">m</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">ознака</span><span class="p">(</span><span class="n">tree</span><span class="p">))</span>
+<span class="gp">... </span>        <span class="n">исписПартиција</span><span class="p">(</span><span class="n">лева</span><span class="p">,</span> <span class="n">партиција</span> <span class="o">+</span> <span class="p">[</span><span class="n">m</span><span class="p">])</span>
+<span class="gp">... </span>        <span class="n">исписПартиција</span><span class="p">(</span><span class="n">десна</span><span class="p">,</span> <span class="n">партиција</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">исписПартиција</span><span class="p">(</span><span class="n">стаблоПартиција</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="go">4 + 2</span>
+<span class="go">4 + 1 + 1</span>
+<span class="go">3 + 3</span>
+<span class="go">3 + 2 + 1</span>
+<span class="go">3 + 1 + 1 + 1</span>
+<span class="go">2 + 2 + 2</span>
+<span class="go">2 + 2 + 1 + 1</span>
+<span class="go">2 + 1 + 1 + 1 + 1</span>
+<span class="go">1 + 1 + 1 + 1 + 1 + 1</span>
+</pre></div>
+</div>
+<p>Одсецање се такође може користити на гранама стабла. На пример, могуће је да се пожели постављања ограничења на број грана у стаблу. Бинарна стабла имају највише две гране. Уобичајена трансформација стабла под именом бинаризација проналази бинарно стабло са истим ознакама као и оригинално стабло груписањем грана.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">деснаБинаризација</span><span class="p">(</span><span class="n">с</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Прави десно-разгранато бинарно стабло.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">стабло</span><span class="p">(</span><span class="n">ознака</span><span class="p">(</span><span class="n">с</span><span class="p">),</span> <span class="n">бинаризацијаГрана</span><span class="p">(</span><span class="n">гране</span><span class="p">(</span><span class="n">с</span><span class="p">)))</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">бинаризацијаГрана</span><span class="p">(</span><span class="n">низГрана</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Бинаризација низа грана.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">низГрана</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="n">прва</span><span class="p">,</span> <span class="n">остале</span> <span class="o">=</span> <span class="n">низГрана</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">низГрана</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="p">[</span><span class="n">деснаБинаризација</span><span class="p">(</span><span class="n">прва</span><span class="p">),</span> <span class="n">бинаризацијаГрана</span><span class="p">(</span><span class="n">остале</span><span class="p">)]</span>
+<span class="gp">... </span>    <span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="p">[</span><span class="n">деснаБинаризација</span><span class="p">(</span><span class="n">грана</span><span class="p">)</span> <span class="k">for</span> <span class="n">грана</span> <span class="ow">in</span> <span class="n">низГрана</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">деснаБинаризација</span><span class="p">(</span><span class="n">стабло</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="p">[</span><span class="n">стабло</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]]))</span>
+<span class="go">[0, [1], [[2], [[3], [[4], [[5], [[6], [7]]]]]]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="linkedlists">
+<span id="id22"></span><h2>Уланчане листе<a class="headerlink" href="#linkedlists" title="Permalink to this headline">¶</a></h2>
+<p>До сада су само изворни типови коришћени за представљање секвенци. Међутим, такође се могу развити представе секвенци које нису уграђене у Пајтон. Уобичајена представа секвенце изграђене од угнежђених парова назива се <em>уланчана листа</em>. Дијаграм оркужења у наставку илуструје представу преко уланчане листе четворочлане секвенце која садржи 1, 2, 3 и 4.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">четири</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;празно&#39;</span><span class="p">]]]]</span>
+</pre></div>
+</div>
+<p>Уланчана листа је пар који садржи први члан секвенце (у овом случају 1) и остатак секвенце (у овом случају представа 2, 3, 4). Други члан је такође уланчана листа. Остатак најугнежђеније уланчане листе која садржи само 4 је <code class="docutils literal notranslate"><span class="pre">празно</span></code>, вредност која представља празну уланчану листу.</p>
+<p>Уланчане листе имају рекурзивну структуру: остатак уланчане листе је уланчана листа или <code class="docutils literal notranslate"><span class="pre">'празно'</span></code>. Може се дефинисати апстрактна представа података за валидацију, конкструкцију и избор компоненти уланчаних листа.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">празно</span> <span class="o">=</span> <span class="s1">&#39;празно&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">даЛиЈеУланчанаЛиста</span><span class="p">(</span><span class="n">с</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;с је уланчана листа ако је празна или ако је уређени пар (први, остатак).&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">с</span> <span class="o">==</span> <span class="n">празно</span> <span class="ow">or</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">с</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span> <span class="ow">and</span> <span class="n">даЛиЈеУланчанаЛиста</span><span class="p">(</span><span class="n">с</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">уланчанаЛиста</span><span class="p">(</span><span class="n">први</span><span class="p">,</span> <span class="n">остатак</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Направи уланчану листу од првог члана и остатка.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="k">assert</span> <span class="n">даЛиЈеУланчанаЛиста</span><span class="p">(</span><span class="n">остатак</span><span class="p">),</span> <span class="s2">&quot;остатак мора бити уланчана листа.&quot;</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="p">[</span><span class="n">први</span><span class="p">,</span> <span class="n">остатак</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">први</span><span class="p">(</span><span class="n">с</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Враћа први члан уланчане листе с.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="k">assert</span> <span class="n">даЛиЈеУланчанаЛиста</span><span class="p">(</span><span class="n">с</span><span class="p">),</span> <span class="s2">&quot;први је применљив само на уланчане листе.&quot;</span>
+<span class="gp">... </span>    <span class="k">assert</span> <span class="n">с</span> <span class="o">!=</span> <span class="n">празно</span><span class="p">,</span> <span class="s2">&quot;празна уланчана листа нема први члан.&quot;</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">с</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">остатак</span><span class="p">(</span><span class="n">с</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Враћа остатак чланова уланчане листе с.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="k">assert</span> <span class="n">даЛиЈеУланчанаЛиста</span><span class="p">(</span><span class="n">с</span><span class="p">),</span> <span class="s2">&quot;остатак је применљив само на уланчане листе.&quot;</span>
+<span class="gp">... </span>    <span class="k">assert</span> <span class="n">с</span> <span class="o">!=</span> <span class="n">празно</span><span class="p">,</span> <span class="s2">&quot;празна уланчана листа нема остатак.&quot;</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">с</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Горе, <code class="docutils literal notranslate"><span class="pre">уланчанаЛиста</span></code> је конструктор, а <code class="docutils literal notranslate"><span class="pre">први</span></code> и <code class="docutils literal notranslate"><span class="pre">остатак</span></code> су селектори за апстрактну представу податка уланчаних листа. Услов понашања за уланчане листе јесте да и за њих, попут пара, важи да су конструктор и селектори инверзне функције.</p>
+<ul class="simple">
+<li><p>Ако је уланчана листа <code class="docutils literal notranslate"><span class="pre">с</span></code> направљена из првог члана <code class="docutils literal notranslate"><span class="pre">п</span></code> и уланчане листе <code class="docutils literal notranslate"><span class="pre">о</span></code>, тада <code class="docutils literal notranslate"><span class="pre">први(с)</span></code> враћа <code class="docutils literal notranslate"><span class="pre">п</span></code>, а <code class="docutils literal notranslate"><span class="pre">остатак(с)</span></code> враћа <code class="docutils literal notranslate"><span class="pre">о</span></code>.</p></li>
+</ul>
+<p>Конструктор и селектори се могу користити за манипулацију уланчаним листама.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">четири</span> <span class="o">=</span> <span class="n">уланчанаЛиста</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">уланчанаЛиста</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">уланчанаЛиста</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">уланчанаЛиста</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">празно</span><span class="p">))))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">први</span><span class="p">(</span><span class="n">четири</span><span class="p">)</span>
+<span class="go">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">остатак</span><span class="p">(</span><span class="n">четири</span><span class="p">)</span>
+<span class="go">[2, [3, [4, &#39;празно&#39;]]]</span>
+</pre></div>
+</div>
+<p>Претходна имплементација ове врсте апстрактних података користи парове који су заправо двочлани низови. Вреди напоменути да је такође било могуће имплементирати парове користећи функције, а како је имплементација уланчаних листа могућа коришћењем било каквих парова, следи да је било изводљиво имплементирати уланчане листе користећи се само функцијама.</p>
+<p>Уланчана листа може да смешта секвенцу вредности у редуследу, али још увек није показано да задовољава услове апстракције секвенци. Користећи апстрактну представу података која је дефинисана, могу се имплементирати два понашања која карактеришу секвенце: дужина и избор чланова.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">дужинаУланчанеЛисте</span><span class="p">(</span><span class="n">с</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Враћа дужину уланчане листе с.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="n">дужина</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="gp">... </span>    <span class="k">while</span> <span class="n">с</span> <span class="o">!=</span> <span class="n">празно</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="n">с</span><span class="p">,</span> <span class="n">дужина</span> <span class="o">=</span> <span class="n">остатак</span><span class="p">(</span><span class="n">с</span><span class="p">),</span> <span class="n">дужина</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">дужина</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">вратиЧланУланчанеЛисте</span><span class="p">(</span><span class="n">с</span><span class="p">,</span> <span class="n">и</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Враћа члан под индексом и уланчане листе с.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="k">while</span> <span class="n">и</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="n">с</span><span class="p">,</span> <span class="n">и</span> <span class="o">=</span> <span class="n">остатак</span><span class="p">(</span><span class="n">с</span><span class="p">),</span> <span class="n">и</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">први</span><span class="p">(</span><span class="n">с</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Сада се може оперисати уланчаним листама као секвенцама користећи ове функције. (Још увек није дозвољено коришћење уграђене <code class="docutils literal notranslate"><span class="pre">len</span></code> функције, синтаксе за одабир чланова, или <code class="docutils literal notranslate"><span class="pre">for</span></code> наредбе, али ће ускоро и то бити омогућено.)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">дужинаУланчанеЛисте</span><span class="p">(</span><span class="n">четири</span><span class="p">)</span>
+<span class="go">4</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">вратиЧланУланчанеЛисте</span><span class="p">(</span><span class="n">четири</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="go">2</span>
+</pre></div>
+</div>
+<p>Низ дијаграма окружења у наставку илуструје итеративни процес којим <code class="docutils literal notranslate"><span class="pre">вратиЧланУланчанеЛисте</span></code> проналази члан 2 на идексу 1 унутар уланчане листе.
+.. Испод је уланчана листа <code class="docutils literal notranslate"><span class="pre">четири</span></code> дефинисана користећи Пајтон примитиве како би се поједноставили дијаграми. Овај избор имплементације крши апстракцијске баријере, али омогућава лакши увид у процес израчунавања за овај пример.
+Најпре је функција <code class="docutils literal notranslate"><span class="pre">вратиЧланУланчанеЛисте</span></code> позвана, стварајући локални оквир. Израз у заглављу <code class="docutils literal notranslate"><span class="pre">while</span></code> наредбе вреднује се као тачан, што узрокује извршавање наредбе доделе из увученог <code class="docutils literal notranslate"><span class="pre">while</span></code> пакета. Функција <code class="docutils literal notranslate"><span class="pre">остатак</span></code> враћа уланчану подлисту која почиње са 2.</p>
+<p>Затим, локални назив <code class="docutils literal notranslate"><span class="pre">с</span></code> ће бити ажуриран како би се односио на уланчану подлисту која почиње другим чланом оригиналне уланчане листе. Вредновање израза из <code class="docutils literal notranslate"><span class="pre">while</span></code> заглавља сада даје нетачну вредност па Пајтон интерпретира израз с десне стране  <code class="docutils literal notranslate"><span class="pre">return</span></code> наредбе у последњој линији <code class="docutils literal notranslate"><span class="pre">вратиЧланУланчанеЛисте</span></code> функције.</p>
+<p>Крајњи дијаграм окружења приказује локални оквир за позив функције <code class="docutils literal notranslate"><span class="pre">први</span></code>, који садржи име <code class="docutils literal notranslate"><span class="pre">с</span></code> повезано на исту уланчану подлисту. Функција <code class="docutils literal notranslate"><span class="pre">први</span></code> селектује вредност 2 и враћа је, а иста вредност ће бити враћена и од стране <code class="docutils literal notranslate"><span class="pre">вратиЧланУланчанеЛисте</span></code>.</p>
+<p>Овај пример показује уобичајени шаблон израчунавања са уланчаним листама, где сваки следећи корак у итерацији обрађује све краће суфиксе оригиналне уланчане листе. Ова постепена обрада ради проналажења дужине и чланова уланчаних листа изискује неко време израчунавања. Пајтонови уграђени типови секвенци су имплементирани на другачији начин у коме за израчунавање дужине секвенце и за дохватање њених чланова сложеност и цена израчунавања нису тако високи. Појединости те представе су ван оквира овог текста.</p>
+<div class="section" id="recursivemanipulation">
+<span id="id23"></span><h3>Рекурзивна обрада<a class="headerlink" href="#recursivemanipulation" title="Permalink to this headline">¶</a></h3>
+<p>Обе функције, и <code class="docutils literal notranslate"><span class="pre">дужинаУланчанеЛисте</span></code> и <code class="docutils literal notranslate"><span class="pre">вратиЧланУланчанеЛисте</span></code> су итеративне. Оне скидају сваки слој угнежђеног пара све док се не дође до краја (у <code class="docutils literal notranslate"><span class="pre">дужинаУланчанеЛисте</span></code>) или жељеног члана (у <code class="docutils literal notranslate"><span class="pre">вратиЧланУланчанеЛисте</span></code>) уланчане листе. Дужина и избор чланова се такође могу имплементирати користећи се рекурзијом.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">дужинаУланчанеЛистеРекурзивно</span><span class="p">(</span><span class="n">с</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Враћа дужину уланчане листе с.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">с</span> <span class="o">==</span> <span class="n">празно</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="mi">0</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">дужинаУланчанеЛистеРекурзивно</span><span class="p">(</span><span class="n">остатак</span><span class="p">(</span><span class="n">с</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">вратиЧланУланчанеЛистеРекурзивно</span><span class="p">(</span><span class="n">с</span><span class="p">,</span> <span class="n">и</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Враћа члан под индексом и уланчане листе с.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">и</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">први</span><span class="p">(</span><span class="n">с</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">вратиЧланУланчанеЛистеРекурзивно</span><span class="p">(</span><span class="n">остатак</span><span class="p">(</span><span class="n">с</span><span class="p">),</span> <span class="n">и</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">дужинаУланчанеЛистеРекурзивно</span><span class="p">(</span><span class="n">четири</span><span class="p">)</span>
+<span class="go">4</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">вратиЧланУланчанеЛистеРекурзивно</span><span class="p">(</span><span class="n">четири</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="go">2</span>
+</pre></div>
+</div>
+<p>Ове рекурзивне имплементације прате ланац парова све док се не дође до краја (у <code class="docutils literal notranslate"><span class="pre">дужинаУланчанеЛистеРекурзивно</span></code>) или жељеног члана (у <code class="docutils literal notranslate"><span class="pre">вратиЧланУланчанеЛистеРекурзивно</span></code>) уланчане листе.</p>
+<p>Рекурзија је такође корисна за трансформисање и комбиновање уланчаних листа.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">продужиУланчануЛисту</span><span class="p">(</span><span class="n">с</span><span class="p">,</span> <span class="n">т</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Враћа уланчану листу са члановима с праћеним члановима т.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="k">assert</span> <span class="n">даЛиЈеУланчанаЛиста</span><span class="p">(</span><span class="n">с</span><span class="p">)</span> <span class="ow">and</span> <span class="n">даЛиЈеУланчанаЛиста</span><span class="p">(</span><span class="n">т</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">с</span> <span class="o">==</span> <span class="n">празно</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">т</span>
+<span class="gp">... </span>    <span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">уланчанаЛиста</span><span class="p">(</span><span class="n">први</span><span class="p">(</span><span class="n">с</span><span class="p">),</span> <span class="n">продужиУланчануЛисту</span><span class="p">(</span><span class="n">остатак</span><span class="p">(</span><span class="n">с</span><span class="p">),</span> <span class="n">т</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">продужиУланчануЛисту</span><span class="p">(</span><span class="n">четири</span><span class="p">,</span> <span class="n">четири</span><span class="p">)</span>
+<span class="go">[1, [2, [3, [4, [1, [2, [3, [4, &#39;празно&#39;]]]]]]]]</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">примениНаСвакиЧланУланчанеЛисте</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">с</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Примени функцију f на сваки члан уланчане листе с.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="k">assert</span> <span class="n">даЛиЈеУланчанаЛиста</span><span class="p">(</span><span class="n">с</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">с</span> <span class="o">==</span> <span class="n">празно</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">с</span>
+<span class="gp">... </span>    <span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">уланчанаЛиста</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">први</span><span class="p">(</span><span class="n">с</span><span class="p">)),</span> <span class="n">примениНаСвакиЧланУланчанеЛисте</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">остатак</span><span class="p">(</span><span class="n">с</span><span class="p">)))</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">примениНаСвакиЧланУланчанеЛисте</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">,</span> <span class="n">четири</span><span class="p">)</span>
+<span class="go">[1, [4, [9, [16, &#39;празно&#39;]]]]</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">условноЗадржавањеЧлановаУланчанеЛисте</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">с</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Враћа уланчану листу чланова с за које важи да је f(ч) тачно.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="k">assert</span> <span class="n">даЛиЈеУланчанаЛиста</span><span class="p">(</span><span class="n">с</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">с</span> <span class="o">==</span> <span class="n">празно</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">с</span>
+<span class="gp">... </span>    <span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="n">задржани</span> <span class="o">=</span> <span class="n">условноЗадржавањеЧлановаУланчанеЛисте</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">остатак</span><span class="p">(</span><span class="n">с</span><span class="p">))</span>
+<span class="gp">... </span>        <span class="k">if</span> <span class="n">f</span><span class="p">(</span><span class="n">први</span><span class="p">(</span><span class="n">с</span><span class="p">)):</span>
+<span class="gp">... </span>            <span class="k">return</span> <span class="n">уланчанаЛиста</span><span class="p">(</span><span class="n">први</span><span class="p">(</span><span class="n">с</span><span class="p">),</span> <span class="n">задржани</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="k">return</span> <span class="n">задржани</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">условноЗадржавањеЧлановаУланчанеЛисте</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="n">четири</span><span class="p">)</span>
+<span class="go">[2, [4, &#39;празно&#39;]]</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">спојУланчануЛисту</span><span class="p">(</span><span class="n">с</span><span class="p">,</span> <span class="n">раздвојник</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Враћа ниску свих чланова уланчане листе с раздвојених раздвојник-ом.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">с</span> <span class="o">==</span> <span class="n">празно</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="s2">&quot;&quot;</span>
+<span class="gp">... </span>    <span class="k">elif</span> <span class="n">остатак</span><span class="p">(</span><span class="n">с</span><span class="p">)</span> <span class="o">==</span> <span class="n">празно</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">први</span><span class="p">(</span><span class="n">с</span><span class="p">))</span>
+<span class="gp">... </span>    <span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">први</span><span class="p">(</span><span class="n">с</span><span class="p">))</span> <span class="o">+</span> <span class="n">раздвојник</span> <span class="o">+</span> <span class="n">спојУланчануЛисту</span><span class="p">(</span><span class="n">остатак</span><span class="p">(</span><span class="n">с</span><span class="p">),</span> <span class="n">раздвојник</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">спојУланчануЛисту</span><span class="p">(</span><span class="n">четири</span><span class="p">,</span> <span class="s2">&quot;, &quot;</span><span class="p">)</span>
+<span class="go">&#39;1, 2, 3, 4&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="recursiveconstruction">
+<span id="id24"></span><h3>Рекурзивна конструкција<a class="headerlink" href="#recursiveconstruction" title="Permalink to this headline">¶</a></h3>
+<p>Уланчане листе се посебно користе приликом поступне изграње секвенци, што је ситуација која се често појављује код рекурзивних израчунавања.</p>
+<p>Функција <code class="docutils literal notranslate"><span class="pre">бројПартиција</span></code> са самог краја претходног поглавља враћала је број начина на који је могуће партиционисати природан број <span class="math notranslate nohighlight">\(n\)</span> користећи бројеве мање или једнаке <span class="math notranslate nohighlight">\(m\)</span> преко рекурзивног стабла. Преко секвенци, могуће је такође пребројити све партиције експлицитно користећи сличан поступак.</p>
+<p>Треба пратити исту рекурзивну анализу проблема као и код пребројавања: партиционисање броја <span class="math notranslate nohighlight">\(n\)</span> користећи бројеве не веће од <span class="math notranslate nohighlight">\(m\)</span> укључује или</p>
+<ol class="arabic simple">
+<li><p>партиционисање <span class="math notranslate nohighlight">\(n-m\)</span> користећи природне бројеве не веће од <span class="math notranslate nohighlight">\(m\)</span>, или</p></li>
+<li><p>партиционисање <span class="math notranslate nohighlight">\(n\)</span> користећи природне бројеве не веће од <span class="math notranslate nohighlight">\(m-1\)</span>.</p></li>
+</ol>
+<p>За основне случајеве узима се да 0 има празну партицију, док је партиционисање негативнних бројева или партиционисање коришћењем делова мањих од 1 немогуће.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">партиције</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Враћа уланчану листу партиција n користећи делове не веће од m.</span>
+<span class="gp">... </span><span class="sd">       Свака од партиција представљена је такође уланчаном листом.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">уланчанаЛиста</span><span class="p">(</span><span class="n">празно</span><span class="p">,</span> <span class="n">празно</span><span class="p">)</span> <span class="c1"># Уланчана листа с празном партицијом</span>
+<span class="gp">... </span>    <span class="k">elif</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">m</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">празно</span>
+<span class="gp">... </span>    <span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="n">користећи_m</span> <span class="o">=</span> <span class="n">партиције</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="n">m</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="n">са_m</span> <span class="o">=</span> <span class="n">примениНаСвакиЧланУланчанеЛисте</span><span class="p">(</span><span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="n">уланчанаЛиста</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">s</span><span class="p">),</span> <span class="n">користећи_m</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="n">без_m</span> <span class="o">=</span> <span class="n">партиције</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">продужиУланчануЛисту</span><span class="p">(</span><span class="n">са_m</span><span class="p">,</span> <span class="n">без_m</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>У рекурзивном случају, праве се две уланчане подлисте партиција. Прва користећи <span class="math notranslate nohighlight">\(m\)</span>, па се због тога <span class="math notranslate nohighlight">\(m\)</span> умеће на почетак сваког члана резултата <code class="docutils literal notranslate"><span class="pre">користећи_m</span></code> да би се добило <code class="docutils literal notranslate"><span class="pre">са_m</span></code>.</p>
+<p>Резултат функције <code class="docutils literal notranslate"><span class="pre">партиције</span></code> је изузетно угнежђен: уланчана листа уланчаних листа, а свака уланчана листа је представљена преко угнежђених парова који су заправо низови. Користећи функцију <code class="docutils literal notranslate"><span class="pre">спојУланчануЛисту</span></code> са одговарајућим раздвојницима, могу се приказати партиције на читак начин.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">испишиПартиције</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">улисте</span> <span class="o">=</span> <span class="n">партиције</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="n">ниске</span> <span class="o">=</span> <span class="n">примениНаСвакиЧланУланчанеЛисте</span><span class="p">(</span><span class="k">lambda</span> <span class="n">с</span><span class="p">:</span> <span class="n">спојУланчануЛисту</span><span class="p">(</span><span class="n">с</span><span class="p">,</span> <span class="s2">&quot; + &quot;</span><span class="p">),</span> <span class="n">улисте</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">спојУланчануЛисту</span><span class="p">(</span><span class="n">ниске</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">испишиПартиције</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="go">4 + 2</span>
+<span class="go">4 + 1 + 1</span>
+<span class="go">3 + 3</span>
+<span class="go">3 + 2 + 1</span>
+<span class="go">3 + 1 + 1 + 1</span>
+<span class="go">2 + 2 + 2</span>
+<span class="go">2 + 2 + 1 + 1</span>
+<span class="go">2 + 1 + 1 + 1 + 1</span>
+<span class="go">1 + 1 + 1 + 1 + 1 + 1</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Апстракција података' data-toggle="tooltip"><a href="2-апстракција-података.html">Претходно поглавље</a></li>
+    
+        <li id="relations-next" title='Next chapter - Променљиви подаци' data-toggle="tooltip"><a href="4-променљиви-подаци.html">Следеће поглавље</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Апстракција података' data-toggle="tooltip"><a href="2-апстракција-података.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Променљиви подаци' data-toggle="tooltip"><a href="4-променљиви-подаци.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="pull-left">&copy; 2019 Petlja (Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

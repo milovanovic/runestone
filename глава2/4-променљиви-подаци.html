@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sr"></html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Променљиви подаци &#8212; Компоновање рачунарских програма</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/simanim.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pycode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/p5js.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dbDirective.css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-runestone.css" type="text/css" />
+    <link rel="stylesheet" href="../_staticnbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../_static/Blob.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="../_static/blockpy-modal.js"></script>
+    <script type="text/javascript" src="../_static/simanim.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.16.1/full/pyodide.js"></script>
+    <script type="text/javascript" src="../_static/pycode.js"></script>
+    <script type="text/javascript" src="//toolness.github.io/p5.js-widget/p5-widget.js"></script>
+    <script type="text/javascript" src="../_static/p5js.js"></script>
+    <script type="text/javascript" src="../_static/gallery.js"></script>
+    <script type="text/javascript" src="../_static/dbDirective.js"></script>
+    <script type="text/javascript" src="../_static/sql.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="../_static/require.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Објектно-оријентисано програмирање" href="5-ооп.html" />
+    <link rel="prev" title="Секвенце" href="3-секвенце.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host + '/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+  eBookConfig.course = 'krp';
+  eBookConfig.logLevel = '0';
+  eBookConfig.loginRequired = 'false';
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = 'false';
+  eBookConfig.python3 = 'true';
+  eBookConfig.basecourse = 'krp';
+  eBookConfig.runestone_version = '';
+  eBookConfig.imagesDir = '../_images/';
+  eBookConfig.staticDir = '../_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="../_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="../">Компоновање рачунарских програма</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content" style="margin-top: 70px;">
+  
+  <div class="section" id="mutabledata">
+<span id="id1"></span><h1>Променљиви подаци<a class="headerlink" href="#mutabledata" title="Permalink to this headline">¶</a></h1>
+<p>Видели смо колико је апстракција битна као помоћно средство у борби са сложеношћу великих система. Ефикасно програмирање такође захтева организационе принципе који воде ка формулисању целокупног пројекта програма. Конкретно, потребне су стратегије које ће помоћи приликом устројства великих система како би били модуларни, што значи да се природно деле на кохерентне делове који се могу засебно развијати и одржавати.</p>
+<p>Једна моћна техника за стварање модуларних програма је уметање података чије се стање временом може мењати. На овај начин, један објекат података може представљати нешто што се развија независно од остатка програма. На понашање променљивог објекта може утицати његова историја, баш као што утиче и на бића у стварном свету. Додавање стања подацима је централни састојак парадигме која се назива објектно-оријентисано програмирање.</p>
+<div class="section" id="theobjectmetaphor">
+<span id="id2"></span><h2>Метафора објекта<a class="headerlink" href="#theobjectmetaphor" title="Permalink to this headline">¶</a></h2>
+<p>На почетку овог текста, направљена је разлика између функција и података: функције су вршиле операције, а над подацима је оперисано. Када су у податке увршћене и вредности функција, то је имплицитно значило признање да подаци такође могу имати понашање. Функцијама се може малипулисати као подацима, али се такође могу позивати за обављање израчунавања.</p>
+<p><em>Објекти</em> спајају вредности података с понашањем. Објекти представљају информације, али се такође понашају попут ствари које приказују. Логика начина на који објекти узајамно дејствују и комуницирају са другим објектима је запакована заједно са информацијама које кодирају вредност објекта. Када се објекат испише, он зна како то треба учинити. Уколико је објекат састављен из делова, зна како те делове да открије и прикаже када му се упути такав захтев. Објекти су истовремено и информације и поступци, сједињени заједно како би представили својства, интеракције и понашања сложених ствари.</p>
+<p>Понашање објеката је имплементирано у Пајтону кроз посебну објектну синтаксу и придружену терминологију која ће бити уведена примером. Датум је врста објекта.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">date</span>
+</pre></div>
+</div>
+<p>Назив <code class="docutils literal notranslate"><span class="pre">date</span></code> је везан за <em>класу</em>. Као што је виђено, класа представља неку врсту вредности. Појединачни датуми називају се инстанцама те класе. Инстанце се могу створити позивањем класе над аргументима који одликују ту инстанцу.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">небоСеОтворило</span> <span class="o">=</span> <span class="n">date</span><span class="p">(</span><span class="mi">1991</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">29</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Иако је <code class="docutils literal notranslate"><span class="pre">небоСеОтворило</span></code> направљено од примитивних бројева, ипак се понаша као датум. На пример, одузимање од другог датума даће временску разлику која се може исписати.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">date</span><span class="p">(</span><span class="mi">1991</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span> <span class="o">-</span> <span class="n">небоСеОтворило</span><span class="p">)</span>
+<span class="go">193 days, 0:00:00</span>
+</pre></div>
+</div>
+<p>Објекти имају <em>атрибуте</em>, што су заправо именоване вредности које су део тог објекта. У Пајтону, као и у многим другим програмским језицима, користи се тачка, то јест тачкаста нотација како би се означио атрибут објекта.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">израз</span><span class="o">&gt;</span> <span class="o">.</span> <span class="o">&lt;</span><span class="n">име</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Изнад, <code class="docutils literal notranslate"><span class="pre">&lt;израз&gt;</span></code> се вреднује у објекат, а <code class="docutils literal notranslate"><span class="pre">&lt;име&gt;</span></code> је име атрибута тог објекта.</p>
+<p>За разлику од имена која су до сада разматрана, ова имена атрибута нису доступна у општем окружењу. Уместо тога, имена атрибута су посебна за инстанцу објекта која претходи тачки.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">небоСеОтворило</span><span class="o">.</span><span class="n">year</span>
+<span class="go">1991</span>
+</pre></div>
+</div>
+<p>Објекти такође имају <em>методе</em>, а нису ништа друго до атрибути са функцијама као вредностима. Метафорично, каже се да објекат „зна” како да спроведе те методе. Гледано кроз имплементацију, методе су функције које израчунавају своје резултате на основу својих аргумената и свог објекта. На пример, <code class="docutils literal notranslate"><span class="pre">strftime</span></code> метода (класичан назив функције који претвара и форматира време у ниску) инстанце <code class="docutils literal notranslate"><span class="pre">небоСеОтворило</span></code> прима један аргумент који специфицира како приказати датум (нпр. <code class="docutils literal notranslate"><span class="pre">%A</span></code> значи да би требало у целости исписати дан у недељи).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">небоСеОтворило</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%A, %B </span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="go">&#39;Wednesday, May 29&#39;</span>
+</pre></div>
+</div>
+<p>Израчунавање повратне вредности <code class="docutils literal notranslate"><span class="pre">strftime</span></code> захтева два улаза: ниску која описује формат излаза и информације о датуму која је запакована у <code class="docutils literal notranslate"><span class="pre">небоСеОтворило</span></code>. Логика која се посебно односи на датум примењује се у оквиру ове методе како би се добио претходни резултат. Никада није речено да је 29. мај 1991. године била среда, али знање одговарајућег дана у недељи је део онога што датум представља. Спајањем понашања и информација заједно, овај Пајтон објекат нуди убедљиву и самосталну апстракцију датума.</p>
+<p>Датуми су објекти, али и бројеви, ниске, низови и распони су такође све објекти. Они представљају вредности, али се уједно и понашају на начин који одговара вредностима које представљају. Они такође имају своје атрибуте и методе. Примера ради, ниске имају низ метода које олакшавају обраду текста.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;1234&#39;</span><span class="o">.</span><span class="n">isnumeric</span><span class="p">()</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;вЛАДИМИР мИЛОВАНОВИЋ&#39;</span><span class="o">.</span><span class="n">swapcase</span><span class="p">()</span>
+<span class="go">&#39;Владимир Миловановић&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;Влада&#39;</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;ДА&#39;</span><span class="p">)</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p>Заправо, све вредности у Пајтону су објекти. Односно, све вредности имају понашање и атрибуте. Оне се понашају као вредности које представљају.</p>
+</div>
+<div class="section" id="sequenceobjects">
+<span id="id3"></span><h2>Објекти секвенци<a class="headerlink" href="#sequenceobjects" title="Permalink to this headline">¶</a></h2>
+<p>Инстанце примитивних уграђених вредности попут бројева су <em>непроменљиве</em>. Саме вредности се не могу мењати током извршења програма. Низови, са друге стране, су <em>променљиви</em>.</p>
+<p>Променљиви објекти се користе за представљање вредности које се мењају током времена. Нека особа је иста особа од једног до другог дана и поред тога што је остарила, променила фризуру или се изменила на неки други начин. Слично томе, објекат може имати својства која се мењају услед операције <em>мутирања</em>. На пример, могуће је променити садржај низа. Већина промена се врши позивањем метода над објектима низа.</p>
+<p>Многе операције измена низова могу се представити кроз пример који илуструје историју карата (додуше драстично поједностављену). Коментари у примерима описују ефекат позива сваке методе.</p>
+<p>Карте потичу из древне Кине, највероватније још из деветог века. Рани шпилови су имали само три знака који су одговарали апоенима новца.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">кинески</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;новчић&#39;</span><span class="p">,</span> <span class="s1">&#39;ниска&#39;</span><span class="p">,</span> <span class="s1">&#39;мирјада&#39;</span><span class="p">]</span>  <span class="c1"># литерал низа</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">знакови</span> <span class="o">=</span> <span class="n">кинески</span>                         <span class="c1"># два имена односе се на исти низ</span>
+</pre></div>
+</div>
+<p>Како су карте стигле до Европе (највероватније преко Египта), само се знак новчића задржао у шпанском шпилу (<em>златник</em>).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">знакови</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>            <span class="c1"># Избаци из низа и врати последњи члан</span>
+<span class="go">&#39;мирјада&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">знакови</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;ниска&#39;</span><span class="p">)</span>  <span class="c1"># Избаци први члан који је једнак аргументу</span>
+</pre></div>
+</div>
+<p>Додата су још три знака (која су временом еволуирала како у имену тако и у дизајну),</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">знакови</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;пехар&#39;</span><span class="p">)</span>            <span class="c1"># Додај члан на крај низа</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">знакови</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="s1">&#39;батина&#39;</span><span class="p">,</span> <span class="s1">&#39;мач&#39;</span><span class="p">])</span>  <span class="c1"># Додај све чланове низа на крај низа</span>
+</pre></div>
+</div>
+<p>а Италијани су мачеве звали <em>пикови</em>,</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">знакови</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;пик&#39;</span>  <span class="c1"># Замени члан низа</span>
+</pre></div>
+</div>
+<p>што је дало знакове за традиционални италијански шпил карата.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">знакови</span>
+<span class="go">[&#39;новчић&#39;, &#39;пехар&#39;, &#39;батина&#39;, &#39;пик&#39;]</span>
+</pre></div>
+</div>
+<p>Француска варијанта која се користи и дан данас у Србији мења прва три знака:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">знакови</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;херц&#39;</span><span class="p">,</span> <span class="s1">&#39;каро&#39;</span><span class="p">,</span> <span class="s1">&#39;треф&#39;</span><span class="p">]</span>  <span class="c1"># Замени одрезак низа</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">знакови</span>
+<span class="go">[&#39;херц&#39;, &#39;каро&#39;, &#39;треф&#39;, &#39;пик&#39;]</span>
+</pre></div>
+</div>
+<p>Такође постоје методе за уметање, сортирање и изокретање низова. Све ове операције мутације мењају вредност низа, притом не стварајући нови објекат низа.</p>
+<div class="section" id="sharingandidentity">
+<span id="id4"></span><h3>Дељење и истоветност<a class="headerlink" href="#sharingandidentity" title="Permalink to this headline">¶</a></h3>
+<p>Пошто је мењан један низ уместо стварања нових низова, објекат повезан са именом <code class="docutils literal notranslate"><span class="pre">кинески</span></code> се такође променио, јер је то исти објекат низа који је био везан и на име <code class="docutils literal notranslate"><span class="pre">знакови</span></code>!</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">кинески</span>  <span class="c1"># Ово име се односи као и &quot;знакови&quot; на исти низ који је мењан</span>
+<span class="go">[&#39;херц&#39;, &#39;каро&#39;, &#39;треф&#39;, &#39;пик&#39;]</span>
+</pre></div>
+</div>
+<p>Ово понашање је ново. Све до сада, ако се име није појавило у наредби, тада та наредба није утицала на вредност повезану с тим именом. Са променљивим подацима, методе позване над једним именом могу истовремено утицати и на друго име.</p>
+<p>Дијаграм окружења за претходни пример показује како се вредност везана за име <code class="docutils literal notranslate"><span class="pre">кинески</span></code> мења у наредбама које укључују само име <code class="docutils literal notranslate"><span class="pre">знакови</span></code>.</p>
+<p>Низови се могу копирати помоћу конструкторске <code class="docutils literal notranslate"><span class="pre">list</span></code> функције. Промене једног низа не утичу на другу, осим ако не деле структуру.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">гнездо</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">знакови</span><span class="p">)</span>  <span class="c1"># Повезује &quot;гнездо&quot; на други низ са истим члановима</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">гнездо</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">знакови</span>     <span class="c1"># Ствара угнежђени низ</span>
+</pre></div>
+</div>
+<p>У складу са овим окружењем, свака промена низа на који упућују <code class="docutils literal notranslate"><span class="pre">знакови</span></code> ће утицати на угнежђени низ који је први члан низа <code class="docutils literal notranslate"><span class="pre">гнездо</span></code>, али не и на остале чланове.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">знакови</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;Џокер&#39;</span><span class="p">)</span>  <span class="c1"># Убаци члан на индексу 2, померајући остале чланове</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">гнездо</span>
+<span class="go">[[&#39;херц&#39;, &#39;каро&#39;, &#39;Џокер&#39;, &#39;треф&#39;, &#39;пик&#39;], &#39;каро&#39;, &#39;треф&#39;, &#39;пик&#39;]</span>
+</pre></div>
+</div>
+<p>И на исти начин, поништавање ове промене у првом члану низа <code class="docutils literal notranslate"><span class="pre">гнездо</span></code> ће променити и низ <code class="docutils literal notranslate"><span class="pre">знакови</span></code> такође.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">гнездо</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="go">&#39;Џокер&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">знакови</span>
+<span class="go">[&#39;херц&#39;, &#39;каро&#39;, &#39;треф&#39;, &#39;пик&#39;]</span>
+</pre></div>
+</div>
+<p>Пошто два низа могу имати исти садржај, али у ствари бити различити низови, постоји потреба за средством за проверу да ли су два објекта иста. Пајтон укључује два поредбена оператора која се зову <code class="docutils literal notranslate"><span class="pre">is</span></code> и <code class="docutils literal notranslate"><span class="pre">is</span> <span class="pre">not</span></code>, која проверавају да ли се два израза заправо вреднују у истоветан објекат. Два објекта су истоветна ако су једнаки по тренутној вредности, а уједно и свака промена једног ће се увек одразити на други. Истоветност је јачи услов од једнакости.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">знакови</span> <span class="ow">is</span> <span class="n">гнездо</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">знакови</span> <span class="ow">is</span> <span class="p">[</span><span class="s1">&#39;херц&#39;</span><span class="p">,</span> <span class="s1">&#39;каро&#39;</span><span class="p">,</span> <span class="s1">&#39;треф&#39;</span><span class="p">,</span> <span class="s1">&#39;пик&#39;</span><span class="p">]</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">знакови</span> <span class="o">==</span> <span class="p">[</span><span class="s1">&#39;херц&#39;</span><span class="p">,</span> <span class="s1">&#39;каро&#39;</span><span class="p">,</span> <span class="s1">&#39;треф&#39;</span><span class="p">,</span> <span class="s1">&#39;пик&#39;</span><span class="p">]</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p>Последња два поређења илуструју разлику између оператора <code class="docutils literal notranslate"><span class="pre">is</span></code> и <code class="docutils literal notranslate"><span class="pre">==</span></code>. Први проверава истоветност, док други проверава једнакост садржаја.</p>
+</div>
+<div class="section" id="listmanipulation">
+<span id="id5"></span><h3>Манипулација низовима<a class="headerlink" href="#listmanipulation" title="Permalink to this headline">¶</a></h3>
+<p>Понашање функција и метода над низовима се може најбоље разумети у смислу мутације и истоветности објеката. Низови имају велики број уграђених метода које су корисне у многим приликама, па је учење и савладавање њиховог понашања корисно за програмерску продуктивност.</p>
+<p>Одсецањем низа ствара се нов низ, а почетни низ остаје неизмењен. Одрезак од почетка до краја низа је један од начина да се ископира целокупан садржај низа.</p>
+<p>Иако је низ прекопиран, вредности садржане унутар низа нису. Уместо тога, саставља се нов низ који садржи подскуп истих вредности као и одсечен низ. Стога ће промена низа унутар одсеченог низа утицати и на изворни низ.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">низА</span> <span class="o">=</span> <span class="p">[</span><span class="mi">11</span><span class="p">,</span> <span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">],</span> <span class="mi">14</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">низБ</span> <span class="o">=</span> <span class="n">низА</span><span class="p">[:]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">низБ</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">низА</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
+<span class="go">15</span>
+</pre></div>
+</div>
+<p>Уграђена функција <code class="docutils literal notranslate"><span class="pre">list</span></code> ствара нов низ који садржи вредности из аргумента функције, што мора бити итерирајућа вредност као што је секвенца. Поново, вредности које се убацују у новостворени низ се не копирају. Другим речима, позиви <code class="docutils literal notranslate"><span class="pre">list(низ)</span></code> и <code class="docutils literal notranslate"><span class="pre">низ[:]</span></code> дају идентичан резултат.</p>
+<p>Додавање, односно сабирање два низа ствара нов низ који садржи све вредности првог низа праћене свим вредностима другог низа. Према томе, <code class="docutils literal notranslate"><span class="pre">низА</span> <span class="pre">+</span> <span class="pre">низБ</span></code> и <code class="docutils literal notranslate"><span class="pre">низБ</span> <span class="pre">+</span> <span class="pre">низА</span></code> у општем случају дају различите вредности за два произвољна низа <code class="docutils literal notranslate"><span class="pre">низА</span></code> и <code class="docutils literal notranslate"><span class="pre">низБ</span></code>. Међутим, оператор <code class="docutils literal notranslate"><span class="pre">+=</span></code> се понаша другачије када су низови у питању, а његово понашање је описано у наставку заједно са <code class="docutils literal notranslate"><span class="pre">extend</span></code> методом.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">низА</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">11</span><span class="p">],</span> <span class="mi">12</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">низБ</span> <span class="o">=</span> <span class="p">[</span><span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">низВ</span> <span class="o">=</span> <span class="n">низА</span> <span class="o">+</span> <span class="n">низБ</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">низГ</span> <span class="o">=</span> <span class="n">низБ</span> <span class="o">+</span> <span class="n">низА</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">низА</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">низБ</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">16</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">низВ</span><span class="p">)</span>
+<span class="go">[[15], 12, 13, 14]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">низГ</span><span class="p">)</span>
+<span class="go">[13, 14, [15], 12]</span>
+</pre></div>
+</div>
+<p>Метода <code class="docutils literal notranslate"><span class="pre">append</span></code> прима једну вредност као свој аргумент и додаје је на крај низа. Аргумент може бити било која вредност, попут броја или пак неког другог низа. Уколико је аргумент методе низ, тада се сам тај низ, а не његова копија, додаје као последњи члан низа. Метода <code class="docutils literal notranslate"><span class="pre">append</span></code> увек враћа <code class="docutils literal notranslate"><span class="pre">None</span></code> притом мењајући односно мутирајући низ над којим се позива тако што му повећава дужину за један.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">низА</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">низБ</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">број</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">низА</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">низБ</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">низА</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">број</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">низБ</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">број</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">резултат</span> <span class="o">=</span> <span class="n">низА</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">низА</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">низА</span><span class="p">)</span>
+<span class="go">[1, [2, 3], [4, [5, 6], 7], 7, [...]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">резултат</span><span class="p">)</span>
+<span class="go">None</span>
+</pre></div>
+</div>
+<p>Метода <code class="docutils literal notranslate"><span class="pre">extend</span></code> узима итерирајућу вредност као свој аргумент и додаје сваки од чланова на крај низа. Као и <code class="docutils literal notranslate"><span class="pre">append</span></code> ни ова метода не враћа ништа већ мења, односно мутира изворни низ повећавајући му дужину за дужину итерирајућег аргумента. Наредба <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">+=</span> <span class="pre">y</span></code> за низ <code class="docutils literal notranslate"><span class="pre">x</span></code> и итерирајућу вредност <code class="docutils literal notranslate"><span class="pre">y</span></code> је, ако се занемаре неке мање разлике које спадају ван обима овог рукописа, у потпуности еквивалентна наредби <code class="docutils literal notranslate"><span class="pre">x.extend(y)</span></code>. Прослеђивање било ког неитерирајућег аргумента <code class="docutils literal notranslate"><span class="pre">extend</span></code> методи проузроковаће <code class="docutils literal notranslate"><span class="pre">TypeError</span></code> грешку.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">низА</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">низБ</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">низВ</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">низГ</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="p">[</span><span class="mi">4</span><span class="p">]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">низА</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">низГ</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">низБ</span> <span class="o">+=</span> <span class="n">низГ</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">низВ</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">низГ</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">низГ</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">низА</span><span class="p">)</span>
+<span class="go">[1, 2, 3, [7]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">низБ</span><span class="p">)</span>
+<span class="go">[1, 2, 3, [7]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">низВ</span><span class="p">)</span>
+<span class="go">[1, 2, [3, [7]]]</span>
+</pre></div>
+</div>
+<p>Метода <code class="docutils literal notranslate"><span class="pre">pop</span></code> уклања и враћа последњи члан низа. Када се методи зада целобројни аргумент <code class="docutils literal notranslate"><span class="pre">i</span></code>, она уклања и враћа <code class="docutils literal notranslate"><span class="pre">i</span></code>-ти члан, односно члан са индексом <code class="docutils literal notranslate"><span class="pre">i</span></code>, из датог низа. У сваком случају, метода мења, односно мутира низ смањујући му дужину за један. Позив <code class="docutils literal notranslate"><span class="pre">pop</span></code> методе над празним низом резултује <code class="docutils literal notranslate"><span class="pre">IndexError</span></code> грешком.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="mi">4</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">z</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="go">[0, 1]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<span class="go">[2, 3]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+<span class="go">4</span>
+</pre></div>
+</div>
+<p>Метода <code class="docutils literal notranslate"><span class="pre">remove</span></code> прима један аргумент једнак некој вредности која се већ налази унутар низа. Метода уклања први члан у низу који је једнак њеном аргументу. Позив <code class="docutils literal notranslate"><span class="pre">remove</span></code> методе са вредношћу која се не налази у низу, односно није једнака ниједном члану низа изазива <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> грешку.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">низА</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="p">[</span><span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">низА</span><span class="o">.</span><span class="n">remove</span><span class="p">([</span><span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">низА</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">низА</span><span class="p">)</span>
+<span class="go">[11, 10, 12]</span>
+</pre></div>
+</div>
+<p>Метода <code class="docutils literal notranslate"><span class="pre">index</span></code> такође узима један аргумент који мора бити једнак некој вредности унутар низа. Метода враћа индекс првог члана низа чија је вредност једнака њеном аргументу. Позив <code class="docutils literal notranslate"><span class="pre">index</span></code> методе са вредношћу која није једнака неком члану унутар низа узрокује <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> грешку.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">низА</span> <span class="o">=</span> <span class="p">[</span><span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="p">[</span><span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">],</span> <span class="mi">15</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">низА</span><span class="o">.</span><span class="n">index</span><span class="p">([</span><span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">])</span>
+<span class="go">4</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">низА</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="mi">13</span><span class="p">)</span>
+<span class="go">0</span>
+</pre></div>
+</div>
+<p>Метода <code class="docutils literal notranslate"><span class="pre">insert</span></code> прима два аргумента: индекс и вредност коју треба уметнути. Вредност се затим убацује у низ на месту датог индекса. Сви чланови низа пре задатог индекса остају исти док индекси чланова након њега бивају увећани за један. Ова метода мења, односно мутира низ повећавајући му дужину за један, а затим враћа <code class="docutils literal notranslate"><span class="pre">None</span></code> вредност.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">низА</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">низА</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">низА</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">низА</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">низА</span>
+<span class="go">[[3, 4], 0, 5, 1, 2, 6]</span>
+</pre></div>
+</div>
+<p>Метода <code class="docutils literal notranslate"><span class="pre">count</span></code> позвана с неким чланом низа као својим аргументом враћа колико се пута члан с том вредношћу појављује унутар низа. Уколико пак аргумент није једнак било ком елементу низа, метода <code class="docutils literal notranslate"><span class="pre">count</span></code> ће вратити вредност <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">низА</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">низА</span><span class="o">.</span><span class="n">count</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="go">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">низА</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="go">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">низА</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="go">0</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="listcomprehensionsinmutabledata">
+<span id="id6"></span><h3>Низовна убрајања<a class="headerlink" href="#listcomprehensionsinmutabledata" title="Permalink to this headline">¶</a></h3>
+<p>Низовно убрајање увек ствара нов низ. На пример, модул <code class="docutils literal notranslate"><span class="pre">unicodedata</span></code> прати званична имена свих знакова у Јуникод алфабету. Могу се потражити знакови који одговарају одређеним именима укључујући, примера ради, и оне за карте.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">знаци</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;heart&#39;</span><span class="p">,</span> <span class="s1">&#39;diamond&#39;</span><span class="p">,</span> <span class="s1">&#39;spade&#39;</span><span class="p">,</span> <span class="s1">&#39;club&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">unicodedata</span> <span class="kn">import</span> <span class="n">lookup</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">lookup</span><span class="p">(</span><span class="s1">&#39;BLACK &#39;</span> <span class="o">+</span> <span class="n">з</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="o">+</span> <span class="s1">&#39; SUIT&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">з</span> <span class="ow">in</span> <span class="n">знаци</span><span class="p">]</span>
+<span class="go">[&#39;♥&#39;, &#39;♦&#39;, &#39;♠&#39;, &#39;♣&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">lookup</span><span class="p">(</span><span class="s1">&#39;WHITE &#39;</span> <span class="o">+</span> <span class="n">з</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="o">+</span> <span class="s1">&#39; SUIT&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">з</span> <span class="ow">in</span> <span class="n">знаци</span><span class="p">]</span>
+<span class="go">[&#39;♡&#39;, &#39;♢&#39;, &#39;♤&#39;, &#39;♧&#39;]</span>
+</pre></div>
+</div>
+<p>Резултујући низови немају заједнички садржај са почетним низом <code class="docutils literal notranslate"><span class="pre">знаци</span></code>, а вредновање низовног убрајања не мења почетни низ.</p>
+<p>Више о Јуникод стандарду за представљање текста може се прочитати у поглављу о Јуникоду интернет књиге <a class="reference external" href="http://www.diveintopython3.net/strings.html#one-ring-to-rule-them-all">Dive Into Python 3</a>.</p>
+</div>
+<div class="section" id="tuples">
+<span id="id7"></span><h3>Поворке<a class="headerlink" href="#tuples" title="Permalink to this headline">¶</a></h3>
+<p>Поворка, односно инстанца уграђеног <code class="docutils literal notranslate"><span class="pre">tuple</span></code> типа податка, је непроменљива секвенца. Поворке се стварају користећи литерал поворке који одваја изразе чланова зарезима. Обле, тј. мале заграде, нису обавезне, али се у пракси често користе. Било који објекти могу бити смештени унутар поворке.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span>
+<span class="go">(1, 5)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">(</span><span class="s2">&quot;еци&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;пеци&quot;</span><span class="p">,</span> <span class="s2">&quot;пец&quot;</span><span class="p">))</span>
+<span class="go">(&#39;еци&#39;, 1, (&#39;пеци&#39;, &#39;пец&#39;))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span> <span class="p">)</span>
+<span class="go">&lt;class &#39;tuple&#39;&gt;</span>
+</pre></div>
+</div>
+<p>Литерали празних и једночланих поворки имају посебну синтаксу.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">()</span>    <span class="c1"># нула чланова - празна поворка</span>
+<span class="go">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">(</span><span class="mi">10</span><span class="p">,)</span> <span class="c1"># један члан - једночлана поворка</span>
+<span class="go">(10,)</span>
+</pre></div>
+</div>
+<p>Попут низова, и поворке имају коначну дужину и подржавају избор елемената. Такође поседују и неколико метода које су доступне и за рад са низовима, као што су <code class="docutils literal notranslate"><span class="pre">count</span></code> и <code class="docutils literal notranslate"><span class="pre">index</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">стрелице</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;горе&quot;</span><span class="p">,</span> <span class="s2">&quot;горе&quot;</span><span class="p">,</span> <span class="s2">&quot;доле&quot;</span><span class="p">,</span> <span class="s2">&quot;доле&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="s2">&quot;лево&quot;</span><span class="p">,</span> <span class="s2">&quot;десно&quot;</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">стрелице</span><span class="p">)</span>
+<span class="go">8</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">стрелице</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+<span class="go">&#39;доле&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">стрелице</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;доле&quot;</span><span class="p">)</span>
+<span class="go">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">стрелице</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;лево&quot;</span><span class="p">)</span>
+<span class="go">4</span>
+</pre></div>
+</div>
+<p>Међутим, методе за манипулисање садржајем низа нису доступне код поворки из разумљивог разлога јер су поворке непроменљиве.</p>
+<p>Иако није могуће променити чланове поворке, могуће је изменити вредност променљивих чланова који се налазе унутар поворке.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">гнездо</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="p">[</span><span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">гнездо</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+<span class="go">40</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">гнездо</span><span class="p">)</span>
+<span class="go">(10, 20, [30])</span>
+</pre></div>
+</div>
+<p>Поворке се имплицитно користе приликом вишеструке доделе вредности. Додела две вредности двема променљивама ствара двочлану поворку, то јест уређени пар, а затим је распакује.</p>
+</div>
+</div>
+<div class="section" id="dictionaries">
+<span id="id8"></span><h2>Речници<a class="headerlink" href="#dictionaries" title="Permalink to this headline">¶</a></h2>
+<p>Речници су уграђени Пајтонов тип података за чување и обраду одговарајућих уређених веза. Речник садржи уређене парове кључ-вредност, где су и кључеви и вредности објекти. Сврха речника је да пружи апстракцију за чување и дохватање вредности које се не индексирају узастопним целим бројевима, већ описним кључевима. На тај начин представљају неку врсту уопштених низова, код којих су индекси искључиво цели бројеви.</p>
+<p>Ниске обично служе као кључеви, јер су ниске уобичајениа представа имена различитих ствари. Наредни литерал речника даје вредности различитих римских бројева.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">римскиБројеви</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;I&#39;</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;V&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;X&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>За претрагу, односно дохватање вредности преко њихових кључева користи се оператор избора члана који је претходно примењиван и на секвенце.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">римскиБројеви</span><span class="p">[</span><span class="s1">&#39;X&#39;</span><span class="p">]</span>
+<span class="go">10</span>
+</pre></div>
+</div>
+<p>Речник може имати највише једну вредност за сваки кључ. Додавање нових парова кључ-вредност и промена постојеће вредности кључа може се обавити помоћу наредби доделе.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">римскиБројеви</span><span class="p">[</span><span class="s1">&#39;I&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">римскиБројеви</span><span class="p">[</span><span class="s1">&#39;L&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">римскиБројеви</span>
+<span class="go">{&#39;I&#39;: 1, &#39;V&#39;: 5, &#39;X&#39;: 10, &#39;L&#39;: 50}</span>
+</pre></div>
+</div>
+<p>Треба приметити у претходном излазу да је <code class="docutils literal notranslate"><span class="pre">'L'</span></code> додато на крај речника. Наиме, речници су били неуређена структура података све до Пајтона 3.5. Међутим, почевши од Пајтон верзије 3.6 па надаље, њихов садржај јесте уређен уметањем. Будући да су речници у прошлости били неуређен скупови података, најсигурније је не узимати никакве претпоставке о редоследу којим ће се кључеви и вредности унутар речника чувати и начину на који ће се исписивати и штампати.</p>
+<p>Речник као тип података такође подржава различите методе проласка кроз садржај речника у целини. Методе <code class="docutils literal notranslate"><span class="pre">keys</span></code>, <code class="docutils literal notranslate"><span class="pre">values</span></code> и <code class="docutils literal notranslate"><span class="pre">items</span></code> враћају итерирајуће вредности.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">sum</span><span class="p">(</span><span class="n">римскиБројеви</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<span class="go">66</span>
+</pre></div>
+</div>
+<p>Низ уређених парова кључ-вредност може се претворити у речник позивањем <code class="docutils literal notranslate"><span class="pre">dict</span></code> уграђене конструкторске функције.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">dict</span><span class="p">([(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">16</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">25</span><span class="p">)])</span>
+<span class="go">{3: 9, 4: 16, 5: 25}</span>
+</pre></div>
+</div>
+<p>Речници имају нека ограничења:</p>
+<ul class="simple">
+<li><p>Кључ речника не може бити или садржати променљиву вредност.</p></li>
+<li><p>Одређени кључ може бити повезан на највише једну вредност.</p></li>
+</ul>
+<p>Прво ограничење везано је за сам начин имплементације речника у Пајтону. Појединости ове имплемнтације нису предмет и тема овог рукописа. Интуитивно гледано, треба узети у обзир да кључеви говоре Пајтону где да пронађе уређени пар кључ-вредност у меморији рачунара, па ако се кључ промени и сама меморијска локација пара се може изгубити. Поворке се обично користе као кључеви у речницима јер се низови не могу користити пошто су променљиви.</p>
+<p>Друго ограничење је последица саме апстракције речника, која је пројектована за чување и дохватање вредности кључева. Вредност за одређени кључ се може пронаћи и дохватити само ако у речнику постоји највише једна таква вредност.</p>
+<p>Корисна метода која постоји у речницима јесте <code class="docutils literal notranslate"><span class="pre">get</span></code> која враћа вредност за одређени кључ ако тај кључ постоји у речнику или, у супротном, неку подразумевану вредност. Аргументи методе <code class="docutils literal notranslate"><span class="pre">get</span></code> су кључ и подразумевана вредност.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">римскиБројеви</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="go">0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">римскиБројеви</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;V&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="go">5</span>
+</pre></div>
+</div>
+<p>Речници такође имају и синтаксу убрајања аналогну оној у низовима. Израз за кључ и израз за вредност су раздвојени двотачком. Вредновање речничког убрајања ствара нови објекат речника.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">{</span><span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">)}</span>
+<span class="go">{3: 9, 4: 16, 5: 25}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="localstate">
+<span id="id9"></span><h2>Локално стање<a class="headerlink" href="#localstate" title="Permalink to this headline">¶</a></h2>
+<p>Низови и речници поседују такозвано <em>локално стање</em>: они мењају вредности које имају одређени садржај у сваком тренутку извршавања програма. Реч „стање” подразумева еволутивни, односно развојни процес у коме се то стање може променити.</p>
+<p>Функције такође могу имати и локално стање. На пример, дефинишимо функцију која моделира процес подизања новца са банковног рачуна. Биће направљена функција <code class="docutils literal notranslate"><span class="pre">подигни</span></code>, која као свој једини аргумент прима износ који треба подићи. Уколико на рачуну има довољно новца да се то подизање изврши, функција <code class="docutils literal notranslate"><span class="pre">подигни</span></code> ће вратити преостало стање на рачуну након подизања новца. У супоротном, функција <code class="docutils literal notranslate"><span class="pre">подигни</span></code> ће вратити поруку „Недовољно средстава на рачуну.”.</p>
+<p>Имплементација функције <code class="docutils literal notranslate"><span class="pre">подизањеНовца</span></code> захтева нову врсту наредбе: такозвану <code class="docutils literal notranslate"><span class="pre">nonlocal</span></code> наредбу. Приликом позива функције <code class="docutils literal notranslate"><span class="pre">подизањеНовца</span></code>, повезује се променљива <code class="docutils literal notranslate"><span class="pre">стање</span></code> на неки почетни износ. Затим се дефинише и враћа локална функција <code class="docutils literal notranslate"><span class="pre">подигни</span></code> која приликом сваког позива најпре ажурира, а затим и враћа вредност променљиве <code class="docutils literal notranslate"><span class="pre">стање</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">подизањеНовца</span><span class="p">(</span><span class="n">стање</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Враћа функцију подигни која умањује стање рачуна сваким својим позивом.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">подигни</span><span class="p">(</span><span class="n">износ</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">nonlocal</span> <span class="n">стање</span>            <span class="c1"># Проглашава променљиву &quot;стање&quot; нелокалном</span>
+<span class="gp">... </span>        <span class="k">if</span> <span class="n">износ</span> <span class="o">&gt;</span> <span class="n">стање</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="k">return</span> <span class="s1">&#39;Недовољно средстава на рачуну.&#39;</span>
+<span class="gp">... </span>        <span class="n">стање</span> <span class="o">=</span> <span class="n">стање</span> <span class="o">-</span> <span class="n">износ</span>     <span class="c1"># Пре(по)везује постојећу променљиву стање</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">стање</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">подигни</span>
+</pre></div>
+</div>
+<p>Наредба <code class="docutils literal notranslate"><span class="pre">nonlocal</span></code> проглашава да приликом сваке промене везивања променљиве <code class="docutils literal notranslate"><span class="pre">стање</span></code>, повезивање се мења у првом оквиру у коме је променљива <code class="docutils literal notranslate"><span class="pre">стање</span></code> већ повезана. Треба се подсетити да би без наредбе <code class="docutils literal notranslate"><span class="pre">nonlocal</span></code> наредба доделе увек повезала име променљиве у првом оквиру тренутног окружења. Наредба <code class="docutils literal notranslate"><span class="pre">nonlocal</span></code> указује на то да се име променљиве појављује негде у окружењу ван првог (локалног) оквира или последњег (глобалног) оквира.</p>
+<p>Да би функција <code class="docutils literal notranslate"><span class="pre">подигни</span></code> уопште имала смисла, мора се направити с неким унапред одређеним стањем на рачуну. Функција <code class="docutils literal notranslate"><span class="pre">подизањеНовца</span></code> је функција вишег реда која прима почетно стање рачуна као аргумент док јој је сама функција <code class="docutils literal notranslate"><span class="pre">подигни</span></code> повратна вредност.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">подигни</span> <span class="o">=</span> <span class="n">подизањеНовца</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Сада, примера ради, ако се започне са 100 динара на рачуну, као што је у претходној додели назначено, добија се следећи низ повратних вредности:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">подигни</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
+<span class="go">75</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">подигни</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
+<span class="go">50</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">подигни</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
+<span class="go">&#39;Недовољно средстава на рачуну.&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">подигни</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
+<span class="go">35</span>
+</pre></div>
+</div>
+<p>У горњем примеру вредновање једног те истог израза <code class="docutils literal notranslate"><span class="pre">подигни(25)</span></code> даје различите вредности. Према томе, ова кориснички дефинисана функција није чиста. Позивање те функције не само да враћа неку вредност, већ очигледно има и промену саме функције на неки начин као свој бочни ефекат, тако да следећи позив са истим аргументом враћа другачији резултат. Овај бочни ефекат је заправо резултат промене у везивању имена и вредности коју функција <code class="docutils literal notranslate"><span class="pre">подигни</span></code> врши ван тренутног оквира.</p>
+<p>Дијаграмима окружења могуће је илустровати (бочне) ефекте вишеструких позива функцији створеној позивом <code class="docutils literal notranslate"><span class="pre">подизањеНовца</span></code>.</p>
+<p>Прва <code class="docutils literal notranslate"><span class="pre">def</span></code> наредба се понаша на сасвим уобичајен начин, односно ствара нову користички дефинисану функцију и повезује назив <code class="docutils literal notranslate"><span class="pre">подизањеНовца</span></code> на ту функцију у глобалном оквиру. Наредни позив функције <code class="docutils literal notranslate"><span class="pre">подизањеНовца</span></code> ствара и враћа локално дефинисану функцију <code class="docutils literal notranslate"><span class="pre">подигни</span></code>. Променљива <code class="docutils literal notranslate"><span class="pre">стање</span></code> је повезана у родитељском оквиру ове функције. Од пресудног значаја је то да постоји само једна веза променљиве <code class="docutils literal notranslate"><span class="pre">стање</span></code> на неку вредност кроз читав горњи пример.</p>
+<p>Даље, вреднује се израз који позива ову функцију, везану на име <code class="docutils literal notranslate"><span class="pre">подигни</span></code> са износом 25. Тело функције <code class="docutils literal notranslate"><span class="pre">подигни</span></code> извршава се у новом окружењу које проширује окружење у коме је функцији <code class="docutils literal notranslate"><span class="pre">подигни</span></code> дефинисана. Праћење ефекта вредновања функције <code class="docutils literal notranslate"><span class="pre">подигни</span></code> илуструје дејство наредбе <code class="docutils literal notranslate"><span class="pre">nonlocal</span></code> у Пајтону: променљива изван првог локалног оквира може се мењати наредбом доделе.</p>
+<p>Наредба <code class="docutils literal notranslate"><span class="pre">nonlocal</span></code> мења све преостале наредбе доделе унутар дефиниције функције <code class="docutils literal notranslate"><span class="pre">подигни</span></code>. Након извршавања <code class="docutils literal notranslate"><span class="pre">nonlocal</span> <span class="pre">стање</span></code>, све наредбе доделе са променљивом <code class="docutils literal notranslate"><span class="pre">стање</span></code> која се налази на левој страни знака <code class="docutils literal notranslate"><span class="pre">=</span></code> неће повезати <code class="docutils literal notranslate"><span class="pre">стање</span></code> у првом оквиру тренутног окружења. Уместо тога, пронаћи ће први оквир у коме је променљива <code class="docutils literal notranslate"><span class="pre">стање</span></code> већ дефинисана и пре(по)везати име променљиве у том оквиру. За случај да променљива <code class="docutils literal notranslate"><span class="pre">стање</span></code> није претходно била повезана на неку вредност, наредба <code class="docutils literal notranslate"><span class="pre">nonlocal</span></code> ће пријавити грешку.</p>
+<p>Захваљујући промени повезивања назива <code class="docutils literal notranslate"><span class="pre">стање</span></code>, промењена је и сама функција <code class="docutils literal notranslate"><span class="pre">подигни</span></code>. Приликом следећег позива функције, променљива <code class="docutils literal notranslate"><span class="pre">стање</span></code> имаће вредност 75 уместо 100. Стога, када се функција <code class="docutils literal notranslate"><span class="pre">подигни</span></code> позове други пут, њена повратна вредност ће бити 50, а не 75. Самим тим, промена у променљивој <code class="docutils literal notranslate"><span class="pre">стање</span></code> из првог позива функције утиче на резултат другог позива.</p>
+<p>Други позив функције <code class="docutils literal notranslate"><span class="pre">подигни</span></code>, већ по обичају, ствара други локални оквир. Међутим, оба оквира функције <code class="docutils literal notranslate"><span class="pre">подигни</span></code> имају истог родитеља. Односно, оба проширују окружење <code class="docutils literal notranslate"><span class="pre">подизањеНовца</span></code>, које садржи повезивање променљиве <code class="docutils literal notranslate"><span class="pre">стање</span></code>. Отуда, оба оквира деле ту конкретну променљиву и њену везу. Позив функције <code class="docutils literal notranslate"><span class="pre">подигни</span></code> има као бочни ефекат промену окружења које ће бити проширено будућим позивима функције <code class="docutils literal notranslate"><span class="pre">подигни</span></code>. Наредба <code class="docutils literal notranslate"><span class="pre">nonlocal</span></code> омогућава функцији <code class="docutils literal notranslate"><span class="pre">подигни</span></code> да промени везу, односно вредност променљиве у оквиру функције <code class="docutils literal notranslate"><span class="pre">подизањеНовца</span></code>.</p>
+<p>Од првог сусрета са угнежђеним <code class="docutils literal notranslate"><span class="pre">def</span></code> наредбама било је приметно да локално дефинисана функција може тражити имена изван својих локалних оквира. Сама <code class="docutils literal notranslate"><span class="pre">nonlocal</span></code> наредба није потребна да би се <em>приступило</em> нелокалној променљивој. Насупрот томе, само након наредбе <code class="docutils literal notranslate"><span class="pre">nonlocal</span></code> финкција може да <em>промени</em> вредност променљиве у овим оквирима.</p>
+<p>Увођењем <code class="docutils literal notranslate"><span class="pre">nonlocal</span></code> наредби створена је двострука улога наредби доделе: или мењају локалне везе променљивих или мењају нелокалне везе. У ствари, наредбе доделе су већ имале двоструку улогу: или су стварале нове везе или су превезивале имена већ постојећих променљивих. Додела такође може променити садржај низова и речника. Многобројне улоге додела у Пајтони могу прикрити ефекте извршавања саме наредбе доделе. На програмерима је да јасно документују свој изворни код тако да други могу разумети ефекте додела.</p>
+<div class="section" id="pythonparticulars">
+<span id="id10"></span><h3>Пајтон подробности<a class="headerlink" href="#pythonparticulars" title="Permalink to this headline">¶</a></h3>
+<p>Овај узорак нелокалне доделе је општа одлика програмских језика са функцијама вишег реда и лексичком облашћу видљивости. Већина других језика уопште не захтева <code class="docutils literal notranslate"><span class="pre">nonlocal</span></code> наредбу. Уместо тога, нелокална додела је често подразумевано понашање наредбе доделе.</p>
+<p>Пајтон такође има необично ограничење у погледу претраге имена променљивих: унутар тела функције, све инстанце променљиве морају се односити на исти оквир. Као резултат тога, Пајтон не може пронаћи вредност променљиве у нелокалном оквиру, а затим везати ту исту променљиву у локалном оквиру јер би се у том случају истој променљивој приступало у два различита оквира у истој функцији. Ово ограничење омогућава Пајтону да унапред одреди који оквир садржи свако име пре извршавања тела функције. Када се ово ограничење прекрши, долази до збуњујуће поруке о грешци. Да би се ово илустровало практичним примером, функција <code class="docutils literal notranslate"><span class="pre">подизањеНовца</span></code> се понавља у наставку само без <code class="docutils literal notranslate"><span class="pre">nonlocal</span></code> наредбе.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">подизањеНовца</span><span class="p">(</span><span class="n">стање</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Враћа функцију подигни која умањује стање рачуна сваким својим позивом.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">подигни</span><span class="p">(</span><span class="n">износ</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">if</span> <span class="n">износ</span> <span class="o">&gt;</span> <span class="n">стање</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="k">return</span> <span class="s1">&#39;Недовољно средстава на рачуну.&#39;</span>
+<span class="gp">... </span>        <span class="n">стање</span> <span class="o">=</span> <span class="n">стање</span> <span class="o">-</span> <span class="n">износ</span>     <span class="c1"># Пре(по)везује постојећу променљиву стање</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">стање</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">подигни</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">подигни</span> <span class="o">=</span> <span class="n">подизањеНовца</span><span class="p">(</span><span class="mi">37</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">try</span><span class="p">:</span>
+<span class="gp">... </span>   <span class="n">подигни</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="gp">... </span><span class="k">except</span> <span class="ne">UnboundLocalError</span> <span class="k">as</span> <span class="n">грешка</span><span class="p">:</span>
+<span class="gp">... </span>   <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;UnboundLocalError: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">грешка</span><span class="p">))</span>
+<span class="go">UnboundLocalError: local variable &#39;стање&#39; referenced before assignment</span>
+</pre></div>
+</div>
+<p>Грешка <code class="docutils literal notranslate"><span class="pre">UnboundLocalError</span></code> се појављује зато што се променљивој <code class="docutils literal notranslate"><span class="pre">стање</span></code> локално врши додела, па Пајтон претпоставља да се сва референцирања променљиве <code class="docutils literal notranslate"><span class="pre">стање</span></code> морају такође појавити у локалном оквиру. Ова грешка се дешава заправо пре но што се сама наредба доделе уопште изврши што имплицира да Пајтон на неки начин разматра ову наредбу и пре њеног извршавања. Када буде излагано пројектовање интерпретатора, биће приказано да су проучавања тела функције пре њеног извршавања прилично честа. У овом случају, Пајтонова пред-обрада је ограничила оквир у коме се променљива <code class="docutils literal notranslate"><span class="pre">стање</span></code> може појавити и тиме спречила проналажење имена променљиве у окружењу. Додавањем наредбе <code class="docutils literal notranslate"><span class="pre">nonlocal</span></code> ова грешка се исправља. Иначе, <code class="docutils literal notranslate"><span class="pre">nonlocal</span></code> наредба није постојала у Пајтону 2.</p>
+</div>
+</div>
+<div class="section" id="thebenefitsofnon-localassignment">
+<span id="id11"></span><h2>Предности нелокалне доделе<a class="headerlink" href="#thebenefitsofnon-localassignment" title="Permalink to this headline">¶</a></h2>
+<p>Нелокална додела је важан корак на путу ка посматрању рачунарских програма као скупа независних и аутономних <em>објеката</em> који међусобно дејствују, али сваки од њих управља својим унутрашњим стањем.</p>
+<p>Конкретно говорећи, нелокална додела је донела способност да се неко стање које је локално за функцију одржава, али и развија током узастопних позива тој функцији. Променљива <code class="docutils literal notranslate"><span class="pre">стање</span></code> одређене <code class="docutils literal notranslate"><span class="pre">подигни</span></code> функције је дељено међу свим позивима те функције. Међутим, вредност повезана с променљивом <code class="docutils literal notranslate"><span class="pre">стање</span></code> унутар одређене инстанце <code class="docutils literal notranslate"><span class="pre">подигни</span></code> је недоступна остатку програма. Само је име функције <code class="docutils literal notranslate"><span class="pre">подигни</span></code> повезано са оквиром функције <code class="docutils literal notranslate"><span class="pre">подизањеНовца</span></code> унутар кога је дефинисано. Уколико се <code class="docutils literal notranslate"><span class="pre">подизањеНовца</span></code> поново позове, створиће се нов оквир са засебном променљивом <code class="docutils literal notranslate"><span class="pre">стање</span></code>.</p>
+<p>Горњи пример може се проширити да се и илуструје претходно изнета поента. Други позив функције <code class="docutils literal notranslate"><span class="pre">подизањеНовца</span></code> враћа другу функцију <code class="docutils literal notranslate"><span class="pre">подигни</span></code> која има другог родитеља. Ову друга функција се везује за име <code class="docutils literal notranslate"><span class="pre">подигни2</span></code> у глобалном оквиру.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">подизањеНовца</span><span class="p">(</span><span class="n">стање</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Враћа функцију подигни која умањује стање рачуна сваким својим позивом.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">подигни</span><span class="p">(</span><span class="n">износ</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">nonlocal</span> <span class="n">стање</span>            <span class="c1"># Проглашава променљиву &quot;стање&quot; нелокалном</span>
+<span class="gp">... </span>        <span class="k">if</span> <span class="n">износ</span> <span class="o">&gt;</span> <span class="n">стање</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="k">return</span> <span class="s1">&#39;Недовољно средстава на рачуну.&#39;</span>
+<span class="gp">... </span>        <span class="n">стање</span> <span class="o">=</span> <span class="n">стање</span> <span class="o">-</span> <span class="n">износ</span>     <span class="c1"># Пре(по)везује постојећу променљиву стање</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">стање</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">подигни</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">подигни1</span> <span class="o">=</span> <span class="n">подизањеНовца</span><span class="p">(</span><span class="mi">46</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">подигни2</span> <span class="o">=</span> <span class="n">подизањеНовца</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">подигни2</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="go">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">подигни1</span><span class="p">(</span><span class="mi">17</span><span class="p">)</span>
+<span class="go">29</span>
+</pre></div>
+</div>
+<p>Сада се види да заправо постоје две променљиве <code class="docutils literal notranslate"><span class="pre">стање</span></code> у два различита оквира, а свака <code class="docutils literal notranslate"><span class="pre">подигни</span></code> функција има другог родитеља. Назив <code class="docutils literal notranslate"><span class="pre">подигни1</span></code> везан је на функцију која има променљиву <code class="docutils literal notranslate"><span class="pre">стање</span></code> с вредношћу 46, док је <code class="docutils literal notranslate"><span class="pre">подигни2</span></code> везан за другу функцију с променљивом <code class="docutils literal notranslate"><span class="pre">стање</span></code> која има вредност 7.</p>
+<p>Позив <code class="docutils literal notranslate"><span class="pre">подигни2</span></code> мења вредност своје нелокалне променљиве <code class="docutils literal notranslate"><span class="pre">стање</span></code>, али не утиче на функцију везану на име <code class="docutils literal notranslate"><span class="pre">подигни</span></code>. Промена променљиве <code class="docutils literal notranslate"><span class="pre">стање</span></code> од стране функције <code class="docutils literal notranslate"><span class="pre">подигни2</span></code> не утиче на будуће позиве функције <code class="docutils literal notranslate"><span class="pre">подигни1</span></code> јер је њено <code class="docutils literal notranslate"><span class="pre">стање</span></code> и даље 46.</p>
+<p>На овај начин, свака инстанца функције <code class="docutils literal notranslate"><span class="pre">подигни</span></code> одржава своје стање променљиве <code class="docutils literal notranslate"><span class="pre">стање</span></code>, али то стање је недоступно било којој другој функцији у програму. Посматрајући ову ситуацију с вишег нивоа, створена је апстракција банковног рачуна који управља сопственом унутрашњом структуром и појединостима, али се понаша на начин који моделира банковне рачуне у стварном свету, односно рачуне који се временом мењају на основу сопствене историје захтева за подизањем новца.</p>
+</div>
+<div class="section" id="thecostofnon-localassignment">
+<span id="id12"></span><h2>Цена нелокалне доделе<a class="headerlink" href="#thecostofnon-localassignment" title="Permalink to this headline">¶</a></h2>
+<p>Уведени модел израчунавања унутар окружења се елегантно и чисто проширује како би објаснио ефекте нелокалне доделе. Међутим, нелокална додела носи са собом и неке суптилне нијансе у посматрање и разматрање имена променљивих и вредности.</p>
+<p>Све до сада, вредности се нису мењале већ су се само мењали називи (променљивих) и повезивања. Када су два назива (променљивих) <code class="docutils literal notranslate"><span class="pre">а</span></code> и <code class="docutils literal notranslate"><span class="pre">б</span></code> била повезана рецимо на вредност 7, није било важно да ли су повезана на исту седмицу или на две различите седмице у меморији. Колико се могло закључити, постојао је само један објекат седмице који се никада није мењао.</p>
+<p>Међутим, функције са стањем се не понашају на овај начин. Када су оба назива <code class="docutils literal notranslate"><span class="pre">подигни1</span></code> и <code class="docutils literal notranslate"><span class="pre">подигни2</span></code> везана на <code class="docutils literal notranslate"><span class="pre">подигни</span></code> функцију битно је да ли су везана за исту функцију или различите инстанце те функције. Размотримо следећи пример који је другачији од претходних који су управо анализирани. У овом случају, позивање функције назване <code class="docutils literal notranslate"><span class="pre">подигни2</span></code> је променило вредност функције назване <code class="docutils literal notranslate"><span class="pre">подигни1</span></code> због тога што се оба назива односе на једну те исту функцију.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">подизањеНовца</span><span class="p">(</span><span class="n">стање</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Враћа функцију подигни која умањује стање рачуна сваким својим позивом.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">подигни</span><span class="p">(</span><span class="n">износ</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">nonlocal</span> <span class="n">стање</span>            <span class="c1"># Проглашава променљиву &quot;стање&quot; нелокалном</span>
+<span class="gp">... </span>        <span class="k">if</span> <span class="n">износ</span> <span class="o">&gt;</span> <span class="n">стање</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="k">return</span> <span class="s1">&#39;Недовољно средстава на рачуну.&#39;</span>
+<span class="gp">... </span>        <span class="n">стање</span> <span class="o">=</span> <span class="n">стање</span> <span class="o">-</span> <span class="n">износ</span>     <span class="c1"># Пре(по)везује постојећу променљиву стање</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">стање</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">подигни</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">подигни1</span> <span class="o">=</span> <span class="n">подизањеНовца</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">подигни2</span> <span class="o">=</span> <span class="n">подигни1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">подигни2</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="go">11</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">подигни1</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="go">10</span>
+</pre></div>
+</div>
+<p>Није необично да се два назива односе на исту вредност, па је тако и у програмима. Међутим, како се вредности временом мењају, мора се бити веома обазрив како би се разумео ефекат промене на друге називе који би се могли односити на те вредности.</p>
+<p>Кључ за исправну и правилну анализу изворног кода који садржи нелокалне доделе јесте да се запамти да само позиви функција могу стварати нове оквире. Наредбе доделе увек мењају повезивање у постојећим оквирима. У претходном случају, осим ако се <code class="docutils literal notranslate"><span class="pre">подизањеНовца</span></code> не позове два пута, може постојати само једна променљива <code class="docutils literal notranslate"><span class="pre">стање</span></code>.</p>
+<div class="section" id="samenessandchange">
+<span id="id13"></span><h3>Истоветност и промена<a class="headerlink" href="#samenessandchange" title="Permalink to this headline">¶</a></h3>
+<p>Ове финесе настају због тога што је, увођењем нечистих функција које мењају нелокално окружење, промењена природа израза. Израз који садржи само чисте позиве функција је <em>референцијално прозиран</em> или <em>референцијално прозрачан</em>, односно његова вредност се не мења ако се један од његових подизраза замени са вредношћу тог подизраза.</p>
+<p>Операције пре(по)везивања нарушавају услове референцијалне прозрачности јер поред враћања вредности мењају и окружење. Када се уведе произвољно пре(по)везивање, долази се до трновитог епистемолошког питања: шта значи да две вредности буду исте? У представљеном моделу окружења за израчунавање, две одвојено дефинисане функције нису исте из простог разлога јер се промене једне можда неће одразити на другу.</p>
+<p>Уопштено говорећи, све док се објекти података не мењају, може се сматрати да су сложени објекти података ништа друго до спој појединачних делова. На пример, рационални број се у потпуности одређује његовим бројиоцем и имениоцем. Међутим, овај поглед не важи у присуству промена, када сложени објекти података поседује свој „идентитет” који је различит од делова од којих је састављен. Банковни рачун је и даље „исти” банковни рачун чак и ако се промени његово стање кроз подизање новца, и обратно, могу постојати два банковна рачуна која имају исто стање, али су различити објекти.</p>
+<p>Упркос компликацијама које несумњиво носи са собом, нелокална додела је моћно средство за писање модуларних програма. Различити делови програма који одговарају различитим оквирима окружења могу се развијати одвојено током извршења програма. Штавише, користећи функције са локалним стањем даје могућност имплементације променљивих типова података. Заправо, могу се имплементирати и реализовати апстрактни типови података који су еквивалентни уграђеним типовима низа <code class="docutils literal notranslate"><span class="pre">list</span></code> и речника <code class="docutils literal notranslate"><span class="pre">dict</span></code> који су малочас представљени.</p>
+</div>
+</div>
+<div class="section" id="implementinglistsanddictionaries">
+<span id="id14"></span><h2>Имплементација низова и речника<a class="headerlink" href="#implementinglistsanddictionaries" title="Permalink to this headline">¶</a></h2>
+<p>Програмски језик Пајтон не даје приступ имплементацији низова, већ само апстракцији секвенце и методама за мутирање уграђеним у сам језик. Да би се разумело како би променљиви низови могли бити представљени помоћу функција са локалним стањем, у наставку ће бити развијена имплементација променљиве уланчане листе.</p>
+<p>Променљива уланчана листа биће представљена помоћу функције која има уланчану листу као своје локално стање. Листе морају имати својствен идентитет, као и свака друга променљива вредност. Конкретно, за представљање празне променљиве листе није могуће користити <code class="docutils literal notranslate"><span class="pre">None</span></code> јер две празне листе нису идентичне вредности (на пример, додавање члана једној не додаје тај члан и другој листи), али <code class="docutils literal notranslate"><span class="pre">None</span> <span class="pre">is</span> <span class="pre">None</span></code> односно јединствени објекат. С друге стране, две различите функције од којих свака понаособ има <code class="docutils literal notranslate"><span class="pre">празно</span></code> као своје локално стање биће довољне за разликовање две празне листе.</p>
+<p>Уколико је променљива уланчана листа заправо функција, које аргументе она прима? Одговор излаже општи образац у програмирању: функција је диспечерска функција, а њени аргументи су порука праћена додатним аргументима за параметризацију те методе. Ова порука је ниска која именује шта функција треба да ради. Диспечерске функције су у ствари више функција у једној: порука одређује понашање и начин рада функције, а додатни аргументи се користе унутар тог рада.</p>
+<p>Променљива уланчана листа из наставка одговара на пет различитих порука: <code class="docutils literal notranslate"><span class="pre">len</span></code>, <code class="docutils literal notranslate"><span class="pre">getitem</span></code>, <code class="docutils literal notranslate"><span class="pre">push</span></code>, <code class="docutils literal notranslate"><span class="pre">pop</span></code> и <code class="docutils literal notranslate"><span class="pre">str</span></code>. Прве две имплементирају понашања из апстракције секвенце. Следећа два додају и уклањају први члан листе. Завршна порука враћа представу целокупне уланчане листе у облику ниске.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">променљиваУланчанаЛиста</span><span class="p">():</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Враћа функционалну имплементацију променљиве уланчане листе.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="n">садржај</span> <span class="o">=</span> <span class="n">празно</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">dispatch</span><span class="p">(</span><span class="n">порука</span><span class="p">,</span> <span class="n">вредност</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">nonlocal</span> <span class="n">садржај</span>
+<span class="gp">... </span>        <span class="k">if</span> <span class="n">порука</span> <span class="o">==</span> <span class="s1">&#39;len&#39;</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="k">return</span> <span class="n">дужинаУланчанеЛисте</span><span class="p">(</span><span class="n">садржај</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="k">elif</span> <span class="n">порука</span> <span class="o">==</span> <span class="s1">&#39;getitem&#39;</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="k">return</span> <span class="n">вратиЧланУланчанеЛисте</span><span class="p">(</span><span class="n">садржај</span><span class="p">,</span> <span class="n">вредност</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="k">elif</span> <span class="n">порука</span> <span class="o">==</span> <span class="s1">&#39;push_first&#39;</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="n">садржај</span> <span class="o">=</span> <span class="n">уланчанаЛиста</span><span class="p">(</span><span class="n">вредност</span><span class="p">,</span> <span class="n">садржај</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="k">elif</span> <span class="n">порука</span> <span class="o">==</span> <span class="s1">&#39;pop_first&#39;</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="n">f</span> <span class="o">=</span> <span class="n">први</span><span class="p">(</span><span class="n">садржај</span><span class="p">)</span>
+<span class="gp">... </span>            <span class="n">садржај</span> <span class="o">=</span> <span class="n">остатак</span><span class="p">(</span><span class="n">садржај</span><span class="p">)</span>
+<span class="gp">... </span>            <span class="k">return</span> <span class="n">f</span>
+<span class="gp">... </span>        <span class="k">elif</span> <span class="n">порука</span> <span class="o">==</span> <span class="s1">&#39;str&#39;</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="k">return</span> <span class="n">спојУланчануЛисту</span><span class="p">(</span><span class="n">садржај</span><span class="p">,</span> <span class="s2">&quot;, &quot;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">dispatch</span>
+</pre></div>
+</div>
+<p>Помоћне функције из претходног поглавља поновљене су у наставку ради комплетности.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">празно</span> <span class="o">=</span> <span class="s1">&#39;празно&#39;</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">даЛиЈеУланчанаЛиста</span><span class="p">(</span><span class="n">с</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;с је уланчана листа ако је празна или (први, остатак) пар.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">с</span> <span class="o">==</span> <span class="n">празно</span> <span class="ow">or</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">с</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span> <span class="ow">and</span> <span class="n">даЛиЈеУланчанаЛиста</span><span class="p">(</span><span class="n">с</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">уланчанаЛиста</span><span class="p">(</span><span class="n">први</span><span class="p">,</span> <span class="n">остатак</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Направи уланчану листу од првог члана и остатка.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="k">assert</span> <span class="n">даЛиЈеУланчанаЛиста</span><span class="p">(</span><span class="n">остатак</span><span class="p">),</span> <span class="s2">&quot;остатак мора бити уланчана листа.&quot;</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="p">[</span><span class="n">први</span><span class="p">,</span> <span class="n">остатак</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">први</span><span class="p">(</span><span class="n">с</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Враћа први члан уланчане листе с.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="k">assert</span> <span class="n">даЛиЈеУланчанаЛиста</span><span class="p">(</span><span class="n">с</span><span class="p">),</span> <span class="s2">&quot;први је применљив само на уланчане листе.&quot;</span>
+<span class="gp">... </span>    <span class="k">assert</span> <span class="n">с</span> <span class="o">!=</span> <span class="n">празно</span><span class="p">,</span> <span class="s2">&quot;празна уланчана листа нема први члан.&quot;</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">с</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">остатак</span><span class="p">(</span><span class="n">с</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Враћа остатак чланова уланчане листе с.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="k">assert</span> <span class="n">даЛиЈеУланчанаЛиста</span><span class="p">(</span><span class="n">с</span><span class="p">),</span> <span class="s2">&quot;остатак је применљив само на уланчане листе.&quot;</span>
+<span class="gp">... </span>    <span class="k">assert</span> <span class="n">с</span> <span class="o">!=</span> <span class="n">празно</span><span class="p">,</span> <span class="s2">&quot;празна уланчана листа нема остатак.&quot;</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">с</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">дужинаУланчанеЛисте</span><span class="p">(</span><span class="n">с</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Враћа дужину уланчане листе с.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="n">дужина</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="gp">... </span>    <span class="k">while</span> <span class="n">с</span> <span class="o">!=</span> <span class="n">празно</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="n">с</span><span class="p">,</span> <span class="n">дужина</span> <span class="o">=</span> <span class="n">остатак</span><span class="p">(</span><span class="n">с</span><span class="p">),</span> <span class="n">дужина</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">дужина</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">вратиЧланУланчанеЛисте</span><span class="p">(</span><span class="n">с</span><span class="p">,</span> <span class="n">и</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Враћа члан под индексом и уланчане листе с.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="k">while</span> <span class="n">и</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="n">с</span><span class="p">,</span> <span class="n">и</span> <span class="o">=</span> <span class="n">остатак</span><span class="p">(</span><span class="n">с</span><span class="p">),</span> <span class="n">и</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">први</span><span class="p">(</span><span class="n">с</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">спојУланчануЛисту</span><span class="p">(</span><span class="n">с</span><span class="p">,</span> <span class="n">раздвојник</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Враћа ниску свих чланова уланчане листе с раздвојених раздвојник-ом.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">с</span> <span class="o">==</span> <span class="n">празно</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="s2">&quot;&quot;</span>
+<span class="gp">... </span>    <span class="k">elif</span> <span class="n">остатак</span><span class="p">(</span><span class="n">с</span><span class="p">)</span> <span class="o">==</span> <span class="n">празно</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">први</span><span class="p">(</span><span class="n">с</span><span class="p">))</span>
+<span class="gp">... </span>    <span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">први</span><span class="p">(</span><span class="n">с</span><span class="p">))</span> <span class="o">+</span> <span class="n">раздвојник</span> <span class="o">+</span> <span class="n">спојУланчануЛисту</span><span class="p">(</span><span class="n">остатак</span><span class="p">(</span><span class="n">с</span><span class="p">),</span> <span class="n">раздвојник</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Такође, може се написати прикладна функција за прављење функционално имплементиране уланчане листе из било које уграђене секвенце једноставним додавањем сваког члана у обрнутом редоследу.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">уПроменљивуУланчануЛисту</span><span class="p">(</span><span class="n">извор</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Враћа функционалну уланчану листу са истим садржајем као и извор.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="n">s</span> <span class="o">=</span> <span class="n">променљиваУланчанаЛиста</span><span class="p">()</span>
+<span class="gp">... </span>    <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="n">извор</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="n">s</span><span class="p">(</span><span class="s1">&#39;push_first&#39;</span><span class="p">,</span> <span class="n">element</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">s</span>
+</pre></div>
+</div>
+<p>У горњој дефиницији, функција <code class="docutils literal notranslate"><span class="pre">reversed</span></code> прима и враћа итерирајућу вредност. То је још један пример функције која обрађује секвенце.</p>
+<p>У овом тренутку могу се направити функционално имплементиране променљиве уланчане листе. Треба имати у виду да је и уланчана листа сама по себи функција.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="n">уПроменљивуУланчануЛисту</span><span class="p">(</span><span class="n">знакови</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="go">&lt;class &#39;function&#39;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">(</span><span class="s1">&#39;str&#39;</span><span class="p">))</span>
+<span class="go">херц, каро, треф, пик</span>
+</pre></div>
+</div>
+<p>Поред тога, листама могу бити прослеђене поруке које мењају њихов садржај, примера ради за уклањање првог члана листе.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">s</span><span class="p">(</span><span class="s1">&#39;pop_first&#39;</span><span class="p">)</span>
+<span class="go">&#39;херц&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">(</span><span class="s1">&#39;str&#39;</span><span class="p">))</span>
+<span class="go">каро, треф, пик</span>
+</pre></div>
+</div>
+<p>У принципу, операције <code class="docutils literal notranslate"><span class="pre">push_first</span></code> и <code class="docutils literal notranslate"><span class="pre">pop_first</span></code> су довољне за произвољне промене листе. Увек је могуће листу потпуно очистити, односно испразнити је избацивањем свих њених чланова, а затим њен претходни садржај заменити жељеним члановима.</p>
+<div class="section" id="messagepassing">
+<span id="id15"></span><h3>Прослеђивање порука<a class="headerlink" href="#messagepassing" title="Permalink to this headline">¶</a></h3>
+<p>Уз мало времена, могу се имплементирати многе корисне операције мутација Пајтонових низова, као што су <code class="docutils literal notranslate"><span class="pre">extend</span></code> и <code class="docutils literal notranslate"><span class="pre">insert</span></code> методе. Постоје два начина да се то учини. Први, могле би се имплементирати као функције које користе постојеће поруке <code class="docutils literal notranslate"><span class="pre">pop_first</span></code> и <code class="docutils literal notranslate"><span class="pre">push_first</span></code> да би се извршиле неопходне промене. Алтернативно, могле би се додати додатне <code class="docutils literal notranslate"><span class="pre">elif</span></code> клаузуле у тело диспечера, при чему би свака од њих проверавала нову поруку (нпр., <code class="docutils literal notranslate"><span class="pre">'extend'</span></code> или <code class="docutils literal notranslate"><span class="pre">'insert'</span></code>) и директно примењивала одговарајућу измену садржаја листе.</p>
+<p>Овај други приступ, који обухвата логику свих операција над вредностима података у оквиру једне функције која се одазива и реагује на различите поруке јесте програмерска дисциплина под називом прослеђивање порука. Програм који користи прослеђивање порука дефинише диспечерске функције, од којих свака може имати локално стање, и организује израчунавање прослеђивањем „порука” као првог аргумента тим функцијама. Поруке су ниске које одговарају одређеним радњама и понашању функције.</p>
+</div>
+<div class="section" id="implementingdictionaries">
+<span id="id16"></span><h3>Имплементација речника<a class="headerlink" href="#implementingdictionaries" title="Permalink to this headline">¶</a></h3>
+<p>Могуће је такође имплементирати структуру података налик речнику. У овом случају, биће коришћена листа парова кључ-вредност за чување садржаја речника. Сваки пар је заправо двочлани низ.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">речник</span><span class="p">():</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Враћа функционалну имплементацију речника.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="n">records</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">getitem</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="n">matches</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">records</span> <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">key</span><span class="p">]</span>
+<span class="gp">... </span>        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">matches</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="n">matches</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="gp">... </span>            <span class="k">return</span> <span class="n">value</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">setitem</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">nonlocal</span> <span class="n">records</span>
+<span class="gp">... </span>        <span class="n">non_matches</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">records</span> <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="n">key</span><span class="p">]</span>
+<span class="gp">... </span>        <span class="n">records</span> <span class="o">=</span> <span class="n">non_matches</span> <span class="o">+</span> <span class="p">[[</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">]]</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">dispatch</span><span class="p">(</span><span class="n">порука</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">if</span> <span class="n">порука</span> <span class="o">==</span> <span class="s1">&#39;getitem&#39;</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="k">return</span> <span class="n">getitem</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="k">elif</span> <span class="n">порука</span> <span class="o">==</span> <span class="s1">&#39;setitem&#39;</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="n">setitem</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">dispatch</span>
+</pre></div>
+</div>
+<p>Поново ће за организацију имплементације бити коришћена метода преношења порука. Подржане су две поруке: <code class="docutils literal notranslate"><span class="pre">getitem</span></code> и <code class="docutils literal notranslate"><span class="pre">setitem</span></code>. Да би се убацила вредност под одређеним кључем, најпре се филтрирају сви постојећи записи под задатим кључем, а затим се додаје нов. На овај начин се осигурава да се сваки кључ у речнику појављује само једном. Како би се пронашла вредност под одређеним кључем, филтрирају се сви записи који одговарају датом кључу. Сада је могуће користити горњу имплементацију за чување и преузимање вредности.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">р</span> <span class="o">=</span> <span class="n">речник</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">р</span><span class="p">(</span><span class="s1">&#39;setitem&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">р</span><span class="p">(</span><span class="s1">&#39;setitem&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">р</span><span class="p">(</span><span class="s1">&#39;getitem&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="go">9</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">р</span><span class="p">(</span><span class="s1">&#39;getitem&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="go">16</span>
+</pre></div>
+</div>
+<p>Ова конкретна имплементација речника није оптимизована за брзу претрагу записа јер сваки позив мора филтрирати све записе унутар речника. Пајтонов уграђени тип речника је знатно ефикаснији, али је начин његове имплементације ван оквира овог уџбеника.</p>
+</div>
+</div>
+<div class="section" id="dispatchdictionaries">
+<span id="id17"></span><h2>Диспечерски речници<a class="headerlink" href="#dispatchdictionaries" title="Permalink to this headline">¶</a></h2>
+<p>Диспечерска функција је општа метода за имплементацију сучеља за прослеђивање порука за апстрактне податке. Да би се имплементирало слање поруке до сада је коришћено условно гранање за поређење ниске која садржи поруку са фиксним скупом унапред познатих порука.</p>
+<p>Уграђени тип података речник пружа општу методу за тражење вредности под задатим кључем. Уместо коришћења условних гранања за имплементацију диспечера, могу се користити речници са нискама као кључевима.</p>
+<p>Променљиви тип података <code class="docutils literal notranslate"><span class="pre">рачун</span></code> који је дат у наставку имплементиран је као речник. Има свој конструктор <code class="docutils literal notranslate"><span class="pre">рачун</span></code> и селектор <code class="docutils literal notranslate"><span class="pre">провериСтање</span></code>, као и функције <code class="docutils literal notranslate"><span class="pre">депонуј</span></code> и <code class="docutils literal notranslate"><span class="pre">подигни</span></code> за баратање средствима на рачуну. Штавише, локално стање рачуна се чува у речнику заједно са функцијама које имплементирају његово понашање и све радње.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">рачун</span><span class="p">(</span><span class="n">почетноСтање</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">депонуј</span><span class="p">(</span><span class="n">износ</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="n">диспечер</span><span class="p">[</span><span class="s1">&#39;стање&#39;</span><span class="p">]</span> <span class="o">+=</span> <span class="n">износ</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">диспечер</span><span class="p">[</span><span class="s1">&#39;стање&#39;</span><span class="p">]</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">подигни</span><span class="p">(</span><span class="n">износ</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">if</span> <span class="n">износ</span> <span class="o">&gt;</span> <span class="n">диспечер</span><span class="p">[</span><span class="s1">&#39;стање&#39;</span><span class="p">]:</span>
+<span class="gp">... </span>            <span class="k">return</span> <span class="s1">&#39;Insufficient funds&#39;</span>
+<span class="gp">... </span>        <span class="n">диспечер</span><span class="p">[</span><span class="s1">&#39;стање&#39;</span><span class="p">]</span> <span class="o">-=</span> <span class="n">износ</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">диспечер</span><span class="p">[</span><span class="s1">&#39;стање&#39;</span><span class="p">]</span>
+<span class="gp">... </span>    <span class="n">диспечер</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;депонуј&#39;</span><span class="p">:</span> <span class="n">депонуј</span><span class="p">,</span>
+<span class="gp">... </span>                <span class="s1">&#39;подигни&#39;</span><span class="p">:</span> <span class="n">подигни</span><span class="p">,</span>
+<span class="gp">... </span>                <span class="s1">&#39;стање&#39;</span><span class="p">:</span> <span class="n">почетноСтање</span><span class="p">}</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">диспечер</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">подигни</span><span class="p">(</span><span class="n">рачун</span><span class="p">,</span> <span class="n">износ</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">рачун</span><span class="p">[</span><span class="s1">&#39;подигни&#39;</span><span class="p">](</span><span class="n">износ</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">депонуј</span><span class="p">(</span><span class="n">рачун</span><span class="p">,</span> <span class="n">износ</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">рачун</span><span class="p">[</span><span class="s1">&#39;депонуј&#39;</span><span class="p">](</span><span class="n">износ</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">провериСтање</span><span class="p">(</span><span class="n">рачун</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">рачун</span><span class="p">[</span><span class="s1">&#39;стање&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">бр</span> <span class="o">=</span> <span class="n">рачун</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">депонуј</span><span class="p">(</span><span class="n">бр</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="go">25</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">подигни</span><span class="p">(</span><span class="n">бр</span><span class="p">,</span> <span class="mi">17</span><span class="p">)</span>
+<span class="go">8</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">провериСтање</span><span class="p">(</span><span class="n">бр</span><span class="p">)</span>
+<span class="go">8</span>
+</pre></div>
+</div>
+<p>Назив <code class="docutils literal notranslate"><span class="pre">диспечер</span></code> унутар тела конструктора <code class="docutils literal notranslate"><span class="pre">рачун</span></code> је повезан на речник који садржи поруке које рачун прихвата као кључеве. <em>Стање</em> је број, док су поруке <em>депонуј</em> и <em>подигни</em> повезане на функције. Ове функције имају приступ диспечерском речнику <code class="docutils literal notranslate"><span class="pre">диспечер</span></code> и тако могу читати и мењати стање рачуна. Чувањем стања унутар диспечерског речника, а не директно у оквиру функције <code class="docutils literal notranslate"><span class="pre">рачун</span></code> избегава се потреба за <code class="docutils literal notranslate"><span class="pre">nonlocal</span></code> наредбама у <code class="docutils literal notranslate"><span class="pre">депонуј</span></code> и <code class="docutils literal notranslate"><span class="pre">подигни</span></code> функцијама.</p>
+<p>Оператори <code class="docutils literal notranslate"><span class="pre">+=</span></code> и <code class="docutils literal notranslate"><span class="pre">-=</span></code> су скраћеница у Пајтону (као и у многим другим програмским језицима) за комбиновано тражење и поновну доделу вредности. Последње две линије кода у наставку су међусобно еквивалентне.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">бр</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">бр</span> <span class="o">=</span> <span class="n">бр</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">бр</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="propagatingconstraints">
+<span id="id18"></span><h2>Пропагација ограничења<a class="headerlink" href="#propagatingconstraints" title="Permalink to this headline">¶</a></h2>
+<p>Променљиви подаци дозвољавају симулацију система са променом, али такође омогућавају и изградњу нових врста апстракција. У свеобухватном примеру који следи комбинују се нелокалне доделе, листе и речници како би се изградио <em>систем заснован на ограничењима</em> који подржава израчунавање у више праваца. Изражавање програма као ограничења је врста такозваног <em>декларативног програмирања</em> у којем програмер декларише структуру проблема који треба решити, али се помоћу апстракције издиже изнад појединости како се тачно израчунава резултат и решење проблема.</p>
+<p>Рачунарски програми су традиционално организовани као једносмерна израчунавања која изводе операције над унапред наведеним аргументима како би произвели жељене излазе. С друге стране, често је потребно моделирати системе у погледу односа између различитих физичких величина. На пример, у претходном поглављу је разматрана једначина стања идеалног гаса која повезује притисак (<code class="docutils literal notranslate"><span class="pre">p</span></code>), запремину (<code class="docutils literal notranslate"><span class="pre">v</span></code>), количину (<code class="docutils literal notranslate"><span class="pre">n</span></code>) и температуру (<code class="docutils literal notranslate"><span class="pre">t</span></code>) идеалног гаса преко Болцманове константе (<code class="docutils literal notranslate"><span class="pre">k</span></code>):</p>
+<p>p * v = n * k * t</p>
+<p>Таква једначина није једносмерна, односно ако су дате било које четири величине, претходна једначина може се искористити за израчунавање пете. Упркос томе, превођење ове једначине у традиционални програмски језик на рачунару приморава да се одабере једна од величина која ће се израчунавати у зависности од преостале четири. Дакле, функција за израчунавање притиска не може се користити за израчунавање температуре иако прорачун обе величине проистиче из једне те исте једначине.</p>
+<p>У овом одељку биће скицирано пројектовање општег модела линеарних односа. Биће најпре дефинисана примитивна ограничења која важе међу величинама, као што је ограничење <code class="docutils literal notranslate"><span class="pre">сабирач(a,</span> <span class="pre">b,</span> <span class="pre">c)</span></code> које намеће математички однос <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">+</span> <span class="pre">b</span> <span class="pre">=</span> <span class="pre">c</span></code>.</p>
+<p>Такође неопходно је дефинисати средство за комбиновање како би се примитивна ограничења могла комбиновати да се изразе сложенији односи. На овај начин, сам програм личи заправо на програмски језик. Ограничења се комбинују изградњом мреже у којој су ограничења спојена конекторима. Конектор је објекат који „држи” вредност и може учествовати у једном или више ограничења.</p>
+<p>Примера ради, зна се да је веза између температуре у Фаренхајтима и Целзијусима:</p>
+<p>9 * c = 5 * (f - 32)</p>
+<p>Ова једначина је сложено ограничење између величина <code class="docutils literal notranslate"><span class="pre">c</span></code> и <code class="docutils literal notranslate"><span class="pre">f</span></code>. Такво ограничење може се посматрати као мрежа која се састоји од примитивних <code class="docutils literal notranslate"><span class="pre">сабирач</span></code>, <code class="docutils literal notranslate"><span class="pre">множач</span></code> и <code class="docutils literal notranslate"><span class="pre">константа</span></code> ограничења.</p>
+<img alt="../_images/constraints.png" class="align-center" src="../_images/constraints.png" />
+<p>На претходној слици, с леве стране се налази блок за множење са три терминала, означена словима <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code> и <code class="docutils literal notranslate"><span class="pre">c</span></code>. Ови терминали повезују множач са остатком мреже на следећи начин: терминал <code class="docutils literal notranslate"><span class="pre">a</span></code> је повезан на конектор <code class="docutils literal notranslate"><span class="pre">celsius</span></code> који садржи температуру у степенима на Целзијусовој скали. Терминал <code class="docutils literal notranslate"><span class="pre">b</span></code> је повезан на конектор <code class="docutils literal notranslate"><span class="pre">w</span></code> који је с друге стране повезан на константан блок који садржи <code class="docutils literal notranslate"><span class="pre">9</span></code>. Коначно, терминал <code class="docutils literal notranslate"><span class="pre">c</span></code> који ограничава блок множача да буде производ чинилаца <code class="docutils literal notranslate"><span class="pre">a</span></code> и <code class="docutils literal notranslate"><span class="pre">b</span></code> повезан је са терминалом <code class="docutils literal notranslate"><span class="pre">c</span></code> другог множача, чији је терминал <code class="docutils literal notranslate"><span class="pre">b</span></code> повезан на константу <code class="docutils literal notranslate"><span class="pre">5</span></code>, а терминал <code class="docutils literal notranslate"><span class="pre">a</span></code> повезан на један од сабирака блока за израчунавање, односно ограничење збира.</p>
+<p>Израчунавање путем једне такве мреже одвија се на следећи начин: када конектор добије вредност (од стране корисника или од стране блока за ограничење на који је повезан), он буди сва повезана ограничења (осим блока ограничења који га је управо пробудио) како би их обавестио да има спремну вредност. Сваки пробуђени блок ограничења затим прозива своје конекторе не би ли утврдио да ли има довољно информација за одређивање вредности конектора. Уколико је то случај, блок поставља вредност тог конектора који затим буди све блокове ограничења повезане на њега, и тако даље. На пример, у претварању између Целзијуса и Фаренхајта, <code class="docutils literal notranslate"><span class="pre">w</span></code>, <code class="docutils literal notranslate"><span class="pre">x</span></code> и <code class="docutils literal notranslate"><span class="pre">y</span></code> се константним блоковима одмах постављају на <code class="docutils literal notranslate"><span class="pre">9</span></code>, <code class="docutils literal notranslate"><span class="pre">5</span></code> и <code class="docutils literal notranslate"><span class="pre">32</span></code>, респективно. Конектори буде множаче и сабирач, који утврђују да нема довољно информација за наставак. За случај да корисник (или неки други део мреже) постави <code class="docutils literal notranslate"><span class="pre">celsius</span></code> конектор на неку вредност (рецимо 25), пробудиће се крајњи леви множач и поставиће <code class="docutils literal notranslate"><span class="pre">u</span></code> на вредност <span class="math notranslate nohighlight">\(25 \cdot 9 = 225\)</span>. Затим <code class="docutils literal notranslate"><span class="pre">u</span></code> буди други множач који поставља <code class="docutils literal notranslate"><span class="pre">v</span></code> на 45, а <code class="docutils literal notranslate"><span class="pre">v</span></code> буди сабирач, који поставља <code class="docutils literal notranslate"><span class="pre">fahrenheit</span></code> конектор на 77.</p>
+<div class="section" id="implementingtheconstraintsystem">
+<span id="id19"></span><h3>Имплементација система ограничења<a class="headerlink" href="#implementingtheconstraintsystem" title="Permalink to this headline">¶</a></h3>
+<p>Као што ће бити приказано, конектори су заправо речници који повезују имена порука на функције и вредности података. Биће имплементирани конектори који одговарају на следеће поруке:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">конектор['set_val'](извор,</span> <span class="pre">вредност)</span></code> указује да <code class="docutils literal notranslate"><span class="pre">извор</span></code> захтева од конектора да постави своју тренутну вредност на <code class="docutils literal notranslate"><span class="pre">вредност</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">конектор['has_val']()</span></code> враћа да ли конектор већ има вредност.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">конектор['val']</span></code> је тренутна вредност конектора.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">конектор['forget'](извор)</span></code> говори конектору да <code class="docutils literal notranslate"><span class="pre">извор</span></code> захтева да заборави своју вредност.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">конектор['connect'](извор)</span></code> говори конектору да учествује у новом ограничењу <code class="docutils literal notranslate"><span class="pre">извор</span></code>.</p></li>
+</ul>
+<p>Ограничења су такође речници који добијају информације од конектора помоћу две различите поруке:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">constraint['new_val']()</span></code> означава да неки конектор који је повезан са ограничењем има нову вредност.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">constraint['forget']()</span></code> указује да је неки конектор који је повезан са ограничењем заборавио своју вредност.</p></li>
+</ul>
+<p>Када ограничења приме ове поруке, она их на одговарајући начин шире на друге конекторе.</p>
+<p>Функција <code class="docutils literal notranslate"><span class="pre">сабирач</span></code> ствара ограничење сабирача преко три конектора, при чему је збир прва два једнак трећем: <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">+</span> <span class="pre">b</span> <span class="pre">=</span> <span class="pre">c</span></code>. Како би подржао ширење вишесмерног ограничења, сабирач такође мора да ескплицитно наведе да се одузимањем <code class="docutils literal notranslate"><span class="pre">a</span></code> од <code class="docutils literal notranslate"><span class="pre">c</span></code> добија <code class="docutils literal notranslate"><span class="pre">b</span></code>, а да се слично томе одузимањем <code class="docutils literal notranslate"><span class="pre">b</span></code> од <code class="docutils literal notranslate"><span class="pre">c</span></code> добија <code class="docutils literal notranslate"><span class="pre">a</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">add</span><span class="p">,</span> <span class="n">sub</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">сабирач</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Ограничење да је a + b = c.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">тернарноОграничење</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">add</span><span class="p">,</span> <span class="n">sub</span><span class="p">,</span> <span class="n">sub</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>У ту сврху, корисно би било имплементирати опште тернарно (тросмерно) ограничење, које користи три конектора и три функције из <code class="docutils literal notranslate"><span class="pre">сабирач</span></code>-а да би направило ограничење које прихвата поруке <code class="docutils literal notranslate"><span class="pre">new_val</span></code> и <code class="docutils literal notranslate"><span class="pre">forget</span></code>. Одговор на поруке су локалне функције које су смештене у речник под именом <code class="docutils literal notranslate"><span class="pre">constraint</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">тернарноОграничење</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">ab</span><span class="p">,</span> <span class="n">ca</span><span class="p">,</span> <span class="n">cb</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Ограничење да је ab(a,b)=c и ca(c,a)=b и cb(c,b) = a.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">new_value</span><span class="p">():</span>
+<span class="gp">... </span>        <span class="n">av</span><span class="p">,</span> <span class="n">bv</span><span class="p">,</span> <span class="n">cv</span> <span class="o">=</span> <span class="p">[</span><span class="n">конектор</span><span class="p">[</span><span class="s1">&#39;has_val&#39;</span><span class="p">]()</span> <span class="k">for</span> <span class="n">конектор</span> <span class="ow">in</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)]</span>
+<span class="gp">... </span>        <span class="k">if</span> <span class="n">av</span> <span class="ow">and</span> <span class="n">bv</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="n">c</span><span class="p">[</span><span class="s1">&#39;set_val&#39;</span><span class="p">](</span><span class="n">constraint</span><span class="p">,</span> <span class="n">ab</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="s1">&#39;val&#39;</span><span class="p">],</span> <span class="n">b</span><span class="p">[</span><span class="s1">&#39;val&#39;</span><span class="p">]))</span>
+<span class="gp">... </span>        <span class="k">elif</span> <span class="n">av</span> <span class="ow">and</span> <span class="n">cv</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="n">b</span><span class="p">[</span><span class="s1">&#39;set_val&#39;</span><span class="p">](</span><span class="n">constraint</span><span class="p">,</span> <span class="n">ca</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;val&#39;</span><span class="p">],</span> <span class="n">a</span><span class="p">[</span><span class="s1">&#39;val&#39;</span><span class="p">]))</span>
+<span class="gp">... </span>        <span class="k">elif</span> <span class="n">bv</span> <span class="ow">and</span> <span class="n">cv</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="n">a</span><span class="p">[</span><span class="s1">&#39;set_val&#39;</span><span class="p">](</span><span class="n">constraint</span><span class="p">,</span> <span class="n">cb</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;val&#39;</span><span class="p">],</span> <span class="n">b</span><span class="p">[</span><span class="s1">&#39;val&#39;</span><span class="p">]))</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">forget_value</span><span class="p">():</span>
+<span class="gp">... </span>        <span class="k">for</span> <span class="n">конектор</span> <span class="ow">in</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+<span class="gp">... </span>            <span class="n">конектор</span><span class="p">[</span><span class="s1">&#39;forget&#39;</span><span class="p">](</span><span class="n">constraint</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="n">constraint</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;new_val&#39;</span><span class="p">:</span> <span class="n">new_value</span><span class="p">,</span> <span class="s1">&#39;forget&#39;</span><span class="p">:</span> <span class="n">forget_value</span><span class="p">}</span>
+<span class="gp">... </span>    <span class="k">for</span> <span class="n">конектор</span> <span class="ow">in</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="n">конектор</span><span class="p">[</span><span class="s1">&#39;connect&#39;</span><span class="p">](</span><span class="n">constraint</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">constraint</span>
+</pre></div>
+</div>
+<p>Речник под називом <code class="docutils literal notranslate"><span class="pre">constraint</span></code> је диспечерски речник, али уједно и сам објекат ограничења. Одговара на две поруке које ограничења примају, али се такође прослеђује као аргумент <code class="docutils literal notranslate"><span class="pre">извор</span></code> у позивима његових конектора.</p>
+<p>Локална функција неког ограничења <code class="docutils literal notranslate"><span class="pre">new_value</span></code> позива се сваки пут када је то ограничење обавештено да један од његових конектора има вредност. Ова функција најпре проверава да ли и <code class="docutils literal notranslate"><span class="pre">a</span></code> и <code class="docutils literal notranslate"><span class="pre">b</span></code> имају вредности, па ако је тако говори <code class="docutils literal notranslate"><span class="pre">c</span></code> конектору да постави своју вредност на повратну вредност функције <code class="docutils literal notranslate"><span class="pre">ab</span></code>, односно <code class="docutils literal notranslate"><span class="pre">add</span></code> функцију у случају сабирача. Ограничење прослеђује <em>само себе</em> (<code class="docutils literal notranslate"><span class="pre">constraint</span></code>) као аргумент <code class="docutils literal notranslate"><span class="pre">извор</span></code> конектора, који је објекат сабирача. Уколико ни <code class="docutils literal notranslate"><span class="pre">a</span></code> ни <code class="docutils literal notranslate"><span class="pre">b</span></code> немају вредности, тада ограничење проверава <code class="docutils literal notranslate"><span class="pre">a</span></code> и <code class="docutils literal notranslate"><span class="pre">c</span></code>, и тако редом.</p>
+<p>За случај да ограничење буде обавештено да је један од његових конектора заборавио своју вредност оно захтева да сви његови конектори сада забораве своје вредности. (У стварности, губе се само оне вредности које су постављене од стране овог ограничења.)</p>
+<p>Ограничење <code class="docutils literal notranslate"><span class="pre">множач</span></code> је веома слично <code class="docutils literal notranslate"><span class="pre">сабирач</span></code>-у.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">mul</span><span class="p">,</span> <span class="n">truediv</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">множач</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Ограничење да је a * b = c.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">тернарноОграничење</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">mul</span><span class="p">,</span> <span class="n">truediv</span><span class="p">,</span> <span class="n">truediv</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Константа је такође ограничење, али оно којем се никада не шаљу никакве поруке јер се састоји из само једног конектора који се поставља на одређену вредност приликом стварања.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">константа</span><span class="p">(</span><span class="n">конектор</span><span class="p">,</span> <span class="n">вредност</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Ограничење које је конектор = вредност.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="n">constraint</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="gp">... </span>    <span class="n">конектор</span><span class="p">[</span><span class="s1">&#39;set_val&#39;</span><span class="p">](</span><span class="n">constraint</span><span class="p">,</span> <span class="n">вредност</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">constraint</span>
+</pre></div>
+</div>
+<p>Ова три ограничења су довољна за имплементацију представљене мреже за претварање температуре.</p>
+</div>
+<div class="section" id="representingconnectors">
+<span id="id20"></span><h3>Представљање конектора<a class="headerlink" href="#representingconnectors" title="Permalink to this headline">¶</a></h3>
+<p>Конектор је представљен као речник који садржи вредност, али такође поседује и функције за одговоре са локалним стањем. Конектор мора пратити онога ко му је дао тренутну вредност, такозвани <code class="docutils literal notranslate"><span class="pre">доушник</span></code> и низ <code class="docutils literal notranslate"><span class="pre">ограничења</span></code> у којима учествује.</p>
+<p>Конструктор <code class="docutils literal notranslate"><span class="pre">конектор</span></code> има локалне функције за постављање и заборављање вредности, а то су одговори на поруке које долазе из ограничења.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">конектор</span><span class="p">(</span><span class="n">име</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Конектор између ограничења.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="n">informant</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="gp">... </span>    <span class="n">constraints</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">set_value</span><span class="p">(</span><span class="n">извор</span><span class="p">,</span> <span class="n">вредност</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">nonlocal</span> <span class="n">informant</span>
+<span class="gp">... </span>        <span class="n">val</span> <span class="o">=</span> <span class="n">конектор</span><span class="p">[</span><span class="s1">&#39;val&#39;</span><span class="p">]</span>
+<span class="gp">... </span>        <span class="k">if</span> <span class="n">val</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="n">informant</span><span class="p">,</span> <span class="n">конектор</span><span class="p">[</span><span class="s1">&#39;val&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">извор</span><span class="p">,</span> <span class="n">вредност</span>
+<span class="gp">... </span>            <span class="k">if</span> <span class="n">име</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="gp">... </span>                <span class="nb">print</span><span class="p">(</span><span class="n">име</span><span class="p">,</span> <span class="s1">&#39;=&#39;</span><span class="p">,</span> <span class="n">вредност</span><span class="p">)</span>
+<span class="gp">... </span>            <span class="n">обавестиСвеОсим</span><span class="p">(</span><span class="n">извор</span><span class="p">,</span> <span class="s1">&#39;new_val&#39;</span><span class="p">,</span> <span class="n">constraints</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="k">if</span> <span class="n">val</span> <span class="o">!=</span> <span class="n">вредност</span><span class="p">:</span>
+<span class="gp">... </span>                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Contradiction detected:&#39;</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="s1">&#39;vs&#39;</span><span class="p">,</span> <span class="n">вредност</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">forget_value</span><span class="p">(</span><span class="n">извор</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">nonlocal</span> <span class="n">informant</span>
+<span class="gp">... </span>        <span class="k">if</span> <span class="n">informant</span> <span class="o">==</span> <span class="n">извор</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="n">informant</span><span class="p">,</span> <span class="n">конектор</span><span class="p">[</span><span class="s1">&#39;val&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span>
+<span class="gp">... </span>            <span class="k">if</span> <span class="n">име</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="gp">... </span>                <span class="nb">print</span><span class="p">(</span><span class="n">име</span><span class="p">,</span> <span class="s1">&#39;is forgotten&#39;</span><span class="p">)</span>
+<span class="gp">... </span>            <span class="n">обавестиСвеОсим</span><span class="p">(</span><span class="n">извор</span><span class="p">,</span> <span class="s1">&#39;forget&#39;</span><span class="p">,</span> <span class="n">constraints</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="n">конектор</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;val&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+<span class="gp">... </span>                 <span class="s1">&#39;set_val&#39;</span><span class="p">:</span> <span class="n">set_value</span><span class="p">,</span>
+<span class="gp">... </span>                 <span class="s1">&#39;forget&#39;</span><span class="p">:</span> <span class="n">forget_value</span><span class="p">,</span>
+<span class="gp">... </span>                 <span class="s1">&#39;has_val&#39;</span><span class="p">:</span> <span class="k">lambda</span><span class="p">:</span> <span class="n">конектор</span><span class="p">[</span><span class="s1">&#39;val&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">,</span>
+<span class="gp">... </span>                 <span class="s1">&#39;connect&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">извор</span><span class="p">:</span> <span class="n">constraints</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">извор</span><span class="p">)}</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">конектор</span>
+</pre></div>
+</div>
+<p>Конектор је поново диспечерски речник за пет порука које ограничења користе за комуникацију са конекторима. Четири одговора су функције, а крајњи одговор је сама вредност.</p>
+<p>Локална функција <code class="docutils literal notranslate"><span class="pre">set_value</span></code> позива се када постоји захтев за постављање вредности конектора. За случај да конектор тренутно нема вредност, поставиће своју вредност и запамтити у променљивој <code class="docutils literal notranslate"><span class="pre">доушник</span></code> изворно ограничење које је захтевало да се та вредност постави. Тада ће конектор обавестити сва своја повезана ограничења изузев ограничења које је тражило да се поменута вредност постави. Ово се постиже коришћењем следеће итеративне функције.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">обавестиСвеОсим</span><span class="p">(</span><span class="n">извор</span><span class="p">,</span> <span class="n">порука</span><span class="p">,</span> <span class="n">ограничења</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Обавести сва ограничења о поруци порука, изузев извора.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="k">for</span> <span class="n">о</span> <span class="ow">in</span> <span class="n">ограничења</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">if</span> <span class="n">о</span> <span class="o">!=</span> <span class="n">извор</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="n">о</span><span class="p">[</span><span class="n">порука</span><span class="p">]()</span>
+</pre></div>
+</div>
+<p>Уколико се од конектора затражи да заборави своју вредност, он позива своју локалну функцију <code class="docutils literal notranslate"><span class="pre">forget_value</span></code> која најпре проверава да ли захтев долази од истог ограничења које је вредност првобитно поставило и ако је то случај, конектор обавештава повезана ограничења о губитку вредности.</p>
+<p>Одговор на <code class="docutils literal notranslate"><span class="pre">has_val</span></code> поруку указује на то да ли конектор има вредност. Одговор на <code class="docutils literal notranslate"><span class="pre">connect</span></code> поруку додаје изворно ограничење у низ ограничења.</p>
+</div>
+<div class="section" id="usingtheconstraintsystem">
+<span id="id21"></span><h3>Коришћење система ограничења<a class="headerlink" href="#usingtheconstraintsystem" title="Permalink to this headline">¶</a></h3>
+<p>Да би се систем ограничења користио за извршавање горе описаних прорачуна температуре, најпре треба направити два именована конектора <code class="docutils literal notranslate"><span class="pre">celsius</span></code> и <code class="docutils literal notranslate"><span class="pre">fahrenheit</span></code> позивањем <code class="docutils literal notranslate"><span class="pre">конектор</span></code> конструктора.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">celsius</span> <span class="o">=</span> <span class="n">конектор</span><span class="p">(</span><span class="s1">&#39;Целзијус&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fahrenheit</span> <span class="o">=</span> <span class="n">конектор</span><span class="p">(</span><span class="s1">&#39;Фаренхајт&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Затим се ови конектори повезују у мрежу која одговара претходној шеми. Функција <code class="docutils literal notranslate"><span class="pre">конвертор</span></code> саставља разне конекторе и ограничења у мрежу.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">конвертор</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">f</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Повежи c до f ограничењима да се температура у Целзијусима претвори у Фаренхајте.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="n">конектор</span><span class="p">()</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)]</span>
+<span class="gp">... </span>    <span class="n">множач</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">u</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="n">множач</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">u</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="n">сабирач</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="n">константа</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="n">константа</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="n">константа</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="mi">32</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">конвертор</span><span class="p">(</span><span class="n">celsius</span><span class="p">,</span> <span class="n">fahrenheit</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>За координацију ограничења и конектора биће коришћен систем за прослеђивање порука. Као што је приказано, ограничења су речници који не садрже сама локална стања. Њихови одговори на поруке су нечисте функције које мењају конекторе које ограничавају.</p>
+<p>Конектори су речници који садрже тренутну вредност и одговарају на поруке које манипулишу том вредношћу. Ограничења неће директно мењати вредност конектора, већ ће то учинити слањем порука, тако да као одговор на промену и конектор може да обавести друга ограничења. На овај начин, конектор представља број, али такође обухвата и понашање конектора.</p>
+<p>Једна од порука која може бити послата конектору јесте постављање његове вредности. У примеру из наставка, <code class="docutils literal notranslate"><span class="pre">корисник</span></code> поставља вредност <code class="docutils literal notranslate"><span class="pre">celsius</span></code>-а на 25.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">celsius</span><span class="p">[</span><span class="s1">&#39;set_val&#39;</span><span class="p">](</span><span class="s1">&#39;корисник&#39;</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
+<span class="go">Целзијус = 25</span>
+<span class="go">Фаренхајт = 77.0</span>
+</pre></div>
+</div>
+<p>Не само да се вредност <code class="docutils literal notranslate"><span class="pre">celsius</span></code>-а мења на 25, већ његова вредност пропагира кроз мрежу и тако мења вредност <code class="docutils literal notranslate"><span class="pre">fahrenheit</span></code>-а такође. Ове промене су исписане због тога што су ова два конектора именована приликом њиховог стварања.</p>
+<p>Сада је могуће покушати да се <code class="docutils literal notranslate"><span class="pre">fahrenheit</span></code>-у додели нова вредност, рецимо 212.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">fahrenheit</span><span class="p">[</span><span class="s1">&#39;set_val&#39;</span><span class="p">](</span><span class="s1">&#39;корисник&#39;</span><span class="p">,</span> <span class="mi">212</span><span class="p">)</span>
+<span class="go">Contradiction detected: 77.0 vs 212</span>
+</pre></div>
+</div>
+<p>Конектор се жали да је осетио контрадикцију: вредност му је 77.0, а неко покушава да га постави на 212. Уколико се заиста жели да иста мрежа буде поново искоришћена само са новим вредностима, може се рећи <code class="docutils literal notranslate"><span class="pre">celsius</span></code>-у да заборави своју стару вредност.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">celsius</span><span class="p">[</span><span class="s1">&#39;forget&#39;</span><span class="p">](</span><span class="s1">&#39;корисник&#39;</span><span class="p">)</span>
+<span class="go">Целзијус is forgotten</span>
+<span class="go">Фаренхајт is forgotten</span>
+</pre></div>
+</div>
+<p>Конектор <code class="docutils literal notranslate"><span class="pre">celsius</span></code> открива да <code class="docutils literal notranslate"><span class="pre">корисник</span></code>, који је првобитно поставио његову вредност, сада повлачи ту вредност тако да се <code class="docutils literal notranslate"><span class="pre">celsius</span></code> слаже да изгуби своју вредност и о томе обавештава остатак мреже. Ове информације се на крају шире све до <code class="docutils literal notranslate"><span class="pre">fahrenheit</span></code>-а, који сада утврђује да нема разлога да и даље верује да је његова сопствена вредност 77. Дакле, он се такође одриче своје вредности.</p>
+<p>Сада када <code class="docutils literal notranslate"><span class="pre">fahrenheit</span></code> нема вредност, слободно се може поставити на 212:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">fahrenheit</span><span class="p">[</span><span class="s1">&#39;set_val&#39;</span><span class="p">](</span><span class="s1">&#39;корисник&#39;</span><span class="p">,</span> <span class="mi">212</span><span class="p">)</span>
+<span class="go">Фаренхајт = 212</span>
+<span class="go">Целзијус = 100.0</span>
+</pre></div>
+</div>
+<p>Ова нова вредност, када се прошири кроз мрежу, присиљава <code class="docutils literal notranslate"><span class="pre">celsius</span></code>-а да има, односно добије вредност 100. Једна те иста мрежа је коришћена за израчунавање <code class="docutils literal notranslate"><span class="pre">celsius</span></code>-а задавањем <code class="docutils literal notranslate"><span class="pre">fahrenheit</span></code>-а, као и за израчунавање <code class="docutils literal notranslate"><span class="pre">fahrenheit</span></code>-а задавањем <code class="docutils literal notranslate"><span class="pre">celsius</span></code>-а. Ова неусмереност израчунавања је препознатљива одлика система заснованих на ограничењима.</p>
+<p>Програм ограничења који је осмишљен уводи многе идеје које ће се поново појавити у објектно-оријентисаном програмирању. Ограничења и конектори су апстракције којима се манипулише путем порука. Када се вредност конектора промени, она се мења путем поруке која не само да мења вредност, већ је и потврђује (провером извора) и шири даље њене ефекте (обавештавањем других ограничења). У ствари, биће коришћена слична архитектура речника са кључевима који су ниске и вредностима које су заправо функције како би се касније у овом поглављу имплементирао објектно-оријентисани систем.</p>
+</div>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Секвенце' data-toggle="tooltip"><a href="3-секвенце.html">Претходно поглавље</a></li>
+    
+        <li id="relations-next" title='Next chapter - Објектно-оријентисано програмирање' data-toggle="tooltip"><a href="5-ооп.html">Следеће поглавље</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Секвенце' data-toggle="tooltip"><a href="3-секвенце.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Објектно-оријентисано програмирање' data-toggle="tooltip"><a href="5-ооп.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="pull-left">&copy; 2019 Petlja (Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>
