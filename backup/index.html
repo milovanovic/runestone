@@ -282,6 +282,7 @@ Those files may even be in subdirectories that you can reference using a relativ
 <h2>SECTION 3: Sample Directives<a class="headerlink" href="#section-3-sample-directives" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="activecode">
 <h3>ActiveCode<a class="headerlink" href="#activecode" title="Permalink to this headline">¶</a></h3>
+<p>Ово је пример активног кода који је већ постојао у PetljaDoc шаблону за приручник:</p>
 
 <div data-childcomponent="codeexample1" class="course-box course-box-problem course-content">
 
@@ -298,6 +299,21 @@ for num in myList:
 print(total)
 </textarea>
 </div>
+<p>Сада следи пример новог активног кода који показује да се не могу користити претходнодефинисане променљиве:</p>
+
+<div data-childcomponent="codeexample2" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=codeexample2 data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+         data-caption='This is a caption'      data-hidehistory=true
+       >
+print("My second program tries to reference the first one")
+print(myList)
+print(total)
+</textarea>
+</div>
+<p>за шта не знам да ли постоји начин да се заобиђе или премости? Сваки савет је добродошао.</p>
 </div>
 <div class="section" id="multiple-choice">
 <h3>Multiple Choice<a class="headerlink" href="#multiple-choice" title="Permalink to this headline">¶</a></h3>

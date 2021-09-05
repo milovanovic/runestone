@@ -55,6 +55,8 @@ SECTION 3: Sample Directives
 ActiveCode
 ----------
 
+Ово је пример активног кода који је већ постојао у PetljaDoc шаблону за приручник:
+
 .. activecode:: codeexample1
    :coach:
    :caption: This is a caption
@@ -65,6 +67,18 @@ ActiveCode
    for num in myList:
        total = total + num
    print(total)
+
+Сада следи пример новог активног кода који показује да се не могу користити претходнодефинисане променљиве:
+
+.. activecode:: codeexample2
+   :coach:
+   :caption: This is a caption
+
+   print("My second program tries to reference the first one")
+   print(myList)
+   print(total)
+
+за шта не знам да ли постоји начин да се заобиђе или премости? Сваки савет је добродошао.
 
 Multiple Choice
 ---------------

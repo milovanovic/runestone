@@ -277,13 +277,24 @@
 <span class="go">5</span>
 </pre></div>
 </div>
+
+<div data-childcomponent="дваПлусТри" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=дваПлусТри data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+print(2 + 3)
+</textarea>
+</div>
 <div class="section" id="interactivecontrols">
-<span id="id15"></span><h3>Интерактивне контроле<a class="headerlink" href="#interactivecontrols" title="Permalink to this headline">¶</a></h3>
+<span id="id16"></span><h3>Интерактивне контроле<a class="headerlink" href="#interactivecontrols" title="Permalink to this headline">¶</a></h3>
 <p>Свака сеанса чува историју уноса. Уносима у историји се приступа притиском на <code class="docutils literal notranslate"><span class="pre">&lt;Ctrl&gt;+p</span></code> (претходни) и <code class="docutils literal notranslate"><span class="pre">&lt;Ctrl&gt;+n</span></code> (наредни). Стрелице горе и доле такође пролазе кроз историју на неким оперативним системима. Излазак из сеансе могућ је преко <code class="docutils literal notranslate"><span class="pre">&lt;Ctrl&gt;+d</span></code> и том приликом се брише историја уноса.</p>
 </div>
 </div>
 <div class="section" id="firstexample">
-<span id="id16"></span><h2>Први пример<a class="headerlink" href="#firstexample" title="Permalink to this headline">¶</a></h2>
+<span id="id17"></span><h2>Први пример<a class="headerlink" href="#firstexample" title="Permalink to this headline">¶</a></h2>
 <p>Како би се Пајтону пружио одговарајући увод, излагање ће бити започето примером који користи неколико језичких одлика. У следећем одељку ће се кренути од нуле и програмски језик Пајтон ће се надограђивати део по део. Овај одељак се може посматрати као кратак преглед онога што долази.</p>
 <p>Пајтон поседује уграђену подршку за широк спектар уобичајених програмерских активности, попут обраде текста, графичког приказа и комуникације путем интернета. Следећа линија Пајтон кода</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">urllib.request</span> <span class="kn">import</span> <span class="n">urlopen</span>
@@ -291,7 +302,7 @@
 </div>
 <p>представља <code class="docutils literal notranslate"><span class="pre">import</span></code> наредбу која учитава функционалност за приступ интернет подацима. Конкретно, претходна наредба чини доступном функцију под називом <code class="docutils literal notranslate"><span class="pre">urlopen</span></code> која може приступити одређеном садржају на некој интернет адреси.</p>
 <div class="section" id="statementsandexpressions">
-<span id="id17"></span><h3>Наредбе и изрази<a class="headerlink" href="#statementsandexpressions" title="Permalink to this headline">¶</a></h3>
+<span id="id18"></span><h3>Наредбе и изрази<a class="headerlink" href="#statementsandexpressions" title="Permalink to this headline">¶</a></h3>
 <p>Пајтон код се састоји од израза и наредби. Уопштено говорећи, рачунарски програми садрже упутстава за:</p>
 <ol class="arabic simple">
 <li><p>израчунавање неких вредности, или</p></li>
@@ -305,7 +316,7 @@
 <p>повезује име <code class="docutils literal notranslate"><span class="pre">наДриниЋуприја</span></code> на вредност израза који следи након <code class="docutils literal notranslate"><span class="pre">=</span></code>. Тај израз примењује <code class="docutils literal notranslate"><span class="pre">urlopen</span></code> функцију на интернет адресу која садржи комплетан текст романа <em>На Дрини ћуприја</em> српског књижевника и нобеловца Иве Андрића.</p>
 </div>
 <div class="section" id="functions">
-<span id="id18"></span><h3>Функције<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
+<span id="id19"></span><h3>Функције<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
 <p>Функције обухватају логику која манипулише подацима. На пример, <code class="docutils literal notranslate"><span class="pre">urlopen</span></code> је функција. Интернет адреса је један податак, а сам текст романа је неки други податак. Процес којим први води до другог може бити сложен, али тај процес се може применити користећи само једноставан израз јер је та сложеност обухваћена и уметнута унутар функције. Функције су примарна тема овог поглавља.</p>
 <p>Друга наредба доделе</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">речи</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">наДриниЋуприја</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
@@ -314,7 +325,7 @@
 <p>повезује име <code class="docutils literal notranslate"><span class="pre">речи</span></code> са скупом свих јединствених речи и облика истих које се појављују у роману <em>На Дрини ћуприја</em>, свих пар десетина хиљада њих. Свака од уланчаних наредби за читање (<code class="docutils literal notranslate"><span class="pre">read</span></code>), декодирање (<code class="docutils literal notranslate"><span class="pre">decode</span></code>) и раздвајање (<code class="docutils literal notranslate"><span class="pre">split</span></code>) оперишу над рачунским међурезултатом, односно читају се подаци из отворене интернет адресе, затим се ти подаци декодују у текст и на крају се тај текст дели у речи. Све те речи се смештају у <code class="docutils literal notranslate"><span class="pre">set</span></code>, то јест скуп.</p>
 </div>
 <div class="section" id="objects">
-<span id="id19"></span><h3>Објекти<a class="headerlink" href="#objects" title="Permalink to this headline">¶</a></h3>
+<span id="id20"></span><h3>Објекти<a class="headerlink" href="#objects" title="Permalink to this headline">¶</a></h3>
 <p>Скуп, односно <code class="docutils literal notranslate"><span class="pre">set</span></code> је врста објекта који подржава операције над скуповима попут израчунавања пресека скупова и провере чланства. Објекат неприметно спаја заједно податке и логику која њима манипулише, на начин који је погодан за управљање сложеношћу оба. Објекти су примарна тема наредног поглавља. Коначно, израз</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">sorted</span><span class="p">({</span><span class="n">реч</span> <span class="k">for</span> <span class="n">реч</span> <span class="ow">in</span> <span class="n">речи</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">реч</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">3</span> <span class="ow">and</span> <span class="n">реч</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="ow">in</span> <span class="n">речи</span><span class="p">})</span>
 <span class="go">[&#39;ипак&#39;, &#39;капак&#39;, &#39;капи&#39;, &#39;кулук&#39;, &#39;мелем&#39;, &#39;мојом&#39;, &#39;ромор&#39;, &#39;терет&#39;]</span>
@@ -323,14 +334,14 @@
 <p>је сложени израз који из скупа прави сортиран низ свих речи, не краћих од четворословних, у роману <em>На Дрини ћуприја</em> које су истовремено исправне речи написане обрнуто. Тајанствени запис <code class="docutils literal notranslate"><span class="pre">реч[::-1]</span></code> набраја једно по једно слово у речи, али <code class="docutils literal notranslate"><span class="pre">-1</span></code> налаже да се то ради у обрнутом редоследу, односно уназад. Када се израз унесе у интерактивну сеансу, Пајтон исписује његову вредност у следећем реду.</p>
 </div>
 <div class="section" id="interpreters">
-<span id="id20"></span><h3>Интерпретатори<a class="headerlink" href="#interpreters" title="Permalink to this headline">¶</a></h3>
+<span id="id21"></span><h3>Интерпретатори<a class="headerlink" href="#interpreters" title="Permalink to this headline">¶</a></h3>
 <p>Вредновање сложених израза захтева прецизан поступак који тумачи изворни код на предвидљив начин. Програм који примењује такав поступак, вреднујући сложене изразе, назива се интерпретатор. Пројектовање и имплементација интерпретатора примарна је тема трећег поглавља.</p>
 <p>У поређењу са другим рачунарским програмима, интерпретатори програмских језика су јединствени по својој општости. Пајтон није пројектован имајући у виду Иву Андрића. Међутим, његова велика флексибилност омогућила је да се обради велика количина текста само помоћу неколико наредби и израза.</p>
 <p>На крају ће бити откривено да су сви ови основни концепти уско повезани: функције су објекти, објекти су функције, а интерпретатори су инстанце оба. Међутим, развијање јасног разумевања сваког од ових концепата и њихове улоге у организацији изворног кода пресудно је за овладавање вештином програмирања.</p>
 </div>
 </div>
 <div class="section" id="errors">
-<span id="id21"></span><h2>Грешке<a class="headerlink" href="#errors" title="Permalink to this headline">¶</a></h2>
+<span id="id22"></span><h2>Грешке<a class="headerlink" href="#errors" title="Permalink to this headline">¶</a></h2>
 <p>Чекајући на наредбу Пајтон подстиче експериментисање са језиком, иако корисник можда још увек не познаје у потпуности речник и структуру језика. Ипак, треба бити спреман на грешке. Иако су рачунари изузетно брзи и флексибилни, истовремено су и крајње крути. Природа рачунара може бити описана као</p>
 <blockquote>
 <div><p>Основна једначина рачунара је:</p>

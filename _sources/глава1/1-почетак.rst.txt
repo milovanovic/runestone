@@ -51,6 +51,10 @@
 
     >>> 2 + 3
     5
+    
+.. activecode:: дваПлусТри
+
+    print(2 + 3)
 
 .. _interactiveControls:
 
